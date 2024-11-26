@@ -16,7 +16,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 import userinterface.DonorRole.DonorProfilePanel;
-import userinterface.FCAdminRole.ViewPantryItemsPanel;
+import userinterface.ACAdminRole.ViewPantryItemsPanel;
 import userinterface.MainJFrame;
 import userinterface.NGORole.NGOWorkAreaPanel;
 

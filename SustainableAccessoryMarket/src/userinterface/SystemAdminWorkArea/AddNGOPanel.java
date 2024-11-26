@@ -7,9 +7,9 @@ package userinterface.SystemAdminWorkArea;
 
 import Business.EcoSystem;
 import Business.Worker.Worker;
-import Business.NonGovtOrg.NonGovtOrg;
-import Business.NonGovtOrg.NonGovtOrgDirectory;
-import Business.Role.NgoRole;
+import Business.CommunityOutreach.CommunityOutreach;
+import Business.CommunityOutreach.CommunityOutreachDirectory;
+import Business.Role.CoRole;
 import Business.UserAccount.UserAccount;
 import Business.UserAccount.UserAccountDirectory;
 import java.awt.Color;
@@ -37,7 +37,7 @@ public class AddNGOPanel extends javax.swing.JPanel {
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
-    NonGovtOrgDirectory ngod;
+    CommunityOutreachDirectory ngod;
     UserAccountDirectory uad;
 
     public AddNGOPanel(JPanel userProcessContainer, EcoSystem ecosystem) throws IOException {
@@ -53,8 +53,8 @@ public class AddNGOPanel extends javax.swing.JPanel {
 //        imageLbl.setIcon(new ImageIcon(newimg));
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
-        if (ecosystem.getNgoDir() == null) {
-            ecosystem.setNgoDir(new NonGovtOrgDirectory());
+        if (ecosystem.getcoDir() == null) {
+            ecosystem.setNgoDir(new CommunityOutreachDirectory());
         }
 
         setBG();
@@ -416,32 +416,32 @@ public class AddNGOPanel extends javax.swing.JPanel {
                 Worker employee = new Worker();
                 employee.setName(txtNonGovtOrgAgent.getText());
                 String role = "NGOAgent";
-                NonGovtOrg ngo = new NonGovtOrg();
-                ngo.setNgoId("ngo" + txtNonGovtOrgid.getText());
-                ngo.setNgoName(txtNonGovtOrgname.getText());
-                ngo.setNgoPhno(txtNonGovtOrgPhone.getText());
-                ngo.setNgoAddress(txtNonGovtOrgAdd.getText());
-                ngo.setNgoCity(txtNonGovtOrgCity.getText());
-                ngo.setNgoState(txtNonGovtOrgState.getText());
-                ngo.setNgoZipcode(txtNonGovtOrgZip.getText());
-                ngo.setNgoAgent(txtNonGovtOrgAgent.getText());
+                CommunityOutreach ngo = new CommunityOutreach();
+                ngo.setCOId("ngo" + txtNonGovtOrgid.getText());
+                ngo.setCOName(txtNonGovtOrgname.getText());
+                ngo.setCOPhone(txtNonGovtOrgPhone.getText());
+                ngo.setCOAddress(txtNonGovtOrgAdd.getText());
+                ngo.setCOCity(txtNonGovtOrgCity.getText());
+                ngo.setCOState(txtNonGovtOrgState.getText());
+                ngo.setCOZipcode(txtNonGovtOrgZip.getText());
+                ngo.setCOAgent(txtNonGovtOrgAgent.getText());
                 UserAccount nogAccount = new UserAccount();
                 nogAccount.setUsername(txtNonGovtOrgAgentuname.getText());
                 nogAccount.setPassword(txtNonGovtOrgpwd.getText());
                 // uaList.createUserAccount(txtFCAuname.getText(), txtFCApwd.getText(), employee, new FCAdminRole());
                 //                ua = usersList.getUserAccount(txtUserName.getText());
 
-                nogAccount.setRole(new NgoRole());
+                nogAccount.setRole(new CoRole());
                 nogAccount.setEmployee(employee);
                 uad = ecosystem.getUserAccountDirectory();
-                uad.createUserAccount(txtNonGovtOrgAgentuname.getText(), txtNonGovtOrgpwd.getText(), employee, new NgoRole());
+                uad.createUserAccount(txtNonGovtOrgAgentuname.getText(), txtNonGovtOrgpwd.getText(), employee, new CoRole());
                 ecosystem.setUserAccountDirectory(uad);
-                ngo.setNgoAccount(nogAccount);
-                ngod = ecosystem.getNgoDir();
+                ngo.setCOAccount(nogAccount);
+                ngod = ecosystem.getcoDir();
                 ngod.addNewNGO(ngo);
                 ecosystem.setNgoDir(ngod);
-                Integer ngoCnt = ecosystem.getNgoCnt();
-                ecosystem.setNgoCnt(ngoCnt + 1);
+                Integer ngoCnt = ecosystem.getcoCnt();
+                ecosystem.setcoCnt(ngoCnt + 1);
                 JOptionPane.showMessageDialog(this, "NGO added successfully!");
                 clearfields();
             } else {

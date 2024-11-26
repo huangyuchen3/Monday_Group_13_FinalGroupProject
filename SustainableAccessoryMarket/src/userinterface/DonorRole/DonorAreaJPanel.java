@@ -15,7 +15,7 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
-import userinterface.FCAdminRole.FCAdminWorkAreaPanel;
+import userinterface.ACAdminRole.FCAdminWorkAreaPanel;
 import userinterface.MainJFrame;
 
 /**

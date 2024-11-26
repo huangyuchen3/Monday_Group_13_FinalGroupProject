@@ -160,7 +160,7 @@ public class NGOWorkAreaPanel extends javax.swing.JPanel {
 
     private void btnProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfileActionPerformed
         // TODO add your handling code here:
-        NGOProfilePanel objNGOProf = new NGOProfilePanel(userProcessContainer,ecosystem,userAcc);
+        COProfilePanel objNGOProf = new COProfilePanel(userProcessContainer,ecosystem,userAcc);
         SplitPaneDon.setRightComponent(objNGOProf);
     }//GEN-LAST:event_btnProfileActionPerformed
 

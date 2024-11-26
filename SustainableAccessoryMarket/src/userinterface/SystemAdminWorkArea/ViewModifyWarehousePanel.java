@@ -6,8 +6,8 @@ package userinterface.SystemAdminWorkArea;
 
 import Business.EcoSystem;
 import Business.Worker.Worker;
-import Business.FoodWarehouse.FoodWarehouse;
-import Business.FoodWarehouse.FoodWarehouseDirectory;
+import Business.DistributionHub.DistributionHub;
+import Business.DistributionHub.DistributionHubDirectory;
 import Business.UserAccount.UserAccount;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -37,7 +37,7 @@ public class ViewModifyWarehousePanel extends javax.swing.JPanel {
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
-    FoodWarehouseDirectory fcd;
+    DistributionHubDirectory fcd;
 
     public ViewModifyWarehousePanel(JPanel userProcessContainer, EcoSystem ecosystem) {
         initComponents();
@@ -364,17 +364,17 @@ public class ViewModifyWarehousePanel extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model = (DefaultTableModel) tblWarehouseDetails.getModel();
-        FoodWarehouse selectedFCW = (FoodWarehouse) model.getValueAt(selectedRowIndex, 0);
-        lblWarehouseid1.setText(selectedFCW.getFcwId());
-        txtWarehousename.setText(selectedFCW.getFcwName());
-        txtWarehousePhone.setText(selectedFCW.getFcwPhno());
-        txtWarehouseAdd.setText(selectedFCW.getFcwAddres());
-        txtWarehouseCity.setText(selectedFCW.getFcwCity());
-        txtWarehouseState.setText(selectedFCW.getFcwState());
-        txtWarehouseZip.setText(selectedFCW.getFcwZipcode());
-        txtWarehouseFCAdmin.setText(selectedFCW.getFcwAdmin());
-        txtFCAdminuname.setText(selectedFCW.getFcwAccount().getUsername());
-        txtFCAdminpwd.setText(selectedFCW.getFcwAccount().getPassword());
+        DistributionHub selectedFCW = (DistributionHub) model.getValueAt(selectedRowIndex, 0);
+        lblWarehouseid1.setText(selectedFCW.getAcDistributionHubId());
+        txtWarehousename.setText(selectedFCW.getAcDistributionHubName());
+        txtWarehousePhone.setText(selectedFCW.getAcDistributionHubPhone());
+        txtWarehouseAdd.setText(selectedFCW.getAcDistributionHubAddress());
+        txtWarehouseCity.setText(selectedFCW.getAcDistributionHubCity());
+        txtWarehouseState.setText(selectedFCW.getAcDistributionHubState());
+        txtWarehouseZip.setText(selectedFCW.getAcDistributionHubZipcode());
+        txtWarehouseFCAdmin.setText(selectedFCW.getAcDistributionHubAdmin());
+        txtFCAdminuname.setText(selectedFCW.getAcDistributionHubAccount().getUsername());
+        txtFCAdminpwd.setText(selectedFCW.getAcDistributionHubAccount().getPassword());
     }//GEN-LAST:event_btnWarehouseEditActionPerformed
 
     private void btnWarehouseDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnWarehouseDeleteActionPerformed
@@ -385,14 +385,14 @@ public class ViewModifyWarehousePanel extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model = (DefaultTableModel) tblWarehouseDetails.getModel();
-        FoodWarehouse selectedFCW = (FoodWarehouse) model.getValueAt(selectedRowIndex, 0);
+        DistributionHub selectedFCW = (DistributionHub) model.getValueAt(selectedRowIndex, 0);
         ecosystem.getUserAccountDirectory().deleteUserAccount(
-                ecosystem.getFCWDirectory().getFcwList().get(selectedRowIndex).getFcwAccount());
-        fcd = ecosystem.getFCWDirectory();
-        fcd.deleteFCWarehouse(selectedFCW);
-        ecosystem.setFCWDirectory(fcd);
-        Integer whcnt = ecosystem.getWarehouseCnt();
-        ecosystem.setWarehouseCnt(whcnt - 1);
+                ecosystem.getACDDirectory().getFadList().get(selectedRowIndex).getAcDistributionHubAccount());
+        fcd = ecosystem.getACDDirectory();
+        fcd.deleteACDistributionHub(selectedFCW);
+        ecosystem.setACDDirectory(fcd);
+        Integer whcnt = ecosystem.getdistributionHubCnt();
+        ecosystem.setdistributionHubCnt(whcnt-1);
         JOptionPane.showMessageDialog(this, "warehouse deleted Successfully");
         populateWHtable();
         clearfields();
@@ -422,9 +422,9 @@ public class ViewModifyWarehousePanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblWarehouseDetails.getModel();
         String WHid = lblWarehouseid1.getText();
 
-        ArrayList<FoodWarehouse> fcWarehouseList = ecosystem.getFCWDirectory().getFcwList();
-        for (FoodWarehouse f : fcWarehouseList) {
-            if (f.getFcwId().equals(WHid)) {
+        ArrayList<DistributionHub> fcWarehouseList = ecosystem.getACDDirectory().getFadList();
+        for (DistributionHub f : fcWarehouseList) {
+            if (f.getAcDistributionHubId().equals(WHid)) {
 
                 String whName = txtWarehousename.getText();
                 String phone = txtWarehousePhone.getText();
@@ -469,19 +469,19 @@ public class ViewModifyWarehousePanel extends javax.swing.JPanel {
                     return;
                 }
 
-                f.setFcwName(txtWarehousename.getText());
-                f.setFcwPhno(txtWarehousePhone.getText());
-                f.setFcwAddres(txtWarehouseAdd.getText());
-                f.setFcwCity(txtWarehouseCity.getText());
-                f.setFcwState(txtWarehouseState.getText());
-                f.setFcwZipcode(txtWarehouseZip.getText());
-                f.setFcwAdmin(txtWarehouseFCAdmin.getText());
+                f.setAcDistributionHubName(txtWarehousename.getText());
+                f.setAcDistributionHubPhone(txtWarehousePhone.getText());
+                f.setAcDistributionHubAddress(txtWarehouseAdd.getText());
+                f.setAcDistributionHubCity(txtWarehouseCity.getText());
+                f.setAcDistributionHubState(txtWarehouseState.getText());
+                f.setAcDistributionHubZipcode(txtWarehouseZip.getText());
+                f.setAcDistributionHubAdmin(txtWarehouseFCAdmin.getText());
                 //UserAccount WHua=new UserAccount();
                 //WHua.setUsername(txtFCAuname.getText());
                 //WHua.setPassword(txtFCApwd.getText());
-                if (f.getFcwAccount().getUsername().equals(txtFCAdminuname.getText())) {
-                    f.getFcwAccount().setPassword(txtFCAdminpwd.getText());
-                    f.getFcwAccount().getEmployee().setName(txtWarehouseFCAdmin.getText());
+                if (f.getAcDistributionHubAccount().getUsername().equals(txtFCAdminuname.getText())) {
+                    f.getAcDistributionHubAccount().setPassword(txtFCAdminpwd.getText());
+                    f.getAcDistributionHubAccount().getEmployee().setName(txtWarehouseFCAdmin.getText());
                 }
                 //f.setFcwAccount(WHua);
                 break;
@@ -489,8 +489,8 @@ public class ViewModifyWarehousePanel extends javax.swing.JPanel {
 
         }
         // ecosystem.setFCWDirectory(fcWarehouseList);
-        fcd = ecosystem.getFCWDirectory();
-        ecosystem.setFCWDirectory(fcd);
+        fcd = ecosystem.getACDDirectory();
+        ecosystem.setACDDirectory(fcd);
         JOptionPane.showMessageDialog(this, "warehouse details updated successfully");
         clearfields();
         populateWHtable();
@@ -562,16 +562,16 @@ public class ViewModifyWarehousePanel extends javax.swing.JPanel {
     private void populateWHtable() {
         DefaultTableModel model = (DefaultTableModel) tblWarehouseDetails.getModel();
         model.setRowCount(0);
-        for (FoodWarehouse fcwh : ecosystem.getFCWDirectory().getFcwList()) {
+        for (DistributionHub fcwh : ecosystem.getACDDirectory().getFadList()) {
             Object[] row = new Object[8];
             row[0] = fcwh;
-            row[1] = fcwh.getFcwName();
-            row[2] = fcwh.getFcwAdmin();
-            row[3] = fcwh.getFcwPhno();
-            row[4] = fcwh.getFcwAddres();
-            row[5] = fcwh.getFcwCity();
-            row[6] = fcwh.getFcwState();
-            row[7] = fcwh.getFcwZipcode();
+            row[1] = fcwh.getAcDistributionHubName();
+            row[2] = fcwh.getAcDistributionHubAdmin();
+            row[3] = fcwh.getAcDistributionHubPhone();
+            row[4] = fcwh.getAcDistributionHubAddress();
+            row[5] = fcwh.getAcDistributionHubCity();
+            row[6] = fcwh.getAcDistributionHubState();
+            row[7] = fcwh.getAcDistributionHubZipcode();
             model.addRow(row);
         }
     }

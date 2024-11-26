@@ -7,23 +7,23 @@ package Business;
 
 import Business.Customer.CustomerDirectory;
 import Business.DeliveryMan.DeliveryManDirectory;
-import Business.FoodDonation.FoodDonationDirectory;
-import Business.FoodDonor.FoodDonorDirectory;
-import Business.FoodPantry.FoodPantryDirectory;
-import Business.FoodPantry.FoodPantryItemsDirectory;
-import Business.FoodWarehouse.FoodWarehouse;
-import Business.FoodWarehouse.FoodWarehouseDirectory;
-import Business.NonGovtOrg.NonGovtOrgDirectory;
-import Business.NonGovtOrgVolunteer.NGOVolunteerRequestsDirectory;
-import Business.NonGovtOrgVolunteer.NGOVolunteerDirectory;
-import Business.FoodRequestorder.FoodRequestorderDirectory;
-import Business.FoodRequestor.FoodRequestorDirectory;
-import Business.Restaurant.RestaurantDirectory;
+import Business.AccessoryDonation.AccessoryDonationDirectory;
+import Business.AccessoryDonor.AccessoryDonorDirectory;
+import Business.DropOff.DropOffDirectory;
+import Business.DropOff.DropOffItemsDirectory;
+import Business.DistributionHub.DistributionHub;
+import Business.DistributionHub.DistributionHubDirectory;
+import Business.CommunityOutreach.CommunityOutreachDirectory;
+import Business.COVolunteer.COVolunteerRequestsDirectory;
+import Business.COVolunteer.COVolunteerDirectory;
+import Business.AccessoryRequestorder.AccessoryRequestorderDirectory;
+import Business.AccessoryRequestor.AccessoryRequestorDirectory;
+import Business.Shop.ShopDirectory;
 import Business.Role.DeliveryVolunteer;
 import Business.Role.DonorRole;
-import Business.Role.FCAdminRole;
-import Business.Role.FCPManagerRole;
-import Business.Role.NgoRole;
+import Business.Role.ACAdminRole;
+import Business.Role.ACPManagerRole;
+import Business.Role.CoRole;
 import Business.Role.RequestorRole;
 import Business.Role.Role;
 import Business.Role.SystemAdminRole;
@@ -38,64 +38,64 @@ import java.util.ArrayList;
 public class EcoSystem extends Organization {
 
     private static EcoSystem business;
-    //private RestaurantDirectory restaurantDirectory;
+    //private ShopDirectory restaurantDirectory;
     //private CustomerDirectory customerDirectory;
     //private DeliveryManDirectory deliveryManDirectory;
 
-    private FoodRequestorDirectory requestorDir;
-    private FoodDonorDirectory donorDir;
-    private FoodWarehouseDirectory fcWarehouseDir;
-    private NonGovtOrgDirectory nogDir;
-    private FoodPantryDirectory fcPantryDir;
+    private AccessoryRequestorDirectory requestorDir;
+    private AccessoryDonorDirectory donorDir;
+    private DistributionHubDirectory acDistributionHubDir;//warehouse
+    private CommunityOutreachDirectory coDir;
+    private DropOffDirectory acDropOffDir;//fcPantryDir
     private UserAccountDirectory uaDir;
-    private FoodPantryItemsDirectory fcPantryItemsDir;
-    private NGOVolunteerDirectory volunteerDir;
-    private FoodDonationDirectory donationDir;
-    private FoodRequestorderDirectory requestorOrderDir;
-    private NGOVolunteerRequestsDirectory volunteerRequestsDir;
+    private DropOffItemsDirectory acDropOffItemsDir;
+    private COVolunteerDirectory volunteerDir;
+    private AccessoryDonationDirectory donationDir;
+    private AccessoryRequestorderDirectory requestorOrderDir;
+    private COVolunteerRequestsDirectory volunteerRequestsDir;
     private Integer donationCounttId;
     private Integer requestorCountID;
-    private Integer warehouseCnt;
-    private Integer pantryCnt;
-    private Integer ngoCnt;
+    private Integer distributionHubCnt;
+    private Integer DropOffCnt;
+    private Integer coCnt;
     private Integer volunteersCnt;
     private Integer donorsCnt;
     private Integer requestorsCnt;
     private Integer organisationsCnt;
-    private Integer restaurentCnt;
+    private Integer shopCnt;
     private Integer donationCnt;
     private Integer requestCnt;
 
-    public Integer getRestaurentCnt() {
-        return restaurentCnt;
+    public Integer getshopCnt() {
+        return shopCnt;
     }
 
-    public void setRestaurentCnt(Integer restaurentCnt) {
-        this.restaurentCnt = restaurentCnt;
+    public void setRestaurentCnt(Integer shopCnt) {
+        this.shopCnt = shopCnt;
     }
 
-    public Integer getWarehouseCnt() {
-        return warehouseCnt;
+    public Integer getdistributionHubCnt() {
+        return distributionHubCnt;
     }
 
-    public void setWarehouseCnt(Integer warehouseCnt) {
-        this.warehouseCnt = warehouseCnt;
+    public void setdistributionHubCnt(Integer distributionHubCnt) {
+        this.distributionHubCnt = distributionHubCnt;
     }
 
-    public Integer getPantryCnt() {
-        return pantryCnt;
+    public Integer getDropOffCnt() {
+        return DropOffCnt;
     }
 
-    public void setPantryCnt(Integer pantryCnt) {
-        this.pantryCnt = pantryCnt;
+    public void setDropOffCnt(Integer DropOffCnt) {
+        this.DropOffCnt = DropOffCnt;
     }
 
-    public Integer getNgoCnt() {
-        return ngoCnt;
+    public Integer getcoCnt() {
+        return coCnt;
     }
 
-    public void setNgoCnt(Integer ngoCnt) {
-        this.ngoCnt = ngoCnt;
+    public void setcoCnt(Integer coCnt) {
+        this.coCnt = coCnt;
     }
 
     public Integer getVolunteersCnt() {
@@ -170,54 +170,54 @@ public class EcoSystem extends Organization {
         EcoSystem.business = business;
     }
 
-    public EcoSystem(FoodRequestorDirectory requestorDir, FoodDonorDirectory donorDir, FoodWarehouseDirectory fcWarehouseDir, NonGovtOrgDirectory nogDir, NGOVolunteerDirectory volunteerDir,
-            FoodPantryDirectory fcPantryDir, FoodPantryItemsDirectory fcPantryItemsDir, FoodDonationDirectory donationDir, FoodRequestorderDirectory requestorOrderDir,
-            NGOVolunteerRequestsDirectory volunteerRequestsDir) { // to add ngo directory
+    public EcoSystem(AccessoryRequestorDirectory requestorDir, AccessoryDonorDirectory donorDir, DistributionHubDirectory acDistributionHubDir, CommunityOutreachDirectory coDir, COVolunteerDirectory volunteerDir,
+            DropOffDirectory acDropOffDir, DropOffItemsDirectory acDropOffItemsDir, AccessoryDonationDirectory donationDir, AccessoryRequestorderDirectory requestorOrderDir,
+            COVolunteerRequestsDirectory volunteerRequestsDir) { // to add ngo directory
 
         this.requestorDir = requestorDir;
         this.donorDir = donorDir;
-        this.fcWarehouseDir = fcWarehouseDir;
-        this.nogDir = nogDir;
+        this.acDistributionHubDir = acDistributionHubDir;
+        this.coDir = coDir;
         this.volunteerDir = volunteerDir;
 
-        this.fcPantryDir = fcPantryDir;
+        this.acDropOffDir = acDropOffDir;
         // this.uaDir = uaDir;
-        this.fcPantryItemsDir = fcPantryItemsDir;
+        this.acDropOffItemsDir = acDropOffItemsDir;
         this.donationDir = donationDir;
         this.requestorOrderDir = requestorOrderDir;
         this.volunteerRequestsDir = volunteerRequestsDir;
 
     }
 
-    public NGOVolunteerDirectory getVolDir() {
+    public COVolunteerDirectory getVolDir() {
         return volunteerDir;
     }
 
-    public void setVolDir(NGOVolunteerDirectory volunteerDir) {
+    public void setVolDir(COVolunteerDirectory volunteerDir) {
         this.volunteerDir = volunteerDir;
     }
 
-    public NonGovtOrgDirectory getNgoDir() {
-        return nogDir;
+    public CommunityOutreachDirectory getcoDir() {
+        return coDir;
     }
 
-    public void setNgoDir(NonGovtOrgDirectory nogDir) {
-        this.nogDir = nogDir;
+    public void setNgoDir(CommunityOutreachDirectory nogDir) {
+        this.coDir = nogDir;
     }
 
-    public FoodRequestorDirectory getReqDir() {
+    public AccessoryRequestorDirectory getReqDir() {
         return requestorDir;
     }
 
-    public void setReqDir(FoodRequestorDirectory requestorDir) {
+    public void setReqDir(AccessoryRequestorDirectory requestorDir) {
         this.requestorDir = requestorDir;
     }
 
-    public FoodDonorDirectory getDonDir() {
+    public AccessoryDonorDirectory getDonDir() {
         return donorDir;
     }
 
-    public void setDonDir(FoodDonorDirectory donorDir) {
+    public void setDonDir(AccessoryDonorDirectory donorDir) {
         this.donorDir = donorDir;
     }
 
@@ -235,37 +235,37 @@ public class EcoSystem extends Organization {
         roleList.add(new SystemAdminRole());
         roleList.add(new RequestorRole());
         roleList.add(new DonorRole());
-        roleList.add(new NgoRole());
-        roleList.add(new FCAdminRole());
-        roleList.add(new FCPManagerRole());
+        roleList.add(new CoRole());
+        roleList.add(new ACAdminRole());
+        roleList.add(new ACPManagerRole());
         roleList.add(new DeliveryVolunteer());
         return roleList;
     }
 
     private EcoSystem() {
-        super("nourished.bridge");
-        this.requestorDir = new FoodRequestorDirectory();
-        this.donorDir = new FoodDonorDirectory();
-        this.fcWarehouseDir = new FoodWarehouseDirectory();
-        this.nogDir = new NonGovtOrgDirectory();
-        this.fcPantryDir = new FoodPantryDirectory();
+        super("Sustainable Accessory Market");
+        this.requestorDir = new AccessoryRequestorDirectory();
+        this.donorDir = new AccessoryDonorDirectory();
+        this.acDistributionHubDir = new DistributionHubDirectory();
+        this.coDir = new CommunityOutreachDirectory();
+        this.acDropOffDir = new DropOffDirectory();
         this.uaDir = new UserAccountDirectory();
-        this.fcPantryItemsDir = new FoodPantryItemsDirectory();
-        this.volunteerDir = new NGOVolunteerDirectory();
-        this.donationDir = new FoodDonationDirectory();
-        this.volunteerRequestsDir = new NGOVolunteerRequestsDirectory();
+        this.acDropOffItemsDir = new DropOffItemsDirectory();
+        this.volunteerDir = new COVolunteerDirectory();
+        this.donationDir = new AccessoryDonationDirectory();
+        this.volunteerRequestsDir = new COVolunteerRequestsDirectory();
         this.donationCounttId = 1;
         this.requestorCountID = 1;
       
         
-        this.warehouseCnt = 0;
-        this.pantryCnt = 0;
-        this.ngoCnt = 0;
+        this.distributionHubCnt = 0;
+        this.DropOffCnt = 0;
+        this.coCnt = 0;
         this.volunteersCnt = 0;
         this.donorsCnt = 0;
         this.requestorsCnt = 0;
         this.organisationsCnt = 0;
-        this.restaurentCnt = 0;
+        this.shopCnt = 0;
         this.donationCnt = 0;
         this.requestCnt = 0;
         System.out.println(this.donationCounttId + "sati");
@@ -285,55 +285,55 @@ public class EcoSystem extends Organization {
         return true;
     }
 
-    public FoodWarehouseDirectory getFCWDirectory() {
-        return fcWarehouseDir;
+    public DistributionHubDirectory getACDDirectory() {
+        return acDistributionHubDir;
     }
 
-    public void setFCWDirectory(FoodWarehouseDirectory fcd) {
-        this.fcWarehouseDir = fcd;
+    public void setACDDirectory(DistributionHubDirectory acd) {
+        this.acDistributionHubDir = acd;
     }
 
-    public FoodPantryDirectory getFCPDirectory() {
-        return fcPantryDir;
+    public DropOffDirectory getACDOFDirectory() {
+        return acDropOffDir;
     }
 
-    public void setFCPDirectory(FoodPantryDirectory fcp) {
-        this.fcPantryDir = fcp;
+    public void setACDODirectory(DropOffDirectory dod) {
+        this.acDropOffDir = dod;
     }
 
     public void setUserAccountDirectory(UserAccountDirectory uad) {
         this.uaDir = uad;
     }
 
-    public FoodPantryItemsDirectory getFCPIDirectory() {
-        return fcPantryItemsDir;
+    public DropOffItemsDirectory getACDOIDirectory() { //ACDOI
+        return acDropOffItemsDir;
     }
 
-    public void setFCPIDirectory(FoodPantryItemsDirectory fcpid) {
-        this.fcPantryItemsDir = fcpid;
+    public void setACDOIDirectory(DropOffItemsDirectory acdoid) {
+        this.acDropOffItemsDir = acdoid;
     }
 
-    public FoodDonationDirectory getDonatDirectory() {
+    public AccessoryDonationDirectory getDonatDirectory() {
         return donationDir;
     }
 
-    public void setDonatDirectory(FoodDonationDirectory donationDir) {
+    public void setDonatDirectory(AccessoryDonationDirectory donationDir) {
         this.donationDir = donationDir;
     }
 
-    public FoodRequestorderDirectory getReqorderDirectory() {
+    public AccessoryRequestorderDirectory getReqorderDirectory() {
         return requestorOrderDir;
     }
 
-    public void setReqorderDirectory(FoodRequestorderDirectory requestorOrderDir) {
+    public void setReqorderDirectory(AccessoryRequestorderDirectory requestorOrderDir) {
         this.requestorOrderDir = requestorOrderDir;
     }
 
-    public NGOVolunteerRequestsDirectory getVRDirectory() {
+    public COVolunteerRequestsDirectory getVRDirectory() {
         return volunteerRequestsDir;
     }
 
-    public void setVRDirectory(NGOVolunteerRequestsDirectory volunteerRequestsDir) {
+    public void setVRDirectory(COVolunteerRequestsDirectory volunteerRequestsDir) {
         this.volunteerRequestsDir = volunteerRequestsDir;
     }
 }

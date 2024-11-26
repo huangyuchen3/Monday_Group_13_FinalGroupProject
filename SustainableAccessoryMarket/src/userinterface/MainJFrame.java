@@ -6,21 +6,21 @@ package userinterface;
 
 import Business.Customer.CustomerDirectory;
 import Business.EcoSystem;
-import Business.DB4OUtil.DB4OUtil;
+//import Business.DB4OUtil.DB4OUtil;
 import Business.DeliveryMan.DeliveryManDirectory;
-import Business.FoodDonation.FoodDonationDirectory;
-import Business.FoodDonor.FoodDonorDirectory;
-import Business.FoodPantry.FoodPantryDirectory;
-import Business.FoodPantry.FoodPantryItemsDirectory;
-import Business.FoodWarehouse.FoodWarehouseDirectory;
-import Business.NonGovtOrg.NonGovtOrgDirectory;
-import Business.NonGovtOrgVolunteer.NGOVolunteerRequestsDirectory;
-import Business.NonGovtOrgVolunteer.NGOVolunteerDirectory;
+import Business.AccessoryDonation.AccessoryDonationDirectory;
+import Business.AccessoryDonor.AccessoryDonorDirectory;
+import Business.DropOff.DropOffDirectory;
+import Business.DropOff.DropOffItemsDirectory;
+import Business.DistributionHub.DistributionHubDirectory;
+import Business.CommunityOutreach.CommunityOutreachDirectory;
+import Business.COVolunteer.COVolunteerRequestsDirectory;
+import Business.COVolunteer.COVolunteerDirectory;
 
 import Business.Organization;
-import Business.FoodRequestorder.FoodRequestorderDirectory;
-import Business.FoodRequestor.FoodRequestorDirectory;
-import Business.Restaurant.RestaurantDirectory;
+import Business.AccessoryRequestorder.AccessoryRequestorderDirectory;
+import Business.AccessoryRequestor.AccessoryRequestorDirectory;
+import Business.Shop.ShopDirectory;
 import Business.UserAccount.UserAccount;
 import Business.UserAccount.UserAccountDirectory;
 import java.awt.CardLayout;
@@ -37,8 +37,8 @@ import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 import javax.swing.JTextField;
 import userinterface.DonorRole.DonorAreaJPanel;
-import userinterface.FCAdminRole.FCAdminWorkAreaPanel;
-import userinterface.FCPManagerRole.FCPManagerWorkAreaPanel;
+import userinterface.ACAdminRole.FCAdminWorkAreaPanel;
+import userinterface.ACPManagerRole.ACPManagerWorkAreaPanel;
 import userinterface.NGORole.ManageVolunteerPanel;
 import userinterface.NGORole.NGOWorkAreaPanel;
 import userinterface.RequestorRole.RequestorAreaJPanel;
@@ -58,21 +58,27 @@ public class MainJFrame extends javax.swing.JFrame {
      * Creates new form MainJFrame
      */
     private EcoSystem ecosystem;
-    private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
+    //private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
+
     UserAccount ua;
-    FoodRequestorDirectory rd;
-    FoodDonorDirectory dd;
-    FoodWarehouseDirectory fcd;
+    AccessoryRequestorDirectory rd;
+    AccessoryDonorDirectory dd;
+    DistributionHubDirectory fcd;
 
     public MainJFrame() throws IOException {
         initComponents();
+        
+         this.setSize(1680, 1050);
 
-        this.setSize(1680, 1050);
-        ecosystem = dB4OUtil.retrieveSystem();
-        if (ecosystem == null) {
-            ecosystem = new EcoSystem(new FoodRequestorDirectory(), new FoodDonorDirectory(), new FoodWarehouseDirectory(), new NonGovtOrgDirectory(), new NGOVolunteerDirectory(),
-                                        new FoodPantryDirectory(),new FoodPantryItemsDirectory(), new FoodDonationDirectory(), new FoodRequestorderDirectory() 
-                                        , new NGOVolunteerRequestsDirectory());
+        // Use Singleton to ensure a single EcoSystem instance
+        ecosystem = EcoSystem.getInstance();
+
+        // Ensure UserAccountDirectory is initialized
+        if (ecosystem.getUserAccountDirectory() == null) {
+            System.out.println("UserAccountDirectory is null. Initializing it...");
+            ecosystem.setUserAccountDirectory(new UserAccountDirectory());
+        } else {
+            System.out.println("UserAccountDirectory is already initialized.");
         }
 
         Image img = ImageIO.read(getClass().getResource("/Images/background.jpg"));
@@ -83,6 +89,23 @@ public class MainJFrame extends javax.swing.JFrame {
         Image newIcon = icon.getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH);
         jLabel2.setIcon(new ImageIcon(newIcon));
         pack();
+
+//        this.setSize(1680, 1050);
+//        //ecosystem = dB4OUtil.retrieveSystem();
+//        if (ecosystem == null) {
+//            ecosystem = new EcoSystem(new AccessoryRequestorDirectory(), new AccessoryDonorDirectory(), new DistributionHubDirectory(), new CommunityOutreachDirectory(), new COVolunteerDirectory(),
+//                                        new DropOffDirectory(),new DropOffItemsDirectory(), new AccessoryDonationDirectory(), new AccessoryRequestorderDirectory() 
+//                                        , new COVolunteerRequestsDirectory());
+//        }
+//
+//        Image img = ImageIO.read(getClass().getResource("/Images/background.jpg"));
+//        Image newimg = img.getScaledInstance(jLabel3.getWidth(), jLabel3.getHeight(), java.awt.Image.SCALE_SMOOTH);
+//        jLabel3.setIcon(new ImageIcon(newimg));
+//
+//        Image icon = ImageIO.read(getClass().getResource("/Images/logo.png"));
+//        Image newIcon = icon.getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH);
+//        jLabel2.setIcon(new ImageIcon(newIcon));
+//        pack();
     }
 
     /**
@@ -279,7 +302,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 CardLayout crdLyt = (CardLayout) container.getLayout();
                 crdLyt.next(container);
             }
-            else if (ua.getRole().toString().equals("Business.Role.NgoRole")) {
+            else if (ua.getRole().toString().equals("Business.Role.CoRole")) {
 
                 userNameJTextField.setEnabled(false);
                 passwordtxtField.setEnabled(false);
@@ -287,19 +310,19 @@ public class MainJFrame extends javax.swing.JFrame {
                 logoutJButton.setEnabled(true);
 
                 NGOWorkAreaPanel req = new NGOWorkAreaPanel(container, ecosystem, ua, jPanel, jSplitPane);
-                container.add("NGOAgent", req);
+                container.add("COAgent", req);
                 CardLayout crdLyt = (CardLayout) container.getLayout();
                 crdLyt.next(container);
             }
-            else if (ua.getRole().toString().equals("Business.Role.FCPManagerRole")) {
+            else if (ua.getRole().toString().equals("Business.Role.ACPManagerRole")) {
 
                 userNameJTextField.setEnabled(false);
                 passwordtxtField.setEnabled(false);
                 loginJButton.setEnabled(false);
                 logoutJButton.setEnabled(true);
 
-                FCPManagerWorkAreaPanel fcpm = new FCPManagerWorkAreaPanel(container, ecosystem, ua, jPanel, jSplitPane);
-                container.add("FCPManager", fcpm);
+                ACPManagerWorkAreaPanel fcpm = new ACPManagerWorkAreaPanel(container, ecosystem, ua, jPanel, jSplitPane);
+                container.add("ACPManager", fcpm);
                 CardLayout crdLyt = (CardLayout) container.getLayout();
                 crdLyt.next(container);
             }
@@ -371,7 +394,7 @@ public class MainJFrame extends javax.swing.JFrame {
             container.add("Home", hmJP);
             CardLayout crdLyt = (CardLayout) container.getLayout();
             crdLyt.next(container);
-            dB4OUtil.storeSystem(ecosystem);
+            //dB4OUtil.storeSystem(ecosystem);
         } catch (IOException ex) {
             Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
         }

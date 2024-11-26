@@ -4,7 +4,7 @@
  */
 package userinterface.DonorRole;
 
-import Business.FoodDonation.FoodDonation;
+import Business.AccessoryDonation.AccessoryDonation;
 import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
 import java.awt.Color;
@@ -78,7 +78,7 @@ public class ViewDonationPanel extends javax.swing.JPanel {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Donation ID", "Food Item", "Quantity", "Warehouse", "Status"
+                "Donation ID", "Item", "Quantity", "Distribution Hub", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -162,12 +162,12 @@ public class ViewDonationPanel extends javax.swing.JPanel {
     private void populateTable() {
         DefaultTableModel model = (DefaultTableModel) tblDonations.getModel();
         model.setRowCount(0);
-        for (FoodDonation dt : ecosystem.getDonatDirectory().getDonatList()) {
+        for (AccessoryDonation dt : ecosystem.getDonatDirectory().getDonatList()) {
             if(dt.getDonatDonorAcc().getUsername()==userAcc.getUsername()){
             Object[] row = new Object[5];
             row[0] = dt;
-            row[1] = dt.getDonatFooditem();
-            row[2] = dt.getDonatFoodQuant();
+            row[1] = dt.getDonatItem();
+            row[2] = dt.getDonatQuant();
             row[3] = dt.getDonatWHname();
             row[4] = dt.getDonatStatus();
             model.addRow(row);

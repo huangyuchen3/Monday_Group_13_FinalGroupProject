@@ -4,8 +4,14 @@
  */
 package Business.UserAccount;
 
+import Business.Role.DeliveryVolunteer;
+import Business.Role.DonorRole;
+import Business.Role.ACPManagerRole;
+import Business.Role.CoRole;
+import Business.Role.RequestorRole;
 import Business.Worker.Worker;
 import Business.Role.Role;
+import Business.Role.SystemAdminRole;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -19,6 +25,35 @@ public class UserAccountDirectory {
 
     public UserAccountDirectory() {
         userAccList = new ArrayList();
+        
+        // Add default admin user
+        UserAccount adminAccount = new UserAccount();
+        adminAccount.setUsername("admin");
+        adminAccount.setPassword("admin123");
+        adminAccount.setRole(new SystemAdminRole()); // Assuming SystemAdminRole exists
+        adminAccount.setEmployee(null); // If no employee object is needed
+        userAccList.add(adminAccount);
+        
+        UserAccount donorAccount = new UserAccount();
+        donorAccount.setUsername("donor");
+        donorAccount.setPassword("donor123");
+        donorAccount.setRole(new DonorRole()); // Replace with your DonorRole class
+        donorAccount.setEmployee(null); // Set an Employee object if needed
+        userAccList.add(donorAccount);
+        
+        UserAccount volunteerAccount = new UserAccount();
+        volunteerAccount.setUsername("volunteer");
+        volunteerAccount.setPassword("volunteer123");
+        volunteerAccount.setRole(new DeliveryVolunteer()); // Replace with your VolunteerRole class
+        volunteerAccount.setEmployee(null); // Set an Employee object if needed
+        userAccList.add(volunteerAccount);
+        
+        UserAccount requesterAccount = new UserAccount();
+        requesterAccount.setUsername("requester");
+        requesterAccount.setPassword("requester123");
+        requesterAccount.setRole(new RequestorRole()); // Replace with your RequestorRole class
+        requesterAccount.setEmployee(null); // Set an Employee object if needed
+        userAccList.add(requesterAccount);
     }
 
     public ArrayList<UserAccount> getUserAccountList() {
@@ -34,13 +69,23 @@ public class UserAccountDirectory {
         return null;
     }
     
-    public UserAccount authenticateUser(String username, String password){
-        for (UserAccount ua : userAccList)
-            if (ua.getUsername().equals(username) && ua.getPassword().equals(password)){
-                return ua;
+//    public UserAccount authenticateUser(String username, String password){
+//        for (UserAccount ua : userAccList)
+//            if (ua.getUsername().equals(username) && ua.getPassword().equals(password)){
+//                return ua;
+//            }
+//        return null;
+//    }
+    
+    public UserAccount authenticateUser(String username, String password) {
+        for (UserAccount account : userAccList) {
+            if (account.getUsername().equals(username) && account.getPassword().equals(password)) {
+                return account;
             }
+        }
         return null;
     }
+
     
     public UserAccount createUserAccount(String username, String password, Worker employee, Role role){
         UserAccount userAccount = new UserAccount();
@@ -78,4 +123,12 @@ public class UserAccountDirectory {
             }
         }
     }
+     
+    public void addUserAccount(UserAccount userAccount) {
+        if (userAccList == null) {
+            userAccList = new ArrayList<>();
+        }
+        userAccList.add(userAccount);
+}
+
 }

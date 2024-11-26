@@ -6,10 +6,10 @@ package userinterface.SystemAdminWorkArea;
 
 import Business.EcoSystem;
 import Business.Worker.Worker;
-import Business.FoodPantry.FoodPantry;
-import Business.FoodPantry.FoodPantryDirectory;
-import Business.FoodWarehouse.FoodWarehouse;
-import Business.Role.FCPManagerRole;
+import Business.DropOff.DropOff;
+import Business.DropOff.DropOffDirectory;
+import Business.DistributionHub.DistributionHub;
+import Business.Role.ACPManagerRole;
 import Business.UserAccount.UserAccount;
 import Business.UserAccount.UserAccountDirectory;
 import java.awt.Dimension;
@@ -38,19 +38,19 @@ public class AddFCPantryPanel extends javax.swing.JPanel {
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
-    FoodPantryDirectory fcpd;
+    DropOffDirectory fcpd;
     UserAccountDirectory uad;
 
     public AddFCPantryPanel(JPanel userProcessContainer, EcoSystem ecosystem) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
-        if (ecosystem.getFCPDirectory() == null) {
-            ecosystem.setFCPDirectory(new FoodPantryDirectory());
+        if (ecosystem.getACDOFDirectory() == null) {
+            ecosystem.setACDODirectory(new DropOffDirectory());
         }
         ArrayList<String> whList = new ArrayList<String>();
-        for (FoodWarehouse fcw : ecosystem.getFCWDirectory().getFcwList()) {
-            whList.add(fcw.getFcwName());
+        for (DistributionHub fcw : ecosystem.getACDDirectory().getFadList()) {
+            whList.add(fcw.getAcDistributionHubName());
         }
         cbWarehouse.setModel(new DefaultComboBoxModel<String>(whList.toArray(new String[0])));
         setBG();
@@ -428,35 +428,35 @@ public class AddFCPantryPanel extends javax.swing.JPanel {
                 Worker employee = new Worker();
                 employee.setName(txtPantryManager.getText());
                 String role = "FCPManager";
-                FoodPantry fcp = new FoodPantry();
-                fcp.setFcpId("fcp" + txtPantryid.getText());
-                fcp.setFcpWHname(cbWarehouse.getSelectedItem().toString());
-                fcp.setFcpName(txtPantryname.getText());
-                fcp.setFcpPhno(txtPantryPhone.getText());
-                fcp.setFcpAddres(txtPantryAdd.getText());
-                fcp.setFcpCity(txtPantryCity.getText());
-                fcp.setFcpState(txtPantryState.getText());
-                fcp.setFcpZipcode(txtPantryZip.getText());
-                fcp.setFcpManager(txtPantryManager.getText());
+                DropOff fcp = new DropOff();
+                fcp.setDropOffId("fcp" + txtPantryid.getText());
+                fcp.setDropOffHubName(cbWarehouse.getSelectedItem().toString());
+                fcp.setDropOffName(txtPantryname.getText());
+                fcp.setDropOffPhone(txtPantryPhone.getText());
+                fcp.setDropOffAddresss(txtPantryAdd.getText());
+                fcp.setDropOffCity(txtPantryCity.getText());
+                fcp.setDropOffState(txtPantryState.getText());
+                fcp.setDropOffZipcode(txtPantryZip.getText());
+                fcp.setDropOffManager(txtPantryManager.getText());
                 UserAccount fcPantryAccount = new UserAccount();
                 fcPantryAccount.setUsername(txtPantryuname.getText());
                 fcPantryAccount.setPassword(txtPantrypwd.getText());
-                fcPantryAccount.setRole(new FCPManagerRole());
+                fcPantryAccount.setRole(new ACPManagerRole());
                 fcPantryAccount.setEmployee(employee);
                 uad = ecosystem.getUserAccountDirectory();
-                uad.createUserAccount(txtPantryuname.getText(), txtPantrypwd.getText(), employee, new FCPManagerRole());
+                uad.createUserAccount(txtPantryuname.getText(), txtPantrypwd.getText(), employee, new ACPManagerRole());
                 ecosystem.setUserAccountDirectory(uad);
-                fcp.setFcpAccount(fcPantryAccount);
+                fcp.setDropOffAccount(fcPantryAccount);
                 System.out.println(fcp);
                 System.out.println("here");
-                fcpd = ecosystem.getFCPDirectory();
+                fcpd = ecosystem.getACDOFDirectory();
                 fcpd.addNewFCPantry(fcp);
                 System.out.println(fcpd);
-                System.out.println(ecosystem.getFCPDirectory().getFcpList());
+                System.out.println(ecosystem.getACDOFDirectory().getFcpList());
 
-                ecosystem.setFCPDirectory(fcpd);
-                Integer pantryCnt = ecosystem.getPantryCnt();
-                ecosystem.setPantryCnt(pantryCnt + 1);
+                ecosystem.setACDODirectory(fcpd);
+                Integer pantryCnt = ecosystem.getDropOffCnt();
+                ecosystem.setDropOffCnt(pantryCnt+1);
 
                 JOptionPane.showMessageDialog(this, "pantry added successfully!");
                 clearfields();

@@ -4,8 +4,8 @@
  */
 package userinterface.DonorRole;
 
-import Business.FoodDonor.FoodDonor;
-import Business.FoodDonor.FoodDonorDirectory;
+import Business.AccessoryDonor.AccessoryDonor;
+import Business.AccessoryDonor.AccessoryDonorDirectory;
 import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
 import java.awt.Dimension;
@@ -35,7 +35,7 @@ public class DonorProfilePanel extends javax.swing.JPanel {
     UserAccount userAcc;
     String DonUname;
     String DonName;
-    FoodDonorDirectory donorDir;
+    AccessoryDonorDirectory donorDir;
 
     public DonorProfilePanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount userAcc) {
         initComponents();
@@ -393,8 +393,8 @@ public class DonorProfilePanel extends javax.swing.JPanel {
     private void btnProfileSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfileSubmitActionPerformed
         // TODO add your handling code here:
         if (!nullCheck()) {
-            ArrayList<FoodDonor> donList = ecosystem.getDonDir().getDonorList();
-            for (FoodDonor d : donList) {
+            ArrayList<AccessoryDonor> donList = ecosystem.getDonDir().getDonorList();
+            for (AccessoryDonor d : donList) {
                 if (d.getDonorAccount().getUsername().equals(DonUname)) {
 
                     String donName = txtDonorname.getText();
@@ -528,7 +528,7 @@ public class DonorProfilePanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void populateFields() {
-        for (FoodDonor d : ecosystem.getDonDir().getDonorList()) {
+        for (AccessoryDonor d : ecosystem.getDonDir().getDonorList()) {
             if (d.getDonorName().equals(DonName)) {
                 txtDonorname.setText(d.getDonorName());
                 txtDonorname.setEnabled(false);

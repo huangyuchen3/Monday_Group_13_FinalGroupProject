@@ -6,17 +6,17 @@ package userinterface.Signup;
 
 import Business.Customer.Customer;
 import Business.Customer.CustomerDirectory;
-import Business.DB4OUtil.DB4OUtil;
+//import Business.DB4OUtil.DB4OUtil;
 import Business.DeliveryMan.DeliveryManDirectory;
-import Business.FoodDonor.FoodDonor;
-import Business.FoodDonor.FoodDonorDirectory;
+import Business.AccessoryDonor.AccessoryDonor;
+import Business.AccessoryDonor.AccessoryDonorDirectory;
 import Business.EcoSystem;
 import Business.Worker.Worker;
-import Business.FoodRequestor.FoodRequestor;
-import Business.FoodRequestor.FoodRequestorDirectory;
-import Business.Mail.JavaMailUtil;
-import Business.Restaurant.Restaurant;
-import Business.Restaurant.RestaurantDirectory;
+import Business.AccessoryRequestor.AccessoryRequestor;
+import Business.AccessoryRequestor.AccessoryRequestorDirectory;
+//import Business.Mail.JavaMailUtil;
+import Business.Shop.Shop;
+import Business.Shop.ShopDirectory;
 import Business.Role.AdminRole;
 import Business.Role.CustomerRole;
 import Business.Role.DonorRole;
@@ -52,11 +52,11 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
     EcoSystem ecosystem;
     JPanel userProcessContainer;
     UserAccount ua;
-    FoodRequestorDirectory rd;
-    FoodRequestor req;
-    FoodDonor don;
-    FoodDonorDirectory dd;
-    private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
+    AccessoryRequestorDirectory rd;
+    AccessoryRequestor req;
+    AccessoryDonor don;
+    AccessoryDonorDirectory dd;
+    //private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     public boolean isNotValid = false;
     private String verificationCode;
 
@@ -71,10 +71,10 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
 
         if (ecosystem.getReqDir() == null) {
-            ecosystem.setReqDir(new FoodRequestorDirectory());
+            ecosystem.setReqDir(new AccessoryRequestorDirectory());
         }
         if (ecosystem.getDonDir() == null) {
-            ecosystem.setDonDir(new FoodDonorDirectory());
+            ecosystem.setDonDir(new AccessoryDonorDirectory());
         }
 
         initComponents();
@@ -149,9 +149,7 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
         rdSignupInd = new javax.swing.JRadioButton();
         rdSignupOr = new javax.swing.JRadioButton();
         bgImgLabel = new javax.swing.JLabel();
-        txtverificationCode = new javax.swing.JTextField();
         submiitBtn = new javax.swing.JButton();
-        lblSignupCPWD1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1100, 1000));
@@ -405,13 +403,6 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
         bgImgLabel.setPreferredSize(new java.awt.Dimension(1100, 1000));
         add(bgImgLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(483, 0, 910, -1));
 
-        txtverificationCode.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtverificationCodeActionPerformed(evt);
-            }
-        });
-        add(txtverificationCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(331, 663, 75, -1));
-
         submiitBtn.setText("Submit");
         submiitBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -419,10 +410,6 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(submiitBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(305, 699, -1, -1));
-
-        lblSignupCPWD1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblSignupCPWD1.setText("Confirmation Code:");
-        add(lblSignupCPWD1, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 662, -1, 25));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSignupHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignupHomeActionPerformed
@@ -475,7 +462,7 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnSignupSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignupSaveActionPerformed
         // TODO add your handling code here:
-        verificationCode = JavaMailUtil.getRandomCode();
+//        verificationCode = JavaMailUtil.getRandomCode();
         isNotValid = false;
 //        isNotValid = mandatoryValidations();
 //        if (isNotValid) {
@@ -545,7 +532,7 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
 
         try {
 //                logger.log(Level.INFO, "Sending email to new user");
-            JavaMailUtil.sendMail(txtSignupEmail.getText(), txtSignupName.getText(), verificationCode);
+//            JavaMailUtil.sendMail(txtSignupEmail.getText(), txtSignupName.getText(), verificationCode);
             JOptionPane.showMessageDialog(this, "Confirmation Mail is sent to the user");
         } catch (Exception ex) {
             System.out.println("error in sending verification code!! " + ex);
@@ -574,7 +561,7 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
 //                    case "Food Requestor":
 //                        usersList.createUserAccount(txtSignupUserName.getText(), txtSignupPwd.getText(), employee, new RequestorRole());
 //                        ua = usersList.getUserAccount(txtSignupUserName.getText());
-//                        req = new FoodRequestor(ua);
+//                        req = new AccessoryRequestor(ua);
 //                        req.setReqType(getReqType());
 //                        req.setReqName(txtSignupName.getText());
 //                        req.setReqAddres(txtSignupAddrss1.getText());
@@ -602,7 +589,7 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
 //                    case "Food Donor":
 //                        usersList.createUserAccount(txtSignupUserName.getText(), txtSignupPwd.getText(), employee, new DonorRole());
 //                        ua = usersList.getUserAccount(txtSignupUserName.getText());
-//                        don = new FoodDonor(ua);
+//                        don = new AccessoryDonor(ua);
 //                        don.setDonorType(role);
 //
 //                        don.setDonorName(txtSignupName.getText());
@@ -776,18 +763,8 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_txtSignupEmailFocusLost
 
-    private void txtverificationCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtverificationCodeActionPerformed
-        if (verificationCode.equals(txtverificationCode.getText())) {
-            JOptionPane.showMessageDialog(this, " Email verified");
-            check = true;
-        } else {
-            JOptionPane.showMessageDialog(this, " please enter correct code");
-        }
-        txtverificationCode.setText("");
-    }//GEN-LAST:event_txtverificationCodeActionPerformed
-
     private void submiitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submiitBtnActionPerformed
-        if (txtverificationCode.getText().equals(verificationCode)) {
+        //if (txtverificationCode.getText().equals(verificationCode)) {
 
             UserAccountDirectory usersList = ecosystem.getUserAccountDirectory();
             String role = (String) cmbIAM.getSelectedItem();
@@ -807,7 +784,7 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
                         case "Food Requestor":
                             usersList.createUserAccount(txtSignupUserName.getText(), txtSignupPwd.getText(), employee, new RequestorRole());
                             ua = usersList.getUserAccount(txtSignupUserName.getText());
-                            req = new FoodRequestor(ua);
+                            req = new AccessoryRequestor(ua);
                             req.setReqType(getReqType());
                             req.setReqName(txtSignupName.getText());
                             req.setReqAddres(txtSignupAddrss1.getText());
@@ -835,7 +812,7 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
                         case "Food Donor":
                             usersList.createUserAccount(txtSignupUserName.getText(), txtSignupPwd.getText(), employee, new DonorRole());
                             ua = usersList.getUserAccount(txtSignupUserName.getText());
-                            don = new FoodDonor(ua);
+                            don = new AccessoryDonor(ua);
                             don.setDonorType(role);
 
                             don.setDonorName(txtSignupName.getText());
@@ -854,7 +831,7 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
                                 Integer orgCnt = ecosystem.getOrganisationsCnt();
                                 ecosystem.setOrganisationsCnt(orgCnt + 1);
                             } else if (donorFlag == false && organisationFlag == false && restaurantFlag == true) {
-                                Integer restaurantCnt = ecosystem.getRestaurentCnt();
+                                Integer restaurantCnt = ecosystem.getshopCnt();
                                 ecosystem.setRestaurentCnt(restaurantCnt + 1);
                             }
 
@@ -863,6 +840,8 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
                             break;
 
                     }
+                }
+            }
 
 //                    try {
 ////                logger.log(Level.INFO, "Sending email to new user");
@@ -871,7 +850,7 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
 //                    }
 //                    JOptionPane.showMessageDialog(this, "Confirmation Mail is sent to the user");
 
-                    clearFields();
+     /*               clearFields();
                 } else {
                     JOptionPane.showMessageDialog(this, "Password and confirm password does not match");
                 }
@@ -888,7 +867,8 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "please enter valid verification code send to your mail");
         }
 
-        txtverificationCode.setText("");
+        txtverificationCode.setText("");*/
+    
     }//GEN-LAST:event_submiitBtnActionPerformed
 
     private void txtSignupPwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSignupPwdActionPerformed
@@ -908,7 +888,6 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblSignupAddress;
     private javax.swing.JLabel lblSignupAge;
     private javax.swing.JLabel lblSignupCPWD;
-    private javax.swing.JLabel lblSignupCPWD1;
     private javax.swing.JLabel lblSignupCity;
     private javax.swing.JLabel lblSignupEmail;
     private javax.swing.JLabel lblSignupGender;
@@ -933,7 +912,6 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtSignupUserCity;
     private javax.swing.JTextField txtSignupUserName;
     private javax.swing.JTextField txtSignupZipCode;
-    private javax.swing.JTextField txtverificationCode;
     // End of variables declaration//GEN-END:variables
 
     private boolean mandatoryValidations() {

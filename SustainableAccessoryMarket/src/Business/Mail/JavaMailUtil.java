@@ -2,7 +2,7 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
+
 package Business.Mail;
 
 /**
@@ -12,6 +12,7 @@ package Business.Mail;
 //import javax.mail.*;
 //import javax.mail.internet.InternetAddress;
 //import javax.mail.internet.MimeMessage;
+/*
 import com.db4o.cs.internal.messages.Message;
 import java.net.Authenticator;
 import java.net.PasswordAuthentication;
@@ -51,9 +52,9 @@ public class JavaMailUtil {
                 + "mail");
     }
 
-    public static Message prepareMessage(java.mail.Session session, String myAccountEmail, String recepientMail, String recepientName,String verificationCode) {
+    public static Message prepareMessage(javax.mail.Session session, String myAccountEmail, String recepientMail, String recepientName,String verificationCode) {
         try {
-            javax.mail.Message message = new java.mail.internet.MimeMessage(session);
+            javax.mail.Message message = new javax.mail.internet.MimeMessage(session);
             message.setFrom(new InternetAddress(myAccountEmail));
             message.setRecipient(Message.RecipientType.TO, new InternetAddress(recepientMail));
             message.setSubject("Account activation mail from Food Donation");
@@ -73,4 +74,4 @@ public static String getRandomCode(){
 }
     
 }
-
+*/

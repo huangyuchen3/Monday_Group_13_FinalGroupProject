@@ -28,11 +28,11 @@ public abstract class Organization {
 //        Customer("Customer"),
 //        DeliveryMan("Delivery"),
 
-        FCAdmin("FCAdmin"),
-        FCPManager("FCPManager"),
+        ACAdmin("ACAdmin"),
+        ACPManager("ACPManager"),
         Donor("Donor"),
         Requestor("Requestor"),
-        NGOAgent("NGOAgent"),
+        COAgent("COAgent"),
         Volunteer("Volunteer"),
         SysAdmin("Sysadmin");
         
