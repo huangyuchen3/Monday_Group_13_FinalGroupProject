@@ -5,10 +5,10 @@
 package userinterface.RequestorRole;
 
 import Business.EcoSystem;
-import Business.FoodPantry.FoodPantry;
-import Business.FoodRequestorder.FoodRequestorder;
-import Business.FoodRequestorder.FoodRequestorderDirectory;
-import Business.FoodRequestor.FoodRequestor;
+import Business.DropOff.DropOff;
+import Business.AccessoryRequestorder.AccessoryRequestorder;
+import Business.AccessoryRequestorder.AccessoryRequestorderDirectory;
+import Business.AccessoryRequestor.AccessoryRequestor;
 import Business.UserAccount.UserAccount;
 import java.awt.Dimension;
 import java.awt.Image;
@@ -39,7 +39,7 @@ public class RequestFoodPanel extends javax.swing.JPanel {
     String requestorState;
     String selDelCity;
     Integer requestorId;
-    FoodRequestorderDirectory rqorD;
+    AccessoryRequestorderDirectory rqorD;
     public RequestFoodPanel(JPanel userProcessContainer,EcoSystem ecosystem,UserAccount userAcc) {
         initComponents();
          this.userProcessContainer = userProcessContainer;
@@ -51,14 +51,14 @@ public class RequestFoodPanel extends javax.swing.JPanel {
         System.out.println(requestorId +" reqsId");
         ecosystem.setReqCntID(requestorId);
         if(ecosystem.getReqorderDirectory()== null){
-         ecosystem.setReqorderDirectory(new FoodRequestorderDirectory());
+         ecosystem.setReqorderDirectory(new AccessoryRequestorderDirectory());
         }
         String requestorState = ecosystem.getReqDir().getreqState(reqUName);
          ArrayList<String> CityList = new ArrayList<String>();
-        for (FoodPantry fcp : ecosystem.getFCPDirectory().getFcpList()){
-            if(fcp.getFcpState().equals(requestorState)){
-                CityList.add(fcp.getFcpCity());
-                selDelCity = fcp.getFcpCity();
+        for (DropOff fcp : ecosystem.getACDOFDirectory().getFcpList()){
+            if(fcp.getDropOffState().equals(requestorState)){
+                CityList.add(fcp.getDropOffCity());
+                selDelCity = fcp.getDropOffCity();
                 break;
             }
         }         
@@ -66,9 +66,9 @@ public class RequestFoodPanel extends javax.swing.JPanel {
         
 //        String city=cbSelectCity.getSelectedItem().toString();
         ArrayList<String> ptList = new ArrayList<String>();
-        for (FoodPantry fcp : ecosystem.getFCPDirectory().getFcpList()){
-            if(fcp.getFcpCity().equals(selDelCity)){
-                ptList.add(fcp.getFcpName());
+        for (DropOff fcp : ecosystem.getACDOFDirectory().getFcpList()){
+            if(fcp.getDropOffCity().equals(selDelCity)){
+                ptList.add(fcp.getDropOffName());
             }
         }
         cbNearPantry.setModel(new DefaultComboBoxModel<String>(ptList.toArray(new String[0])));
@@ -259,7 +259,7 @@ public class RequestFoodPanel extends javax.swing.JPanel {
     private void chkDelAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkDelAddActionPerformed
         // TODO add your handling code here:
         if(chkDelAdd.isSelected()){
-            for(FoodRequestor r: ecosystem.getReqDir().getReqAccList()){
+            for(AccessoryRequestor r: ecosystem.getReqDir().getReqAccList()){
                 if(r.getReqUserName().equals(reqUName)){
                     txtDeliveryadd.setText(r.getReqAddres());
                     txtDelcity.setText(r.getReqCity());
@@ -315,7 +315,7 @@ public class RequestFoodPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
 //        String city=cbSelectCity.getSelectedItem().toString();
 //        ArrayList<String> ptList = new ArrayList<String>();
-//        for (FoodPantry fcp : ecosystem.getFCPDirectory().getFcpList()){
+//        for (DropOff fcp : ecosystem.getFCPDirectory().getFcpList()){
 //            if(fcp.getFcpCity().equals(city)){
 //                ptList.add(fcp.getFcpName());
 //            }
@@ -326,7 +326,7 @@ public class RequestFoodPanel extends javax.swing.JPanel {
     private void btnReqSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReqSubmitActionPerformed
         // TODO add your handling code here:
         if(!nullCheck()){
-            FoodRequestorder rq= new FoodRequestorder();
+            AccessoryRequestorder rq= new AccessoryRequestorder();
             rq.setReqOrderId(String.valueOf(requestorId));
             rq.setReqName(requestorName);
             rq.setReqOrderQuant(String.valueOf(sdFoodQuan.getValue()));

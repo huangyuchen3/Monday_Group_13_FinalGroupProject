@@ -4,11 +4,11 @@
  */
 package userinterface.DonorRole;
 
-import Business.FoodDonation.FoodDonation;
-import Business.FoodDonation.FoodDonationDirectory;
-import Business.FoodDonor.FoodDonor;
+import Business.AccessoryDonation.AccessoryDonation;
+import Business.AccessoryDonation.AccessoryDonationDirectory;
+import Business.AccessoryDonor.AccessoryDonor;
 import Business.EcoSystem;
-import Business.FoodWarehouse.FoodWarehouse;
+import Business.DistributionHub.DistributionHub;
 import Business.UserAccount.UserAccount;
 import java.awt.Dimension;
 import java.awt.Image;
@@ -38,7 +38,7 @@ public class DonateNowPanel extends javax.swing.JPanel {
     String donName;
     String donState;
     Integer donId;
-    FoodDonationDirectory donatD;
+    AccessoryDonationDirectory donatD;
 
     public DonateNowPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount userAcc) {
         initComponents();
@@ -51,13 +51,13 @@ public class DonateNowPanel extends javax.swing.JPanel {
         donUName = userAcc.getUsername();
         donName = userAcc.getEmployee().getName();
         if (ecosystem.getDonatDirectory() == null) {
-            ecosystem.setDonatDirectory(new FoodDonationDirectory());
+            ecosystem.setDonatDirectory(new AccessoryDonationDirectory());
         }
         String donState = ecosystem.getDonDir().getdonState(donUName);
         ArrayList<String> CityList = new ArrayList<String>();
-        for (FoodWarehouse fcw : ecosystem.getFCWDirectory().getFcwList()) {
-            if (fcw.getFcwState().equals(donState)) {
-                CityList.add(fcw.getFcwCity());
+        for (DistributionHub fcw : ecosystem.getACDDirectory().getFadList()) {
+            if (fcw.getAcDistributionHubState().equals(donState)) {
+                CityList.add(fcw.getAcDistributionHubCity());
             }
         }        
         cbDonateCity.setModel(new DefaultComboBoxModel<String>(CityList.toArray(new String[0])));
@@ -78,7 +78,7 @@ public class DonateNowPanel extends javax.swing.JPanel {
         lblDonationProfileTitle = new javax.swing.JLabel();
         lblDonateFoodItem = new javax.swing.JLabel();
         lblDonateFoodQuantity = new javax.swing.JLabel();
-        txtDonateFoodItem = new javax.swing.JTextField();
+        txtDonateItem = new javax.swing.JTextField();
         sdDonateQuantity = new javax.swing.JSlider();
         lblDonatePickupAddress = new javax.swing.JLabel();
         chkDonateAddress = new javax.swing.JCheckBox();
@@ -105,25 +105,25 @@ public class DonateNowPanel extends javax.swing.JPanel {
 
         lblDonationProfileTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
         lblDonationProfileTitle.setForeground(new java.awt.Color(0, 153, 204));
-        lblDonationProfileTitle.setText("Donate Food ");
+        lblDonationProfileTitle.setText("Donate Accessory ");
         add(lblDonationProfileTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, -1, -1));
 
         lblDonateFoodItem.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblDonateFoodItem.setText("Food Item:");
-        add(lblDonateFoodItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, -1, -1));
+        lblDonateFoodItem.setText("Accessory Item:");
+        add(lblDonateFoodItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, -1, -1));
 
         lblDonateFoodQuantity.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         lblDonateFoodQuantity.setText("Quantity:");
         add(lblDonateFoodQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, -1, -1));
 
-        txtDonateFoodItem.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtDonateFoodItem.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtDonateFoodItem.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtDonateItem.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDonateItem.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtDonateItem.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtDonateFoodItemFocusLost(evt);
+                txtDonateItemFocusLost(evt);
             }
         });
-        add(txtDonateFoodItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(214, 147, 137, -1));
+        add(txtDonateItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(214, 147, 137, -1));
 
         sdDonateQuantity.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         sdDonateQuantity.setMajorTickSpacing(10);
@@ -212,8 +212,8 @@ public class DonateNowPanel extends javax.swing.JPanel {
         add(cbDonateCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 150, -1));
 
         lblDonateWH.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblDonateWH.setText("Nearest Warehouse:");
-        add(lblDonateWH, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, -1, -1));
+        lblDonateWH.setText("Nearest DistributionHub:");
+        add(lblDonateWH, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, -1, -1));
 
         cbWarehouse.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         cbWarehouse.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Select --" }));
@@ -279,10 +279,10 @@ public class DonateNowPanel extends javax.swing.JPanel {
             Logger.getLogger(DonorProfilePanel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    private void txtDonateFoodItemFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDonateFoodItemFocusLost
+    private void txtDonateItemFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDonateItemFocusLost
         // TODO add your handling code here:
         
-    }//GEN-LAST:event_txtDonateFoodItemFocusLost
+    }//GEN-LAST:event_txtDonateItemFocusLost
 
     private void txtDonateAddressFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDonateAddressFocusLost
         // TODO add your handling code here:
@@ -307,12 +307,12 @@ public class DonateNowPanel extends javax.swing.JPanel {
     private void btnDonateSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDonateSubmitActionPerformed
         // TODO add your handling code here:
         if (!nullCheck()) {
-            FoodDonation dt = new FoodDonation();
+            AccessoryDonation dt = new AccessoryDonation();
             dt.setDonatId(String.valueOf(donId));
             dt.setDonatDname(donName);
             
-            dt.setDonatFooditem(txtDonateFoodItem.getText());
-            dt.setDonatFoodQuant(String.valueOf(sdDonateQuantity.getValue()));
+            dt.setDonatItem(txtDonateItem.getText());
+            dt.setDonatQuant(String.valueOf(sdDonateQuantity.getValue()));
             dt.setDonatPickuptype("Pick up");
             dt.setDonatStatus("Requested");
             dt.setDonatWHname(cbWarehouse.getSelectedItem().toString());
@@ -339,9 +339,9 @@ public class DonateNowPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         String city = cbDonateCity.getSelectedItem().toString();
         ArrayList<String> whList = new ArrayList<String>();
-        for (FoodWarehouse fcw : ecosystem.getFCWDirectory().getFcwList()) {
-            if (fcw.getFcwCity().equals(city)) {
-                whList.add(fcw.getFcwName());
+        for (DistributionHub fcw : ecosystem.getACDDirectory().getFadList()) {
+            if (fcw.getAcDistributionHubCity().equals(city)) {
+                whList.add(fcw.getAcDistributionHubName());
             }
         }        
         cbWarehouse.setModel(new DefaultComboBoxModel<String>(whList.toArray(new String[0])));
@@ -350,7 +350,7 @@ public class DonateNowPanel extends javax.swing.JPanel {
     private void chkDonateAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkDonateAddressActionPerformed
         // TODO add your handling code here:
         if (chkDonateAddress.isSelected()) {
-            for (FoodDonor d : ecosystem.getDonDir().getDonorList()) {
+            for (AccessoryDonor d : ecosystem.getDonDir().getDonorList()) {
                 if (d.getDonUserName().equals(donUName)) {
                     txtDonateAddress.setText(d.getDonorAddres());
                     txtDonateCity.setText(d.getDonorCity());
@@ -394,13 +394,13 @@ public class DonateNowPanel extends javax.swing.JPanel {
     private javax.swing.JSlider sdDonateQuantity;
     private javax.swing.JTextField txtDonateAddress;
     private javax.swing.JTextField txtDonateCity;
-    private javax.swing.JTextField txtDonateFoodItem;
+    private javax.swing.JTextField txtDonateItem;
     private javax.swing.JTextField txtDonateState;
     private javax.swing.JTextField txtDonateZip;
     // End of variables declaration//GEN-END:variables
 
     private boolean nullCheck() {
-        if (txtDonateFoodItem.getText().length() != 0 && txtDonateAddress.getText().length() != 0 && txtDonateCity.getText().length() != 0
+        if (txtDonateItem.getText().length() != 0 && txtDonateAddress.getText().length() != 0 && txtDonateCity.getText().length() != 0
                 && txtDonateState.getText().length() != 0 && txtDonateZip.getText().length() != 0) {
             return false;
         } else {
@@ -409,7 +409,7 @@ public class DonateNowPanel extends javax.swing.JPanel {
     }
     
     private void clearfields() {
-        txtDonateFoodItem.setText("");
+        txtDonateItem.setText("");
         txtDonateAddress.setText("");
         txtDonateCity.setText("");
         txtDonateState.setText("");

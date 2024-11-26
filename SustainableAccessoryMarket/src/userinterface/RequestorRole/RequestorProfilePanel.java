@@ -5,8 +5,8 @@
 package userinterface.RequestorRole;
 
 import Business.EcoSystem;
-import Business.FoodRequestor.FoodRequestor;
-import Business.FoodRequestor.FoodRequestorDirectory;
+import Business.AccessoryRequestor.AccessoryRequestor;
+import Business.AccessoryRequestor.AccessoryRequestorDirectory;
 import Business.UserAccount.UserAccount;
 import java.awt.Dimension;
 import java.awt.Image;
@@ -35,7 +35,7 @@ public class RequestorProfilePanel extends javax.swing.JPanel {
     UserAccount userAcc;
     String reqUname;
     String requestorName;
-    FoodRequestorDirectory requestorDir;
+    AccessoryRequestorDirectory requestorDir;
 
     public RequestorProfilePanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount userAcc) {
         initComponents();
@@ -368,8 +368,8 @@ public class RequestorProfilePanel extends javax.swing.JPanel {
     private void btnReqSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReqSubmitActionPerformed
         // TODO add your handling code here:
         if (!nullCheck()) {
-            ArrayList<FoodRequestor> reqList = ecosystem.getReqDir().getReqAccList();
-            for (FoodRequestor r : reqList) {
+            ArrayList<AccessoryRequestor> reqList = ecosystem.getReqDir().getReqAccList();
+            for (AccessoryRequestor r : reqList) {
                 if (r.getReqAccount().getUsername().equals(reqUname)) {
 
                     String reqName = txtReqName.getText();
@@ -523,7 +523,7 @@ public class RequestorProfilePanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void populateFields() {
-        for (FoodRequestor r : ecosystem.getReqDir().getReqAccList()) {
+        for (AccessoryRequestor r : ecosystem.getReqDir().getReqAccList()) {
             if (r.getReqName().equals(requestorName)) {
                 txtReqName.setText(r.getReqName());
                 txtReqName.setEnabled(false);

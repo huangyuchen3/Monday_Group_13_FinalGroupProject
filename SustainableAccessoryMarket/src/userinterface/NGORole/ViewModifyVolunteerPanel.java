@@ -7,8 +7,8 @@ package userinterface.NGORole;
 
 import Business.EcoSystem;
 import Business.Worker.Worker;
-import Business.NonGovtOrgVolunteer.NGOVolunteer;
-import Business.NonGovtOrgVolunteer.NGOVolunteerDirectory;
+import Business.COVolunteer.COVolunteer;
+import Business.COVolunteer.COVolunteerDirectory;
 import Business.UserAccount.UserAccount;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -38,7 +38,7 @@ public class ViewModifyVolunteerPanel extends javax.swing.JPanel {
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
-    NGOVolunteerDirectory vold;
+    COVolunteerDirectory vold;
     String nogName;
 
     public ViewModifyVolunteerPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount userAcc) {
@@ -46,7 +46,7 @@ public class ViewModifyVolunteerPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
         if (ecosystem.getVolDir() == null) {
-            ecosystem.setVolDir(new NGOVolunteerDirectory());
+            ecosystem.setVolDir(new COVolunteerDirectory());
         }
         nogName = userAcc.getEmployee().getName();
         populatevoltable();
@@ -307,7 +307,7 @@ public class ViewModifyVolunteerPanel extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model = (DefaultTableModel) tblViewVolunteer.getModel();
-        NGOVolunteer selectedvol = (NGOVolunteer) model.getValueAt(selectedRowIndex, 0);
+        COVolunteer selectedvol = (COVolunteer) model.getValueAt(selectedRowIndex, 0);
         ecosystem.getUserAccountDirectory().deleteUserAccount(
                 ecosystem.getVolDir().getVolunteerList().get(selectedRowIndex).getVolAccount());
         vold = ecosystem.getVolDir();
@@ -359,7 +359,7 @@ public class ViewModifyVolunteerPanel extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model = (DefaultTableModel) tblViewVolunteer.getModel();
-        NGOVolunteer selectedvol = (NGOVolunteer) model.getValueAt(selectedRowIndex, 0);
+        COVolunteer selectedvol = (COVolunteer) model.getValueAt(selectedRowIndex, 0);
         lblvolunteerid1.setText(selectedvol.getVolId());
         txtVolunteername.setText(selectedvol.getVolName());
         txtVolunteerage.setText(selectedvol.getVolAge());
@@ -406,8 +406,8 @@ public class ViewModifyVolunteerPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblViewVolunteer.getModel();
         String volid = lblvolunteerid1.getText();
 
-        ArrayList<NGOVolunteer> volList = ecosystem.getVolDir().getVolunteerList();
-        for (NGOVolunteer vol : volList) {
+        ArrayList<COVolunteer> volList = ecosystem.getVolDir().getVolunteerList();
+        for (COVolunteer vol : volList) {
             if (vol.getVolId().equals(volid)) {
                 
                 String volName = txtVolunteername.getText();
@@ -580,8 +580,8 @@ public class ViewModifyVolunteerPanel extends javax.swing.JPanel {
     private void populatevoltable() {
         DefaultTableModel model = (DefaultTableModel) tblViewVolunteer.getModel();
         model.setRowCount(0);
-        for (NGOVolunteer vol : ecosystem.getVolDir().getVolunteerList()) {
-            if (vol.getVolNGO().equals(nogName)) {
+        for (COVolunteer vol : ecosystem.getVolDir().getVolunteerList()) {
+            if (vol.getVolCO().equals(nogName)) {
                 Object[] row = new Object[9];
                 row[0] = vol;
                 row[1] = vol.getVolName();

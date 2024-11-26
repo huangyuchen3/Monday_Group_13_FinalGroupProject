@@ -5,10 +5,10 @@
 package userinterface.NGORole;
 
 import Business.EcoSystem;
-import Business.NonGovtOrg.NonGovtOrg;
-import Business.NonGovtOrgVolunteer.NGOVolunteerRequests;
-import Business.NonGovtOrgVolunteer.NGOVolunteer;
-import Business.FoodRequestorder.FoodRequestorder;
+import Business.CommunityOutreach.CommunityOutreach;
+import Business.COVolunteer.COVolunteerRequests;
+import Business.COVolunteer.COVolunteer;
+import Business.AccessoryRequestorder.AccessoryRequestorder;
 import Business.UserAccount.UserAccount;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -45,9 +45,9 @@ public class RequestsPanel extends javax.swing.JPanel {
         this.ecosystem = ecosystem;
         this.userAcc = userAcc;
         ngoAName = userAcc.getEmployee().getName();
-        for (NonGovtOrg ng : ecosystem.getNgoDir().getNgoList()) {
-            if (ng.getNgoAgent().equals(ngoAName)) {
-                nogName = ng.getNgoName();
+        for (CommunityOutreach ng : ecosystem.getcoDir().getNgoList()) {
+            if (ng.getCOAgent().equals(ngoAName)) {
+                nogName = ng.getCOName();
             }
         }
         setBG();
@@ -220,11 +220,11 @@ public class RequestsPanel extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model = (DefaultTableModel) tblWarehouse.getModel();
-        NGOVolunteer selectedV = (NGOVolunteer) model.getValueAt(selectedRowIndex, 0);
+        COVolunteer selectedV = (COVolunteer) model.getValueAt(selectedRowIndex, 0);
         if (selectedV.getVolAvail().equals("New") || selectedV.getVolAvail().equals("No")) {
             selectedV.setVolAvail("Yes");
             String reqidval = lblReq.getText();
-            for (NGOVolunteerRequests vr : ecosystem.getVRDirectory().getVrList()) {
+            for (COVolunteerRequests vr : ecosystem.getVRDirectory().getVrList()) {
                 if (vr.getVolreqId().equals(reqidval)) {
                     vr.setVolreqStatus("Completed");
                 }
@@ -247,11 +247,11 @@ public class RequestsPanel extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model = (DefaultTableModel) tblFCReq.getModel();
-        NGOVolunteerRequests selectedVR = (NGOVolunteerRequests) model.getValueAt(selectedRowIndex, 0);
+        COVolunteerRequests selectedVR = (COVolunteerRequests) model.getValueAt(selectedRowIndex, 0);
         if (selectedVR.getVolreqStatus().equals("Completed")) {
             JOptionPane.showMessageDialog(this, "Request already completed!");
         } else {
-            lblWarehouse.setText(selectedVR.getVolreqWH());
+            lblWarehouse.setText(selectedVR.getVolreqDB());
             lblReq.setText(selectedVR.getVolreqId());
             tblWarehouse.setVisible(true);
             btnFCReqAvail.setVisible(true);
@@ -288,12 +288,12 @@ public class RequestsPanel extends javax.swing.JPanel {
     private void populateRTable() {
         DefaultTableModel model = (DefaultTableModel) tblFCReq.getModel();
         model.setRowCount(0);
-        for (NGOVolunteerRequests vr : ecosystem.getVRDirectory().getVrList()) {
+        for (COVolunteerRequests vr : ecosystem.getVRDirectory().getVrList()) {
             if (vr.getVolreqName().equals(nogName)) {
                 Object[] row = new Object[6];
                 row[0] = vr;
                 row[1] = vr.getVolreqName();
-                row[2] = vr.getVolreqWH();
+                row[2] = vr.getVolreqDB();
                 row[3] = vr.getVolreqNum();
                 row[4] = vr.getVolreqStatus();
                 model.addRow(row);
@@ -304,8 +304,8 @@ public class RequestsPanel extends javax.swing.JPanel {
     private void populateVTable() {
         DefaultTableModel model = (DefaultTableModel) tblWarehouse.getModel();
         model.setRowCount(0);
-        for (NGOVolunteer vol : ecosystem.getVolDir().getVolunteerList()) {
-            if (vol.getVolNGO().equals(ngoAName)) {
+        for (COVolunteer vol : ecosystem.getVolDir().getVolunteerList()) {
+            if (vol.getVolCO().equals(ngoAName)) {
                 Object[] row = new Object[6];
                 row[0] = vol;
                 row[1] = vol.getVolName();

@@ -5,7 +5,7 @@
 package userinterface.RequestorRole;
 
 import Business.EcoSystem;
-import Business.FoodRequestorder.FoodRequestorder;
+import Business.AccessoryRequestorder.AccessoryRequestorder;
 import Business.UserAccount.UserAccount;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -134,7 +134,7 @@ public class ReqorderStatusPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblFCReq.getModel();
         model.setRowCount(0);
         if (ecosystem.getReqorderDirectory() != null) {
-            for (FoodRequestorder rq : ecosystem.getReqorderDirectory().getReqOrderList()) {
+            for (AccessoryRequestorder rq : ecosystem.getReqorderDirectory().getReqOrderList()) {
                 if (rq.getReqRequestorAcc().getUsername() == null ? userAcc.getUsername() == null : rq.getReqRequestorAcc().getUsername().equals(userAcc.getUsername())) {
                     Object[] row = new Object[6];
                     row[0] = rq;

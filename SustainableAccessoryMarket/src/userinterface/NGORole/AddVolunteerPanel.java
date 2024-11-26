@@ -7,8 +7,8 @@ package userinterface.NGORole;
 
 import Business.EcoSystem;
 import Business.Worker.Worker;
-import Business.NonGovtOrgVolunteer.NGOVolunteer;
-import Business.NonGovtOrgVolunteer.NGOVolunteerDirectory;
+import Business.COVolunteer.COVolunteer;
+import Business.COVolunteer.COVolunteerDirectory;
 import Business.Role.DeliveryVolunteer;
 import Business.UserAccount.UserAccount;
 import Business.UserAccount.UserAccountDirectory;
@@ -36,18 +36,18 @@ public class AddVolunteerPanel extends javax.swing.JPanel {
     JPanel userProcessContainer;
     EcoSystem ecosystem;
     UserAccountDirectory uad;
-    NGOVolunteerDirectory vold;
-    String nogName;
+    COVolunteerDirectory vold;
+    String coName;
 
     public AddVolunteerPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount userAcc) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
         if (ecosystem.getVolDir() == null) {
-            ecosystem.setVolDir(new NGOVolunteerDirectory());
+            ecosystem.setVolDir(new COVolunteerDirectory());
         }
         setBG();
-        nogName = userAcc.getEmployee().getName();
+        coName = userAcc.getEmployee().getName();
     }
 
     /**
@@ -439,7 +439,7 @@ public class AddVolunteerPanel extends javax.swing.JPanel {
                 Worker employee = new Worker();
                 employee.setName(txtVolunteername.getText());
                 String role = "Volunteer";
-                NGOVolunteer vol = new NGOVolunteer();
+                COVolunteer vol = new COVolunteer();
                 vol.setVolId("volunteer" + txtVolunteerid.getText());
                 vol.setVolName(txtVolunteername.getText());
                 vol.setVolAge(txtVolunteerage.getText());
@@ -458,7 +458,7 @@ public class AddVolunteerPanel extends javax.swing.JPanel {
                 volAccount.setRole(new DeliveryVolunteer());
                 volAccount.setEmployee(employee);
                 vol.setVolAvail("New");
-                vol.setVolNGO(nogName);
+                vol.setVolCO(coName);
                 uad = ecosystem.getUserAccountDirectory();
                 uad.createUserAccount(txtVolunteeruname.getText(), txtVolunteerpwd.getText(), employee, new DeliveryVolunteer());
                 ecosystem.setUserAccountDirectory(uad);

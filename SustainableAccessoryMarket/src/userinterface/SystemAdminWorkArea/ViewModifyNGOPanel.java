@@ -7,9 +7,9 @@ package userinterface.SystemAdminWorkArea;
 
 import Business.EcoSystem;
 import Business.Worker.Worker;
-import Business.FoodWarehouse.FoodWarehouse;
-import Business.NonGovtOrg.NonGovtOrg;
-import Business.NonGovtOrg.NonGovtOrgDirectory;
+import Business.DistributionHub.DistributionHub;
+import Business.CommunityOutreach.CommunityOutreach;
+import Business.CommunityOutreach.CommunityOutreachDirectory;
 import Business.UserAccount.UserAccount;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -39,7 +39,7 @@ public class ViewModifyNGOPanel extends javax.swing.JPanel {
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
-    NonGovtOrgDirectory ngod;
+    CommunityOutreachDirectory ngod;
 
     public ViewModifyNGOPanel(JPanel userProcessContainer, EcoSystem ecosystem) throws IOException {
         initComponents();
@@ -54,8 +54,8 @@ public class ViewModifyNGOPanel extends javax.swing.JPanel {
 //        imageLbl.setIcon(new ImageIcon(newimg));
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
-        if (ecosystem.getNgoDir() == null) {
-            ecosystem.setNgoDir(new NonGovtOrgDirectory());
+        if (ecosystem.getcoDir() == null) {
+            ecosystem.setNgoDir(new CommunityOutreachDirectory());
         }
         populatengotable();
         txtNonGovtOrguname.setEnabled(false);
@@ -356,14 +356,14 @@ public class ViewModifyNGOPanel extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model = (DefaultTableModel) tblNonGovtOrg.getModel();
-        NonGovtOrg selectedNGO = (NonGovtOrg) model.getValueAt(selectedRowIndex, 0);
+        CommunityOutreach selectedNGO = (CommunityOutreach) model.getValueAt(selectedRowIndex, 0);
         ecosystem.getUserAccountDirectory().deleteUserAccount(
-                ecosystem.getNgoDir().getNgoList().get(selectedRowIndex).getNgoAccount());
-        ngod = ecosystem.getNgoDir();
+                ecosystem.getcoDir().getNgoList().get(selectedRowIndex).getCOAccount());
+        ngod = ecosystem.getcoDir();
         ngod.deleteNGO(selectedNGO);
         ecosystem.setNgoDir(ngod);
-        Integer ngoCnt = ecosystem.getNgoCnt();
-        ecosystem.setNgoCnt(ngoCnt - 1);
+        Integer ngoCnt = ecosystem.getcoCnt();
+        ecosystem.setcoCnt(ngoCnt - 1);
         JOptionPane.showMessageDialog(this, "NGO deleted Successfully");
         populatengotable();
         clearfields();
@@ -377,17 +377,17 @@ public class ViewModifyNGOPanel extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model = (DefaultTableModel) tblNonGovtOrg.getModel();
-        NonGovtOrg selectedNGO = (NonGovtOrg) model.getValueAt(selectedRowIndex, 0);
-        lblNonGovtOrgid1.setText(selectedNGO.getNgoId());
-        txtNonGovtOrgname.setText(selectedNGO.getNgoName());
-        txtNonGovtOrgPhone.setText(selectedNGO.getNgoPhno());
-        txtNonGovtOrgAdd.setText(selectedNGO.getNgoAddress());
-        txtNonGovtOrgCity.setText(selectedNGO.getNgoCity());
-        txtNonGovtOrgState.setText(selectedNGO.getNgoState());
-        txtNonGovtOrgZip.setText(selectedNGO.getNgoZipcode());
-        txtNonGovtOrgAgent.setText(selectedNGO.getNgoAgent());
-        txtNonGovtOrguname.setText(selectedNGO.getNgoAccount().getUsername());
-        txtNonGovtOrgpwd.setText(selectedNGO.getNgoAccount().getPassword());
+        CommunityOutreach selectedNGO = (CommunityOutreach) model.getValueAt(selectedRowIndex, 0);
+        lblNonGovtOrgid1.setText(selectedNGO.getCOId());
+        txtNonGovtOrgname.setText(selectedNGO.getCOName());
+        txtNonGovtOrgPhone.setText(selectedNGO.getCOPhone());
+        txtNonGovtOrgAdd.setText(selectedNGO.getCOAddress());
+        txtNonGovtOrgCity.setText(selectedNGO.getCOCity());
+        txtNonGovtOrgState.setText(selectedNGO.getCOState());
+        txtNonGovtOrgZip.setText(selectedNGO.getCOZipcode());
+        txtNonGovtOrgAgent.setText(selectedNGO.getCOAgent());
+        txtNonGovtOrguname.setText(selectedNGO.getCOAccount().getUsername());
+        txtNonGovtOrgpwd.setText(selectedNGO.getCOAccount().getPassword());
     }//GEN-LAST:event_btnNonGovtOrgEditActionPerformed
 
     private void txtNonGovtOrgnameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNonGovtOrgnameFocusLost
@@ -460,9 +460,9 @@ public class ViewModifyNGOPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblNonGovtOrg.getModel();
         String NGOid = lblNonGovtOrgid1.getText();
 
-        ArrayList<NonGovtOrg> nogList = ecosystem.getNgoDir().getNgoList();
-        for (NonGovtOrg f : nogList) {
-            if (f.getNgoId().equals(NGOid)) {
+        ArrayList<CommunityOutreach> nogList = ecosystem.getcoDir().getNgoList();
+        for (CommunityOutreach f : nogList) {
+            if (f.getCOId().equals(NGOid)) {
 
                 String ngoName = txtNonGovtOrgname.getText();
                 String phone = txtNonGovtOrgPhone.getText();
@@ -507,26 +507,26 @@ public class ViewModifyNGOPanel extends javax.swing.JPanel {
                     return;
                 }
 
-                f.setNgoName(txtNonGovtOrgname.getText());
-                f.setNgoPhno(txtNonGovtOrgPhone.getText());
-                f.setNgoAddress(txtNonGovtOrgAdd.getText());
-                f.setNgoCity(txtNonGovtOrgCity.getText());
-                f.setNgoState(txtNonGovtOrgState.getText());
-                f.setNgoZipcode(txtNonGovtOrgZip.getText());
-                f.setNgoAgent(txtNonGovtOrgAgent.getText());
+                f.setCOName(txtNonGovtOrgname.getText());
+                f.setCOPhone(txtNonGovtOrgPhone.getText());
+                f.setCOAddress(txtNonGovtOrgAdd.getText());
+                f.setCOCity(txtNonGovtOrgCity.getText());
+                f.setCOState(txtNonGovtOrgState.getText());
+                f.setCOZipcode(txtNonGovtOrgZip.getText());
+                f.setCOAgent(txtNonGovtOrgAgent.getText());
                 UserAccount NGOua = new UserAccount();
                 NGOua.setUsername(txtNonGovtOrguname.getText());
                 NGOua.setPassword(txtNonGovtOrgpwd.getText());
                 Worker emp = new Worker();
                 emp.setName(txtNonGovtOrgAgent.getText());
                 NGOua.setEmployee(emp);
-                f.setNgoAccount(NGOua);
+                f.setCOAccount(NGOua);
                 break;
             }
 
         }
         // ecosystem.setFCWDirectory(fcWarehouseList);
-        ngod = ecosystem.getNgoDir();
+        ngod = ecosystem.getcoDir();
         ecosystem.setNgoDir(ngod);
         JOptionPane.showMessageDialog(this, "NGO details updated successfully");
         clearfields();
@@ -545,16 +545,16 @@ public class ViewModifyNGOPanel extends javax.swing.JPanel {
     private void populatengotable() {
         DefaultTableModel model = (DefaultTableModel) tblNonGovtOrg.getModel();
         model.setRowCount(0);
-        for (NonGovtOrg ngo : ecosystem.getNgoDir().getNgoList()) {
+        for (CommunityOutreach ngo : ecosystem.getcoDir().getNgoList()) {
             Object[] row = new Object[8];
             row[0] = ngo;
-            row[1] = ngo.getNgoName();
-            row[2] = ngo.getNgoAgent();
-            row[3] = ngo.getNgoPhno();
-            row[4] = ngo.getNgoAddress();
-            row[5] = ngo.getNgoCity();
-            row[6] = ngo.getNgoState();
-            row[7] = ngo.getNgoZipcode();
+            row[1] = ngo.getCOName();
+            row[2] = ngo.getCOAgent();
+            row[3] = ngo.getCOPhone();
+            row[4] = ngo.getCOAddress();
+            row[5] = ngo.getCOCity();
+            row[6] = ngo.getCOState();
+            row[7] = ngo.getCOZipcode();
             model.addRow(row);
         }
     }

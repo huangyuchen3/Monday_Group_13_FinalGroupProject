@@ -6,8 +6,8 @@ package userinterface.SystemAdminWorkArea;
 
 import Business.EcoSystem;
 import Business.Worker.Worker;
-import Business.FoodPantry.FoodPantry;
-import Business.FoodPantry.FoodPantryDirectory;
+import Business.DropOff.DropOff;
+import Business.DropOff.DropOffDirectory;
 import Business.UserAccount.UserAccount;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -37,7 +37,7 @@ public class ViewModifyPantryPanel extends javax.swing.JPanel {
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
-    FoodPantryDirectory fcpd;
+    DropOffDirectory fcpd;
 
     public ViewModifyPantryPanel(JPanel userProcessContainer, EcoSystem ecosystem) {
         initComponents();
@@ -297,14 +297,14 @@ public class ViewModifyPantryPanel extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model = (DefaultTableModel) tblViewPantry.getModel();
-        FoodPantry selectedFCP = (FoodPantry) model.getValueAt(selectedRowIndex, 0);
+        DropOff selectedFCP = (DropOff) model.getValueAt(selectedRowIndex, 0);
         ecosystem.getUserAccountDirectory().deleteUserAccount(
-                ecosystem.getFCPDirectory().getFcpList().get(selectedRowIndex).getFcpAccount());
-        fcpd = ecosystem.getFCPDirectory();
+                ecosystem.getACDOFDirectory().getFcpList().get(selectedRowIndex).getDropOffAccount());
+        fcpd = ecosystem.getACDOFDirectory();
         fcpd.deleteFCPantry(selectedFCP);
-        ecosystem.setFCPDirectory(fcpd);
-        Integer pantryCnt = ecosystem.getPantryCnt();
-        ecosystem.setPantryCnt(pantryCnt - 1);
+        ecosystem.setACDODirectory(fcpd);
+        Integer pantryCnt = ecosystem.getDropOffCnt();
+        ecosystem.setDropOffCnt(pantryCnt-1);
         JOptionPane.showMessageDialog(this, "pantry deleted Successfully");
         populatePantryTable();
         clearfields();
@@ -347,17 +347,17 @@ public class ViewModifyPantryPanel extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model = (DefaultTableModel) tblViewPantry.getModel();
-        FoodPantry selectedFCP = (FoodPantry) model.getValueAt(selectedRowIndex, 0);
-        lblFCPantryid1.setText(selectedFCP.getFcpId());
-        txtFCPantryname.setText(selectedFCP.getFcpName());
-        txtFCPantryPhone.setText(selectedFCP.getFcpPhno());
-        txtFCPantryAdd.setText(selectedFCP.getFcpAddres());
-        txtFCPantryCity.setText(selectedFCP.getFcpCity());
-        txtFCPantryState.setText(selectedFCP.getFcpState());
-        txtFCPantryZip.setText(selectedFCP.getFcpZipcode());
-        txtFCPantryManager.setText(selectedFCP.getFcpManager());
-        txtFCPantryuname.setText(selectedFCP.getFcpAccount().getUsername());
-        txtFCPantrypwd.setText(selectedFCP.getFcpAccount().getPassword());
+        DropOff selectedFCP = (DropOff) model.getValueAt(selectedRowIndex, 0);
+        lblFCPantryid1.setText(selectedFCP.getDropOffId());
+        txtFCPantryname.setText(selectedFCP.getDropOffName());
+        txtFCPantryPhone.setText(selectedFCP.getDropOffPhone());
+        txtFCPantryAdd.setText(selectedFCP.getDropOffAddress());
+        txtFCPantryCity.setText(selectedFCP.getDropOffCity());
+        txtFCPantryState.setText(selectedFCP.getDropOffState());
+        txtFCPantryZip.setText(selectedFCP.getDropOffZipcode());
+        txtFCPantryManager.setText(selectedFCP.getDropOffManager());
+        txtFCPantryuname.setText(selectedFCP.getDropOffAccount().getUsername());
+        txtFCPantrypwd.setText(selectedFCP.getDropOffAccount().getPassword());
     }//GEN-LAST:event_btnPantryEditActionPerformed
 
     private void txtFCPantrynameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtFCPantrynameFocusLost
@@ -431,9 +431,9 @@ public class ViewModifyPantryPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblViewPantry.getModel();
         String FCPid = lblFCPantryid1.getText();
 
-        ArrayList<FoodPantry> fcPantryList = ecosystem.getFCPDirectory().getFcpList();
-        for (FoodPantry f : fcPantryList) {
-            if (f.getFcpId().equals(FCPid)) {
+        ArrayList<DropOff> fcPantryList = ecosystem.getACDOFDirectory().getFcpList();
+        for (DropOff f : fcPantryList) {
+            if (f.getDropOffId().equals(FCPid)) {
 
                 String panName = txtFCPantryname.getText();
                 String phone = txtFCPantryPhone.getText();
@@ -478,20 +478,20 @@ public class ViewModifyPantryPanel extends javax.swing.JPanel {
                     return;
                 }
 
-                f.setFcpName(txtFCPantryname.getText());
-                f.setFcpPhno(txtFCPantryPhone.getText());
-                f.setFcpAddres(txtFCPantryAdd.getText());
-                f.setFcpCity(txtFCPantryCity.getText());
-                f.setFcpState(txtFCPantryState.getText());
-                f.setFcpZipcode(txtFCPantryZip.getText());
-                f.setFcpManager(txtFCPantryManager.getText());
+                f.setDropOffName(txtFCPantryname.getText());
+                f.setDropOffPhone(txtFCPantryPhone.getText());
+                f.setDropOffAddresss(txtFCPantryAdd.getText());
+                f.setDropOffCity(txtFCPantryCity.getText());
+                f.setDropOffState(txtFCPantryState.getText());
+                f.setDropOffZipcode(txtFCPantryZip.getText());
+                f.setDropOffManager(txtFCPantryManager.getText());
                 //UserAccount FCPua=new UserAccount();
                 //FCPua.setUsername(txtFCPuname.getText());
                 //FCPua.setPassword(txtFCPpwd.getText());
                 //f.setFcpAccount(FCPua);
-                if (f.getFcpAccount().getUsername().equals(txtFCPantryuname.getText())) {
-                    f.getFcpAccount().setPassword(txtFCPantrypwd.getText());
-                    f.getFcpAccount().getEmployee().setName(txtFCPantryManager.getText());
+                if (f.getDropOffAccount().getUsername().equals(txtFCPantryuname.getText())) {
+                    f.getDropOffAccount().setPassword(txtFCPantrypwd.getText());
+                    f.getDropOffAccount().getEmployee().setName(txtFCPantryManager.getText());
                 }
                 break;
             }
@@ -552,17 +552,17 @@ public class ViewModifyPantryPanel extends javax.swing.JPanel {
     private void populatePantryTable() {
         DefaultTableModel model = (DefaultTableModel) tblViewPantry.getModel();
         model.setRowCount(0);
-        for (FoodPantry fcp : ecosystem.getFCPDirectory().getFcpList()) {
+        for (DropOff fcp : ecosystem.getACDOFDirectory().getFcpList()) {
             Object[] row = new Object[9];
             row[0] = fcp;
-            row[1] = fcp.getFcpName();
-            row[2] = fcp.getFcpWHname();
-            row[3] = fcp.getFcpManager();
-            row[4] = fcp.getFcpPhno();
-            row[5] = fcp.getFcpAddres();
-            row[6] = fcp.getFcpCity();
-            row[7] = fcp.getFcpState();
-            row[8] = fcp.getFcpZipcode();
+            row[1] = fcp.getDropOffName();
+            row[2] = fcp.getDropOffHubName();
+            row[3] = fcp.getDropOffManager();
+            row[4] = fcp.getDropOffPhone();
+            row[5] = fcp.getDropOffAddress();
+            row[6] = fcp.getDropOffCity();
+            row[7] = fcp.getDropOffState();
+            row[8] = fcp.getDropOffZipcode();
             model.addRow(row);
         }
     }

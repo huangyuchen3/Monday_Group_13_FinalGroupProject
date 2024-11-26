@@ -4,13 +4,13 @@
  */
 package userinterface.VolunteerRole;
 
-import Business.FoodDonation.FoodDonation;
-import Business.FoodDonation.FoodDonationDirectory;
+import Business.AccessoryDonation.AccessoryDonation;
+import Business.AccessoryDonation.AccessoryDonationDirectory;
 import Business.EcoSystem;
-import Business.FoodPantry.FoodPantryItems;
-import Business.NonGovtOrgVolunteer.NGOVolunteer;
-import Business.FoodRequestorder.FoodRequestorder;
-import Business.FoodRequestorder.FoodRequestorderDirectory;
+import Business.DropOff.DropOffItems;
+import Business.COVolunteer.COVolunteer;
+import Business.AccessoryRequestorder.AccessoryRequestorder;
+import Business.AccessoryRequestorder.AccessoryRequestorderDirectory;
 import Business.UserAccount.UserAccount;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -57,10 +57,10 @@ public class VolunteerWorkAreaPanel extends javax.swing.JPanel {
         name = userAccount.getEmployee().getName();
 
          if(ecosystem.getDonatDirectory()== null){
-         ecosystem.setDonatDirectory(new FoodDonationDirectory());
+         ecosystem.setDonatDirectory(new AccessoryDonationDirectory());
         }
          if (ecosystem.getReqorderDirectory() == null) {
-            ecosystem.setReqorderDirectory(new FoodRequestorderDirectory());
+            ecosystem.setReqorderDirectory(new AccessoryRequestorderDirectory());
         }
 
         setBG();
@@ -293,7 +293,7 @@ public class VolunteerWorkAreaPanel extends javax.swing.JPanel {
             return;
         }
 
-        FoodDonation dt = (FoodDonation) tblDonationPick.getValueAt(selectedRow, 0);
+        AccessoryDonation dt = (AccessoryDonation) tblDonationPick.getValueAt(selectedRow, 0);
         //        order.setDeliveryMan(userAccount.getEmployee().getName());
         if (dt.getDonatStatus().equals("Assigned to Volunteer")) {
             dt.setDonatStatus("Order Picked up");
@@ -312,18 +312,18 @@ public class VolunteerWorkAreaPanel extends javax.swing.JPanel {
             return;
         }
 
-        FoodDonation dt = (FoodDonation) tblDonationPick.getValueAt(selectedRow, 0);
+        AccessoryDonation dt = (AccessoryDonation) tblDonationPick.getValueAt(selectedRow, 0);
         if (dt.getDonatStatus().equals("Delivered")) {
             JOptionPane.showMessageDialog(null, "Already Delivered.");
             return;
         } else if (dt.getDonatStatus().equals("Order Picked up")) {
             dt.setDonatStatus("Delivered");
-            for (NGOVolunteer v : ecosystem.getVolDir().getVolunteerList()) {
+            for (COVolunteer v : ecosystem.getVolDir().getVolunteerList()) {
                 if (v.getVolName().equals(name)) {
                     v.setVolAvail("Yes");
                 }
             }
-            FoodPantryItems curPantryItem = new FoodPantryItems();
+            DropOffItems curPantryItem = new DropOffItems();
             
 //            ecosystem.getFCPIDirectory().addFCPItems(curPantryItem);
             JOptionPane.showMessageDialog(null, "Delivered Order with id : " + dt.getDonatId());
@@ -345,7 +345,7 @@ public class VolunteerWorkAreaPanel extends javax.swing.JPanel {
             return;
         }
 
-        FoodRequestorder rq = (FoodRequestorder) tblPickupReq.getValueAt(selectedRow, 0);
+        AccessoryRequestorder rq = (AccessoryRequestorder) tblPickupReq.getValueAt(selectedRow, 0);
         //        order.setDeliveryMan(userAccount.getEmployee().getName());
         if (rq.getReqOrderStatus().equals("Assigned to Volunteer")) {
             rq.setReqOrderStatus("Order Picked up");
@@ -365,13 +365,13 @@ public class VolunteerWorkAreaPanel extends javax.swing.JPanel {
             return;
         }
 
-        FoodRequestorder rq = (FoodRequestorder) tblPickupReq.getValueAt(selectedRow, 0);
+        AccessoryRequestorder rq = (AccessoryRequestorder) tblPickupReq.getValueAt(selectedRow, 0);
         if (rq.getReqOrderStatus().equals("Delivered")) {
             JOptionPane.showMessageDialog(null, "Already Delivered.");
             return;
         } else if (rq.getReqOrderStatus().equals("Order Picked up")) {
             rq.setReqOrderStatus("Delivered");
-            for (NGOVolunteer v : ecosystem.getVolDir().getVolunteerList()) {
+            for (COVolunteer v : ecosystem.getVolDir().getVolunteerList()) {
                 if (v.getVolName().equals(name)) {
                     v.setVolAvail("Yes");
                 }
@@ -425,7 +425,7 @@ public class VolunteerWorkAreaPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblDonationPick.getModel();
         model.setRowCount(0);
         System.out.print(ecosystem.getDonatDirectory().getDonatList());
-        for (FoodDonation dt : ecosystem.getDonatDirectory().getDonatList()) {
+        for (AccessoryDonation dt : ecosystem.getDonatDirectory().getDonatList()) {
             System.out.println(dt + "volingz");
             System.out.println(dt.getDonatVol() + "nee");
             if (dt.getDonatVol() != null) {
@@ -447,7 +447,7 @@ public class VolunteerWorkAreaPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblPickupReq.getModel();
         model.setRowCount(0);
         
-        for(FoodRequestorder rq: ecosystem.getReqorderDirectory().getReqOrderList()){
+        for(AccessoryRequestorder rq: ecosystem.getReqorderDirectory().getReqOrderList()){
             if(rq.getReqVol() != null  && rq.getReqVol().equals(userAccount.getEmployee().getName())){
            Object[] row = new Object[6];
            row[0] =rq;

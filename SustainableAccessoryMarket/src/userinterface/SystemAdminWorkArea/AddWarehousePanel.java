@@ -6,9 +6,9 @@ package userinterface.SystemAdminWorkArea;
 
 import Business.EcoSystem;
 import Business.Worker.Worker;
-import Business.FoodWarehouse.FoodWarehouse;
-import Business.FoodWarehouse.FoodWarehouseDirectory;
-import Business.Role.FCAdminRole;
+import Business.DistributionHub.DistributionHub;
+import Business.DistributionHub.DistributionHubDirectory;
+import Business.Role.ACAdminRole;
 import Business.Role.Role;
 import Business.UserAccount.UserAccount;
 import Business.UserAccount.UserAccountDirectory;
@@ -37,7 +37,7 @@ public class AddWarehousePanel extends javax.swing.JPanel {
     private Image img;
     JPanel userProcessContainer;
     EcoSystem ecosystem;
-    FoodWarehouseDirectory fcd;
+    DistributionHubDirectory fcd;
     UserAccountDirectory uad;
 
     public AddWarehousePanel(String img) {
@@ -48,8 +48,8 @@ public class AddWarehousePanel extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
-        if (ecosystem.getFCWDirectory() == null) {
-            ecosystem.setFCWDirectory(new FoodWarehouseDirectory());
+        if (ecosystem.getACDOFDirectory() == null) {
+            ecosystem.setACDDirectory(new DistributionHubDirectory());
         }
 
         setBG();
@@ -361,31 +361,31 @@ public class AddWarehousePanel extends javax.swing.JPanel {
                 Worker employee = new Worker();
                 employee.setName(txtWarehouseFCAdmin.getText());
                 String role = "FCAdmin";
-                FoodWarehouse fcw = new FoodWarehouse();
-                fcw.setFcwId("fcw" + txtWarehouseid.getText());
-                fcw.setFcwName(txtWHname.getText());
-                fcw.setFcwPhno(txtWarehousePhone.getText());
-                fcw.setFcwAddres(txtWarehouseAdd.getText());
-                fcw.setFcwCity(txtWarehouseCity.getText());
-                fcw.setFcwState(txtWarehouseState.getText());
-                fcw.setFcwZipcode(txtWarehouseZip.getText());
-                fcw.setFcwAdmin(txtWarehouseFCAdmin.getText());
+                DistributionHub fcw = new DistributionHub();
+                fcw.setAcDistributionHubId("fcw" + txtWarehouseid.getText());
+                fcw.setAcDistributionHubName(txtWHname.getText());
+                fcw.setAcDistributionHubPhone(txtWarehousePhone.getText());
+                fcw.setAcDistributionHubAddress(txtWarehouseAdd.getText());
+                fcw.setAcDistributionHubCity(txtWarehouseCity.getText());
+                fcw.setAcDistributionHubState(txtWarehouseState.getText());
+                fcw.setAcDistributionHubZipcode(txtWarehouseZip.getText());
+                fcw.setAcDistributionHubAdmin(txtWarehouseFCAdmin.getText());
                 UserAccount fcWarehouseAccount = new UserAccount();
                 String uaName = txtFCAdminuname.getText();
                 fcWarehouseAccount.setUsername(uaName);
                 String uaPwd = txtFCAdminpwd.getText();
                 fcWarehouseAccount.setPassword(uaPwd);
-                fcWarehouseAccount.setRole(new FCAdminRole());
+                fcWarehouseAccount.setRole(new ACAdminRole());
                 fcWarehouseAccount.setEmployee(employee);
-                fcw.setFcwAccount(fcWarehouseAccount);
-                fcd = ecosystem.getFCWDirectory();
-                fcd.addNewFCWarehouse(fcw);
-                ecosystem.setFCWDirectory(fcd);
+                fcw.setAcDistributionHubAccount(fcWarehouseAccount);
+                fcd = ecosystem.getACDDirectory();
+                fcd.addNewACDistributionHub(fcw);
+                ecosystem.setACDDirectory(fcd);
                 uad = ecosystem.getUserAccountDirectory();
-                uad.createUserAccount(txtFCAdminuname.getText(), txtFCAdminpwd.getText(), employee, new FCAdminRole());
+                uad.createUserAccount(txtFCAdminuname.getText(), txtFCAdminpwd.getText(), employee, new ACAdminRole());
                 ecosystem.setUserAccountDirectory(uad);
-                Integer whcnt = ecosystem.getWarehouseCnt();
-                ecosystem.setWarehouseCnt(whcnt + 1);
+                Integer whcnt = ecosystem.getdistributionHubCnt();
+                ecosystem.setdistributionHubCnt(whcnt+1);
                 JOptionPane.showMessageDialog(this, "warehouse added successfully!");
                 clearfields();
             } else {

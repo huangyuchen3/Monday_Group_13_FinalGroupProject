@@ -22,15 +22,15 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartFrame;
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.plot.CategoryPlot;
-import org.jfree.chart.plot.PiePlot;
-import org.jfree.chart.plot.PlotOrientation;
-import org.jfree.data.category.DefaultCategoryDataset;
-import org.jfree.data.general.DefaultPieDataset;
+//import org.jfree.chart.ChartFactory;
+//import org.jfree.chart.ChartFrame;
+//import org.jfree.chart.ChartPanel;
+//import org.jfree.chart.JFreeChart;
+//import org.jfree.chart.plot.CategoryPlot;
+//import org.jfree.chart.plot.PiePlot;
+//import org.jfree.chart.plot.PlotOrientation;
+//import org.jfree.data.category.DefaultCategoryDataset;
+//import org.jfree.data.general.DefaultPieDataset;
 import userinterface.DonorRole.DonorProfilePanel;
 
 /**
@@ -45,10 +45,10 @@ public class ViewAllStatsPanel extends javax.swing.JPanel {
     JPanel userProcessContainer;
     EcoSystem ecosystem;
     UserAccountDirectory uad;
-    private DefaultPieDataset pieDataset;
-    private JFreeChart pieChart;
-    private PiePlot piePlot;
-    private ChartPanel chartPanel;
+    //private DefaultPieDataset pieDataset;
+    //private JFreeChart pieChart;
+    //private PiePlot piePlot;
+    //private ChartPanel chartPanel;
 
     public ViewAllStatsPanel(JPanel userProcessContainer, EcoSystem ecosystem) {
         initComponents();
@@ -61,7 +61,7 @@ public class ViewAllStatsPanel extends javax.swing.JPanel {
         jLabel2.setText(ecosystem.getDonorsCnt().toString());
         jLabel3.setText(ecosystem.getRequestorsCnt().toString());
         jLabel1.setText(ecosystem.getVolunteersCnt().toString());
-        showPieChart();
+        //showPieChart();
 
     }
 
@@ -193,7 +193,7 @@ public class ViewAllStatsPanel extends javax.swing.JPanel {
         }
         
     }
-    
+/*    
        public void showPieChart(){
             pieDataset = new DefaultPieDataset();
             pieDataset.setValue("No.of Requests",ecosystem.getRequestCnt());
@@ -211,7 +211,7 @@ public class ViewAllStatsPanel extends javax.swing.JPanel {
             pieChartPanel.add(chartPanel, BorderLayout.CENTER);
             chartPanel.validate();
         }
-
+*/
     private void tblViewUsersMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblViewUsersMousePressed
         // TODO add your handling code here:
         //tblUsers.setSelectionBackground(Color.BLUE );
@@ -226,6 +226,7 @@ public class ViewAllStatsPanel extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        /*
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
         dataset.setValue(ecosystem.getDonorsCnt(), "Population", "Donors");
         dataset.setValue(ecosystem.getRequestorsCnt(), "Population", "Requestors");
@@ -237,6 +238,7 @@ public class ViewAllStatsPanel extends javax.swing.JPanel {
            ChartFrame f = new ChartFrame("Request Analysis",chart);
            f.setVisible(true);
            f.setSize(500,400);
+*/
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
@@ -257,9 +259,9 @@ public class ViewAllStatsPanel extends javax.swing.JPanel {
         model.setRowCount(0);
         
             Object[] row = new Object[10];
-            row[0] = ecosystem.getWarehouseCnt();
-            row[1] = ecosystem.getPantryCnt();
-            row[2] = ecosystem.getNgoCnt();
+            row[0] = ecosystem.getdistributionHubCnt();
+            row[1] = ecosystem.getDropOffCnt();
+            row[2] = ecosystem.getcoCnt();
             row[3] = ecosystem.getVolunteersCnt();
             row[4] = ecosystem.getDonorsCnt();
             row[5] = ecosystem.getRequestorsCnt();
