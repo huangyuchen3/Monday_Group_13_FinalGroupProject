@@ -81,9 +81,9 @@ public class MainJFrame extends javax.swing.JFrame {
             System.out.println("UserAccountDirectory is already initialized.");
         }
 
-        Image img = ImageIO.read(getClass().getResource("/Images/background.jpg"));
-        Image newimg = img.getScaledInstance(jLabel3.getWidth(), jLabel3.getHeight(), java.awt.Image.SCALE_SMOOTH);
-        jLabel3.setIcon(new ImageIcon(newimg));
+//        Image img = ImageIO.read(getClass().getResource("/Images/background.jpg"));
+//        Image newimg = img.getScaledInstance(jLabel3.getWidth(), jLabel3.getHeight(), java.awt.Image.SCALE_SMOOTH);
+//        jLabel3.setIcon(new ImageIcon(newimg));
 
         Image icon = ImageIO.read(getClass().getResource("/Images/logo.png"));
         Image newIcon = icon.getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH);
