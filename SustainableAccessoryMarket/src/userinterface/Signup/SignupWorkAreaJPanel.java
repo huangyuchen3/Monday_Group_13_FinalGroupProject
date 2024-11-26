@@ -18,7 +18,7 @@ import Business.AccessoryRequestor.AccessoryRequestorDirectory;
 import Business.Shop.Shop;
 import Business.Shop.ShopDirectory;
 import Business.Role.AdminRole;
-import Business.Role.CustomerRole;
+//import Business.Role.CustomerRole;
 import Business.Role.DonorRole;
 import Business.Role.RequestorRole;
 
