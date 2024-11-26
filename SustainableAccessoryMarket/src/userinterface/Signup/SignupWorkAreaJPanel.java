@@ -142,7 +142,6 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
         cmbSignupGender = new javax.swing.JComboBox<>();
         lblSignupState = new javax.swing.JLabel();
         txtSignupState = new javax.swing.JTextField();
-        btnSignupSave = new javax.swing.JButton();
         btnSignupClear = new javax.swing.JButton();
         rdSignupPanel = new javax.swing.JPanel();
         rdSignupRes = new javax.swing.JRadioButton();
@@ -326,16 +325,6 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(txtSignupState, new org.netbeans.lib.awtextra.AbsoluteConstraints(291, 331, 162, -1));
 
-        btnSignupSave.setBackground(new java.awt.Color(0, 153, 204));
-        btnSignupSave.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        btnSignupSave.setText("Create");
-        btnSignupSave.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSignupSaveActionPerformed(evt);
-            }
-        });
-        add(btnSignupSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 630, -1, -1));
-
         btnSignupClear.setBackground(new java.awt.Color(0, 153, 204));
         btnSignupClear.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         btnSignupClear.setText("Clear");
@@ -409,7 +398,7 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
                 submiitBtnActionPerformed(evt);
             }
         });
-        add(submiitBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(305, 699, -1, -1));
+        add(submiitBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 630, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSignupHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignupHomeActionPerformed
@@ -459,181 +448,6 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
 
     }
 
-
-    private void btnSignupSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignupSaveActionPerformed
-        // TODO add your handling code here:
-//        verificationCode = JavaMailUtil.getRandomCode();
-        isNotValid = false;
-//        isNotValid = mandatoryValidations();
-//        if (isNotValid) {
-//            return;
-//        }
-
-        String regName = txtSignupName.getText();
-        String regAgeString = txtSignupAge.getText();
-
-        String phone = txtSignupPhone.getText();
-        String regAdds = txtSignupAddrss1.getText();
-        String regCity = txtSignupUserCity.getText();
-        String regState = txtSignupState.getText();
-        String regZip = txtSignupZipCode.getText();
-        String regUser = txtSignupUserName.getText();
-        String regPswd = txtSignupPwd.getText();
-        String regMail = txtSignupEmail.getText();
-
-        if (!isValid(regName, "^[A-Za-z]{3,}")) {
-            JOptionPane.showMessageDialog(this, "Please enter valid name");
-            return;
-        }
-        Integer regAge = tryParse(regAgeString);
-        if (regAge < 0 && ageFlag ) {
-            JOptionPane.showMessageDialog(this, "Please enter valid Age");
-            return;
-        }
-        if (regAdds.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Please enter valid address");
-            return;
-        }
-
-        if (!isValid(regCity, "([a-zA-Z]+|[a-zA-Z]+\\s[a-zA-Z]+){3,}")) {
-            JOptionPane.showMessageDialog(this, "Please enter valid city");
-            return;
-        }
-        if (!isValid(regState, "([a-zA-Z]+|[a-zA-Z]+\\s[a-zA-Z]+){2,}")) {
-            JOptionPane.showMessageDialog(this, "Please enter valid state");
-            return;
-        }
-
-        if (!isValid(regZip, "^[0-9]{5}(?:-[0-9]{4})?$")) {
-            JOptionPane.showMessageDialog(this, "Please enter valid zip");
-            return;
-        }
-        if (!isValid(phone, "[+]?[0-9]{10,13}")) {
-            JOptionPane.showMessageDialog(this, "Please enter valid phone number");
-            return;
-        }
-
-        if (!isValid(regUser, "^[a-zA-Z0-9._-]{6,}$")) {
-            JOptionPane.showMessageDialog(this, "Please enter a valid username of atleast 6 characters");
-            return;
-        }
-        if (!isValid(regPswd, "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$")) {
-            JOptionPane.showMessageDialog(this, "Please enter a valid password of atleast 8 characters in length. It must contain a number, a specicial character, a lowercase and an uppercase character.");
-            return;
-        }
-        if (!txtSignupPwd.getText().equals(txtSignupCPWD.getText())) {
-            JOptionPane.showMessageDialog(this, "conformation password doesn't match with given password");
-            return;
-        }
-        if (!isValid(regMail, "[a-zA-Z0-9_\\- \\.]+[@][a-z]+[\\.]+[a-z]{2,3}")) {
-            JOptionPane.showMessageDialog(this, "Please enter a valid mail");
-            return;
-        }
-
-        try {
-//                logger.log(Level.INFO, "Sending email to new user");
-//            JavaMailUtil.sendMail(txtSignupEmail.getText(), txtSignupName.getText(), verificationCode);
-            JOptionPane.showMessageDialog(this, "Confirmation Mail is sent to the user");
-        } catch (Exception ex) {
-            System.out.println("error in sending verification code!! " + ex);
-        }
-//        if(!check)
-//        {
-////            JOptionPane.showMessageDialog(this, "please enter valid verification code sent to your mail");
-//            return ;
-//        }
-
-//        UserAccountDirectory usersList = ecosystem.getUserAccountDirectory();
-//        String role = (String) cmbIAM.getSelectedItem();
-//        Worker employee = new Worker();
-//        employee.setName(txtSignupName.getText());
-//        boolean userDoNotExists = true;
-//        ArrayList<UserAccount> users = usersList.getUserAccountList();
-//        for (UserAccount ua : users) {
-//            if (ua.getUsername().equals(txtSignupUserName.getText())) {
-//                userDoNotExists = false;
-//            }
-//        }
-//
-//        if (userDoNotExists) {
-//            if (txtSignupPwd.getText().equals(txtSignupCPWD.getText())) {
-//                switch (role) {
-//                    case "Food Requestor":
-//                        usersList.createUserAccount(txtSignupUserName.getText(), txtSignupPwd.getText(), employee, new RequestorRole());
-//                        ua = usersList.getUserAccount(txtSignupUserName.getText());
-//                        req = new AccessoryRequestor(ua);
-//                        req.setReqType(getReqType());
-//                        req.setReqName(txtSignupName.getText());
-//                        req.setReqAddres(txtSignupAddrss1.getText());
-//                        req.setReqCity(txtSignupUserCity.getText());
-//                        req.setReqState(txtSignupState.getText());
-//                        req.setReqEmail(txtSignupEmail.getText());
-//                        req.setReqPhno(txtSignupPhone.getText());
-//                        req.setReqZipcode(txtSignupZipCode.getText());
-//                        req.setReqUserName(txtSignupUserName.getText());
-//                        req.setReqPwd(txtSignupPwd.getText());
-//
-//                        rd = ecosystem.getReqDir();
-//                        rd.addReqDir(req);
-//                        ecosystem.setReqDir(rd);
-//                        if (donorFlag == true && organisationFlag == false && restaurantFlag == false) {
-//                            Integer reqstorCnt = ecosystem.getRequestorsCnt();
-//                            ecosystem.setRequestorsCnt(reqstorCnt + 1);
-//                        } else if (donorFlag == false && organisationFlag == true && restaurantFlag == false) {
-//                            Integer orgCnt = ecosystem.getOrganisationsCnt();
-//                            ecosystem.setOrganisationsCnt(orgCnt + 1);
-//                        }
-//
-//                        break;
-//
-//                    case "Food Donor":
-//                        usersList.createUserAccount(txtSignupUserName.getText(), txtSignupPwd.getText(), employee, new DonorRole());
-//                        ua = usersList.getUserAccount(txtSignupUserName.getText());
-//                        don = new AccessoryDonor(ua);
-//                        don.setDonorType(role);
-//
-//                        don.setDonorName(txtSignupName.getText());
-//                        don.setDonorAddres(txtSignupAddrss1.getText());
-//                        don.setDonorCity(txtSignupUserCity.getText());
-//                        don.setDonorState(txtSignupState.getText());
-//                        don.setDonorEmail(txtSignupEmail.getText());
-//                        don.setDonorPhno(txtSignupPhone.getText());
-//                        don.setDonorZipcode(txtSignupZipCode.getText());
-//                        don.setDonPwd(txtSignupUserName.getText());
-//                        don.setDonPwd(txtSignupPwd.getText());
-//                        if (donorFlag == true && organisationFlag == false && restaurantFlag == false) {
-//                            Integer donCnt = ecosystem.getDonorsCnt();
-//                            ecosystem.setDonorsCnt(donCnt + 1);
-//                        } else if (donorFlag == false && organisationFlag == true && restaurantFlag == false) {
-//                            Integer orgCnt = ecosystem.getOrganisationsCnt();
-//                            ecosystem.setOrganisationsCnt(orgCnt + 1);
-//                        } else if (donorFlag == false && organisationFlag == false && restaurantFlag == true) {
-//                            Integer restaurantCnt = ecosystem.getRestaurentCnt();
-//                            ecosystem.setRestaurentCnt(restaurantCnt + 1);
-//                        }
-//
-//                        break;
-//                    default:
-//                        break;
-//
-//                }
-//
-//                try {
-////                logger.log(Level.INFO, "Sending email to new user");
-//                    JavaMailUtil.sendMail(txtSignupEmail.getText(), txtSignupName.getText(), verificationCode);
-//                } catch (Exception ex) {
-//                }
-//                JOptionPane.showMessageDialog(this, "Confirmation Mail is sent to the user");
-//
-//                clearFields();
-//            } else {
-//                JOptionPane.showMessageDialog(this, "Password and confirm password does not match");
-//            }
-//        } else {
-//            JOptionPane.showMessageDialog(this, "UserName already exist");
-//        }
-
-    }//GEN-LAST:event_btnSignupSaveActionPerformed
 
     private void rdSignupResActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdSignupResActionPerformed
         // TODO add your handling code here:
@@ -880,7 +694,6 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel bgImgLabel;
     private javax.swing.JButton btnSignupClear;
     private javax.swing.JButton btnSignupHome;
-    private javax.swing.JButton btnSignupSave;
     private javax.swing.JComboBox<String> cmbIAM;
     private javax.swing.JComboBox<String> cmbSignupGender;
     private javax.swing.JLabel jLabel;
@@ -1122,3 +935,177 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
     }
 
 }
+
+/*
+//        verificationCode = JavaMailUtil.getRandomCode();
+        isNotValid = false;
+//        isNotValid = mandatoryValidations();
+//        if (isNotValid) {
+//            return;
+//        }
+
+        String regName = txtSignupName.getText();
+        String regAgeString = txtSignupAge.getText();
+
+        String phone = txtSignupPhone.getText();
+        String regAdds = txtSignupAddrss1.getText();
+        String regCity = txtSignupUserCity.getText();
+        String regState = txtSignupState.getText();
+        String regZip = txtSignupZipCode.getText();
+        String regUser = txtSignupUserName.getText();
+        String regPswd = txtSignupPwd.getText();
+        String regMail = txtSignupEmail.getText();
+
+        if (!isValid(regName, "^[A-Za-z]{3,}")) {
+            JOptionPane.showMessageDialog(this, "Please enter valid name");
+            return;
+        }
+        Integer regAge = tryParse(regAgeString);
+        if (regAge < 0 && ageFlag ) {
+            JOptionPane.showMessageDialog(this, "Please enter valid Age");
+            return;
+        }
+        if (regAdds.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please enter valid address");
+            return;
+        }
+
+        if (!isValid(regCity, "([a-zA-Z]+|[a-zA-Z]+\\s[a-zA-Z]+){3,}")) {
+            JOptionPane.showMessageDialog(this, "Please enter valid city");
+            return;
+        }
+        if (!isValid(regState, "([a-zA-Z]+|[a-zA-Z]+\\s[a-zA-Z]+){2,}")) {
+            JOptionPane.showMessageDialog(this, "Please enter valid state");
+            return;
+        }
+
+        if (!isValid(regZip, "^[0-9]{5}(?:-[0-9]{4})?$")) {
+            JOptionPane.showMessageDialog(this, "Please enter valid zip");
+            return;
+        }
+        if (!isValid(phone, "[+]?[0-9]{10,13}")) {
+            JOptionPane.showMessageDialog(this, "Please enter valid phone number");
+            return;
+        }
+
+        if (!isValid(regUser, "^[a-zA-Z0-9._-]{6,}$")) {
+            JOptionPane.showMessageDialog(this, "Please enter a valid username of atleast 6 characters");
+            return;
+        }
+        if (!isValid(regPswd, "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$")) {
+            JOptionPane.showMessageDialog(this, "Please enter a valid password of atleast 8 characters in length. It must contain a number, a specicial character, a lowercase and an uppercase character.");
+            return;
+        }
+        if (!txtSignupPwd.getText().equals(txtSignupCPWD.getText())) {
+            JOptionPane.showMessageDialog(this, "conformation password doesn't match with given password");
+            return;
+        }
+        if (!isValid(regMail, "[a-zA-Z0-9_\\- \\.]+[@][a-z]+[\\.]+[a-z]{2,3}")) {
+            JOptionPane.showMessageDialog(this, "Please enter a valid mail");
+            return;
+        }
+
+        try {
+//                logger.log(Level.INFO, "Sending email to new user");
+//            JavaMailUtil.sendMail(txtSignupEmail.getText(), txtSignupName.getText(), verificationCode);
+            JOptionPane.showMessageDialog(this, "Confirmation Mail is sent to the user");
+        } catch (Exception ex) {
+            System.out.println("error in sending verification code!! " + ex);
+        }
+//        if(!check)
+//        {
+////            JOptionPane.showMessageDialog(this, "please enter valid verification code sent to your mail");
+//            return ;
+//        }
+
+//        UserAccountDirectory usersList = ecosystem.getUserAccountDirectory();
+//        String role = (String) cmbIAM.getSelectedItem();
+//        Worker employee = new Worker();
+//        employee.setName(txtSignupName.getText());
+//        boolean userDoNotExists = true;
+//        ArrayList<UserAccount> users = usersList.getUserAccountList();
+//        for (UserAccount ua : users) {
+//            if (ua.getUsername().equals(txtSignupUserName.getText())) {
+//                userDoNotExists = false;
+//            }
+//        }
+//
+//        if (userDoNotExists) {
+//            if (txtSignupPwd.getText().equals(txtSignupCPWD.getText())) {
+//                switch (role) {
+//                    case "Food Requestor":
+//                        usersList.createUserAccount(txtSignupUserName.getText(), txtSignupPwd.getText(), employee, new RequestorRole());
+//                        ua = usersList.getUserAccount(txtSignupUserName.getText());
+//                        req = new AccessoryRequestor(ua);
+//                        req.setReqType(getReqType());
+//                        req.setReqName(txtSignupName.getText());
+//                        req.setReqAddres(txtSignupAddrss1.getText());
+//                        req.setReqCity(txtSignupUserCity.getText());
+//                        req.setReqState(txtSignupState.getText());
+//                        req.setReqEmail(txtSignupEmail.getText());
+//                        req.setReqPhno(txtSignupPhone.getText());
+//                        req.setReqZipcode(txtSignupZipCode.getText());
+//                        req.setReqUserName(txtSignupUserName.getText());
+//                        req.setReqPwd(txtSignupPwd.getText());
+//
+//                        rd = ecosystem.getReqDir();
+//                        rd.addReqDir(req);
+//                        ecosystem.setReqDir(rd);
+//                        if (donorFlag == true && organisationFlag == false && restaurantFlag == false) {
+//                            Integer reqstorCnt = ecosystem.getRequestorsCnt();
+//                            ecosystem.setRequestorsCnt(reqstorCnt + 1);
+//                        } else if (donorFlag == false && organisationFlag == true && restaurantFlag == false) {
+//                            Integer orgCnt = ecosystem.getOrganisationsCnt();
+//                            ecosystem.setOrganisationsCnt(orgCnt + 1);
+//                        }
+//
+//                        break;
+//
+//                    case "Food Donor":
+//                        usersList.createUserAccount(txtSignupUserName.getText(), txtSignupPwd.getText(), employee, new DonorRole());
+//                        ua = usersList.getUserAccount(txtSignupUserName.getText());
+//                        don = new AccessoryDonor(ua);
+//                        don.setDonorType(role);
+//
+//                        don.setDonorName(txtSignupName.getText());
+//                        don.setDonorAddres(txtSignupAddrss1.getText());
+//                        don.setDonorCity(txtSignupUserCity.getText());
+//                        don.setDonorState(txtSignupState.getText());
+//                        don.setDonorEmail(txtSignupEmail.getText());
+//                        don.setDonorPhno(txtSignupPhone.getText());
+//                        don.setDonorZipcode(txtSignupZipCode.getText());
+//                        don.setDonPwd(txtSignupUserName.getText());
+//                        don.setDonPwd(txtSignupPwd.getText());
+//                        if (donorFlag == true && organisationFlag == false && restaurantFlag == false) {
+//                            Integer donCnt = ecosystem.getDonorsCnt();
+//                            ecosystem.setDonorsCnt(donCnt + 1);
+//                        } else if (donorFlag == false && organisationFlag == true && restaurantFlag == false) {
+//                            Integer orgCnt = ecosystem.getOrganisationsCnt();
+//                            ecosystem.setOrganisationsCnt(orgCnt + 1);
+//                        } else if (donorFlag == false && organisationFlag == false && restaurantFlag == true) {
+//                            Integer restaurantCnt = ecosystem.getRestaurentCnt();
+//                            ecosystem.setRestaurentCnt(restaurantCnt + 1);
+//                        }
+//
+//                        break;
+//                    default:
+//                        break;
+//
+//                }
+//
+//                try {
+////                logger.log(Level.INFO, "Sending email to new user");
+//                    JavaMailUtil.sendMail(txtSignupEmail.getText(), txtSignupName.getText(), verificationCode);
+//                } catch (Exception ex) {
+//                }
+//                JOptionPane.showMessageDialog(this, "Confirmation Mail is sent to the user");
+//
+//                clearFields();
+//            } else {
+//                JOptionPane.showMessageDialog(this, "Password and confirm password does not match");
+//            }
+//        } else {
+//            JOptionPane.showMessageDialog(this, "UserName already exist");
+//        }
+
+*/
