@@ -63,11 +63,11 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         SysAdminSplitPane = new javax.swing.JSplitPane();
         MenubarSysAdminPanel = new javax.swing.JPanel();
-        btnManageWarehouse = new javax.swing.JButton();
-        btnManagePantry = new javax.swing.JButton();
+        btnManageDH = new javax.swing.JButton();
+        btnManageDO = new javax.swing.JButton();
         btnManageUsers = new javax.swing.JButton();
         lblSysadminWelcomemsg = new javax.swing.JLabel();
-        btnManageNonGovtOrg = new javax.swing.JButton();
+        btnManageCO = new javax.swing.JButton();
         lblsysadminlogout = new javax.swing.JLabel();
         jLabel = new javax.swing.JLabel();
         logoImg = new javax.swing.JLabel();
@@ -80,27 +80,27 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         MenubarSysAdminPanel.setBackground(new java.awt.Color(255, 255, 255));
         MenubarSysAdminPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnManageWarehouse.setBackground(new java.awt.Color(0, 153, 204));
-        btnManageWarehouse.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnManageWarehouse.setText("Manage Warehouse");
-        btnManageWarehouse.addActionListener(new java.awt.event.ActionListener() {
+        btnManageDH.setBackground(new java.awt.Color(204, 204, 255));
+        btnManageDH.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnManageDH.setText("Manage Distribution Hub");
+        btnManageDH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageWarehouseActionPerformed(evt);
+                btnManageDHActionPerformed(evt);
             }
         });
-        MenubarSysAdminPanel.add(btnManageWarehouse, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, -1, -1));
+        MenubarSysAdminPanel.add(btnManageDH, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
 
-        btnManagePantry.setBackground(new java.awt.Color(0, 153, 204));
-        btnManagePantry.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnManagePantry.setText("Manage Pantry");
-        btnManagePantry.addActionListener(new java.awt.event.ActionListener() {
+        btnManageDO.setBackground(new java.awt.Color(204, 204, 255));
+        btnManageDO.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnManageDO.setText("Manage Drop Off");
+        btnManageDO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManagePantryActionPerformed(evt);
+                btnManageDOActionPerformed(evt);
             }
         });
-        MenubarSysAdminPanel.add(btnManagePantry, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, -1, -1));
+        MenubarSysAdminPanel.add(btnManageDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, -1, -1));
 
-        btnManageUsers.setBackground(new java.awt.Color(0, 153, 204));
+        btnManageUsers.setBackground(new java.awt.Color(204, 204, 255));
         btnManageUsers.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnManageUsers.setText("Manage Users");
         btnManageUsers.addActionListener(new java.awt.event.ActionListener() {
@@ -108,22 +108,22 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageUsersActionPerformed(evt);
             }
         });
-        MenubarSysAdminPanel.add(btnManageUsers, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 80, -1, -1));
+        MenubarSysAdminPanel.add(btnManageUsers, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 80, -1, -1));
 
         lblSysadminWelcomemsg.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblSysadminWelcomemsg.setForeground(new java.awt.Color(0, 153, 204));
+        lblSysadminWelcomemsg.setForeground(new java.awt.Color(102, 102, 255));
         lblSysadminWelcomemsg.setText("Welcome System Admin!");
         MenubarSysAdminPanel.add(lblSysadminWelcomemsg, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, -1));
 
-        btnManageNonGovtOrg.setBackground(new java.awt.Color(0, 153, 204));
-        btnManageNonGovtOrg.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnManageNonGovtOrg.setText("Manage NGO");
-        btnManageNonGovtOrg.addActionListener(new java.awt.event.ActionListener() {
+        btnManageCO.setBackground(new java.awt.Color(204, 204, 255));
+        btnManageCO.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnManageCO.setText("Manage CO");
+        btnManageCO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageNonGovtOrgActionPerformed(evt);
+                btnManageCOActionPerformed(evt);
             }
         });
-        MenubarSysAdminPanel.add(btnManageNonGovtOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 80, -1, -1));
+        MenubarSysAdminPanel.add(btnManageCO, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 80, -1, -1));
 
         lblsysadminlogout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -134,15 +134,15 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         MenubarSysAdminPanel.add(jLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 10, 60, 120));
         MenubarSysAdminPanel.add(logoImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 120, 110));
 
-        btnViewAllStats.setBackground(new java.awt.Color(0, 153, 204));
+        btnViewAllStats.setBackground(new java.awt.Color(204, 204, 255));
         btnViewAllStats.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnViewAllStats.setText("View System Stats");
+        btnViewAllStats.setText("View System Status");
         btnViewAllStats.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewAllStatsActionPerformed(evt);
             }
         });
-        MenubarSysAdminPanel.add(btnViewAllStats, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 80, -1, -1));
+        MenubarSysAdminPanel.add(btnViewAllStats, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 80, -1, -1));
 
         SysAdminSplitPane.setLeftComponent(MenubarSysAdminPanel);
 
@@ -225,25 +225,25 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     }
       
-    private void btnManageWarehouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageWarehouseActionPerformed
+    private void btnManageDHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageDHActionPerformed
         // TODO add your handling code here:
         ManageDHPanel objWH = new ManageDHPanel(userProcessContainer,ecosystem);
         SysAdminSplitPane.setRightComponent(objWH);
         /*userProcessContainer.add("Manage Warehouse",objWH);
         CardLayout crdlyt = (CardLayout) userProcessContainer.getLayout();
         crdlyt.next(userProcessContainer); */
-    }//GEN-LAST:event_btnManageWarehouseActionPerformed
+    }//GEN-LAST:event_btnManageDHActionPerformed
 
-    private void btnManagePantryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManagePantryActionPerformed
+    private void btnManageDOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageDOActionPerformed
         // TODO add your handling code here:
         ManageDOPanel objFCP = new ManageDOPanel(userProcessContainer,ecosystem);
          SysAdminSplitPane.setRightComponent(objFCP);
        /* userProcessContainer.add("Manage Pantry",objFCP);
         CardLayout crdlyt = (CardLayout) userProcessContainer.getLayout();
         crdlyt.next(userProcessContainer); */
-    }//GEN-LAST:event_btnManagePantryActionPerformed
+    }//GEN-LAST:event_btnManageDOActionPerformed
 
-    private void btnManageNonGovtOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageNonGovtOrgActionPerformed
+    private void btnManageCOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageCOActionPerformed
         try {
             // TODO add your handling code here:
             ManageCOJPanel objNGO = new ManageCOJPanel(userProcessContainer,ecosystem);
@@ -251,7 +251,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         } catch (IOException ex) {
             Logger.getLogger(SystemAdminWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_btnManageNonGovtOrgActionPerformed
+    }//GEN-LAST:event_btnManageCOActionPerformed
 
     private void btnManageUsersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageUsersActionPerformed
         // TODO add your handling code here:
@@ -282,10 +282,10 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JPanel MenubarSysAdminPanel;
     private javax.swing.JSplitPane SysAdminSplitPane;
     private javax.swing.JPanel WorkAreaSysadminPanel;
-    private javax.swing.JButton btnManageNonGovtOrg;
-    private javax.swing.JButton btnManagePantry;
+    private javax.swing.JButton btnManageCO;
+    private javax.swing.JButton btnManageDH;
+    private javax.swing.JButton btnManageDO;
     private javax.swing.JButton btnManageUsers;
-    private javax.swing.JButton btnManageWarehouse;
     private javax.swing.JButton btnViewAllStats;
     private javax.swing.JLabel jLabel;
     private javax.swing.JLabel lblSysadminWelcomemsg;

@@ -52,27 +52,29 @@ public class ManageCOJPanel extends javax.swing.JPanel {
 
         SplitPaneNonGovtOrg = new javax.swing.JSplitPane();
         NonGovtOrgControlPanel = new javax.swing.JPanel();
-        btnNGOAddNGO = new javax.swing.JButton();
-        btnNGOView = new javax.swing.JButton();
+        btnCOAddCO = new javax.swing.JButton();
+        btnCOView = new javax.swing.JButton();
         SysAdminNGOWorkareaPanel = new javax.swing.JPanel();
         lblNGObgc = new javax.swing.JLabel();
 
         NonGovtOrgControlPanel.setBackground(new java.awt.Color(255, 255, 255));
         NonGovtOrgControlPanel.setPreferredSize(new java.awt.Dimension(150, 600));
 
-        btnNGOAddNGO.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnNGOAddNGO.setText("Add NGO");
-        btnNGOAddNGO.addActionListener(new java.awt.event.ActionListener() {
+        btnCOAddCO.setBackground(new java.awt.Color(204, 204, 255));
+        btnCOAddCO.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnCOAddCO.setText("Add CO");
+        btnCOAddCO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNGOAddNGOActionPerformed(evt);
+                btnCOAddCOActionPerformed(evt);
             }
         });
 
-        btnNGOView.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnNGOView.setText("View/Modify");
-        btnNGOView.addActionListener(new java.awt.event.ActionListener() {
+        btnCOView.setBackground(new java.awt.Color(204, 204, 255));
+        btnCOView.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnCOView.setText("View/Modify");
+        btnCOView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNGOViewActionPerformed(evt);
+                btnCOViewActionPerformed(evt);
             }
         });
 
@@ -83,17 +85,17 @@ public class ManageCOJPanel extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, NonGovtOrgControlPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(NonGovtOrgControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnNGOView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnNGOAddNGO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnCOView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCOAddCO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         NonGovtOrgControlPanelLayout.setVerticalGroup(
             NonGovtOrgControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(NonGovtOrgControlPanelLayout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addComponent(btnNGOAddNGO)
+                .addComponent(btnCOAddCO)
                 .addGap(26, 26, 26)
-                .addComponent(btnNGOView)
+                .addComponent(btnCOView)
                 .addContainerGap(462, Short.MAX_VALUE))
         );
 
@@ -126,7 +128,7 @@ public class ManageCOJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnNGOAddNGOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNGOAddNGOActionPerformed
+    private void btnCOAddCOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCOAddCOActionPerformed
         try {
             // TODO add your handling code here:
             AddCOPanel objAddNGO = new AddCOPanel(userProcessContainer,ecosystem);
@@ -134,9 +136,9 @@ public class ManageCOJPanel extends javax.swing.JPanel {
         } catch (IOException ex) {
             Logger.getLogger(ManageCOJPanel.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_btnNGOAddNGOActionPerformed
+    }//GEN-LAST:event_btnCOAddCOActionPerformed
 
-    private void btnNGOViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNGOViewActionPerformed
+    private void btnCOViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCOViewActionPerformed
         try {
             // TODO add your handling code here:
             ViewModifyCOPanel objViewModNGO = new ViewModifyCOPanel(userProcessContainer,ecosystem);
@@ -144,15 +146,15 @@ public class ManageCOJPanel extends javax.swing.JPanel {
         } catch (IOException ex) {
             Logger.getLogger(ManageCOJPanel.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_btnNGOViewActionPerformed
+    }//GEN-LAST:event_btnCOViewActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel NonGovtOrgControlPanel;
     private javax.swing.JSplitPane SplitPaneNonGovtOrg;
     private javax.swing.JPanel SysAdminNGOWorkareaPanel;
-    private javax.swing.JButton btnNGOAddNGO;
-    private javax.swing.JButton btnNGOView;
+    private javax.swing.JButton btnCOAddCO;
+    private javax.swing.JButton btnCOView;
     private javax.swing.JLabel lblNGObgc;
     // End of variables declaration//GEN-END:variables
 }

@@ -73,10 +73,13 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="btnFCPAdd">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="cc" red="cc" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Trebuchet MS" size="14" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Add Pantry"/>
+                <Property name="text" type="java.lang.String" value="Add Drop Off"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFCPAddActionPerformed"/>
@@ -84,6 +87,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnFCPView">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="cc" red="cc" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Trebuchet MS" size="14" style="1"/>
                 </Property>

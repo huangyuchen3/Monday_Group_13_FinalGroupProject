@@ -52,7 +52,7 @@ public class AddDOPanel extends javax.swing.JPanel {
         for (DistributionHub fcw : ecosystem.getACDDirectory().getFadList()) {
             whList.add(fcw.getDistributionHubName());
         }
-        cbWarehouse.setModel(new DefaultComboBoxModel<String>(whList.toArray(new String[0])));
+        cbDistributionHub.setModel(new DefaultComboBoxModel<String>(whList.toArray(new String[0])));
         setBG();
     }
 
@@ -66,30 +66,30 @@ public class AddDOPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblAddPantryTitle = new javax.swing.JLabel();
-        lblPantryname = new javax.swing.JLabel();
-        txtPantryname = new javax.swing.JTextField();
-        lblPantryPhone = new javax.swing.JLabel();
-        txtPantryPhone = new javax.swing.JTextField();
-        lblPantryAdd = new javax.swing.JLabel();
-        txtPantryAdd = new javax.swing.JTextField();
-        lblPantryCity = new javax.swing.JLabel();
-        txtPantryCity = new javax.swing.JTextField();
-        lblPantryState = new javax.swing.JLabel();
-        txtPantryState = new javax.swing.JTextField();
-        lblPantryZip = new javax.swing.JLabel();
-        txtPantryZip = new javax.swing.JTextField();
-        lblPantryManager = new javax.swing.JLabel();
-        txtPantryManager = new javax.swing.JTextField();
-        lblPantryuname = new javax.swing.JLabel();
-        txtPantryuname = new javax.swing.JTextField();
-        lblPantrypwd = new javax.swing.JLabel();
-        txtPantrypwd = new javax.swing.JTextField();
-        lblPantrypwd1 = new javax.swing.JLabel();
-        txtPantrypwd1 = new javax.swing.JTextField();
-        btnPantrySubmit = new javax.swing.JButton();
-        lblWHPantryname = new javax.swing.JLabel();
-        lblPantryid = new javax.swing.JLabel();
-        txtPantryid = new javax.swing.JTextField();
+        lblDropOffname = new javax.swing.JLabel();
+        txtDropOffname = new javax.swing.JTextField();
+        lblDropOffPhone = new javax.swing.JLabel();
+        txtDropOffPhone = new javax.swing.JTextField();
+        lblDropOffAdd = new javax.swing.JLabel();
+        txtDropOffAdd = new javax.swing.JTextField();
+        lblDropOffCity = new javax.swing.JLabel();
+        txtDropOffCity = new javax.swing.JTextField();
+        lblDropOffState = new javax.swing.JLabel();
+        txtDropOffState = new javax.swing.JTextField();
+        lblDropOffZip = new javax.swing.JLabel();
+        txtDropOffZip = new javax.swing.JTextField();
+        lblDropOffManager = new javax.swing.JLabel();
+        txtDropOffManager = new javax.swing.JTextField();
+        lblDropOffManagername = new javax.swing.JLabel();
+        txtDropOffManagername = new javax.swing.JTextField();
+        lblDropOffpwd = new javax.swing.JLabel();
+        txtDropOffpwd = new javax.swing.JTextField();
+        lblDropOffpwd1 = new javax.swing.JLabel();
+        txtDropOffpwd1 = new javax.swing.JTextField();
+        btnDropOffSubmit = new javax.swing.JButton();
+        lblDistributionHubname = new javax.swing.JLabel();
+        lblDropOffid = new javax.swing.JLabel();
+        txtDropOffid = new javax.swing.JTextField();
         lblWHPantryname1 = new javax.swing.JLabel();
         lblPantryid1 = new javax.swing.JLabel();
         lblPantryname1 = new javax.swing.JLabel();
@@ -102,7 +102,7 @@ public class AddDOPanel extends javax.swing.JPanel {
         lblPantryuname1 = new javax.swing.JLabel();
         lblPantrypwd2 = new javax.swing.JLabel();
         lblPantrypwd3 = new javax.swing.JLabel();
-        cbWarehouse = new javax.swing.JComboBox<>();
+        cbDistributionHub = new javax.swing.JComboBox<>();
         LabelImage = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -112,156 +112,156 @@ public class AddDOPanel extends javax.swing.JPanel {
         lblAddPantryTitle.setText("Add Drop Off");
         add(lblAddPantryTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, -1, -1));
 
-        lblPantryname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblPantryname.setText("Pantry Name:");
-        add(lblPantryname, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, -1, -1));
+        lblDropOffname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDropOffname.setText("Drop Off Name:");
+        add(lblDropOffname, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, -1, -1));
 
-        txtPantryname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtPantryname.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtPantryname.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtDropOffname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDropOffname.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtDropOffname.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtPantrynameFocusLost(evt);
+                txtDropOffnameFocusLost(evt);
             }
         });
-        add(txtPantryname, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 136, 137, -1));
+        add(txtDropOffname, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 136, 137, -1));
 
-        lblPantryPhone.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblPantryPhone.setText("Phone Number:");
-        add(lblPantryPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, -1, -1));
+        lblDropOffPhone.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDropOffPhone.setText("Phone Number:");
+        add(lblDropOffPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, -1, -1));
 
-        txtPantryPhone.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtPantryPhone.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtPantryPhone.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtDropOffPhone.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDropOffPhone.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtDropOffPhone.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtPantryPhoneFocusLost(evt);
+                txtDropOffPhoneFocusLost(evt);
             }
         });
-        add(txtPantryPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 179, 137, -1));
+        add(txtDropOffPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 179, 137, -1));
 
-        lblPantryAdd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblPantryAdd.setText("Address:");
-        add(lblPantryAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, -1, -1));
+        lblDropOffAdd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDropOffAdd.setText("Address:");
+        add(lblDropOffAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 226, -1, 20));
 
-        txtPantryAdd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtPantryAdd.setPreferredSize(new java.awt.Dimension(150, 25));
-        add(txtPantryAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 222, 137, -1));
+        txtDropOffAdd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDropOffAdd.setPreferredSize(new java.awt.Dimension(150, 25));
+        add(txtDropOffAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 222, 137, -1));
 
-        lblPantryCity.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblPantryCity.setText("City:");
-        add(lblPantryCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, -1, -1));
+        lblDropOffCity.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDropOffCity.setText("City:");
+        add(lblDropOffCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, -1, -1));
 
-        txtPantryCity.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtPantryCity.setPreferredSize(new java.awt.Dimension(150, 25));
-        add(txtPantryCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 265, 137, -1));
+        txtDropOffCity.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDropOffCity.setPreferredSize(new java.awt.Dimension(150, 25));
+        add(txtDropOffCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 265, 137, -1));
 
-        lblPantryState.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblPantryState.setText("State:");
-        add(lblPantryState, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, -1, -1));
+        lblDropOffState.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDropOffState.setText("State:");
+        add(lblDropOffState, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, -1, -1));
 
-        txtPantryState.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtPantryState.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtPantryState.addActionListener(new java.awt.event.ActionListener() {
+        txtDropOffState.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDropOffState.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtDropOffState.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPantryStateActionPerformed(evt);
+                txtDropOffStateActionPerformed(evt);
             }
         });
-        add(txtPantryState, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 308, 137, -1));
+        add(txtDropOffState, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 308, 137, -1));
 
-        lblPantryZip.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblPantryZip.setText("Zip:");
-        add(lblPantryZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, -1, -1));
+        lblDropOffZip.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDropOffZip.setText("Zip:");
+        add(lblDropOffZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, -1, -1));
 
-        txtPantryZip.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtPantryZip.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtPantryZip.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtDropOffZip.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDropOffZip.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtDropOffZip.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtPantryZipFocusLost(evt);
+                txtDropOffZipFocusLost(evt);
             }
         });
-        txtPantryZip.addActionListener(new java.awt.event.ActionListener() {
+        txtDropOffZip.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPantryZipActionPerformed(evt);
+                txtDropOffZipActionPerformed(evt);
             }
         });
-        add(txtPantryZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 351, 137, -1));
+        add(txtDropOffZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 351, 137, -1));
 
-        lblPantryManager.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblPantryManager.setText("Pantry Manager Name:");
-        add(lblPantryManager, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 400, -1, -1));
+        lblDropOffManager.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDropOffManager.setText("Drop Off Manager Name:");
+        add(lblDropOffManager, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 400, -1, -1));
 
-        txtPantryManager.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtPantryManager.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtPantryManager.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtDropOffManager.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDropOffManager.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtDropOffManager.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtPantryManagerFocusLost(evt);
+                txtDropOffManagerFocusLost(evt);
             }
         });
-        add(txtPantryManager, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 394, 137, -1));
+        add(txtDropOffManager, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 394, 137, -1));
 
-        lblPantryuname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblPantryuname.setText("Pantry Manager Username:");
-        add(lblPantryuname, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 440, -1, -1));
+        lblDropOffManagername.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDropOffManagername.setText("Drop Off Manager Username:");
+        add(lblDropOffManagername, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, -1, -1));
 
-        txtPantryuname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtPantryuname.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtPantryuname.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtDropOffManagername.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDropOffManagername.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtDropOffManagername.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtPantryunameFocusLost(evt);
+                txtDropOffManagernameFocusLost(evt);
             }
         });
-        add(txtPantryuname, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 437, 137, -1));
+        add(txtDropOffManagername, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 437, 137, -1));
 
-        lblPantrypwd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblPantrypwd.setText("Password:");
-        add(lblPantrypwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 490, -1, -1));
+        lblDropOffpwd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDropOffpwd.setText("Password:");
+        add(lblDropOffpwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 480, -1, -1));
 
-        txtPantrypwd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtPantrypwd.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtPantrypwd.addActionListener(new java.awt.event.ActionListener() {
+        txtDropOffpwd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDropOffpwd.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtDropOffpwd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPantrypwdActionPerformed(evt);
+                txtDropOffpwdActionPerformed(evt);
             }
         });
-        add(txtPantrypwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 480, 137, -1));
+        add(txtDropOffpwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 480, 137, -1));
 
-        lblPantrypwd1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblPantrypwd1.setText("Confirm Password:");
-        add(lblPantrypwd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 530, -1, -1));
+        lblDropOffpwd1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDropOffpwd1.setText("Confirm Password:");
+        add(lblDropOffpwd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 530, -1, -1));
 
-        txtPantrypwd1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtPantrypwd1.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtPantrypwd1.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtDropOffpwd1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDropOffpwd1.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtDropOffpwd1.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtPantrypwd1FocusLost(evt);
+                txtDropOffpwd1FocusLost(evt);
             }
         });
-        add(txtPantrypwd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 523, 137, -1));
+        add(txtDropOffpwd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 523, 137, -1));
 
-        btnPantrySubmit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        btnPantrySubmit.setText("Submit");
-        btnPantrySubmit.addActionListener(new java.awt.event.ActionListener() {
+        btnDropOffSubmit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        btnDropOffSubmit.setText("Submit");
+        btnDropOffSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPantrySubmitActionPerformed(evt);
+                btnDropOffSubmitActionPerformed(evt);
             }
         });
-        add(btnPantrySubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 560, -1, -1));
+        add(btnDropOffSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 560, -1, -1));
 
-        lblWHPantryname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblWHPantryname.setText("Warehouse Name:");
-        add(lblWHPantryname, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 60, -1, -1));
+        lblDistributionHubname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDistributionHubname.setText("Distribution Hub Name:");
+        add(lblDistributionHubname, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, -1, -1));
 
-        lblPantryid.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblPantryid.setText("Pantry ID:");
-        add(lblPantryid, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, -1, -1));
+        lblDropOffid.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDropOffid.setText("Drop Off ID:");
+        add(lblDropOffid, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, -1, -1));
 
-        txtPantryid.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtPantryid.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtPantryid.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtDropOffid.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDropOffid.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtDropOffid.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtPantryidFocusLost(evt);
+                txtDropOffidFocusLost(evt);
             }
         });
-        add(txtPantryid, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 94, 137, -1));
+        add(txtDropOffid, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 94, 137, -1));
 
         lblWHPantryname1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         add(lblWHPantryname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(548, 53, -1, -1));
@@ -299,9 +299,9 @@ public class AddDOPanel extends javax.swing.JPanel {
         lblPantrypwd3.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         add(lblPantrypwd3, new org.netbeans.lib.awtextra.AbsoluteConstraints(542, 523, -1, -1));
 
-        cbWarehouse.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        cbWarehouse.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(cbWarehouse, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, -1, -1));
+        cbDistributionHub.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        cbDistributionHub.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(cbDistributionHub, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, -1, -1));
         add(LabelImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1470, 700));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -320,42 +320,42 @@ public class AddDOPanel extends javax.swing.JPanel {
         }
     }
 
-    private void txtPantrynameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPantrynameFocusLost
+    private void txtDropOffnameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDropOffnameFocusLost
         // TODO add your handling code here:
-        if (!(txtPantryname.getText().matches("^[a-zA-Z]*$"))) {
+        if (!(txtDropOffname.getText().matches("^[a-zA-Z]*$"))) {
             lblPantryname1.setText("Invalid input. Please enter only alphabets");
         } else {
             lblPantryname1.setText("");
         }
-    }//GEN-LAST:event_txtPantrynameFocusLost
+    }//GEN-LAST:event_txtDropOffnameFocusLost
 
-    private void txtPantryPhoneFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPantryPhoneFocusLost
+    private void txtDropOffPhoneFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDropOffPhoneFocusLost
         // TODO add your handling code here:
-        if (!(txtPantryPhone.getText().matches("^[0-9]*$")) || !(txtPantryPhone.getText().length() == 10)) {
+        if (!(txtDropOffPhone.getText().matches("^[0-9]*$")) || !(txtDropOffPhone.getText().length() == 10)) {
             lblPantryPhone1.setText("Please enter a valid phone number");
         } else {
             lblPantryPhone1.setText("");
 
         }
-    }//GEN-LAST:event_txtPantryPhoneFocusLost
+    }//GEN-LAST:event_txtDropOffPhoneFocusLost
 
-    private void txtPantryZipFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPantryZipFocusLost
+    private void txtDropOffZipFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDropOffZipFocusLost
         // TODO add your handling code here:
-        if ((txtPantryZip.getText().matches("^[a-zA-Z]*$"))) {
+        if ((txtDropOffZip.getText().matches("^[a-zA-Z]*$"))) {
             lblPantryZip1.setText("Invalid input. Please enter only numbers");
         } else {
             lblPantryZip1.setText("");
         }
-    }//GEN-LAST:event_txtPantryZipFocusLost
+    }//GEN-LAST:event_txtDropOffZipFocusLost
 
-    private void txtPantryManagerFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPantryManagerFocusLost
+    private void txtDropOffManagerFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDropOffManagerFocusLost
         // TODO add your handling code here:
-        if (!(txtPantryManager.getText().matches("^[a-zA-Z]*$"))) {
+        if (!(txtDropOffManager.getText().matches("^[a-zA-Z]*$"))) {
             lblPantryManager1.setText("Invalid input. Please enter only alphabets");
         } else {
             lblPantryManager1.setText("");
         }
-    }//GEN-LAST:event_txtPantryManagerFocusLost
+    }//GEN-LAST:event_txtDropOffManagerFocusLost
 
     public boolean isValid(String test, String regex) {
 //        String regex = "^[A-Za-z0-9]+";
@@ -371,22 +371,22 @@ public class AddDOPanel extends javax.swing.JPanel {
     }
 
 
-    private void btnPantrySubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPantrySubmitActionPerformed
+    private void btnDropOffSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDropOffSubmitActionPerformed
         // TODO add your handling code here:
 
         if (!nullCheck()) {
             if (chkpwd()) {
 
-                String panid = txtPantryid.getText();
-                String panName = txtPantryname.getText();
-                String phone = txtPantryPhone.getText();
+                String panid = txtDropOffid.getText();
+                String panName = txtDropOffname.getText();
+                String phone = txtDropOffPhone.getText();
 
-                String panCity = txtPantryCity.getText();
-                String panState = txtPantryState.getText();
-                String panZip = txtPantryZip.getText();
-                String panManager = txtPantryManager.getText();
-                String panUser = txtPantryuname.getText();
-                String panPswd = txtPantrypwd.getText();
+                String panCity = txtDropOffCity.getText();
+                String panState = txtDropOffState.getText();
+                String panZip = txtDropOffZip.getText();
+                String panManager = txtDropOffManager.getText();
+                String panUser = txtDropOffManagername.getText();
+                String panPswd = txtDropOffpwd.getText();
                 if (!isValid(panid, "^[0-9]+")) {
                     JOptionPane.showMessageDialog(this, "Please enter valid ID");
                     return;
@@ -426,25 +426,25 @@ public class AddDOPanel extends javax.swing.JPanel {
 
                 UserAccountDirectory uaList = ecosystem.getUserAccountDirectory();
                 Worker employee = new Worker();
-                employee.setName(txtPantryManager.getText());
+                employee.setName(txtDropOffManager.getText());
                 String role = "FCPManager";
                 DropOff fcp = new DropOff();
-                fcp.setDropOffId("fcp" + txtPantryid.getText());
-                fcp.setDropOffHubName(cbWarehouse.getSelectedItem().toString());
-                fcp.setDropOffName(txtPantryname.getText());
-                fcp.setDropOffPhone(txtPantryPhone.getText());
-                fcp.setDropOffAddresss(txtPantryAdd.getText());
-                fcp.setDropOffCity(txtPantryCity.getText());
-                fcp.setDropOffState(txtPantryState.getText());
-                fcp.setDropOffZipcode(txtPantryZip.getText());
-                fcp.setDropOffManager(txtPantryManager.getText());
+                fcp.setDropOffId("fcp" + txtDropOffid.getText());
+                fcp.setDropOffHubName(cbDistributionHub.getSelectedItem().toString());
+                fcp.setDropOffName(txtDropOffname.getText());
+                fcp.setDropOffPhone(txtDropOffPhone.getText());
+                fcp.setDropOffAddresss(txtDropOffAdd.getText());
+                fcp.setDropOffCity(txtDropOffCity.getText());
+                fcp.setDropOffState(txtDropOffState.getText());
+                fcp.setDropOffZipcode(txtDropOffZip.getText());
+                fcp.setDropOffManager(txtDropOffManager.getText());
                 UserAccount fcPantryAccount = new UserAccount();
-                fcPantryAccount.setUsername(txtPantryuname.getText());
-                fcPantryAccount.setPassword(txtPantrypwd.getText());
+                fcPantryAccount.setUsername(txtDropOffManagername.getText());
+                fcPantryAccount.setPassword(txtDropOffpwd.getText());
                 fcPantryAccount.setRole(new DOManagerRole());
                 fcPantryAccount.setEmployee(employee);
                 uad = ecosystem.getUserAccountDirectory();
-                uad.createUserAccount(txtPantryuname.getText(), txtPantrypwd.getText(), employee, new DOManagerRole());
+                uad.createUserAccount(txtDropOffManagername.getText(), txtDropOffpwd.getText(), employee, new DOManagerRole());
                 ecosystem.setUserAccountDirectory(uad);
                 fcp.setDropOffAccount(fcPantryAccount);
                 System.out.println(fcp);
@@ -465,42 +465,42 @@ public class AddDOPanel extends javax.swing.JPanel {
                 // ecosystem.getFCPDirectory().addNewFCPantry(fcp);
             } else {
                 JOptionPane.showMessageDialog(this, "Password Mismatch. Please verify the password entered.");
-                txtPantrypwd1.setText("");
+                txtDropOffpwd1.setText("");
             }
 
         } else {
             JOptionPane.showMessageDialog(this, "Please make sure that you have filled all mandatory fields");
         }
-    }//GEN-LAST:event_btnPantrySubmitActionPerformed
+    }//GEN-LAST:event_btnDropOffSubmitActionPerformed
 
-    private void txtPantryStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPantryStateActionPerformed
+    private void txtDropOffStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDropOffStateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtPantryStateActionPerformed
+    }//GEN-LAST:event_txtDropOffStateActionPerformed
 
-    private void txtPantryZipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPantryZipActionPerformed
+    private void txtDropOffZipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDropOffZipActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtPantryZipActionPerformed
+    }//GEN-LAST:event_txtDropOffZipActionPerformed
 
-    private void txtPantryidFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPantryidFocusLost
+    private void txtDropOffidFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDropOffidFocusLost
         // TODO add your handling code here:
-        if ((txtPantryid.getText().matches("^[a-zA-Z]*$"))) {
+        if ((txtDropOffid.getText().matches("^[a-zA-Z]*$"))) {
             lblPantryid1.setText("Invalid input. Please enter only numbers");
         } else {
             lblPantryid1.setText("");
         }
-    }//GEN-LAST:event_txtPantryidFocusLost
+    }//GEN-LAST:event_txtDropOffidFocusLost
 
-    private void txtPantryunameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPantryunameFocusLost
+    private void txtDropOffManagernameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDropOffManagernameFocusLost
         // TODO add your handling code here:
-        if (!(txtPantryuname.getText().matches("^[a-zA-Z]*$"))) {
+        if (!(txtDropOffManagername.getText().matches("^[a-zA-Z]*$"))) {
             lblPantryuname1.setText("Invalid input. Please enter only alphabets");
         } else {
             lblPantryuname1.setText("");
         }
-    }//GEN-LAST:event_txtPantryunameFocusLost
+    }//GEN-LAST:event_txtDropOffManagernameFocusLost
 
 
-    private void txtPantrypwd1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPantrypwd1FocusLost
+    private void txtDropOffpwd1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDropOffpwd1FocusLost
         // TODO add your handling code here:
 //        if(!(txtFCPpwd.getText().equals(txtFCPpwd1.getText()))){
 //            lblFCApwd2.setText("Password Mismatch. Please verify the password entered.");
@@ -508,63 +508,63 @@ public class AddDOPanel extends javax.swing.JPanel {
 //        else{
 //            lblFCApwd2.setText("");
 //        }
-    }//GEN-LAST:event_txtPantrypwd1FocusLost
+    }//GEN-LAST:event_txtDropOffpwd1FocusLost
 
-    private void txtPantrypwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPantrypwdActionPerformed
+    private void txtDropOffpwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDropOffpwdActionPerformed
 
-        if (!Business.Validations.ValidateInputs.isPasswordValid(txtPantrypwd.getText())) {
+        if (!Business.Validations.ValidateInputs.isPasswordValid(txtDropOffpwd.getText())) {
             JOptionPane.showMessageDialog(this, "Please verify the password (min 8).");
         }
-    }//GEN-LAST:event_txtPantrypwdActionPerformed
+    }//GEN-LAST:event_txtDropOffpwdActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LabelImage;
-    private javax.swing.JButton btnPantrySubmit;
-    private javax.swing.JComboBox<String> cbWarehouse;
+    private javax.swing.JButton btnDropOffSubmit;
+    private javax.swing.JComboBox<String> cbDistributionHub;
     private javax.swing.JLabel lblAddPantryTitle;
-    private javax.swing.JLabel lblPantryAdd;
+    private javax.swing.JLabel lblDistributionHubname;
+    private javax.swing.JLabel lblDropOffAdd;
+    private javax.swing.JLabel lblDropOffCity;
+    private javax.swing.JLabel lblDropOffManager;
+    private javax.swing.JLabel lblDropOffManagername;
+    private javax.swing.JLabel lblDropOffPhone;
+    private javax.swing.JLabel lblDropOffState;
+    private javax.swing.JLabel lblDropOffZip;
+    private javax.swing.JLabel lblDropOffid;
+    private javax.swing.JLabel lblDropOffname;
+    private javax.swing.JLabel lblDropOffpwd;
+    private javax.swing.JLabel lblDropOffpwd1;
     private javax.swing.JLabel lblPantryAdd1;
-    private javax.swing.JLabel lblPantryCity;
     private javax.swing.JLabel lblPantryCity1;
-    private javax.swing.JLabel lblPantryManager;
     private javax.swing.JLabel lblPantryManager1;
-    private javax.swing.JLabel lblPantryPhone;
     private javax.swing.JLabel lblPantryPhone1;
-    private javax.swing.JLabel lblPantryState;
     private javax.swing.JLabel lblPantryState1;
-    private javax.swing.JLabel lblPantryZip;
     private javax.swing.JLabel lblPantryZip1;
-    private javax.swing.JLabel lblPantryid;
     private javax.swing.JLabel lblPantryid1;
-    private javax.swing.JLabel lblPantryname;
     private javax.swing.JLabel lblPantryname1;
-    private javax.swing.JLabel lblPantrypwd;
-    private javax.swing.JLabel lblPantrypwd1;
     private javax.swing.JLabel lblPantrypwd2;
     private javax.swing.JLabel lblPantrypwd3;
-    private javax.swing.JLabel lblPantryuname;
     private javax.swing.JLabel lblPantryuname1;
-    private javax.swing.JLabel lblWHPantryname;
     private javax.swing.JLabel lblWHPantryname1;
-    private javax.swing.JTextField txtPantryAdd;
-    private javax.swing.JTextField txtPantryCity;
-    private javax.swing.JTextField txtPantryManager;
-    private javax.swing.JTextField txtPantryPhone;
-    private javax.swing.JTextField txtPantryState;
-    private javax.swing.JTextField txtPantryZip;
-    private javax.swing.JTextField txtPantryid;
-    private javax.swing.JTextField txtPantryname;
-    private javax.swing.JTextField txtPantrypwd;
-    private javax.swing.JTextField txtPantrypwd1;
-    private javax.swing.JTextField txtPantryuname;
+    private javax.swing.JTextField txtDropOffAdd;
+    private javax.swing.JTextField txtDropOffCity;
+    private javax.swing.JTextField txtDropOffManager;
+    private javax.swing.JTextField txtDropOffManagername;
+    private javax.swing.JTextField txtDropOffPhone;
+    private javax.swing.JTextField txtDropOffState;
+    private javax.swing.JTextField txtDropOffZip;
+    private javax.swing.JTextField txtDropOffid;
+    private javax.swing.JTextField txtDropOffname;
+    private javax.swing.JTextField txtDropOffpwd;
+    private javax.swing.JTextField txtDropOffpwd1;
     // End of variables declaration//GEN-END:variables
 
     private boolean nullCheck() {
-        if (txtPantryid.getText().length() != 0 && txtPantryname.getText().length() != 0
-                && txtPantryPhone.getText().length() != 0 && txtPantryAdd.getText().length() != 0 && txtPantryCity.getText().length() != 0
-                && txtPantryState.getText().length() != 0 && txtPantryZip.getText().length() != 0 && txtPantryManager.getText().length() != 0
-                && txtPantryuname.getText().length() != 0 && txtPantrypwd.getText().length() != 0 && txtPantrypwd1.getText().length() != 0) {
+        if (txtDropOffid.getText().length() != 0 && txtDropOffname.getText().length() != 0
+                && txtDropOffPhone.getText().length() != 0 && txtDropOffAdd.getText().length() != 0 && txtDropOffCity.getText().length() != 0
+                && txtDropOffState.getText().length() != 0 && txtDropOffZip.getText().length() != 0 && txtDropOffManager.getText().length() != 0
+                && txtDropOffManagername.getText().length() != 0 && txtDropOffpwd.getText().length() != 0 && txtDropOffpwd1.getText().length() != 0) {
             return false;
         } else {
             return true;
@@ -572,22 +572,22 @@ public class AddDOPanel extends javax.swing.JPanel {
     }
 
     private void clearfields() {
-        txtPantryid.setText("");
-        txtPantryname.setText("");
-        cbWarehouse.setSelectedIndex(0);
-        txtPantryPhone.setText("");
-        txtPantryAdd.setText("");
-        txtPantryCity.setText("");
-        txtPantryState.setText("");
-        txtPantryZip.setText("");
-        txtPantryManager.setText("");
-        txtPantryuname.setText("");
-        txtPantrypwd.setText("");
-        txtPantrypwd1.setText("");
+        txtDropOffid.setText("");
+        txtDropOffname.setText("");
+        cbDistributionHub.setSelectedIndex(0);
+        txtDropOffPhone.setText("");
+        txtDropOffAdd.setText("");
+        txtDropOffCity.setText("");
+        txtDropOffState.setText("");
+        txtDropOffZip.setText("");
+        txtDropOffManager.setText("");
+        txtDropOffManagername.setText("");
+        txtDropOffpwd.setText("");
+        txtDropOffpwd1.setText("");
     }
 
     private boolean chkpwd() {
-        if (txtPantrypwd.getText().equals(txtPantrypwd1.getText())) {
+        if (txtDropOffpwd.getText().equals(txtDropOffpwd1.getText())) {
             return true;
         } else {
             return false;

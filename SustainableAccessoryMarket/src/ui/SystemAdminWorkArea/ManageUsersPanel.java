@@ -64,7 +64,7 @@ public class ManageUsersPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblViewUsersTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblViewUsersTitle.setForeground(new java.awt.Color(0, 153, 204));
+        lblViewUsersTitle.setForeground(new java.awt.Color(102, 102, 255));
         lblViewUsersTitle.setText("View Users");
         add(lblViewUsersTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(389, 24, -1, -1));
 

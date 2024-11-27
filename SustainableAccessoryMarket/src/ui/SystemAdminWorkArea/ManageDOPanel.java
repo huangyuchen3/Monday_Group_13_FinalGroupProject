@@ -52,14 +52,16 @@ public class ManageDOPanel extends javax.swing.JPanel {
         SysAdminControlPantryPanel.setBackground(new java.awt.Color(255, 255, 255));
         SysAdminControlPantryPanel.setPreferredSize(new java.awt.Dimension(150, 600));
 
+        btnFCPAdd.setBackground(new java.awt.Color(204, 204, 255));
         btnFCPAdd.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnFCPAdd.setText("Add Pantry");
+        btnFCPAdd.setText("Add Drop Off");
         btnFCPAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFCPAddActionPerformed(evt);
             }
         });
 
+        btnFCPView.setBackground(new java.awt.Color(204, 204, 255));
         btnFCPView.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnFCPView.setText("View/Modify");
         btnFCPView.addActionListener(new java.awt.event.ActionListener() {
