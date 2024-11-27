@@ -102,7 +102,7 @@ public class DonorProfilePanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblDonorProfileTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblDonorProfileTitle.setForeground(new java.awt.Color(0, 153, 204));
+        lblDonorProfileTitle.setForeground(new java.awt.Color(51, 51, 255));
         lblDonorProfileTitle.setText("My  Profile");
         add(lblDonorProfileTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, -1, -1));
 
@@ -197,6 +197,7 @@ public class DonorProfilePanel extends javax.swing.JPanel {
         });
         add(txtDonorEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 137, -1));
 
+        btnProfileSubmit.setBackground(new java.awt.Color(204, 204, 255));
         btnProfileSubmit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         btnProfileSubmit.setText("Submit");
         btnProfileSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -206,6 +207,7 @@ public class DonorProfilePanel extends javax.swing.JPanel {
         });
         add(btnProfileSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 530, -1, -1));
 
+        btnProfileEdit.setBackground(new java.awt.Color(204, 204, 255));
         btnProfileEdit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         btnProfileEdit.setText("Edit Profile");
         btnProfileEdit.addActionListener(new java.awt.event.ActionListener() {
@@ -284,6 +286,7 @@ public class DonorProfilePanel extends javax.swing.JPanel {
         lblDonorpwd3.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         add(lblDonorpwd3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 480, -1, -1));
 
+        btnDonorCancel.setBackground(new java.awt.Color(204, 204, 255));
         btnDonorCancel.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         btnDonorCancel.setText("Cancel");
         btnDonorCancel.addActionListener(new java.awt.event.ActionListener() {

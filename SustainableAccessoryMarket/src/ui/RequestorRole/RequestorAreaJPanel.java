@@ -75,7 +75,7 @@ public class RequestorAreaJPanel extends javax.swing.JPanel {
         MenubarPanel.setBackground(new java.awt.Color(255, 255, 255));
         MenubarPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnFoodReq.setBackground(new java.awt.Color(0, 153, 204));
+        btnFoodReq.setBackground(new java.awt.Color(204, 204, 255));
         btnFoodReq.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnFoodReq.setText("Request Food");
         btnFoodReq.addActionListener(new java.awt.event.ActionListener() {
@@ -85,7 +85,7 @@ public class RequestorAreaJPanel extends javax.swing.JPanel {
         });
         MenubarPanel.add(btnFoodReq, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 70, -1, -1));
 
-        btnMyProfile.setBackground(new java.awt.Color(0, 153, 204));
+        btnMyProfile.setBackground(new java.awt.Color(204, 204, 255));
         btnMyProfile.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnMyProfile.setText("My Profile");
         btnMyProfile.addActionListener(new java.awt.event.ActionListener() {
@@ -95,7 +95,7 @@ public class RequestorAreaJPanel extends javax.swing.JPanel {
         });
         MenubarPanel.add(btnMyProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, -1, -1));
 
-        btnCheckStatus.setBackground(new java.awt.Color(0, 153, 204));
+        btnCheckStatus.setBackground(new java.awt.Color(204, 204, 255));
         btnCheckStatus.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnCheckStatus.setText("Check Status");
         btnCheckStatus.addActionListener(new java.awt.event.ActionListener() {
@@ -106,7 +106,7 @@ public class RequestorAreaJPanel extends javax.swing.JPanel {
         MenubarPanel.add(btnCheckStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 70, -1, -1));
 
         lblReqWelcome.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblReqWelcome.setForeground(new java.awt.Color(0, 153, 204));
+        lblReqWelcome.setForeground(new java.awt.Color(102, 102, 255));
         lblReqWelcome.setText("Welcome Requestor!");
         MenubarPanel.add(lblReqWelcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 10, -1, -1));
 
@@ -134,7 +134,7 @@ public class RequestorAreaJPanel extends javax.swing.JPanel {
         );
         WorkAreaPanelLayout.setVerticalGroup(
             WorkAreaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(LabelImage, javax.swing.GroupLayout.DEFAULT_SIZE, 763, Short.MAX_VALUE)
+            .addComponent(LabelImage, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
         );
 
         SplitPaneReq.setRightComponent(WorkAreaPanel);

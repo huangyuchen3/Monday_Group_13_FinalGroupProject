@@ -130,7 +130,7 @@ public class RequestorProfilePanel extends javax.swing.JPanel {
         add(lblReqName, new org.netbeans.lib.awtextra.AbsoluteConstraints(401, 95, -1, -1));
 
         lblReqProfileTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblReqProfileTitle.setForeground(new java.awt.Color(0, 153, 204));
+        lblReqProfileTitle.setForeground(new java.awt.Color(102, 102, 255));
         lblReqProfileTitle.setText(" Food Requestor Profile");
         add(lblReqProfileTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, -1, -1));
 
@@ -182,6 +182,7 @@ public class RequestorProfilePanel extends javax.swing.JPanel {
         lblReqUname.setText("Username:");
         add(lblReqUname, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 399, -1, -1));
 
+        btnReqEdit.setBackground(new java.awt.Color(204, 204, 255));
         btnReqEdit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         btnReqEdit.setText("Edit Profile");
         btnReqEdit.addActionListener(new java.awt.event.ActionListener() {
@@ -191,6 +192,7 @@ public class RequestorProfilePanel extends javax.swing.JPanel {
         });
         add(btnReqEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 530, -1, -1));
 
+        btnReqSubmit.setBackground(new java.awt.Color(204, 204, 255));
         btnReqSubmit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         btnReqSubmit.setText("Submit");
         btnReqSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -282,6 +284,7 @@ public class RequestorProfilePanel extends javax.swing.JPanel {
         lblReqpwd3.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         add(lblReqpwd3, new org.netbeans.lib.awtextra.AbsoluteConstraints(619, 481, -1, -1));
 
+        btnReqCancel.setBackground(new java.awt.Color(204, 204, 255));
         btnReqCancel.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         btnReqCancel.setText("Cancel");
         btnReqCancel.addActionListener(new java.awt.event.ActionListener() {

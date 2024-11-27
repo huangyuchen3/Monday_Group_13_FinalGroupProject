@@ -60,9 +60,9 @@ public class ReqorderStatusPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblFCRequestsTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblFCRequestsTitle.setForeground(new java.awt.Color(0, 153, 204));
+        lblFCRequestsTitle.setForeground(new java.awt.Color(102, 102, 255));
         lblFCRequestsTitle.setText(" Food Requests");
-        add(lblFCRequestsTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(402, 14, -1, -1));
+        add(lblFCRequestsTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         tblFCReq.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         tblFCReq.setModel(new javax.swing.table.DefaultTableModel(
@@ -83,7 +83,7 @@ public class ReqorderStatusPanel extends javax.swing.JPanel {
         });
         jScrollPane.setViewportView(tblFCReq);
 
-        add(jScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 1010, 153));
+        add(jScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 1010, 153));
         add(LabelImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 6, 1600, 840));
     }// </editor-fold>//GEN-END:initComponents
 
