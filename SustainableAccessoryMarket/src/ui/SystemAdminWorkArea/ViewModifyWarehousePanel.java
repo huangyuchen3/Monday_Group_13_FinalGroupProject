@@ -364,16 +364,16 @@ public class ViewModifyWarehousePanel extends javax.swing.JPanel {
         }
         DefaultTableModel model = (DefaultTableModel) tblWarehouseDetails.getModel();
         DistributionHub selectedFCW = (DistributionHub) model.getValueAt(selectedRowIndex, 0);
-        lblWarehouseid1.setText(selectedFCW.getAcDistributionHubId());
-        txtWarehousename.setText(selectedFCW.getAcDistributionHubName());
-        txtWarehousePhone.setText(selectedFCW.getAcDistributionHubPhone());
-        txtWarehouseAdd.setText(selectedFCW.getAcDistributionHubAddress());
-        txtWarehouseCity.setText(selectedFCW.getAcDistributionHubCity());
-        txtWarehouseState.setText(selectedFCW.getAcDistributionHubState());
-        txtWarehouseZip.setText(selectedFCW.getAcDistributionHubZipcode());
-        txtWarehouseFCAdmin.setText(selectedFCW.getAcDistributionHubAdmin());
-        txtFCAdminuname.setText(selectedFCW.getAcDistributionHubAccount().getUsername());
-        txtFCAdminpwd.setText(selectedFCW.getAcDistributionHubAccount().getPassword());
+        lblWarehouseid1.setText(selectedFCW.getDistributionHubId());
+        txtWarehousename.setText(selectedFCW.getDistributionHubName());
+        txtWarehousePhone.setText(selectedFCW.getDistributionHubPhone());
+        txtWarehouseAdd.setText(selectedFCW.getDistributionHubAddress());
+        txtWarehouseCity.setText(selectedFCW.getDistributionHubCity());
+        txtWarehouseState.setText(selectedFCW.getDistributionHubState());
+        txtWarehouseZip.setText(selectedFCW.getDistributionHubZipcode());
+        txtWarehouseFCAdmin.setText(selectedFCW.getDistributionHubAdmin());
+        txtFCAdminuname.setText(selectedFCW.getDistributionHubAccount().getUsername());
+        txtFCAdminpwd.setText(selectedFCW.getDistributionHubAccount().getPassword());
     }//GEN-LAST:event_btnWarehouseEditActionPerformed
 
     private void btnWarehouseDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnWarehouseDeleteActionPerformed
@@ -386,9 +386,9 @@ public class ViewModifyWarehousePanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblWarehouseDetails.getModel();
         DistributionHub selectedFCW = (DistributionHub) model.getValueAt(selectedRowIndex, 0);
         ecosystem.getUserAccountDirectory().deleteUserAccount(
-                ecosystem.getACDDirectory().getFadList().get(selectedRowIndex).getAcDistributionHubAccount());
+                ecosystem.getACDDirectory().getFadList().get(selectedRowIndex).getDistributionHubAccount());
         fcd = ecosystem.getACDDirectory();
-        fcd.deleteACDistributionHub(selectedFCW);
+        fcd.deleteDistributionHub(selectedFCW);
         ecosystem.setACDDirectory(fcd);
         Integer whcnt = ecosystem.getdistributionHubCnt();
         ecosystem.setdistributionHubCnt(whcnt-1);
@@ -423,7 +423,7 @@ public class ViewModifyWarehousePanel extends javax.swing.JPanel {
 
         ArrayList<DistributionHub> fcWarehouseList = ecosystem.getACDDirectory().getFadList();
         for (DistributionHub f : fcWarehouseList) {
-            if (f.getAcDistributionHubId().equals(WHid)) {
+            if (f.getDistributionHubId().equals(WHid)) {
 
                 String whName = txtWarehousename.getText();
                 String phone = txtWarehousePhone.getText();
@@ -468,19 +468,19 @@ public class ViewModifyWarehousePanel extends javax.swing.JPanel {
                     return;
                 }
 
-                f.setAcDistributionHubName(txtWarehousename.getText());
-                f.setAcDistributionHubPhone(txtWarehousePhone.getText());
-                f.setAcDistributionHubAddress(txtWarehouseAdd.getText());
-                f.setAcDistributionHubCity(txtWarehouseCity.getText());
-                f.setAcDistributionHubState(txtWarehouseState.getText());
-                f.setAcDistributionHubZipcode(txtWarehouseZip.getText());
-                f.setAcDistributionHubAdmin(txtWarehouseFCAdmin.getText());
+                f.setDistributionHubName(txtWarehousename.getText());
+                f.setDistributionHubPhone(txtWarehousePhone.getText());
+                f.setDistributionHubAddress(txtWarehouseAdd.getText());
+                f.getDistributionHubCity(txtWarehouseCity.getText());
+                f.setDistributionHubState(txtWarehouseState.getText());
+                f.setDistributionHubZipcode(txtWarehouseZip.getText());
+                f.setDistributionHubAdmin(txtWarehouseFCAdmin.getText());
                 //UserAccount WHua=new UserAccount();
                 //WHua.setUsername(txtFCAuname.getText());
                 //WHua.setPassword(txtFCApwd.getText());
-                if (f.getAcDistributionHubAccount().getUsername().equals(txtFCAdminuname.getText())) {
-                    f.getAcDistributionHubAccount().setPassword(txtFCAdminpwd.getText());
-                    f.getAcDistributionHubAccount().getEmployee().setName(txtWarehouseFCAdmin.getText());
+                if (f.getDistributionHubAccount().getUsername().equals(txtFCAdminuname.getText())) {
+                    f.getDistributionHubAccount().setPassword(txtFCAdminpwd.getText());
+                    f.getDistributionHubAccount().getEmployee().setName(txtWarehouseFCAdmin.getText());
                 }
                 //f.setFcwAccount(WHua);
                 break;
@@ -564,13 +564,13 @@ public class ViewModifyWarehousePanel extends javax.swing.JPanel {
         for (DistributionHub fcwh : ecosystem.getACDDirectory().getFadList()) {
             Object[] row = new Object[8];
             row[0] = fcwh;
-            row[1] = fcwh.getAcDistributionHubName();
-            row[2] = fcwh.getAcDistributionHubAdmin();
-            row[3] = fcwh.getAcDistributionHubPhone();
-            row[4] = fcwh.getAcDistributionHubAddress();
-            row[5] = fcwh.getAcDistributionHubCity();
-            row[6] = fcwh.getAcDistributionHubState();
-            row[7] = fcwh.getAcDistributionHubZipcode();
+            row[1] = fcwh.getDistributionHubName();
+            row[2] = fcwh.getDistributionHubAdmin();
+            row[3] = fcwh.getDistributionHubPhone();
+            row[4] = fcwh.getDistributionHubAddress();
+            row[5] = fcwh.getDistributionHubCity();
+            row[6] = fcwh.getDistributionHubState();
+            row[7] = fcwh.getDistributionHubZipcode();
             model.addRow(row);
         }
     }

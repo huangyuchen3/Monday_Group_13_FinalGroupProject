@@ -11,92 +11,92 @@ import Business.UserAccount.UserAccount;
  *@author ankitapatil
  */
 public class DistributionHub {
-    private String acDistributionHubId;
-    private String acDistributionHubName;
-    private String acDistributionHubPhone;
-    private String acDistributionHubAddress;
-    private String acDistributionHubCity;
-    private String acDistributionHubState;
-    private String acDistributionHubZipcode;
-    private String acDistributionHubAdmin;
-    private UserAccount acDistributionHubAccount;
+    private String DistributionHubId;
+    private String DistributionHubName;
+    private String DistributionHubPhone;
+    private String DistributionHubAddress;
+    private String DistributionHubCity;
+    private String DistributionHubState;
+    private String DistributionHubZipcode;
+    private String DistributionHubAdmin;
+    private UserAccount DistributionHubAccount;
 
-    public String getAcDistributionHubId() {
-        return acDistributionHubId;
+    public String getDistributionHubId() {
+        return DistributionHubId;
     }
 
-    public void setAcDistributionHubId(String acDistributionHubId) {
-        this.acDistributionHubId = acDistributionHubId;
+    public void setDistributionHubId(String DistributionHubId) {
+        this.DistributionHubId = DistributionHubId;
     }
 
-    public String getAcDistributionHubName() {
-        return acDistributionHubName;
+    public String getDistributionHubName() {
+        return DistributionHubName;
     }
 
-    public void setAcDistributionHubName(String acDistributionHubName) {
-        this.acDistributionHubName = acDistributionHubName;
+    public void setDistributionHubName(String DistributionHubName) {
+        this.DistributionHubName = DistributionHubName;
     }
 
-    public String getAcDistributionHubPhone() {
-        return acDistributionHubPhone;
+    public String getDistributionHubPhone() {
+        return DistributionHubPhone;
     }
 
-    public void setAcDistributionHubPhone(String acDistributionHubPhone) {
-        this.acDistributionHubPhone = acDistributionHubPhone;
+    public void setDistributionHubPhone(String DistributionHubPhone) {
+        this.DistributionHubPhone = DistributionHubPhone;
     }
 
-    public String getAcDistributionHubAddress() {
-        return acDistributionHubAddress;
+    public String getDistributionHubAddress() {
+        return DistributionHubAddress;
     }
 
-    public void setAcDistributionHubAddress(String acDistributionHubAddress) {
-        this.acDistributionHubAddress = acDistributionHubAddress;
+    public void setDistributionHubAddress(String DistributionHubAddress) {
+        this.DistributionHubAddress = DistributionHubAddress;
     }
 
-    public String getAcDistributionHubCity() {
-        return acDistributionHubCity;
+    public String getDistributionHubCity() {
+        return DistributionHubCity;
     }
 
-    public void setAcDistributionHubCity(String acDistributionHubCity) {
-        this.acDistributionHubCity = acDistributionHubCity;
+    public void getDistributionHubCity(String DistributionHubCity) {
+        this.DistributionHubCity = DistributionHubCity;
     }
 
-    public String getAcDistributionHubState() {
-        return acDistributionHubState;
+    public String getDistributionHubState() {
+        return DistributionHubState;
     }
 
-    public void setAcDistributionHubState(String acDistributionHubState) {
-        this.acDistributionHubState = acDistributionHubState;
+    public void setDistributionHubState(String DistributionHubState) {
+        this.DistributionHubState = DistributionHubState;
     }
 
-    public String getAcDistributionHubZipcode() {
-        return acDistributionHubZipcode;
+    public String getDistributionHubZipcode() {
+        return DistributionHubZipcode;
     }
 
-    public void setAcDistributionHubZipcode(String acDistributionHubZipcode) {
-        this.acDistributionHubZipcode = acDistributionHubZipcode;
+    public void setDistributionHubZipcode(String DistributionHubZipcode) {
+        this.DistributionHubZipcode = DistributionHubZipcode;
     }
 
-    public String getAcDistributionHubAdmin() {
-        return acDistributionHubAdmin;
+    public String getDistributionHubAdmin() {
+        return DistributionHubAdmin;
     }
 
-    public void setAcDistributionHubAdmin(String acDistributionHubAdmin) {
-        this.acDistributionHubAdmin = acDistributionHubAdmin;
+    public void setDistributionHubAdmin(String DistributionHubAdmin) {
+        this.DistributionHubAdmin = DistributionHubAdmin;
     }
 
-    public UserAccount getAcDistributionHubAccount() {
-        return acDistributionHubAccount;
+    public UserAccount getDistributionHubAccount() {
+        return DistributionHubAccount;
     }
 
-    public void setAcDistributionHubAccount(UserAccount acDistributionHubAccount) {
-        this.acDistributionHubAccount = acDistributionHubAccount;
+    public void setDistributionHubAccount(UserAccount DistributionHubAccount) {
+        this.DistributionHubAccount = DistributionHubAccount;
     }
 
     
     
    @Override
     public String toString(){
-        return acDistributionHubId;
+        return DistributionHubId;
     }
 }

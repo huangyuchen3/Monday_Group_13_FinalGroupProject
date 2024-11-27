@@ -50,7 +50,7 @@ public class AddFCPantryPanel extends javax.swing.JPanel {
         }
         ArrayList<String> whList = new ArrayList<String>();
         for (DistributionHub fcw : ecosystem.getACDDirectory().getFadList()) {
-            whList.add(fcw.getAcDistributionHubName());
+            whList.add(fcw.getDistributionHubName());
         }
         cbWarehouse.setModel(new DefaultComboBoxModel<String>(whList.toArray(new String[0])));
         setBG();

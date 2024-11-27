@@ -56,8 +56,8 @@ public class DonateNowPanel extends javax.swing.JPanel {
         String donState = ecosystem.getDonDir().getdonState(donUName);
         ArrayList<String> CityList = new ArrayList<String>();
         for (DistributionHub fcw : ecosystem.getACDDirectory().getFadList()) {
-            if (fcw.getAcDistributionHubState().equals(donState)) {
-                CityList.add(fcw.getAcDistributionHubCity());
+            if (fcw.getDistributionHubState().equals(donState)) {
+                CityList.add(fcw.getDistributionHubCity());
             }
         }        
         cbDonateCity.setModel(new DefaultComboBoxModel<String>(CityList.toArray(new String[0])));
@@ -340,8 +340,8 @@ public class DonateNowPanel extends javax.swing.JPanel {
         String city = cbDonateCity.getSelectedItem().toString();
         ArrayList<String> whList = new ArrayList<String>();
         for (DistributionHub fcw : ecosystem.getACDDirectory().getFadList()) {
-            if (fcw.getAcDistributionHubCity().equals(city)) {
-                whList.add(fcw.getAcDistributionHubName());
+            if (fcw.getDistributionHubCity().equals(city)) {
+                whList.add(fcw.getDistributionHubName());
             }
         }        
         cbWarehouse.setModel(new DefaultComboBoxModel<String>(whList.toArray(new String[0])));

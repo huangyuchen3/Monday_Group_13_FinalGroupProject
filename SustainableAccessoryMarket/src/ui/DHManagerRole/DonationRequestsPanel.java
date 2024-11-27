@@ -48,8 +48,8 @@ public class DonationRequestsPanel extends javax.swing.JPanel {
         System.out.println(FCAname);
         WHname= ecosystem.getACDDirectory().getDHname(FCAname);
         for(DistributionHub f: ecosystem.getACDDirectory().getFadList()){
-            if(f.getAcDistributionHubName().equals(WHname)){
-                city=f.getAcDistributionHubCity();
+            if(f.getDistributionHubName().equals(WHname)){
+                city=f.getDistributionHubCity();
             }
         }
         ArrayList<String> VolunteerList = new ArrayList();
