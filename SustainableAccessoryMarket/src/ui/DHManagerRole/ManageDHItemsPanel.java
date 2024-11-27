@@ -45,30 +45,30 @@ public class ManageDHItemsPanel extends javax.swing.JPanel {
 
         SplitPaneFCP = new javax.swing.JSplitPane();
         FCAControlPanel = new javax.swing.JPanel();
-        btnAddPItems = new javax.swing.JButton();
-        btnViewPItems = new javax.swing.JButton();
+        btnAddDOItems = new javax.swing.JButton();
+        btnViewDOItems = new javax.swing.JButton();
         FCAWorkareaPanel = new javax.swing.JPanel();
         LabelImage = new javax.swing.JLabel();
 
         FCAControlPanel.setBackground(new java.awt.Color(255, 255, 255));
         FCAControlPanel.setPreferredSize(new java.awt.Dimension(150, 600));
 
-        btnAddPItems.setBackground(new java.awt.Color(0, 153, 204));
-        btnAddPItems.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnAddPItems.setText("Add Items");
-        btnAddPItems.addActionListener(new java.awt.event.ActionListener() {
+        btnAddDOItems.setBackground(new java.awt.Color(204, 204, 255));
+        btnAddDOItems.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnAddDOItems.setText("Add Items");
+        btnAddDOItems.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddPItemsActionPerformed(evt);
+                btnAddDOItemsActionPerformed(evt);
             }
         });
 
-        btnViewPItems.setBackground(new java.awt.Color(0, 153, 204));
-        btnViewPItems.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnViewPItems.setText("View/Update Items");
-        btnViewPItems.setToolTipText("");
-        btnViewPItems.addActionListener(new java.awt.event.ActionListener() {
+        btnViewDOItems.setBackground(new java.awt.Color(204, 204, 255));
+        btnViewDOItems.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnViewDOItems.setText("View/Update Items");
+        btnViewDOItems.setToolTipText("");
+        btnViewDOItems.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewPItemsActionPerformed(evt);
+                btnViewDOItemsActionPerformed(evt);
             }
         });
 
@@ -79,17 +79,17 @@ public class ManageDHItemsPanel extends javax.swing.JPanel {
             .addGroup(FCAControlPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(FCAControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnViewPItems, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAddPItems, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnViewDOItems, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAddDOItems, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         FCAControlPanelLayout.setVerticalGroup(
             FCAControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FCAControlPanelLayout.createSequentialGroup()
                 .addGap(63, 63, 63)
-                .addComponent(btnAddPItems)
+                .addComponent(btnAddDOItems)
                 .addGap(26, 26, 26)
-                .addComponent(btnViewPItems)
+                .addComponent(btnViewDOItems)
                 .addContainerGap(663, Short.MAX_VALUE))
         );
 
@@ -141,17 +141,17 @@ public class ManageDHItemsPanel extends javax.swing.JPanel {
         }
     }
     
-    private void btnAddPItemsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddPItemsActionPerformed
+    private void btnAddDOItemsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddDOItemsActionPerformed
         // TODO add your handling code here:
        AddDOItemsPanel objAddPI = new AddDOItemsPanel(userProcessContainer, ecosystem,userAcc);
        SplitPaneFCP.setRightComponent(objAddPI);
-    }//GEN-LAST:event_btnAddPItemsActionPerformed
+    }//GEN-LAST:event_btnAddDOItemsActionPerformed
 
-    private void btnViewPItemsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewPItemsActionPerformed
+    private void btnViewDOItemsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewDOItemsActionPerformed
         // TODO add your handling code here:
        ViewDHItemsPanel objViewPI = new ViewDHItemsPanel(userProcessContainer, ecosystem,userAcc);
        SplitPaneFCP.setRightComponent(objViewPI);
-    }//GEN-LAST:event_btnViewPItemsActionPerformed
+    }//GEN-LAST:event_btnViewDOItemsActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -159,8 +159,8 @@ public class ManageDHItemsPanel extends javax.swing.JPanel {
     private javax.swing.JPanel FCAWorkareaPanel;
     private javax.swing.JLabel LabelImage;
     private javax.swing.JSplitPane SplitPaneFCP;
-    private javax.swing.JButton btnAddPItems;
-    private javax.swing.JButton btnViewPItems;
+    private javax.swing.JButton btnAddDOItems;
+    private javax.swing.JButton btnViewDOItems;
     // End of variables declaration//GEN-END:variables
 
 }

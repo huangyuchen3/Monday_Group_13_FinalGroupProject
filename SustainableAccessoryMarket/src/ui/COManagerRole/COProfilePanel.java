@@ -45,8 +45,8 @@ public class COProfilePanel extends javax.swing.JPanel {
         this.userAcc = userAcc;
         ngoAname=userAcc.getEmployee().getName();
         NGOUname = userAcc.getUsername();
-        btnNonGovOrgSubmit.setVisible(false);
-        btnNonGovOrgCancel.setVisible(false);
+        btnCOManagerSubmit.setVisible(false);
+        btnCOManagerCancel.setVisible(false);
         lblNonGovOrgpwd1.setVisible(false);
         txtNonGovOrgpwd1.setVisible(false);
         populateFields();
@@ -75,11 +75,11 @@ public class COProfilePanel extends javax.swing.JPanel {
         txtNonGovOrgstate = new javax.swing.JTextField();
         lblNonGovOrgzip = new javax.swing.JLabel();
         txtNonGovOrgzip = new javax.swing.JTextField();
-        lblNonGovOrgagent = new javax.swing.JLabel();
+        lblCOManagerName = new javax.swing.JLabel();
         txtNonGovOrgAgent = new javax.swing.JTextField();
-        btnNonGovOrgSubmit = new javax.swing.JButton();
-        btnNonGovOrgEdit = new javax.swing.JButton();
-        lblNonGovOrgUname = new javax.swing.JLabel();
+        btnCOManagerSubmit = new javax.swing.JButton();
+        btnCOManagerEdit = new javax.swing.JButton();
+        lblCOManagerUsername = new javax.swing.JLabel();
         txtNonGovOrguname = new javax.swing.JTextField();
         lblNonGovOrgpwd = new javax.swing.JLabel();
         txtNonGovOrgpwd = new javax.swing.JTextField();
@@ -95,13 +95,13 @@ public class COProfilePanel extends javax.swing.JPanel {
         lblNonGovOrgname1 = new javax.swing.JLabel();
         lblNonGovOrgpwd2 = new javax.swing.JLabel();
         lblNonGovOrgpwd3 = new javax.swing.JLabel();
-        btnNonGovOrgCancel = new javax.swing.JButton();
+        btnCOManagerCancel = new javax.swing.JButton();
         LabelImage = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblNGOProTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblNGOProTitle.setForeground(new java.awt.Color(0, 153, 204));
+        lblNGOProTitle.setForeground(new java.awt.Color(102, 102, 255));
         lblNGOProTitle.setText("My Profile");
         add(lblNGOProTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(423, 23, -1, -1));
 
@@ -183,9 +183,9 @@ public class COProfilePanel extends javax.swing.JPanel {
         });
         add(txtNonGovOrgzip, new org.netbeans.lib.awtextra.AbsoluteConstraints(463, 295, 137, -1));
 
-        lblNonGovOrgagent.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblNonGovOrgagent.setText("NGO Agent Name:");
-        add(lblNonGovOrgagent, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 340, -1, -1));
+        lblCOManagerName.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblCOManagerName.setText("Community Outreach Manager Name:");
+        add(lblCOManagerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, -1, -1));
 
         txtNonGovOrgAgent.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         txtNonGovOrgAgent.setPreferredSize(new java.awt.Dimension(150, 25));
@@ -196,27 +196,27 @@ public class COProfilePanel extends javax.swing.JPanel {
         });
         add(txtNonGovOrgAgent, new org.netbeans.lib.awtextra.AbsoluteConstraints(463, 338, 137, -1));
 
-        btnNonGovOrgSubmit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        btnNonGovOrgSubmit.setText("Submit");
-        btnNonGovOrgSubmit.addActionListener(new java.awt.event.ActionListener() {
+        btnCOManagerSubmit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        btnCOManagerSubmit.setText("Submit");
+        btnCOManagerSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNonGovOrgSubmitActionPerformed(evt);
+                btnCOManagerSubmitActionPerformed(evt);
             }
         });
-        add(btnNonGovOrgSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 510, -1, -1));
+        add(btnCOManagerSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 510, -1, -1));
 
-        btnNonGovOrgEdit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        btnNonGovOrgEdit.setText("Edit Profile");
-        btnNonGovOrgEdit.addActionListener(new java.awt.event.ActionListener() {
+        btnCOManagerEdit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        btnCOManagerEdit.setText("Edit Profile");
+        btnCOManagerEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNonGovOrgEditActionPerformed(evt);
+                btnCOManagerEditActionPerformed(evt);
             }
         });
-        add(btnNonGovOrgEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 510, -1, -1));
+        add(btnCOManagerEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 510, -1, -1));
 
-        lblNonGovOrgUname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblNonGovOrgUname.setText("NGO Agent Username:");
-        add(lblNonGovOrgUname, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, -1, -1));
+        lblCOManagerUsername.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblCOManagerUsername.setText("Community Outreach Manager Username:");
+        add(lblCOManagerUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, -1, -1));
 
         txtNonGovOrguname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         txtNonGovOrguname.setPreferredSize(new java.awt.Dimension(150, 25));
@@ -288,14 +288,14 @@ public class COProfilePanel extends javax.swing.JPanel {
         lblNonGovOrgpwd3.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         add(lblNonGovOrgpwd3, new org.netbeans.lib.awtextra.AbsoluteConstraints(606, 467, -1, -1));
 
-        btnNonGovOrgCancel.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        btnNonGovOrgCancel.setText("Cancel");
-        btnNonGovOrgCancel.addActionListener(new java.awt.event.ActionListener() {
+        btnCOManagerCancel.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        btnCOManagerCancel.setText("Cancel");
+        btnCOManagerCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNonGovOrgCancelActionPerformed(evt);
+                btnCOManagerCancelActionPerformed(evt);
             }
         });
-        add(btnNonGovOrgCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 510, -1, -1));
+        add(btnCOManagerCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 510, -1, -1));
         add(LabelImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, -4, 1690, 900));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -385,7 +385,7 @@ public class COProfilePanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_txtNonGovOrgAgentFocusLost
 
-    private void btnNonGovOrgSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNonGovOrgSubmitActionPerformed
+    private void btnCOManagerSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCOManagerSubmitActionPerformed
         // TODO add your handling code here:
         if(!nullCheck()){
             ArrayList<CommunityOutreach> nogList = ecosystem.getcoDir().getNgoList();
@@ -414,12 +414,12 @@ public class COProfilePanel extends javax.swing.JPanel {
         else{
             JOptionPane.showMessageDialog(this, "All fields are mandatory!");
         }
-    }//GEN-LAST:event_btnNonGovOrgSubmitActionPerformed
+    }//GEN-LAST:event_btnCOManagerSubmitActionPerformed
 
-    private void btnNonGovOrgEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNonGovOrgEditActionPerformed
+    private void btnCOManagerEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCOManagerEditActionPerformed
         // TODO add your handling code here:
         enablefields();
-    }//GEN-LAST:event_btnNonGovOrgEditActionPerformed
+    }//GEN-LAST:event_btnCOManagerEditActionPerformed
 
     private void txtNonGovOrgunameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNonGovOrgunameFocusLost
         // TODO add your handling code here:
@@ -437,10 +437,10 @@ public class COProfilePanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNonGovOrgpwd1ActionPerformed
 
-    private void btnNonGovOrgCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNonGovOrgCancelActionPerformed
+    private void btnCOManagerCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCOManagerCancelActionPerformed
         // TODO add your handling code here:
         disableFields();
-    }//GEN-LAST:event_btnNonGovOrgCancelActionPerformed
+    }//GEN-LAST:event_btnCOManagerCancelActionPerformed
 
     private void populateFields() {
         for(CommunityOutreach d: ecosystem.getcoDir().getNgoList()){
@@ -477,8 +477,8 @@ public class COProfilePanel extends javax.swing.JPanel {
         txtNonGovOrgzip.setEnabled(true);
         txtNonGovOrguname.setEnabled(true);
         txtNonGovOrgpwd.setEnabled(true);
-        btnNonGovOrgSubmit.setVisible(true);
-        btnNonGovOrgCancel.setVisible(true);
+        btnCOManagerSubmit.setVisible(true);
+        btnCOManagerCancel.setVisible(true);
         lblNonGovOrgpwd1.setVisible(true);
         txtNonGovOrgpwd1.setVisible(true);
     }
@@ -493,8 +493,8 @@ public class COProfilePanel extends javax.swing.JPanel {
         txtNonGovOrgzip.setEnabled(false);
         txtNonGovOrguname.setEnabled(false);
         txtNonGovOrgpwd.setEnabled(false);
-        btnNonGovOrgSubmit.setVisible(false);
-        btnNonGovOrgCancel.setVisible(false);
+        btnCOManagerSubmit.setVisible(false);
+        btnCOManagerCancel.setVisible(false);
         lblNonGovOrgpwd1.setVisible(false);
         txtNonGovOrgpwd1.setVisible(false);
         lblNonGovOrgName1.setText("");
@@ -522,18 +522,18 @@ public class COProfilePanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LabelImage;
-    private javax.swing.JButton btnNonGovOrgCancel;
-    private javax.swing.JButton btnNonGovOrgEdit;
-    private javax.swing.JButton btnNonGovOrgSubmit;
+    private javax.swing.JButton btnCOManagerCancel;
+    private javax.swing.JButton btnCOManagerEdit;
+    private javax.swing.JButton btnCOManagerSubmit;
+    private javax.swing.JLabel lblCOManagerName;
+    private javax.swing.JLabel lblCOManagerUsername;
     private javax.swing.JLabel lblNGOProTitle;
     private javax.swing.JLabel lblNonGovOrgAgent1;
     private javax.swing.JLabel lblNonGovOrgName;
     private javax.swing.JLabel lblNonGovOrgName1;
     private javax.swing.JLabel lblNonGovOrgPhone;
-    private javax.swing.JLabel lblNonGovOrgUname;
     private javax.swing.JLabel lblNonGovOrgadd;
     private javax.swing.JLabel lblNonGovOrgadd1;
-    private javax.swing.JLabel lblNonGovOrgagent;
     private javax.swing.JLabel lblNonGovOrgcity;
     private javax.swing.JLabel lblNonGovOrgcity1;
     private javax.swing.JLabel lblNonGovOrgname1;

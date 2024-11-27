@@ -55,7 +55,7 @@ public class DHManagerWorkAreaPanel extends javax.swing.JPanel {
         SplitPaneFCAdmin = new javax.swing.JSplitPane();
         FCAMenubarPanel = new javax.swing.JPanel();
         btnViewDonationReq = new javax.swing.JButton();
-        btnManagePItems = new javax.swing.JButton();
+        btnDOSPItems = new javax.swing.JButton();
         btnManageVol = new javax.swing.JButton();
         lblWelcomemessage = new javax.swing.JLabel();
         lbllogout = new javax.swing.JLabel();
@@ -68,7 +68,7 @@ public class DHManagerWorkAreaPanel extends javax.swing.JPanel {
         FCAMenubarPanel.setBackground(new java.awt.Color(255, 255, 255));
         FCAMenubarPanel.setToolTipText("");
 
-        btnViewDonationReq.setBackground(new java.awt.Color(0, 153, 204));
+        btnViewDonationReq.setBackground(new java.awt.Color(204, 204, 255));
         btnViewDonationReq.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnViewDonationReq.setText("View Donation Requests");
         btnViewDonationReq.setToolTipText("");
@@ -78,17 +78,17 @@ public class DHManagerWorkAreaPanel extends javax.swing.JPanel {
             }
         });
 
-        btnManagePItems.setBackground(new java.awt.Color(0, 153, 204));
-        btnManagePItems.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnManagePItems.setText("Manage Pantry Items");
-        btnManagePItems.setToolTipText("");
-        btnManagePItems.addActionListener(new java.awt.event.ActionListener() {
+        btnDOSPItems.setBackground(new java.awt.Color(204, 204, 255));
+        btnDOSPItems.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnDOSPItems.setText("Manage Drop Off Store Items");
+        btnDOSPItems.setToolTipText("");
+        btnDOSPItems.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManagePItemsActionPerformed(evt);
+                btnDOSPItemsActionPerformed(evt);
             }
         });
 
-        btnManageVol.setBackground(new java.awt.Color(0, 153, 204));
+        btnManageVol.setBackground(new java.awt.Color(204, 204, 255));
         btnManageVol.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnManageVol.setText("Manage Volunteers");
         btnManageVol.setToolTipText("");
@@ -99,8 +99,8 @@ public class DHManagerWorkAreaPanel extends javax.swing.JPanel {
         });
 
         lblWelcomemessage.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblWelcomemessage.setForeground(new java.awt.Color(51, 153, 255));
-        lblWelcomemessage.setText("Welcome, Accessory Market Admin!");
+        lblWelcomemessage.setForeground(new java.awt.Color(102, 102, 255));
+        lblWelcomemessage.setText("Welcome Distribution Hub Manager!");
 
         lbllogout.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         lbllogout.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -119,12 +119,12 @@ public class DHManagerWorkAreaPanel extends javax.swing.JPanel {
                 .addGroup(FCAMenubarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(FCAMenubarPanelLayout.createSequentialGroup()
                         .addGap(65, 65, 65)
-                        .addComponent(btnManagePItems)
+                        .addComponent(btnDOSPItems)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnViewDonationReq)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnManageVol)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FCAMenubarPanelLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblWelcomemessage)
@@ -144,7 +144,7 @@ public class DHManagerWorkAreaPanel extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(FCAMenubarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(FCAMenubarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(btnManagePItems)
+                                .addComponent(btnDOSPItems)
                                 .addComponent(btnManageVol)
                                 .addComponent(btnViewDonationReq))
                             .addComponent(lbllogout, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -193,11 +193,11 @@ public class DHManagerWorkAreaPanel extends javax.swing.JPanel {
         SplitPaneFCAdmin.setRightComponent(objDonReq);
     }//GEN-LAST:event_btnViewDonationReqActionPerformed
 
-    private void btnManagePItemsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManagePItemsActionPerformed
+    private void btnDOSPItemsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDOSPItemsActionPerformed
         // TODO add your handling code here:
         ManageDHItemsPanel objWHI = new ManageDHItemsPanel(userProcessContainer,ecosystem,userAccount);
         SplitPaneFCAdmin.setRightComponent(objWHI);
-    }//GEN-LAST:event_btnManagePItemsActionPerformed
+    }//GEN-LAST:event_btnDOSPItemsActionPerformed
 
     private void btnManageVolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageVolActionPerformed
         // TODO add your handling code here:
@@ -256,7 +256,7 @@ public class DHManagerWorkAreaPanel extends javax.swing.JPanel {
     private javax.swing.JPanel FCAWorkAreaPanel;
     private javax.swing.JLabel LabelImage;
     private javax.swing.JSplitPane SplitPaneFCAdmin;
-    private javax.swing.JButton btnManagePItems;
+    private javax.swing.JButton btnDOSPItems;
     private javax.swing.JButton btnManageVol;
     private javax.swing.JButton btnViewDonationReq;
     private javax.swing.JLabel jLabel;

@@ -121,7 +121,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel.setBackground(new java.awt.Color(0, 153, 204));
+        jPanel.setBackground(new java.awt.Color(204, 204, 255));
 
         loginJButton.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         loginJButton.setText("Login");
