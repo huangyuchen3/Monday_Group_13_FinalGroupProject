@@ -143,7 +143,7 @@ public class ManageDHItemsPanel extends javax.swing.JPanel {
     
     private void btnAddPItemsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddPItemsActionPerformed
         // TODO add your handling code here:
-       AddDHItemsPanel objAddPI = new AddDHItemsPanel(userProcessContainer, ecosystem,userAcc);
+       AddDOItemsPanel objAddPI = new AddDOItemsPanel(userProcessContainer, ecosystem,userAcc);
        SplitPaneFCP.setRightComponent(objAddPI);
     }//GEN-LAST:event_btnAddPItemsActionPerformed
 

@@ -26,17 +26,17 @@ import ui.DonorRole.DonorProfilePanel;
  *
  *@author reetikabhanushali
  */
-public class AddDHItemsPanel extends javax.swing.JPanel {
+public class AddDOItemsPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form AddDHItemsPanel
+     * Creates new form AddDOItemsPanel
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
     UserAccount userAcc;
     DropOffItemsDirectory fcpid;
     String WHname;
-    public AddDHItemsPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount userAcc) {
+    public AddDOItemsPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount userAcc) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
