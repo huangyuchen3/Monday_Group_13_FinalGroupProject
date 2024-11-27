@@ -15,7 +15,8 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
-import ui.DHManagerRole.FCAdminWorkAreaPanel;
+
+import ui.DHManagerRole.DHManagerWorkAreaPanel;
 import ui.MainJFrame;
 
 /**
@@ -229,7 +230,7 @@ public class DonorAreaJPanel extends javax.swing.JPanel {
             MainJFrame mjf = new MainJFrame();
             mjf.logout(userProcessContainer, jp, jsp);
         } catch (IOException ex) {
-            Logger.getLogger(FCAdminWorkAreaPanel.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DHManagerWorkAreaPanel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_lbllogoutMousePressed
 

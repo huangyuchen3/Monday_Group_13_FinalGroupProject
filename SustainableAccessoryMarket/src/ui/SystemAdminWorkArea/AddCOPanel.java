@@ -30,17 +30,17 @@ import ui.DonorRole.DonorProfilePanel;
  *
  *@author ankitapatil
  */
-public class AddNGOPanel extends javax.swing.JPanel {
+public class AddCOPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form AddNGOPanel
+     * Creates new form AddCOPanel
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
     CommunityOutreachDirectory ngod;
     UserAccountDirectory uad;
 
-    public AddNGOPanel(JPanel userProcessContainer, EcoSystem ecosystem) throws IOException {
+    public AddCOPanel(JPanel userProcessContainer, EcoSystem ecosystem) throws IOException {
         initComponents();
 
 //        imageLbl.setMinimumSize(new Dimension(userProcessContainer.getWidth(), userProcessContainer.getHeight()));

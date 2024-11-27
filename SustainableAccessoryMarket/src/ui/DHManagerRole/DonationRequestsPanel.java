@@ -219,7 +219,7 @@ public class DonationRequestsPanel extends javax.swing.JPanel {
             Image newimg = img.getScaledInstance(1650, userProcessContainer.getHeight(), java.awt.Image.SCALE_SMOOTH);
 //            fcpLblSelect.setIcon(new ImageIcon(newimg));
         } catch (IOException ex) {
-            Logger.getLogger(ViewPantryItemsPanel.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ViewDHItemsPanel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     

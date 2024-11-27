@@ -19,14 +19,14 @@ import ui.DonorRole.DonorProfilePanel;
  *
  *@author ankitapatil
  */
-public class ManagePantryPanel extends javax.swing.JPanel {
+public class ManageDOPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ManagePantryPanel
+     * Creates new form ManageDOPanel
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
-    public ManagePantryPanel(JPanel userProcessContainer,EcoSystem ecosystem) {
+    public ManageDOPanel(JPanel userProcessContainer, EcoSystem ecosystem) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
@@ -134,13 +134,13 @@ public class ManagePantryPanel extends javax.swing.JPanel {
     }
     private void btnFCPAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFCPAddActionPerformed
         // TODO add your handling code here:
-        AddFCPantryPanel objAddFCP = new AddFCPantryPanel(userProcessContainer,ecosystem);
+        AddDOPanel objAddFCP = new AddDOPanel(userProcessContainer,ecosystem);
         SplitPanePantry.setRightComponent(objAddFCP);
     }//GEN-LAST:event_btnFCPAddActionPerformed
 
     private void btnFCPViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFCPViewActionPerformed
         // TODO add your handling code here:
-        ViewModifyPantryPanel objViewFCP = new ViewModifyPantryPanel(userProcessContainer,ecosystem);
+        ViewModifyDOPanel objViewFCP = new ViewModifyDOPanel(userProcessContainer,ecosystem);
         SplitPanePantry.setRightComponent(objViewFCP);
     }//GEN-LAST:event_btnFCPViewActionPerformed
 

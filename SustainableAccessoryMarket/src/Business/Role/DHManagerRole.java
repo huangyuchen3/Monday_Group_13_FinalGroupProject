@@ -8,7 +8,7 @@ import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
-import ui.DHManagerRole.FCAdminWorkAreaPanel;
+import ui.DHManagerRole.DHManagerWorkAreaPanel;
 
 /**
  *
@@ -16,6 +16,6 @@ import ui.DHManagerRole.FCAdminWorkAreaPanel;
  */
 public class DHManagerRole extends Role{
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business, JPanel jp, JSplitPane jsp) {
-        return new FCAdminWorkAreaPanel(userProcessContainer, business,account, jp, jsp);
+        return new DHManagerWorkAreaPanel(userProcessContainer, business,account, jp, jsp);
     } 
 }

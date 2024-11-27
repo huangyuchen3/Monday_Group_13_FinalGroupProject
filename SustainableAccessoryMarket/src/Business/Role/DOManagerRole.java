@@ -8,7 +8,7 @@ import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
-import ui.DOManagerRole.ACPManagerWorkAreaPanel;
+import ui.DOManagerRole.DOManagerWorkAreaPanel;
 
 /**
  *
@@ -16,6 +16,6 @@ import ui.DOManagerRole.ACPManagerWorkAreaPanel;
  */
 public class DOManagerRole extends Role{
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business, JPanel jp, JSplitPane jsp) {
-        return new ACPManagerWorkAreaPanel(userProcessContainer, business,account,jp,jsp);
+        return new DOManagerWorkAreaPanel(userProcessContainer, business,account,jp,jsp);
     }
 }

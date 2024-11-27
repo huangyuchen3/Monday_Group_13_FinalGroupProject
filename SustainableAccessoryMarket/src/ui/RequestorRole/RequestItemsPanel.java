@@ -26,10 +26,10 @@ import javax.swing.JPanel;
  *
  * @author ankitapatil 
  */
-public class RequestFoodPanel extends javax.swing.JPanel {
+public class RequestItemsPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form RequestFoodPanel
+     * Creates new form RequestItemsPanel
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
@@ -40,7 +40,7 @@ public class RequestFoodPanel extends javax.swing.JPanel {
     String selDelCity;
     Integer requestorId;
     AccessoryRequestorderDirectory rqorD;
-    public RequestFoodPanel(JPanel userProcessContainer,EcoSystem ecosystem,UserAccount userAcc) {
+    public RequestItemsPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount userAcc) {
         initComponents();
          this.userProcessContainer = userProcessContainer;
         this.ecosystem =ecosystem;
@@ -287,7 +287,7 @@ public class RequestFoodPanel extends javax.swing.JPanel {
             Image newimg = img.getScaledInstance(1650, userProcessContainer.getHeight(), java.awt.Image.SCALE_SMOOTH);
             LabelImage.setIcon(new ImageIcon(newimg));
         } catch (IOException ex) {
-            Logger.getLogger(RequestFoodPanel.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(RequestItemsPanel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     

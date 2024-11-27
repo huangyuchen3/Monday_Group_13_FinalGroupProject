@@ -202,7 +202,7 @@ public class RequestorAreaJPanel extends javax.swing.JPanel {
     
     private void btnFoodReqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFoodReqActionPerformed
         // TODO add your handling code here:
-        RequestFoodPanel objReq = new RequestFoodPanel(userProcessContainer,ecosystem,userAccount);
+        RequestItemsPanel objReq = new RequestItemsPanel(userProcessContainer,ecosystem,userAccount);
         SplitPaneReq.setRightComponent(objReq);
     }//GEN-LAST:event_btnFoodReqActionPerformed
 

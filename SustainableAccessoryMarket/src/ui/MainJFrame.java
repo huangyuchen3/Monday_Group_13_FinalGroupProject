@@ -25,13 +25,14 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 import javax.swing.JTextField;
+
+import ui.COManagerRole.COWorkAreaPanel;
+import ui.DHManagerRole.DHManagerWorkAreaPanel;
+import ui.DOManagerRole.DOManagerWorkAreaPanel;
 import ui.DonorRole.DonorAreaJPanel;
-import ui.DHManagerRole.FCAdminWorkAreaPanel;
-import ui.DOManagerRole.ACPManagerWorkAreaPanel;
-import ui.COManagerRole.NGOWorkAreaPanel;
 import ui.RequestorRole.RequestorAreaJPanel;
 import ui.Signup.SignupWorkAreaJPanel;
-import ui.SystemAdminWorkArea.AddWarehousePanel;
+import ui.SystemAdminWorkArea.AddDHPanel;
 import ui.SystemAdminWorkArea.SystemAdminWorkAreaJPanel;
 import ui.VolunteerRole.VolunteerWorkAreaPanel;
 
@@ -262,7 +263,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 loginJButton.setEnabled(false);
                 logoutJButton.setEnabled(true);
 
-                FCAdminWorkAreaPanel fca = new FCAdminWorkAreaPanel(container, ecosystem, ua, jPanel, jSplitPane);
+                DHManagerWorkAreaPanel fca = new DHManagerWorkAreaPanel(container, ecosystem, ua, jPanel, jSplitPane);
                 container.add("FCAdmin", fca);
                 CardLayout crdLyt = (CardLayout) container.getLayout();
                 crdLyt.next(container);
@@ -296,7 +297,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 loginJButton.setEnabled(false);
                 logoutJButton.setEnabled(true);
 
-                NGOWorkAreaPanel req = new NGOWorkAreaPanel(container, ecosystem, ua, jPanel, jSplitPane);
+                COWorkAreaPanel req = new COWorkAreaPanel(container, ecosystem, ua, jPanel, jSplitPane);
                 container.add("COAgent", req);
                 CardLayout crdLyt = (CardLayout) container.getLayout();
                 crdLyt.next(container);
@@ -308,7 +309,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 loginJButton.setEnabled(false);
                 logoutJButton.setEnabled(true);
 
-                ACPManagerWorkAreaPanel fcpm = new ACPManagerWorkAreaPanel(container, ecosystem, ua, jPanel, jSplitPane);
+                DOManagerWorkAreaPanel fcpm = new DOManagerWorkAreaPanel(container, ecosystem, ua, jPanel, jSplitPane);
                 container.add("ACPManager", fcpm);
                 CardLayout crdLyt = (CardLayout) container.getLayout();
                 crdLyt.next(container);
@@ -413,7 +414,7 @@ public class MainJFrame extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        AddWarehousePanel panel = new AddWarehousePanel(
+        AddDHPanel panel = new AddDHPanel(
                 new ImageIcon("images/blurbg.png").getImage());
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {

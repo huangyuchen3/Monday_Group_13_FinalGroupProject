@@ -29,16 +29,16 @@ import ui.DonorRole.DonorProfilePanel;
  *
  *@author ankitapatil
  */
-public class ViewModifyPantryPanel extends javax.swing.JPanel {
+public class ViewModifyDOPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ViewModifyPantryPanel
+     * Creates new form ViewModifyDOPanel
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
     DropOffDirectory fcpd;
 
-    public ViewModifyPantryPanel(JPanel userProcessContainer, EcoSystem ecosystem) {
+    public ViewModifyDOPanel(JPanel userProcessContainer, EcoSystem ecosystem) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;

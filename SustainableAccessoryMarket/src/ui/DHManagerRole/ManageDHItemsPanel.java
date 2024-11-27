@@ -20,13 +20,13 @@ import javax.swing.JPanel;
  *
  *@author ankitapatil
  */
-public class ManagePantryItemsPanel extends javax.swing.JPanel {
+public class ManageDHItemsPanel extends javax.swing.JPanel {
 
     /** Creates new form ManageWHitemsPanel */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
     UserAccount userAcc;
-    public ManagePantryItemsPanel(JPanel userProcessContainer,EcoSystem ecosystem,UserAccount userAcc) {
+    public ManageDHItemsPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount userAcc) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
@@ -137,19 +137,19 @@ public class ManagePantryItemsPanel extends javax.swing.JPanel {
             Image newimg = img.getScaledInstance(1650, userProcessContainer.getHeight(), java.awt.Image.SCALE_SMOOTH);
             LabelImage.setIcon(new ImageIcon(newimg));
         } catch (IOException ex) {
-            Logger.getLogger(ManagePantryItemsPanel.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ManageDHItemsPanel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
     private void btnAddPItemsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddPItemsActionPerformed
         // TODO add your handling code here:
-       AddPantryItemsPanel objAddPI = new AddPantryItemsPanel(userProcessContainer, ecosystem,userAcc);
+       AddDHItemsPanel objAddPI = new AddDHItemsPanel(userProcessContainer, ecosystem,userAcc);
        SplitPaneFCP.setRightComponent(objAddPI);
     }//GEN-LAST:event_btnAddPItemsActionPerformed
 
     private void btnViewPItemsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewPItemsActionPerformed
         // TODO add your handling code here:
-       ViewPantryItemsPanel objViewPI = new ViewPantryItemsPanel(userProcessContainer, ecosystem,userAcc);
+       ViewDHItemsPanel objViewPI = new ViewDHItemsPanel(userProcessContainer, ecosystem,userAcc);
        SplitPaneFCP.setRightComponent(objViewPI);
     }//GEN-LAST:event_btnViewPItemsActionPerformed
 

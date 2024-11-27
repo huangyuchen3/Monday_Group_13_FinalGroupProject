@@ -31,16 +31,16 @@ import ui.DonorRole.DonorProfilePanel;
  *
  *@author ankitapatil
  */
-public class ViewModifyNGOPanel extends javax.swing.JPanel {
+public class ViewModifyCOPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ViewModifyNGOPanel
+     * Creates new form ViewModifyCOPanel
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
     CommunityOutreachDirectory ngod;
 
-    public ViewModifyNGOPanel(JPanel userProcessContainer, EcoSystem ecosystem) throws IOException {
+    public ViewModifyCOPanel(JPanel userProcessContainer, EcoSystem ecosystem) throws IOException {
         initComponents();
 
 //        imageLbl.setMinimumSize(new Dimension(userProcessContainer.getWidth(), userProcessContainer.getHeight()));
