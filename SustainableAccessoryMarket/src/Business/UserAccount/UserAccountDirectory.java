@@ -30,18 +30,22 @@ public class UserAccountDirectory {
         adminAccount.setEmployee(null); // If no employee object is needed
         userAccList.add(adminAccount);
         
+        Worker donorWorker = new Worker();
+        donorWorker.setName("Default Donor");
         UserAccount donorAccount = new UserAccount();
         donorAccount.setUsername("donor");
         donorAccount.setPassword("donor123");
         donorAccount.setRole(new PersonalDonorRole()); // Replace with your PersonalDonorRole class
-        donorAccount.setEmployee(null); // Set an Employee object if needed
+        donorAccount.setEmployee(donorWorker); // Set an Employee object if needed
         userAccList.add(donorAccount);
         
+        Worker volunteerWorker = new Worker();
+        volunteerWorker.setName("Default Volunteer");
         UserAccount volunteerAccount = new UserAccount();
         volunteerAccount.setUsername("volunteer");
         volunteerAccount.setPassword("volunteer123");
         volunteerAccount.setRole(new Volunteer()); // Replace with your VolunteerRole class
-        volunteerAccount.setEmployee(null); // Set an Employee object if needed
+        volunteerAccount.setEmployee(volunteerWorker); // Set an Employee object if needed
         userAccList.add(volunteerAccount);
         
         UserAccount requesterAccount = new UserAccount();
@@ -85,12 +89,12 @@ public class UserAccountDirectory {
     
     public UserAccount createUserAccount(String username, String password, Worker employee, Role role){
         UserAccount userAccount = new UserAccount();
-        userAccount.setUsername(username);
-        userAccount.setPassword(password);
-        userAccount.setEmployee(employee);
-        userAccount.setRole(role);
-        userAccList.add(userAccount);
-        return userAccount;
+    userAccount.setUsername(username);
+    userAccount.setPassword(password);
+    userAccount.setEmployee(employee);  // Associate the Worker object here
+    userAccount.setRole(role);
+    userAccList.add(userAccount);
+    return userAccount;
     }
     
     public boolean checkIfUsernameIsUnique(String username){
