@@ -22,17 +22,17 @@ import ui.MainJFrame;
  *
  *@author ankitapatil
  */
-public class FCAdminWorkAreaPanel extends javax.swing.JPanel {
+public class DHManagerWorkAreaPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form FCAdminWorkAreaPanel
+     * Creates new form DHManagerWorkAreaPanel
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
     UserAccount userAccount;
     JPanel jp;
     JSplitPane jsp;
-    public FCAdminWorkAreaPanel(JPanel userProcessContainer,EcoSystem ecosystem, UserAccount userAccount, JPanel jp, JSplitPane jsp) {
+    public DHManagerWorkAreaPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount userAccount, JPanel jp, JSplitPane jsp) {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.userAccount = userAccount;
@@ -195,7 +195,7 @@ public class FCAdminWorkAreaPanel extends javax.swing.JPanel {
 
     private void btnManagePItemsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManagePItemsActionPerformed
         // TODO add your handling code here:
-        ManagePantryItemsPanel objWHI = new ManagePantryItemsPanel(userProcessContainer,ecosystem,userAccount);
+        ManageDHItemsPanel objWHI = new ManageDHItemsPanel(userProcessContainer,ecosystem,userAccount);
         SplitPaneFCAdmin.setRightComponent(objWHI);
     }//GEN-LAST:event_btnManagePItemsActionPerformed
 
@@ -212,7 +212,7 @@ public class FCAdminWorkAreaPanel extends javax.swing.JPanel {
             MainJFrame mjf = new MainJFrame();
             mjf.logout(userProcessContainer, jp, jsp);
         } catch (IOException ex) {
-            Logger.getLogger(FCAdminWorkAreaPanel.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DHManagerWorkAreaPanel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_lbllogoutMousePressed
 
@@ -231,7 +231,7 @@ public class FCAdminWorkAreaPanel extends javax.swing.JPanel {
             
             
         } catch (IOException ex) {
-            Logger.getLogger(FCAdminWorkAreaPanel.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DHManagerWorkAreaPanel.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }

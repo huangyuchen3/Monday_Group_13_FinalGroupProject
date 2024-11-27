@@ -16,17 +16,17 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 import ui.DonorRole.DonorProfilePanel;
-import ui.DHManagerRole.FCAdminWorkAreaPanel;
+import ui.DHManagerRole.DHManagerWorkAreaPanel;
 import ui.MainJFrame;
 
 /**
  *
  * @author ankitapatil 
  */
-public class ACPManagerWorkAreaPanel extends javax.swing.JPanel {
+public class DOManagerWorkAreaPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ACPManagerWorkAreaPanel
+     * Creates new form DOManagerWorkAreaPanel
      */
     JPanel userProcessContainer;
     UserAccount account;
@@ -34,7 +34,7 @@ public class ACPManagerWorkAreaPanel extends javax.swing.JPanel {
     JPanel jp;
     JSplitPane jsp;
 
-    public ACPManagerWorkAreaPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount account, JPanel jp, JSplitPane jsp) {
+    public DOManagerWorkAreaPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount account, JPanel jp, JSplitPane jsp) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.account = account;
@@ -147,7 +147,7 @@ public class ACPManagerWorkAreaPanel extends javax.swing.JPanel {
             lblFCPlogout.setIcon(new ImageIcon(newimg1));
 
         } catch (IOException ex) {
-            Logger.getLogger(FCAdminWorkAreaPanel.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DHManagerWorkAreaPanel.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -184,19 +184,19 @@ public class ACPManagerWorkAreaPanel extends javax.swing.JPanel {
 
     private void btnViewfoodDonationReqsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewfoodDonationReqsActionPerformed
         // TODO add your handling code here:
-        ViewFoodRequestsPanel objFDreqs = new ViewFoodRequestsPanel(userProcessContainer, ecosystem, account);
+        ViewItemsRequestsPanel objFDreqs = new ViewItemsRequestsPanel(userProcessContainer, ecosystem, account);
         SplitPaneFCPManager.setRightComponent(objFDreqs);
     }//GEN-LAST:event_btnViewfoodDonationReqsActionPerformed
 
     private void btnPantryStockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPantryStockActionPerformed
         // TODO add your handling code here:
-        PantryStockPanel objWHI = new PantryStockPanel(userProcessContainer, ecosystem, account);
+        DHStockPanel objWHI = new DHStockPanel(userProcessContainer, ecosystem, account);
         SplitPaneFCPManager.setRightComponent(objWHI);
     }//GEN-LAST:event_btnPantryStockActionPerformed
 
     private void btnConWarehouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConWarehouseActionPerformed
         // TODO add your handling code here:
-        ContactDistributionHubPanel objConWH = new ContactDistributionHubPanel(userProcessContainer, ecosystem, account);
+        ContactDHPanel objConWH = new ContactDHPanel(userProcessContainer, ecosystem, account);
         SplitPaneFCPManager.setRightComponent(objConWH);
     }//GEN-LAST:event_btnConWarehouseActionPerformed
 

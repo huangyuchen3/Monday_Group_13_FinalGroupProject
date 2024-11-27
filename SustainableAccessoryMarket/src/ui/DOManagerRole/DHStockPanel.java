@@ -22,15 +22,15 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author ankitapatil 
  */
-public class PantryStockPanel extends javax.swing.JPanel {
+public class DHStockPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form PantryStockPanel
+     * Creates new form DHStockPanel
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
     UserAccount userAcc;
-    public PantryStockPanel(JPanel userProcessContainer,EcoSystem ecosystem,UserAccount userAcc) {
+    public DHStockPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount userAcc) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;

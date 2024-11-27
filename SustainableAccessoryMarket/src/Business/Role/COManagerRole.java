@@ -9,7 +9,7 @@ import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
-import ui.COManagerRole.NGOWorkAreaPanel;
+import ui.COManagerRole.COWorkAreaPanel;
 
 
 /**
@@ -19,6 +19,6 @@ import ui.COManagerRole.NGOWorkAreaPanel;
 public class COManagerRole extends Role{
 
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business, JPanel jp, JSplitPane jsp) {
-        return new NGOWorkAreaPanel(userProcessContainer, business, account,jp,jsp);
+        return new COWorkAreaPanel(userProcessContainer, business, account,jp,jsp);
     }
 }

@@ -20,17 +20,17 @@ import javax.swing.JPanel;
  *
  * @author ankitapatil 
  */
-public class ContactDistributionHubPanel extends javax.swing.JPanel {
+public class ContactDHPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ContactDistributionHubPanel
+     * Creates new form ContactDHPanel
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
     UserAccount userAcc;
     String WHname;
     String FCPmgname;
-    public ContactDistributionHubPanel(JPanel userProcessContainer,EcoSystem ecosystem,UserAccount userAcc) {
+    public ContactDHPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount userAcc) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;

@@ -23,17 +23,17 @@ import ui.MainJFrame;
  *
  * @author ankitapatil 
  */
-public class NGOWorkAreaPanel extends javax.swing.JPanel {
+public class COWorkAreaPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form NGOWorkAreaPanel
+     * Creates new form COWorkAreaPanel
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
     UserAccount userAcc;
     JPanel jp;
     JSplitPane jsp;
-    public NGOWorkAreaPanel(JPanel userProcessContainer,EcoSystem ecosystem,UserAccount userAcc, JPanel jp, JSplitPane jsp) {
+    public COWorkAreaPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount userAcc, JPanel jp, JSplitPane jsp) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
@@ -171,7 +171,7 @@ public class NGOWorkAreaPanel extends javax.swing.JPanel {
             MainJFrame mjf = new MainJFrame();
             mjf.logout(userProcessContainer, jp, jsp);
         } catch (IOException ex) {
-            Logger.getLogger(NGOWorkAreaPanel.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(COWorkAreaPanel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_lbllogoutMousePressed
 
@@ -205,7 +205,7 @@ public class NGOWorkAreaPanel extends javax.swing.JPanel {
             
             
         } catch (IOException ex) {
-            Logger.getLogger(NGOWorkAreaPanel.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(COWorkAreaPanel.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }

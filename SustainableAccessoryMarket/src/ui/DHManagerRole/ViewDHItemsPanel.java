@@ -24,10 +24,10 @@ import javax.swing.table.DefaultTableModel;
  *
  *@author ankitapatil
  */
-public class ViewPantryItemsPanel extends javax.swing.JPanel {
+public class ViewDHItemsPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ViewPantryItemsPanel
+     * Creates new form ViewDHItemsPanel
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
@@ -36,7 +36,7 @@ public class ViewPantryItemsPanel extends javax.swing.JPanel {
     String FCPname;
     String WHname;
 
-    public ViewPantryItemsPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount userAcc) {
+    public ViewDHItemsPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount userAcc) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;

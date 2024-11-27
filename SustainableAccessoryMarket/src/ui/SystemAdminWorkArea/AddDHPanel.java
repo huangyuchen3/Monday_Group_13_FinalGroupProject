@@ -28,10 +28,10 @@ import ui.DonorRole.DonorProfilePanel;
  *
  *@author ankitapatil
  */
-public class AddWarehousePanel extends javax.swing.JPanel {
+public class AddDHPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form AddWarehousePanel
+     * Creates new form AddDHPanel
      */
     private Image img;
     JPanel userProcessContainer;
@@ -39,11 +39,11 @@ public class AddWarehousePanel extends javax.swing.JPanel {
     DistributionHubDirectory fcd;
     UserAccountDirectory uad;
 
-    public AddWarehousePanel(String img) {
+    public AddDHPanel(String img) {
         this(new ImageIcon(img).getImage());
     }
 
-    public AddWarehousePanel(JPanel userProcessContainer, EcoSystem ecosystem) {
+    public AddDHPanel(JPanel userProcessContainer, EcoSystem ecosystem) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
@@ -55,7 +55,7 @@ public class AddWarehousePanel extends javax.swing.JPanel {
 
     }
 
-    public AddWarehousePanel(Image img) {
+    public AddDHPanel(Image img) {
         this.img = img;
         Dimension size = new Dimension(img.getWidth(null), img.getHeight(null));
         setPreferredSize(size);

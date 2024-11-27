@@ -19,9 +19,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 
+import ui.DHManagerRole.DHManagerWorkAreaPanel;
 import ui.DonorRole.DonorAreaJPanel;
 import ui.DonorRole.DonorProfilePanel;
-import ui.DHManagerRole.FCAdminWorkAreaPanel;
 import ui.MainJFrame;
 
 /**
@@ -227,7 +227,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
       
     private void btnManageWarehouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageWarehouseActionPerformed
         // TODO add your handling code here:
-        ManageWarehousePanel objWH = new ManageWarehousePanel(userProcessContainer,ecosystem);
+        ManageDHPanel objWH = new ManageDHPanel(userProcessContainer,ecosystem);
         SysAdminSplitPane.setRightComponent(objWH);
         /*userProcessContainer.add("Manage Warehouse",objWH);
         CardLayout crdlyt = (CardLayout) userProcessContainer.getLayout();
@@ -236,7 +236,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnManagePantryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManagePantryActionPerformed
         // TODO add your handling code here:
-        ManagePantryPanel objFCP = new ManagePantryPanel(userProcessContainer,ecosystem);
+        ManageDOPanel objFCP = new ManageDOPanel(userProcessContainer,ecosystem);
          SysAdminSplitPane.setRightComponent(objFCP);
        /* userProcessContainer.add("Manage Pantry",objFCP);
         CardLayout crdlyt = (CardLayout) userProcessContainer.getLayout();
@@ -246,7 +246,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     private void btnManageNonGovtOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageNonGovtOrgActionPerformed
         try {
             // TODO add your handling code here:
-            ManageNGOJPanel objNGO = new ManageNGOJPanel(userProcessContainer,ecosystem);
+            ManageCOJPanel objNGO = new ManageCOJPanel(userProcessContainer,ecosystem);
             SysAdminSplitPane.setRightComponent(objNGO);
         } catch (IOException ex) {
             Logger.getLogger(SystemAdminWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
@@ -266,7 +266,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             MainJFrame mjf = new MainJFrame();
             mjf.logout(userProcessContainer, jp, jsp);
         } catch (IOException ex) {
-            Logger.getLogger(FCAdminWorkAreaPanel.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DHManagerWorkAreaPanel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_lblsysadminlogoutMousePressed
 

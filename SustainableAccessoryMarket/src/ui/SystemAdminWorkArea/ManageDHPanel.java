@@ -19,14 +19,14 @@ import ui.DonorRole.DonorProfilePanel;
  *
  *@author ankitapatil
  */
-public class ManageWarehousePanel extends javax.swing.JPanel {
+public class ManageDHPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form AddWarehousePanel
+     * Creates new form AddDHPanel
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
-    public ManageWarehousePanel(JPanel userProcessContainer,EcoSystem ecosystem) {
+    public ManageDHPanel(JPanel userProcessContainer, EcoSystem ecosystem) {
         initComponents();
         this.ecosystem = ecosystem;
         this.userProcessContainer = userProcessContainer;
@@ -134,13 +134,13 @@ public class ManageWarehousePanel extends javax.swing.JPanel {
     }
     private void btnWarehouseAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnWarehouseAddActionPerformed
         // TODO add your handling code here:
-        AddWarehousePanel objAddWH = new AddWarehousePanel(userProcessContainer,ecosystem);
+        AddDHPanel objAddWH = new AddDHPanel(userProcessContainer,ecosystem);
         SplitPaneWarehouse.setRightComponent(objAddWH);
     }//GEN-LAST:event_btnWarehouseAddActionPerformed
 
     private void btnWarehouseViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnWarehouseViewActionPerformed
         // TODO add your handling code here:
-        ViewModifyWarehousePanel objViewModWH = new ViewModifyWarehousePanel(userProcessContainer,ecosystem);
+        ViewModifyDHPanel objViewModWH = new ViewModifyDHPanel(userProcessContainer,ecosystem);
         SplitPaneWarehouse.setRightComponent(objViewModWH);
     }//GEN-LAST:event_btnWarehouseViewActionPerformed
 

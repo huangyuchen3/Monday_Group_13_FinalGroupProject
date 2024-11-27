@@ -19,15 +19,15 @@ import javax.swing.JPanel;
  *
  *@author ankitapatil
  */
-public class ManageNGOJPanel extends javax.swing.JPanel {
+public class ManageCOJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ManageNGOJPanel
+     * Creates new form ManageCOJPanel
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
 
-    public ManageNGOJPanel(JPanel userProcessContainer, EcoSystem ecosystem) throws IOException {
+    public ManageCOJPanel(JPanel userProcessContainer, EcoSystem ecosystem) throws IOException {
         initComponents();
         this.ecosystem = ecosystem;
         this.userProcessContainer = userProcessContainer;
@@ -129,20 +129,20 @@ public class ManageNGOJPanel extends javax.swing.JPanel {
     private void btnNGOAddNGOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNGOAddNGOActionPerformed
         try {
             // TODO add your handling code here:
-            AddNGOPanel objAddNGO = new AddNGOPanel(userProcessContainer,ecosystem);
+            AddCOPanel objAddNGO = new AddCOPanel(userProcessContainer,ecosystem);
             SplitPaneNonGovtOrg.setRightComponent(objAddNGO);
         } catch (IOException ex) {
-            Logger.getLogger(ManageNGOJPanel.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ManageCOJPanel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnNGOAddNGOActionPerformed
 
     private void btnNGOViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNGOViewActionPerformed
         try {
             // TODO add your handling code here:
-            ViewModifyNGOPanel objViewModNGO = new ViewModifyNGOPanel(userProcessContainer,ecosystem);
+            ViewModifyCOPanel objViewModNGO = new ViewModifyCOPanel(userProcessContainer,ecosystem);
             SplitPaneNonGovtOrg.setRightComponent(objViewModNGO);
         } catch (IOException ex) {
-            Logger.getLogger(ManageNGOJPanel.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ManageCOJPanel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnNGOViewActionPerformed
 

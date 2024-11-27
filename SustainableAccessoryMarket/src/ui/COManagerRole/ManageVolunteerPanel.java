@@ -24,7 +24,7 @@ import javax.swing.JSplitPane;
 public class ManageVolunteerPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form NGOWorkAreaPanel
+     * Creates new form COWorkAreaPanel
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;

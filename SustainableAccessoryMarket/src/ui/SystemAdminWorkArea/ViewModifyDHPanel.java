@@ -29,16 +29,16 @@ import ui.DonorRole.DonorProfilePanel;
  *
  *@author ankitapatil
  */
-public class ViewModifyWarehousePanel extends javax.swing.JPanel {
+public class ViewModifyDHPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ViewModifyWarehousePanel
+     * Creates new form ViewModifyDHPanel
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
     DistributionHubDirectory fcd;
 
-    public ViewModifyWarehousePanel(JPanel userProcessContainer, EcoSystem ecosystem) {
+    public ViewModifyDHPanel(JPanel userProcessContainer, EcoSystem ecosystem) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
