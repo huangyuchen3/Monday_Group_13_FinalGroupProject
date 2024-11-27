@@ -98,7 +98,7 @@ public class DOManagerWorkAreaPanel extends javax.swing.JPanel {
         lblFCPWelcomemsg.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
         lblFCPWelcomemsg.setForeground(new java.awt.Color(102, 102, 255));
         lblFCPWelcomemsg.setText("Welcome Drop-Off Store Manager!");
-        MenubarFCPPanel.add(lblFCPWelcomemsg, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, -1, -1));
+        MenubarFCPPanel.add(lblFCPWelcomemsg, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
         btnConDH.setBackground(new java.awt.Color(204, 204, 255));
         btnConDH.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
