@@ -48,11 +48,13 @@ public class UserAccountDirectory {
         volunteerAccount.setEmployee(volunteerWorker); // Set an Employee object if needed
         userAccList.add(volunteerAccount);
         
+        Worker requesterWorker = new Worker();
+        volunteerWorker.setName("Default Requester");
         UserAccount requesterAccount = new UserAccount();
         requesterAccount.setUsername("requester");
         requesterAccount.setPassword("requester123");
         requesterAccount.setRole(new PersonalRequestorRole()); // Replace with your PersonalRequestorRole class
-        requesterAccount.setEmployee(null); // Set an Employee object if needed
+        requesterAccount.setEmployee(requesterWorker); // Set an Employee object if needed
         userAccList.add(requesterAccount);
     }
 
