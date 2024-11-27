@@ -30,14 +30,23 @@ public class UserAccountDirectory {
         adminAccount.setEmployee(null); // If no employee object is needed
         userAccList.add(adminAccount);
         
-        Worker donorWorker = new Worker();
-        donorWorker.setName("Default Donor");
-        UserAccount donorAccount = new UserAccount();
-        donorAccount.setUsername("donor");
-        donorAccount.setPassword("donor123");
-        donorAccount.setRole(new PersonalDonorRole()); // Replace with your PersonalDonorRole class
-        donorAccount.setEmployee(donorWorker); // Set an Employee object if needed
-        userAccList.add(donorAccount);
+        Worker personalDonorWorker = new Worker();
+        personalDonorWorker.setName("Default Personal Donor");
+        UserAccount personalDonorAccount = new UserAccount();
+        personalDonorAccount.setUsername("personaldonor");
+        personalDonorAccount.setPassword("personaldonor123");
+        personalDonorAccount.setRole(new PersonalDonorRole()); // Replace with your PersonalDonorRole class
+        personalDonorAccount.setEmployee(personalDonorWorker); // Set an Employee object if needed
+        userAccList.add(personalDonorAccount);
+        
+        Worker partnerDonorWorker = new Worker();
+        partnerDonorWorker.setName("Default Partner Donor");
+        UserAccount partnerDonorAccount = new UserAccount();
+        partnerDonorAccount.setUsername("partnerdonor");
+        partnerDonorAccount.setPassword("partnerdonor123");
+        partnerDonorAccount.setRole(new PartnerDonorRole()); // Replace with your PersonalDonorRole class
+        partnerDonorAccount.setEmployee(partnerDonorWorker); // Set an Employee object if needed
+        userAccList.add(partnerDonorAccount); //need work
         
         Worker volunteerWorker = new Worker();
         volunteerWorker.setName("Default Volunteer");
@@ -48,14 +57,50 @@ public class UserAccountDirectory {
         volunteerAccount.setEmployee(volunteerWorker); // Set an Employee object if needed
         userAccList.add(volunteerAccount);
         
-        Worker requesterWorker = new Worker();
-        volunteerWorker.setName("Default Requester");
-        UserAccount requesterAccount = new UserAccount();
-        requesterAccount.setUsername("requester");
-        requesterAccount.setPassword("requester123");
-        requesterAccount.setRole(new PersonalRequestorRole()); // Replace with your PersonalRequestorRole class
-        requesterAccount.setEmployee(requesterWorker); // Set an Employee object if needed
-        userAccList.add(requesterAccount);
+        Worker personalRequesterWorker = new Worker();
+        personalRequesterWorker.setName("Default Personal Requester");
+        UserAccount personalRequesterAccount = new UserAccount();
+        personalRequesterAccount.setUsername("personalrequester");
+        personalRequesterAccount.setPassword("personalrequester123");
+        personalRequesterAccount.setRole(new PersonalRequestorRole()); // Replace with your PersonalRequestorRole class
+        personalRequesterAccount.setEmployee(personalRequesterWorker); // Set an Employee object if needed
+        userAccList.add(personalRequesterAccount);
+        
+        Worker partnerRequesterWorker = new Worker();
+        partnerRequesterWorker.setName("Default Partner Requester");
+        UserAccount partnerRequesterAccount = new UserAccount();
+        partnerRequesterAccount.setUsername("partnerrequester");
+        partnerRequesterAccount.setPassword("partnerrequester123");
+        partnerRequesterAccount.setRole(new PartnerRequesterRole()); // Replace with your PersonalRequestorRole class
+        partnerRequesterAccount.setEmployee(partnerRequesterWorker); // Set an Employee object if needed
+        userAccList.add(partnerRequesterAccount); //need work
+        
+        Worker COManagerWorker = new Worker();
+        COManagerWorker.setName("Default COManager");
+        UserAccount COManagerAccount = new UserAccount();
+        COManagerAccount.setUsername("comanager");
+        COManagerAccount.setPassword("comanager123");
+        COManagerAccount.setRole(new COManagerRole()); // Replace with your PersonalRequestorRole class
+        COManagerAccount.setEmployee(COManagerWorker); // Set an Employee object if needed
+        userAccList.add(COManagerAccount);
+        
+        Worker DHManagerWorker = new Worker();
+        DHManagerWorker.setName("Default DHManager");
+        UserAccount DHManagerAccount = new UserAccount();
+        DHManagerAccount.setUsername("dhmanager");
+        DHManagerAccount.setPassword("dhmanager123");
+        DHManagerAccount.setRole(new DHManagerRole()); // Replace with your PersonalRequestorRole class
+        DHManagerAccount.setEmployee(DHManagerWorker); // Set an Employee object if needed
+        userAccList.add(DHManagerAccount); //need work
+        
+        Worker DOManagerWorker = new Worker();
+        DOManagerWorker.setName("Default DOManager");
+        UserAccount DOManagerAccount = new UserAccount();
+        DOManagerAccount.setUsername("domanager");
+        DOManagerAccount.setPassword("domanager123");
+        DOManagerAccount.setRole(new DOManagerRole()); // Replace with your PersonalRequestorRole class
+        DOManagerAccount.setEmployee(DOManagerWorker); // Set an Employee object if needed
+        userAccList.add(DOManagerAccount);
     }
 
     public ArrayList<UserAccount> getUserAccountList() {
