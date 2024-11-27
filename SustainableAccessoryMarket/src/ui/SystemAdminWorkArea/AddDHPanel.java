@@ -75,29 +75,29 @@ public class AddDHPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblAddWarehouseTitle = new javax.swing.JLabel();
-        lblWarehousename = new javax.swing.JLabel();
-        txtWHname = new javax.swing.JTextField();
-        lblWarehousePhone = new javax.swing.JLabel();
-        txtWarehousePhone = new javax.swing.JTextField();
-        lblWarehouseAdd = new javax.swing.JLabel();
-        txtWarehouseAdd = new javax.swing.JTextField();
-        lblWarehouseCity = new javax.swing.JLabel();
-        txtWarehouseCity = new javax.swing.JTextField();
-        lblWarehouseState = new javax.swing.JLabel();
-        txtWarehouseState = new javax.swing.JTextField();
-        lblWarehouseZip = new javax.swing.JLabel();
-        txtWarehouseZip = new javax.swing.JTextField();
-        lblWarehouseFCAdmin = new javax.swing.JLabel();
-        txtWarehouseFCAdmin = new javax.swing.JTextField();
-        lblFCAdminuname = new javax.swing.JLabel();
-        txtFCAdminuname = new javax.swing.JTextField();
-        lblFCAdminpwd = new javax.swing.JLabel();
-        txtFCAdminpwd = new javax.swing.JTextField();
-        lblFCAdminpwd1 = new javax.swing.JLabel();
-        txtFCAdminpwd1 = new javax.swing.JTextField();
-        btnWarehouseSubmit = new javax.swing.JButton();
-        lblWarehouseid = new javax.swing.JLabel();
-        txtWarehouseid = new javax.swing.JTextField();
+        lblDistributionHubname = new javax.swing.JLabel();
+        txtDistributionHubname = new javax.swing.JTextField();
+        lblDistributionHubPhone = new javax.swing.JLabel();
+        txtDistributionHubPhone = new javax.swing.JTextField();
+        lblDistributionHubAdd = new javax.swing.JLabel();
+        txtDistributionHubAdd = new javax.swing.JTextField();
+        lblDistributionHubCity = new javax.swing.JLabel();
+        txtDistributionHubCity = new javax.swing.JTextField();
+        lblDistributionHubState = new javax.swing.JLabel();
+        txtDistributionHubState = new javax.swing.JTextField();
+        lblDistributionHubZip = new javax.swing.JLabel();
+        txtDistributionHubZip = new javax.swing.JTextField();
+        lblDistributionHubManager = new javax.swing.JLabel();
+        txtDistributionHubManagerName = new javax.swing.JTextField();
+        lblDistributionHubusername = new javax.swing.JLabel();
+        txtDistributionHubusername = new javax.swing.JTextField();
+        lblDistributionHubpwd = new javax.swing.JLabel();
+        txtDistributionHubpwd = new javax.swing.JTextField();
+        lblDistributionHubpwd1 = new javax.swing.JLabel();
+        txtDistributionHubpwd1 = new javax.swing.JTextField();
+        btnDistributionHubSubmit = new javax.swing.JButton();
+        lblDistributionHubid = new javax.swing.JLabel();
+        txtDistributionHubid = new javax.swing.JTextField();
         lblWarehouseid2 = new javax.swing.JLabel();
         lblWarehousename1 = new javax.swing.JLabel();
         lblWarehousePhone1 = new javax.swing.JLabel();
@@ -110,151 +110,151 @@ public class AddDHPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblAddWarehouseTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblAddWarehouseTitle.setForeground(new java.awt.Color(0, 153, 204));
-        lblAddWarehouseTitle.setText("Add Warehouse");
-        add(lblAddWarehouseTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(355, 16, -1, -1));
+        lblAddWarehouseTitle.setForeground(new java.awt.Color(102, 102, 255));
+        lblAddWarehouseTitle.setText("Add Distribution Hub");
+        add(lblAddWarehouseTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, -1, -1));
 
-        lblWarehousename.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblWarehousename.setText("Warehouse Name:");
-        add(lblWarehousename, new org.netbeans.lib.awtextra.AbsoluteConstraints(214, 114, -1, -1));
+        lblDistributionHubname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDistributionHubname.setText("Distribution Hub Name:");
+        add(lblDistributionHubname, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, -1, 30));
 
-        txtWHname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtWHname.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtWHname.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtDistributionHubname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDistributionHubname.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtDistributionHubname.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtWHnameFocusLost(evt);
+                txtDistributionHubnameFocusLost(evt);
             }
         });
-        add(txtWHname, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, 137, -1));
+        add(txtDistributionHubname, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, 137, -1));
 
-        lblWarehousePhone.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblWarehousePhone.setText("Warehouse Phone Number:");
-        add(lblWarehousePhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
+        lblDistributionHubPhone.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDistributionHubPhone.setText("Distribution Hub Phone Number:");
+        add(lblDistributionHubPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, -1));
 
-        txtWarehousePhone.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtWarehousePhone.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtWarehousePhone.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtDistributionHubPhone.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDistributionHubPhone.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtDistributionHubPhone.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtWarehousePhoneFocusLost(evt);
+                txtDistributionHubPhoneFocusLost(evt);
             }
         });
-        add(txtWarehousePhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 153, 137, -1));
+        add(txtDistributionHubPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 153, 137, -1));
 
-        lblWarehouseAdd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblWarehouseAdd.setText("Warehouse Address:");
-        add(lblWarehouseAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, -1, -1));
+        lblDistributionHubAdd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDistributionHubAdd.setText("Distribution Hub Address:");
+        add(lblDistributionHubAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, -1, -1));
 
-        txtWarehouseAdd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtWarehouseAdd.setPreferredSize(new java.awt.Dimension(150, 25));
-        add(txtWarehouseAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 196, 137, -1));
+        txtDistributionHubAdd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDistributionHubAdd.setPreferredSize(new java.awt.Dimension(150, 25));
+        add(txtDistributionHubAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 196, 137, -1));
 
-        lblWarehouseCity.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblWarehouseCity.setText("City:");
-        add(lblWarehouseCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(289, 243, -1, -1));
+        lblDistributionHubCity.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDistributionHubCity.setText("City:");
+        add(lblDistributionHubCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(289, 243, -1, -1));
 
-        txtWarehouseCity.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtWarehouseCity.setPreferredSize(new java.awt.Dimension(150, 25));
-        add(txtWarehouseCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 239, 137, -1));
+        txtDistributionHubCity.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDistributionHubCity.setPreferredSize(new java.awt.Dimension(150, 25));
+        add(txtDistributionHubCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 239, 137, -1));
 
-        lblWarehouseState.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblWarehouseState.setText("State:");
-        add(lblWarehouseState, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, -1, -1));
+        lblDistributionHubState.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDistributionHubState.setText("State:");
+        add(lblDistributionHubState, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, -1, 30));
 
-        txtWarehouseState.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtWarehouseState.setPreferredSize(new java.awt.Dimension(150, 25));
-        add(txtWarehouseState, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 282, 137, -1));
+        txtDistributionHubState.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDistributionHubState.setPreferredSize(new java.awt.Dimension(150, 25));
+        add(txtDistributionHubState, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 282, 137, -1));
 
-        lblWarehouseZip.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblWarehouseZip.setText("Zip:");
-        add(lblWarehouseZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, -1, -1));
+        lblDistributionHubZip.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDistributionHubZip.setText("Zip:");
+        add(lblDistributionHubZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, -1, -1));
 
-        txtWarehouseZip.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtWarehouseZip.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtWarehouseZip.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtDistributionHubZip.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDistributionHubZip.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtDistributionHubZip.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtWarehouseZipFocusLost(evt);
+                txtDistributionHubZipFocusLost(evt);
             }
         });
-        add(txtWarehouseZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 325, 137, -1));
+        add(txtDistributionHubZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 325, 137, -1));
 
-        lblWarehouseFCAdmin.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblWarehouseFCAdmin.setText("Warehouse Admin Name:");
-        add(lblWarehouseFCAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 370, -1, -1));
+        lblDistributionHubManager.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDistributionHubManager.setText("Distribution Hub Manager Name:");
+        add(lblDistributionHubManager, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, -1, -1));
 
-        txtWarehouseFCAdmin.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtWarehouseFCAdmin.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtWarehouseFCAdmin.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtDistributionHubManagerName.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDistributionHubManagerName.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtDistributionHubManagerName.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtWarehouseFCAdminFocusLost(evt);
+                txtDistributionHubManagerNameFocusLost(evt);
             }
         });
-        add(txtWarehouseFCAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 368, 137, -1));
+        add(txtDistributionHubManagerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 368, 137, -1));
 
-        lblFCAdminuname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblFCAdminuname.setText("Warehouse Admin Username:");
-        add(lblFCAdminuname, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 420, -1, -1));
+        lblDistributionHubusername.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDistributionHubusername.setText("Distribution Hub Manager Username:");
+        add(lblDistributionHubusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, -1, -1));
 
-        txtFCAdminuname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtFCAdminuname.setPreferredSize(new java.awt.Dimension(150, 25));
-        add(txtFCAdminuname, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 411, 137, -1));
+        txtDistributionHubusername.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDistributionHubusername.setPreferredSize(new java.awt.Dimension(150, 25));
+        add(txtDistributionHubusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 411, 137, -1));
 
-        lblFCAdminpwd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblFCAdminpwd.setText("Password:");
-        add(lblFCAdminpwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 458, -1, -1));
+        lblDistributionHubpwd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDistributionHubpwd.setText("Password:");
+        add(lblDistributionHubpwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 458, -1, -1));
 
-        txtFCAdminpwd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtFCAdminpwd.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtFCAdminpwd.addActionListener(new java.awt.event.ActionListener() {
+        txtDistributionHubpwd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDistributionHubpwd.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtDistributionHubpwd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFCAdminpwdActionPerformed(evt);
+                txtDistributionHubpwdActionPerformed(evt);
             }
         });
-        add(txtFCAdminpwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 454, 137, -1));
+        add(txtDistributionHubpwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 454, 137, -1));
 
-        lblFCAdminpwd1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblFCAdminpwd1.setText("Confirm Password:");
-        add(lblFCAdminpwd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 501, -1, -1));
+        lblDistributionHubpwd1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDistributionHubpwd1.setText("Confirm Password:");
+        add(lblDistributionHubpwd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 501, -1, -1));
 
-        txtFCAdminpwd1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtFCAdminpwd1.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtFCAdminpwd1.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtDistributionHubpwd1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDistributionHubpwd1.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtDistributionHubpwd1.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtFCAdminpwd1FocusLost(evt);
+                txtDistributionHubpwd1FocusLost(evt);
             }
         });
-        add(txtFCAdminpwd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 497, 137, -1));
+        add(txtDistributionHubpwd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 497, 137, -1));
 
-        btnWarehouseSubmit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        btnWarehouseSubmit.setText("Submit");
-        btnWarehouseSubmit.addActionListener(new java.awt.event.ActionListener() {
+        btnDistributionHubSubmit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        btnDistributionHubSubmit.setText("Submit");
+        btnDistributionHubSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnWarehouseSubmitActionPerformed(evt);
+                btnDistributionHubSubmitActionPerformed(evt);
             }
         });
-        add(btnWarehouseSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 550, -1, -1));
+        add(btnDistributionHubSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 550, -1, -1));
 
-        lblWarehouseid.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblWarehouseid.setText("Warehouse ID:");
-        add(lblWarehouseid, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 71, -1, -1));
+        lblDistributionHubid.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDistributionHubid.setText("Distribution Hub ID:");
+        add(lblDistributionHubid, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, -1, -1));
 
-        txtWarehouseid.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtWarehouseid.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtWarehouseid.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtDistributionHubid.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDistributionHubid.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtDistributionHubid.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtWarehouseidFocusLost(evt);
+                txtDistributionHubidFocusLost(evt);
             }
         });
-        txtWarehouseid.addActionListener(new java.awt.event.ActionListener() {
+        txtDistributionHubid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtWarehouseidActionPerformed(evt);
+                txtDistributionHubidActionPerformed(evt);
             }
         });
-        txtWarehouseid.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtDistributionHubid.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtWarehouseidKeyReleased(evt);
+                txtDistributionHubidKeyReleased(evt);
             }
         });
-        add(txtWarehouseid, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 67, 134, -1));
+        add(txtDistributionHubid, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 67, 134, -1));
 
         lblWarehouseid2.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         add(lblWarehouseid2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 67, -1, -1));
@@ -304,21 +304,21 @@ public class AddDHPanel extends javax.swing.JPanel {
         return m.matches();
     }
 
-    private void btnWarehouseSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnWarehouseSubmitActionPerformed
+    private void btnDistributionHubSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDistributionHubSubmitActionPerformed
         // TODO add your handling code here:
 
         if (!nullCheck()) {
             if (chkpwd()) {
-                String whid = txtWarehouseid.getText();
-                String whName = txtWHname.getText();
-                String phone = txtWarehousePhone.getText();
+                String whid = txtDistributionHubid.getText();
+                String whName = txtDistributionHubname.getText();
+                String phone = txtDistributionHubPhone.getText();
 
-                String whCity = txtWarehouseCity.getText();
-                String whState = txtWarehouseState.getText();
-                String whZip = txtWarehouseZip.getText();
-                String whAdmin = txtWarehouseFCAdmin.getText();
-                String whUser = txtFCAdminuname.getText();
-                String whPswd = txtFCAdminpwd.getText();
+                String whCity = txtDistributionHubCity.getText();
+                String whState = txtDistributionHubState.getText();
+                String whZip = txtDistributionHubZip.getText();
+                String whAdmin = txtDistributionHubManagerName.getText();
+                String whUser = txtDistributionHubusername.getText();
+                String whPswd = txtDistributionHubpwd.getText();
                 if (!isValid(whid, "^[0-9]+")) {
                     JOptionPane.showMessageDialog(this, "Please enter valid ID");
                     return;
@@ -358,21 +358,21 @@ public class AddDHPanel extends javax.swing.JPanel {
 
                 UserAccountDirectory uaList = ecosystem.getUserAccountDirectory();
                 Worker employee = new Worker();
-                employee.setName(txtWarehouseFCAdmin.getText());
+                employee.setName(txtDistributionHubManagerName.getText());
                 String role = "FCAdmin";
                 DistributionHub fcw = new DistributionHub();
-                fcw.setDistributionHubId("fcw" + txtWarehouseid.getText());
-                fcw.setDistributionHubName(txtWHname.getText());
-                fcw.setDistributionHubPhone(txtWarehousePhone.getText());
-                fcw.setDistributionHubAddress(txtWarehouseAdd.getText());
-                fcw.getDistributionHubCity(txtWarehouseCity.getText());
-                fcw.setDistributionHubState(txtWarehouseState.getText());
-                fcw.setDistributionHubZipcode(txtWarehouseZip.getText());
-                fcw.setDistributionHubAdmin(txtWarehouseFCAdmin.getText());
+                fcw.setDistributionHubId("fcw" + txtDistributionHubid.getText());
+                fcw.setDistributionHubName(txtDistributionHubname.getText());
+                fcw.setDistributionHubPhone(txtDistributionHubPhone.getText());
+                fcw.setDistributionHubAddress(txtDistributionHubAdd.getText());
+                fcw.getDistributionHubCity(txtDistributionHubCity.getText());
+                fcw.setDistributionHubState(txtDistributionHubState.getText());
+                fcw.setDistributionHubZipcode(txtDistributionHubZip.getText());
+                fcw.setDistributionHubAdmin(txtDistributionHubManagerName.getText());
                 UserAccount fcWarehouseAccount = new UserAccount();
-                String uaName = txtFCAdminuname.getText();
+                String uaName = txtDistributionHubusername.getText();
                 fcWarehouseAccount.setUsername(uaName);
-                String uaPwd = txtFCAdminpwd.getText();
+                String uaPwd = txtDistributionHubpwd.getText();
                 fcWarehouseAccount.setPassword(uaPwd);
                 fcWarehouseAccount.setRole(new DHManagerRole());
                 fcWarehouseAccount.setEmployee(employee);
@@ -381,7 +381,7 @@ public class AddDHPanel extends javax.swing.JPanel {
                 fcd.addNewDistributionHub(fcw);
                 ecosystem.setACDDirectory(fcd);
                 uad = ecosystem.getUserAccountDirectory();
-                uad.createUserAccount(txtFCAdminuname.getText(), txtFCAdminpwd.getText(), employee, new DHManagerRole());
+                uad.createUserAccount(txtDistributionHubusername.getText(), txtDistributionHubpwd.getText(), employee, new DHManagerRole());
                 ecosystem.setUserAccountDirectory(uad);
                 Integer whcnt = ecosystem.getdistributionHubCnt();
                 ecosystem.setdistributionHubCnt(whcnt+1);
@@ -389,65 +389,65 @@ public class AddDHPanel extends javax.swing.JPanel {
                 clearfields();
             } else {
                 JOptionPane.showMessageDialog(this, "Password Mismatch. Please verify the password entered.");
-                txtFCAdminpwd1.setText("");
+                txtDistributionHubpwd1.setText("");
             }
         } else {
             JOptionPane.showMessageDialog(this, "Please make sure that you have filled all mandatory fields");
         }
-    }//GEN-LAST:event_btnWarehouseSubmitActionPerformed
+    }//GEN-LAST:event_btnDistributionHubSubmitActionPerformed
 
-    private void txtWarehouseidKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtWarehouseidKeyReleased
+    private void txtDistributionHubidKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDistributionHubidKeyReleased
         // TODO add your handling code here:
 
-    }//GEN-LAST:event_txtWarehouseidKeyReleased
+    }//GEN-LAST:event_txtDistributionHubidKeyReleased
 
-    private void txtWarehouseidFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtWarehouseidFocusLost
+    private void txtDistributionHubidFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDistributionHubidFocusLost
         // TODO add your handling code here:
-        if ((txtWarehouseid.getText().matches("^[a-zA-Z]*$"))) {
+        if ((txtDistributionHubid.getText().matches("^[a-zA-Z]*$"))) {
             lblWarehouseid2.setText("Invalid input. Please enter only numbers");
         } else {
             lblWarehouseid2.setText("");
         }
-    }//GEN-LAST:event_txtWarehouseidFocusLost
+    }//GEN-LAST:event_txtDistributionHubidFocusLost
 
-    private void txtWHnameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtWHnameFocusLost
+    private void txtDistributionHubnameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDistributionHubnameFocusLost
         // TODO add your handling code here:
-        if (!(txtWHname.getText().matches("^[a-zA-Z]*$"))) {
+        if (!(txtDistributionHubname.getText().matches("^[a-zA-Z]*$"))) {
             lblWarehousename1.setText("Invalid input. Please enter only alphabets");
         } else {
             lblWarehousename1.setText("");
         }
-    }//GEN-LAST:event_txtWHnameFocusLost
+    }//GEN-LAST:event_txtDistributionHubnameFocusLost
 
-    private void txtWarehousePhoneFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtWarehousePhoneFocusLost
+    private void txtDistributionHubPhoneFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDistributionHubPhoneFocusLost
         // TODO add your handling code here:
-        if (!(txtWarehousePhone.getText().matches("^[0-9]*$")) || !(txtWarehousePhone.getText().length() == 10)) {
+        if (!(txtDistributionHubPhone.getText().matches("^[0-9]*$")) || !(txtDistributionHubPhone.getText().length() == 10)) {
             lblWarehousePhone1.setText("Please enter a valid phone number");
         } else {
             lblWarehousePhone1.setText("");
 
         }
-    }//GEN-LAST:event_txtWarehousePhoneFocusLost
+    }//GEN-LAST:event_txtDistributionHubPhoneFocusLost
 
-    private void txtWarehouseZipFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtWarehouseZipFocusLost
+    private void txtDistributionHubZipFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDistributionHubZipFocusLost
         // TODO add your handling code here:
-        if ((txtWarehouseZip.getText().matches("^[a-zA-Z]*$"))) {
+        if ((txtDistributionHubZip.getText().matches("^[a-zA-Z]*$"))) {
             lblWarehouseZip1.setText("Invalid input. Please enter only numbers");
         } else {
             lblWarehouseZip1.setText("");
         }
-    }//GEN-LAST:event_txtWarehouseZipFocusLost
+    }//GEN-LAST:event_txtDistributionHubZipFocusLost
 
-    private void txtWarehouseFCAdminFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtWarehouseFCAdminFocusLost
+    private void txtDistributionHubManagerNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDistributionHubManagerNameFocusLost
         // TODO add your handling code here:
-        if (!(txtWarehouseFCAdmin.getText().matches("^[a-zA-Z]*$"))) {
+        if (!(txtDistributionHubManagerName.getText().matches("^[a-zA-Z]*$"))) {
             lblWarehouseFCAdmin1.setText("Invalid input. Please enter only alphabets.");
         } else {
             lblWarehouseFCAdmin1.setText("");
         }
-    }//GEN-LAST:event_txtWarehouseFCAdminFocusLost
+    }//GEN-LAST:event_txtDistributionHubManagerNameFocusLost
 
-    private void txtFCAdminpwd1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtFCAdminpwd1FocusLost
+    private void txtDistributionHubpwd1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDistributionHubpwd1FocusLost
         // TODO add your handling code here:
 //        if(!(txtFCApwd.getText().equals(txtFCApwd1.getText()))){
 //            lblFCApwd2.setText("Password Mismatch. Please verify the password entered.");
@@ -455,74 +455,74 @@ public class AddDHPanel extends javax.swing.JPanel {
 //        else{
 //            lblFCApwd2.setText("");
 //        }
-    }//GEN-LAST:event_txtFCAdminpwd1FocusLost
+    }//GEN-LAST:event_txtDistributionHubpwd1FocusLost
 
 
-    private void txtFCAdminpwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFCAdminpwdActionPerformed
-        if (!Business.Validations.ValidateInputs.isPasswordValid(txtFCAdminpwd.getText())) {
+    private void txtDistributionHubpwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDistributionHubpwdActionPerformed
+        if (!Business.Validations.ValidateInputs.isPasswordValid(txtDistributionHubpwd.getText())) {
             JOptionPane.showMessageDialog(this, "Please verify the password (min 8).");
 
         }
-    }//GEN-LAST:event_txtFCAdminpwdActionPerformed
+    }//GEN-LAST:event_txtDistributionHubpwdActionPerformed
 
-    private void txtWarehouseidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtWarehouseidActionPerformed
+    private void txtDistributionHubidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDistributionHubidActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtWarehouseidActionPerformed
+    }//GEN-LAST:event_txtDistributionHubidActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LabelImage;
-    private javax.swing.JButton btnWarehouseSubmit;
+    private javax.swing.JButton btnDistributionHubSubmit;
     private javax.swing.JLabel lblAddWarehouseTitle;
-    private javax.swing.JLabel lblFCAdminpwd;
-    private javax.swing.JLabel lblFCAdminpwd1;
+    private javax.swing.JLabel lblDistributionHubAdd;
+    private javax.swing.JLabel lblDistributionHubCity;
+    private javax.swing.JLabel lblDistributionHubManager;
+    private javax.swing.JLabel lblDistributionHubPhone;
+    private javax.swing.JLabel lblDistributionHubState;
+    private javax.swing.JLabel lblDistributionHubZip;
+    private javax.swing.JLabel lblDistributionHubid;
+    private javax.swing.JLabel lblDistributionHubname;
+    private javax.swing.JLabel lblDistributionHubpwd;
+    private javax.swing.JLabel lblDistributionHubpwd1;
+    private javax.swing.JLabel lblDistributionHubusername;
     private javax.swing.JLabel lblFCAdminpwd2;
-    private javax.swing.JLabel lblFCAdminuname;
-    private javax.swing.JLabel lblWarehouseAdd;
-    private javax.swing.JLabel lblWarehouseCity;
-    private javax.swing.JLabel lblWarehouseFCAdmin;
     private javax.swing.JLabel lblWarehouseFCAdmin1;
-    private javax.swing.JLabel lblWarehousePhone;
     private javax.swing.JLabel lblWarehousePhone1;
-    private javax.swing.JLabel lblWarehouseState;
-    private javax.swing.JLabel lblWarehouseZip;
     private javax.swing.JLabel lblWarehouseZip1;
-    private javax.swing.JLabel lblWarehouseid;
     private javax.swing.JLabel lblWarehouseid2;
-    private javax.swing.JLabel lblWarehousename;
     private javax.swing.JLabel lblWarehousename1;
-    private javax.swing.JTextField txtFCAdminpwd;
-    private javax.swing.JTextField txtFCAdminpwd1;
-    private javax.swing.JTextField txtFCAdminuname;
-    private javax.swing.JTextField txtWHname;
-    private javax.swing.JTextField txtWarehouseAdd;
-    private javax.swing.JTextField txtWarehouseCity;
-    private javax.swing.JTextField txtWarehouseFCAdmin;
-    private javax.swing.JTextField txtWarehousePhone;
-    private javax.swing.JTextField txtWarehouseState;
-    private javax.swing.JTextField txtWarehouseZip;
-    private javax.swing.JTextField txtWarehouseid;
+    private javax.swing.JTextField txtDistributionHubAdd;
+    private javax.swing.JTextField txtDistributionHubCity;
+    private javax.swing.JTextField txtDistributionHubManagerName;
+    private javax.swing.JTextField txtDistributionHubPhone;
+    private javax.swing.JTextField txtDistributionHubState;
+    private javax.swing.JTextField txtDistributionHubZip;
+    private javax.swing.JTextField txtDistributionHubid;
+    private javax.swing.JTextField txtDistributionHubname;
+    private javax.swing.JTextField txtDistributionHubpwd;
+    private javax.swing.JTextField txtDistributionHubpwd1;
+    private javax.swing.JTextField txtDistributionHubusername;
     // End of variables declaration//GEN-END:variables
 
     private void clearfields() {
-        txtWarehouseid.setText("");
-        txtWHname.setText("");
-        txtWarehousePhone.setText("");
-        txtWarehouseAdd.setText("");
-        txtWarehouseCity.setText("");
-        txtWarehouseState.setText("");
-        txtWarehouseZip.setText("");
-        txtWarehouseFCAdmin.setText("");
-        txtFCAdminuname.setText("");
-        txtFCAdminpwd.setText("");
-        txtFCAdminpwd1.setText("");
+        txtDistributionHubid.setText("");
+        txtDistributionHubname.setText("");
+        txtDistributionHubPhone.setText("");
+        txtDistributionHubAdd.setText("");
+        txtDistributionHubCity.setText("");
+        txtDistributionHubState.setText("");
+        txtDistributionHubZip.setText("");
+        txtDistributionHubManagerName.setText("");
+        txtDistributionHubusername.setText("");
+        txtDistributionHubpwd.setText("");
+        txtDistributionHubpwd1.setText("");
     }
 
     private boolean nullCheck() {
-        if (txtWarehouseid.getText().length() != 0 && txtWHname.getText().length() != 0 && txtWarehousePhone.getText().length() != 0
-                && txtWarehouseAdd.getText().length() != 0 && txtWarehouseCity.getText().length() != 0 && txtWarehouseState.getText().length() != 0
-                && txtWarehouseZip.getText().length() != 0 && txtWarehouseFCAdmin.getText().length() != 0 && txtFCAdminuname.getText().length() != 0
-                && txtFCAdminpwd.getText().length() != 0 && txtFCAdminpwd1.getText().length() != 0) {
+        if (txtDistributionHubid.getText().length() != 0 && txtDistributionHubname.getText().length() != 0 && txtDistributionHubPhone.getText().length() != 0
+                && txtDistributionHubAdd.getText().length() != 0 && txtDistributionHubCity.getText().length() != 0 && txtDistributionHubState.getText().length() != 0
+                && txtDistributionHubZip.getText().length() != 0 && txtDistributionHubManagerName.getText().length() != 0 && txtDistributionHubusername.getText().length() != 0
+                && txtDistributionHubpwd.getText().length() != 0 && txtDistributionHubpwd1.getText().length() != 0) {
             return false;
         } else {
             return true;
@@ -530,7 +530,7 @@ public class AddDHPanel extends javax.swing.JPanel {
     }
 
     private boolean chkpwd() {
-        if (txtFCAdminpwd.getText().equals(txtFCAdminpwd1.getText())) {
+        if (txtDistributionHubpwd.getText().equals(txtDistributionHubpwd1.getText())) {
             return true;
         } else {
             return false;

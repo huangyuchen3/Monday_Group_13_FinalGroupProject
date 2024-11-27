@@ -122,8 +122,8 @@ public class VolunteerWorkAreaPanel extends javax.swing.JPanel {
         add(jScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 389, 1008, 153));
 
         lblFCRProfileTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblFCRProfileTitle.setForeground(new java.awt.Color(0, 153, 204));
-        lblFCRProfileTitle.setText("Food Requests");
+        lblFCRProfileTitle.setForeground(new java.awt.Color(102, 102, 255));
+        lblFCRProfileTitle.setText("Accessory Requests");
         add(lblFCRProfileTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, 340, -1));
 
         tblDonationPick.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
@@ -149,12 +149,12 @@ public class VolunteerWorkAreaPanel extends javax.swing.JPanel {
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 1008, 153));
 
         lblPickupReqTitle1.setFont(new java.awt.Font("Trebuchet MS", 1, 22)); // NOI18N
-        lblPickupReqTitle1.setForeground(new java.awt.Color(0, 153, 204));
+        lblPickupReqTitle1.setForeground(new java.awt.Color(102, 102, 255));
         lblPickupReqTitle1.setText("Pickup Requests");
         add(lblPickupReqTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 210, -1));
 
         lblDeliveryReqTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 22)); // NOI18N
-        lblDeliveryReqTitle.setForeground(new java.awt.Color(0, 153, 204));
+        lblDeliveryReqTitle.setForeground(new java.awt.Color(102, 102, 255));
         lblDeliveryReqTitle.setText("Delivery Requests");
         add(lblDeliveryReqTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 351, 220, -1));
 
