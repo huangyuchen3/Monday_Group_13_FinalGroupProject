@@ -44,7 +44,7 @@ public class ManageDHPanel extends javax.swing.JPanel {
 
         SplitPaneWarehouse = new javax.swing.JSplitPane();
         SysAdminControlWHPanel = new javax.swing.JPanel();
-        btnWarehouseAdd = new javax.swing.JButton();
+        btnDHAdd = new javax.swing.JButton();
         btnWarehouseView = new javax.swing.JButton();
         SysAdminWorkareaWHPanel = new javax.swing.JPanel();
         LabelImage = new javax.swing.JLabel();
@@ -52,14 +52,16 @@ public class ManageDHPanel extends javax.swing.JPanel {
         SysAdminControlWHPanel.setBackground(new java.awt.Color(255, 255, 255));
         SysAdminControlWHPanel.setPreferredSize(new java.awt.Dimension(150, 600));
 
-        btnWarehouseAdd.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnWarehouseAdd.setText("Add Warehouse");
-        btnWarehouseAdd.addActionListener(new java.awt.event.ActionListener() {
+        btnDHAdd.setBackground(new java.awt.Color(204, 204, 255));
+        btnDHAdd.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnDHAdd.setText("Add Distribution Hub");
+        btnDHAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnWarehouseAddActionPerformed(evt);
+                btnDHAddActionPerformed(evt);
             }
         });
 
+        btnWarehouseView.setBackground(new java.awt.Color(204, 204, 255));
         btnWarehouseView.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnWarehouseView.setText("View/Modify");
         btnWarehouseView.addActionListener(new java.awt.event.ActionListener() {
@@ -74,19 +76,19 @@ public class ManageDHPanel extends javax.swing.JPanel {
             SysAdminControlWHPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SysAdminControlWHPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(SysAdminControlWHPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnWarehouseAdd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnWarehouseView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(SysAdminControlWHPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnDHAdd)
+                    .addComponent(btnWarehouseView, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         SysAdminControlWHPanelLayout.setVerticalGroup(
             SysAdminControlWHPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SysAdminControlWHPanelLayout.createSequentialGroup()
                 .addGap(63, 63, 63)
-                .addComponent(btnWarehouseAdd)
-                .addGap(26, 26, 26)
+                .addComponent(btnDHAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(btnWarehouseView)
-                .addContainerGap(463, Short.MAX_VALUE))
+                .addContainerGap(451, Short.MAX_VALUE))
         );
 
         SplitPaneWarehouse.setLeftComponent(SysAdminControlWHPanel);
@@ -97,7 +99,7 @@ public class ManageDHPanel extends javax.swing.JPanel {
         SysAdminWorkareaWHPanel.setLayout(SysAdminWorkareaWHPanelLayout);
         SysAdminWorkareaWHPanelLayout.setHorizontalGroup(
             SysAdminWorkareaWHPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(LabelImage, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 834, Short.MAX_VALUE)
+            .addComponent(LabelImage, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 817, Short.MAX_VALUE)
         );
         SysAdminWorkareaWHPanelLayout.setVerticalGroup(
             SysAdminWorkareaWHPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -132,11 +134,11 @@ public class ManageDHPanel extends javax.swing.JPanel {
             Logger.getLogger(DonorProfilePanel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    private void btnWarehouseAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnWarehouseAddActionPerformed
+    private void btnDHAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDHAddActionPerformed
         // TODO add your handling code here:
         AddDHPanel objAddWH = new AddDHPanel(userProcessContainer,ecosystem);
         SplitPaneWarehouse.setRightComponent(objAddWH);
-    }//GEN-LAST:event_btnWarehouseAddActionPerformed
+    }//GEN-LAST:event_btnDHAddActionPerformed
 
     private void btnWarehouseViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnWarehouseViewActionPerformed
         // TODO add your handling code here:
@@ -150,7 +152,7 @@ public class ManageDHPanel extends javax.swing.JPanel {
     private javax.swing.JSplitPane SplitPaneWarehouse;
     private javax.swing.JPanel SysAdminControlWHPanel;
     private javax.swing.JPanel SysAdminWorkareaWHPanel;
-    private javax.swing.JButton btnWarehouseAdd;
+    private javax.swing.JButton btnDHAdd;
     private javax.swing.JButton btnWarehouseView;
     // End of variables declaration//GEN-END:variables
 }

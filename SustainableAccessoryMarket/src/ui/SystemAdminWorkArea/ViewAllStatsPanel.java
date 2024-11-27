@@ -80,12 +80,12 @@ public class ViewAllStatsPanel extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         pieChartPanel = new javax.swing.JPanel();
 
-        setBackground(new java.awt.Color(204, 255, 255));
+        setBackground(new java.awt.Color(204, 204, 255));
         setPreferredSize(new java.awt.Dimension(2000, 1100));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblViewUsersTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblViewUsersTitle.setForeground(new java.awt.Color(0, 153, 204));
+        lblViewUsersTitle.setForeground(new java.awt.Color(102, 102, 255));
         lblViewUsersTitle.setText("View Statstics");
         add(lblViewUsersTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(389, 24, -1, -1));
 
@@ -98,7 +98,7 @@ public class ViewAllStatsPanel extends javax.swing.JPanel {
                 {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Warehouses", "Pantries", "NGOs", "Volunteers", "Donors", "Requestors", "Organizations", "Donations", "Requests"
+                "Distribution hubs", "Drop Offs", "COs", "Volunteers", "Donors", "Requestors", "Organizations", "Donations", "Requests"
             }
         ));
         tblViewUsers.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -117,7 +117,7 @@ public class ViewAllStatsPanel extends javax.swing.JPanel {
             tblViewUsers.getColumnModel().getColumn(3).setResizable(false);
         }
 
-        add(jScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 865, 212));
+        add(jScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 150, 990, 212));
         add(logoImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 90, 80));
 
         jLabel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 51, 0)), "no. of Donars", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 0, 18), new java.awt.Color(255, 51, 0)), "no.of Volunteers", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 0, 18), new java.awt.Color(255, 0, 51))); // NOI18N
@@ -139,7 +139,7 @@ public class ViewAllStatsPanel extends javax.swing.JPanel {
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 410, 100, 30));
 
         pieChartPanel.setLayout(new java.awt.BorderLayout());
-        add(pieChartPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 110, 430, 280));
+        add(pieChartPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 110, 430, 280));
     }// </editor-fold>//GEN-END:initComponents
 
     public void setBG() {

@@ -51,8 +51,8 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnNGOView" max="32767" attributes="0"/>
-                          <Component id="btnNGOAddNGO" max="32767" attributes="0"/>
+                          <Component id="btnCOView" max="32767" attributes="0"/>
+                          <Component id="btnCOAddCO" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -62,35 +62,41 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-                      <Component id="btnNGOAddNGO" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnCOAddCO" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="btnNGOView" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnCOView" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="462" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="btnNGOAddNGO">
+            <Component class="javax.swing.JButton" name="btnCOAddCO">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="cc" red="cc" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Trebuchet MS" size="14" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Add NGO"/>
+                <Property name="text" type="java.lang.String" value="Add CO"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNGOAddNGOActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCOAddCOActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="btnNGOView">
+            <Component class="javax.swing.JButton" name="btnCOView">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="cc" red="cc" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Trebuchet MS" size="14" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="View/Modify"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNGOViewActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCOViewActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
