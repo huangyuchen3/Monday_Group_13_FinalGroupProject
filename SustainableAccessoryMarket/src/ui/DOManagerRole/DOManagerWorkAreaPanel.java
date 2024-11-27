@@ -58,10 +58,10 @@ public class DOManagerWorkAreaPanel extends javax.swing.JPanel {
 
         SplitPaneFCPManager = new javax.swing.JSplitPane();
         MenubarFCPPanel = new javax.swing.JPanel();
-        btnViewfoodDonationReqs = new javax.swing.JButton();
-        btnPantryStock = new javax.swing.JButton();
+        btnViewAccessoryDonationReqs = new javax.swing.JButton();
+        btnStoreStock = new javax.swing.JButton();
         lblFCPWelcomemsg = new javax.swing.JLabel();
-        btnConWarehouse = new javax.swing.JButton();
+        btnConDH = new javax.swing.JButton();
         lblFCPlogout = new javax.swing.JLabel();
         jLabel = new javax.swing.JLabel();
         Imagelogo = new javax.swing.JLabel();
@@ -75,40 +75,40 @@ public class DOManagerWorkAreaPanel extends javax.swing.JPanel {
         MenubarFCPPanel.setBackground(new java.awt.Color(255, 255, 255));
         MenubarFCPPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnViewfoodDonationReqs.setBackground(new java.awt.Color(0, 153, 204));
-        btnViewfoodDonationReqs.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnViewfoodDonationReqs.setText("View Food Requests");
-        btnViewfoodDonationReqs.addActionListener(new java.awt.event.ActionListener() {
+        btnViewAccessoryDonationReqs.setBackground(new java.awt.Color(204, 204, 255));
+        btnViewAccessoryDonationReqs.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnViewAccessoryDonationReqs.setText("View Accessory Requests");
+        btnViewAccessoryDonationReqs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewfoodDonationReqsActionPerformed(evt);
+                btnViewAccessoryDonationReqsActionPerformed(evt);
             }
         });
-        MenubarFCPPanel.add(btnViewfoodDonationReqs, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, -1, -1));
+        MenubarFCPPanel.add(btnViewAccessoryDonationReqs, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, -1, -1));
 
-        btnPantryStock.setBackground(new java.awt.Color(0, 153, 204));
-        btnPantryStock.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnPantryStock.setText("Pantry Stock");
-        btnPantryStock.addActionListener(new java.awt.event.ActionListener() {
+        btnStoreStock.setBackground(new java.awt.Color(204, 204, 255));
+        btnStoreStock.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnStoreStock.setText("Store Stock");
+        btnStoreStock.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPantryStockActionPerformed(evt);
+                btnStoreStockActionPerformed(evt);
             }
         });
-        MenubarFCPPanel.add(btnPantryStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
+        MenubarFCPPanel.add(btnStoreStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
 
         lblFCPWelcomemsg.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblFCPWelcomemsg.setForeground(new java.awt.Color(0, 153, 204));
-        lblFCPWelcomemsg.setText("Welcome Pantry Manager!");
-        MenubarFCPPanel.add(lblFCPWelcomemsg, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, -1, -1));
+        lblFCPWelcomemsg.setForeground(new java.awt.Color(102, 102, 255));
+        lblFCPWelcomemsg.setText("Welcome Drop-Off Store Manager!");
+        MenubarFCPPanel.add(lblFCPWelcomemsg, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, -1, -1));
 
-        btnConWarehouse.setBackground(new java.awt.Color(0, 153, 204));
-        btnConWarehouse.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnConWarehouse.setText("Contact Warehouse");
-        btnConWarehouse.addActionListener(new java.awt.event.ActionListener() {
+        btnConDH.setBackground(new java.awt.Color(204, 204, 255));
+        btnConDH.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnConDH.setText("Contact Distribution Hub");
+        btnConDH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConWarehouseActionPerformed(evt);
+                btnConDHActionPerformed(evt);
             }
         });
-        MenubarFCPPanel.add(btnConWarehouse, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, -1, -1));
+        MenubarFCPPanel.add(btnConDH, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, -1, -1));
 
         lblFCPlogout.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         lblFCPlogout.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -182,23 +182,23 @@ public class DOManagerWorkAreaPanel extends javax.swing.JPanel {
         }
     }
 
-    private void btnViewfoodDonationReqsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewfoodDonationReqsActionPerformed
+    private void btnViewAccessoryDonationReqsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewAccessoryDonationReqsActionPerformed
         // TODO add your handling code here:
         ViewItemsRequestsPanel objFDreqs = new ViewItemsRequestsPanel(userProcessContainer, ecosystem, account);
         SplitPaneFCPManager.setRightComponent(objFDreqs);
-    }//GEN-LAST:event_btnViewfoodDonationReqsActionPerformed
+    }//GEN-LAST:event_btnViewAccessoryDonationReqsActionPerformed
 
-    private void btnPantryStockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPantryStockActionPerformed
+    private void btnStoreStockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStoreStockActionPerformed
         // TODO add your handling code here:
         DHStockPanel objWHI = new DHStockPanel(userProcessContainer, ecosystem, account);
         SplitPaneFCPManager.setRightComponent(objWHI);
-    }//GEN-LAST:event_btnPantryStockActionPerformed
+    }//GEN-LAST:event_btnStoreStockActionPerformed
 
-    private void btnConWarehouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConWarehouseActionPerformed
+    private void btnConDHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConDHActionPerformed
         // TODO add your handling code here:
         ContactDHPanel objConWH = new ContactDHPanel(userProcessContainer, ecosystem, account);
         SplitPaneFCPManager.setRightComponent(objConWH);
-    }//GEN-LAST:event_btnConWarehouseActionPerformed
+    }//GEN-LAST:event_btnConDHActionPerformed
 
     private void lblFCPlogoutMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblFCPlogoutMousePressed
         // TODO add your handling code here:
@@ -217,9 +217,9 @@ public class DOManagerWorkAreaPanel extends javax.swing.JPanel {
     private javax.swing.JPanel MenubarFCPPanel;
     private javax.swing.JSplitPane SplitPaneFCPManager;
     private javax.swing.JPanel WorkAreaFCPPanel;
-    private javax.swing.JButton btnConWarehouse;
-    private javax.swing.JButton btnPantryStock;
-    private javax.swing.JButton btnViewfoodDonationReqs;
+    private javax.swing.JButton btnConDH;
+    private javax.swing.JButton btnStoreStock;
+    private javax.swing.JButton btnViewAccessoryDonationReqs;
     private javax.swing.JLabel jLabel;
     private javax.swing.JLabel lblFCPWelcomemsg;
     private javax.swing.JLabel lblFCPlogout;
