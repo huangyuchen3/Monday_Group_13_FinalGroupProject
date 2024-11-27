@@ -8,7 +8,7 @@ import Business.UserAccount.UserAccount;
 
 /**
  *
- *@author ankitapatil
+ *@author reetikabhanushali
  */
 public class DropOff {
     private String DropOffId;
@@ -26,15 +26,15 @@ public class DropOff {
         return DropOffId;
     }
 
-    public void setDropOffId(String fcPantryId) {
-        this.DropOffId = fcPantryId;
+    public void setDropOffId(String DropOffId) {
+        this.DropOffId = DropOffId;
     }
 
     public String getDropOffName() {
         return DropOffName;
     }
 
-    public void setDropOffName(String fcPantryName) {
+    public void setDropOffName(String DropOffName) {
         this.DropOffName = DropOffName;
     }
 
@@ -42,7 +42,7 @@ public class DropOff {
         return DropOffHubName;
     }
 
-    public void setDropOffHubName(String fcPantryWarehouseName) {
+    public void setDropOffHubName(String DropOffHubName) {
         this.DropOffHubName = DropOffHubName;
     }
 
@@ -50,56 +50,56 @@ public class DropOff {
         return DropOffAddress;
     }
 
-    public void setDropOffAddresss(String fcPantryAddress) {
-        this.DropOffAddress = fcPantryAddress;
+    public void setDropOffAddresss(String DropOffAddress) {
+        this.DropOffAddress = DropOffAddress;
     }
 
     public String getDropOffCity() {
         return DropOffCity;
     }
 
-    public void setDropOffCity(String fcPantryCity) {
-        this.DropOffCity = fcPantryCity;
+    public void setDropOffCity(String DropOffCity) {
+        this.DropOffCity = DropOffCity;
     }
 
     public String getDropOffState() {
         return DropOffState;
     }
 
-    public void setDropOffState(String fcPantryState) {
-        this.DropOffState = fcPantryState;
+    public void setDropOffState(String DropOffState) {
+        this.DropOffState = DropOffState;
     }
 
     public String getDropOffZipcode() {
         return DropOffZipcode;
     }
 
-    public void setDropOffZipcode(String fcPantryZipcode) {
-        this.DropOffZipcode = fcPantryZipcode;
+    public void setDropOffZipcode(String DropOffZipcode) {
+        this.DropOffZipcode = DropOffZipcode;
     }
 
     public String getDropOffManager() {
         return DropOffManager;
     }
 
-    public void setDropOffManager(String fcPantryManager) {
-        this.DropOffManager = fcPantryManager;
+    public void setDropOffManager(String DropOffManager) {
+        this.DropOffManager = DropOffManager;
     }
 
     public String getDropOffPhone() {
         return DropOffPhone;
     }
 
-    public void setDropOffPhone(String fcPantryPhone) {
-        this.DropOffPhone = fcPantryPhone;
+    public void setDropOffPhone(String DropOffPhone) {
+        this.DropOffPhone = DropOffPhone;
     }
 
     public UserAccount getDropOffAccount() {
         return DropOffAccount;
     }
 
-    public void setDropOffAccount(UserAccount fcPantryAccount) {
-        this.DropOffAccount = fcPantryAccount;
+    public void setDropOffAccount(UserAccount DropOffAccount) {
+        this.DropOffAccount = DropOffAccount;
     }
     @Override
     public String toString(){

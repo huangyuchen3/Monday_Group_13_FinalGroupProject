@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author ankitapatil 
+ * @author reetikabhanushali 
  */
 public class DHStockPanel extends javax.swing.JPanel {
 

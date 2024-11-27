@@ -34,7 +34,7 @@ import ui.HomeJPanel;
 
 /**
  *
- * @author ankitapatil 
+ * @author reetikabhanushali 
  */
 public class SignupWorkAreaJPanel extends javax.swing.JPanel {
 

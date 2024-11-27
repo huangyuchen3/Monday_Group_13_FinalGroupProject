@@ -21,7 +21,7 @@ import ui.MainJFrame;
 
 /**
  *
- * @author ankitapatil 
+ * @author reetikabhanushali 
  */
 public class DOManagerWorkAreaPanel extends javax.swing.JPanel {
 

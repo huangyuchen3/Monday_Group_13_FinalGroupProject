@@ -12,7 +12,7 @@ import ui.DHManagerRole.DHManagerWorkAreaPanel;
 
 /**
  *
- *@author ankitapatil
+ *@author reetikabhanushali
  */
 public class DHManagerRole extends Role{
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business, JPanel jp, JSplitPane jsp) {

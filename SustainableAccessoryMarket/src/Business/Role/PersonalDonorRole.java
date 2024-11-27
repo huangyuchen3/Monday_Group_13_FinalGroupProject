@@ -12,7 +12,7 @@ import ui.DonorRole.DonorAreaJPanel;
 
 /**
  *
- * @author ankitapatil 
+ * @author reetikabhanushali 
  */
 public class PersonalDonorRole extends Role{
     

@@ -21,7 +21,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author ankitapatil 
+ * @author reetikabhanushali 
  */
 public class ViewDonationPanel extends javax.swing.JPanel {
 

@@ -13,7 +13,7 @@ import ui.VolunteerRole.VolunteerWorkAreaPanel;
 
 /**
  *
- *@author ankitapatil
+ *@author reetikabhanushali
  */
 public class Volunteer extends Role{
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business, JPanel jp, JSplitPane jsp) {

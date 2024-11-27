@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 
 /**
  *
- *@author ankitapatil
+ *@author reetikabhanushali
  */
 public class ManageCOJPanel extends javax.swing.JPanel {
 

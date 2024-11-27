@@ -22,7 +22,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author ankitapatil 
+ * @author reetikabhanushali 
  */
 public class ViewItemsRequestsPanel extends javax.swing.JPanel {
 

@@ -23,7 +23,7 @@ import ui.DonorRole.DonorProfilePanel;
 
 /**
  *
- *@author ankitapatil
+ *@author reetikabhanushali
  */
 public class ManageUsersPanel extends javax.swing.JPanel {
 

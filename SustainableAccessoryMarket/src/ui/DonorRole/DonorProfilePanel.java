@@ -23,7 +23,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author ankitapatil 
+ * @author reetikabhanushali 
  */
 public class DonorProfilePanel extends javax.swing.JPanel {
 

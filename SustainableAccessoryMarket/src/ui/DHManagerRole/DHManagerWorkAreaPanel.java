@@ -20,7 +20,7 @@ import ui.MainJFrame;
 
 /**
  *
- *@author ankitapatil
+ *@author reetikabhanushali
  */
 public class DHManagerWorkAreaPanel extends javax.swing.JPanel {
 

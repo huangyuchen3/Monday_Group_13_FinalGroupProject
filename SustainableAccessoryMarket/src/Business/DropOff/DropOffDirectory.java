@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- *@author ankitapatil
+ *@author reetikabhanushali
  */
 public class DropOffDirectory {
     private ArrayList<DropOff> DropOffList = new ArrayList<DropOff>();
@@ -17,10 +17,10 @@ public class DropOffDirectory {
         return DropOffList;
     }
 
-    public void setFcpList(ArrayList<DropOff> fcPantryList) {
-        this.DropOffList = fcPantryList;
+    public void setFcpList(ArrayList<DropOff> DropOffList) {
+        this.DropOffList = DropOffList;
     }
-     public void addNewFCPantry(DropOff fcp){
+     public void addNewDO(DropOff fcp){
         DropOffList.add(fcp);
     }
     public void deleteFCPantry(DropOff selectedfcp){

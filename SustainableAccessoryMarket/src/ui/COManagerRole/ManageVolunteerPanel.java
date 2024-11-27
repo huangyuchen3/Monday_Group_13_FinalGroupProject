@@ -19,7 +19,7 @@ import javax.swing.JSplitPane;
 
 /**
  *
- * @author ankitapatil 
+ * @author reetikabhanushali 
  */
 public class ManageVolunteerPanel extends javax.swing.JPanel {
 

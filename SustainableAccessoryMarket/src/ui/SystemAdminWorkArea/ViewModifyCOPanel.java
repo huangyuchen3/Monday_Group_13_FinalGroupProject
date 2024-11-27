@@ -29,7 +29,7 @@ import ui.DonorRole.DonorProfilePanel;
 
 /**
  *
- *@author ankitapatil
+ *@author reetikabhanushali
  */
 public class ViewModifyCOPanel extends javax.swing.JPanel {
 

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- *@author ankitapatil
+ *@author reetikabhanushali
  */
 public class AccessoryDonationDirectory {
     public ArrayList<AccessoryDonation> donationList = new ArrayList<AccessoryDonation>();
