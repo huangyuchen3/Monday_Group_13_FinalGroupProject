@@ -88,7 +88,6 @@ public class RequestItemsPanel extends javax.swing.JPanel {
         lblReqQuan = new javax.swing.JLabel();
         sdFoodQuan = new javax.swing.JSlider();
         lblReqFoodTitle1 = new javax.swing.JLabel();
-        chkDelAdd = new javax.swing.JCheckBox();
         lblDeladd = new javax.swing.JLabel();
         txtDeliveryadd = new javax.swing.JTextField();
         lblDelcity = new javax.swing.JLabel();
@@ -113,7 +112,7 @@ public class RequestItemsPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblReqFoodTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblReqFoodTitle.setForeground(new java.awt.Color(0, 153, 204));
+        lblReqFoodTitle.setForeground(new java.awt.Color(102, 102, 255));
         lblReqFoodTitle.setText("Request Food");
         add(lblReqFoodTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 40, -1, -1));
 
@@ -129,18 +128,9 @@ public class RequestItemsPanel extends javax.swing.JPanel {
         add(sdFoodQuan, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 145, -1, -1));
 
         lblReqFoodTitle1.setFont(new java.awt.Font("Trebuchet MS", 1, 22)); // NOI18N
-        lblReqFoodTitle1.setForeground(new java.awt.Color(0, 153, 204));
+        lblReqFoodTitle1.setForeground(new java.awt.Color(102, 102, 255));
         lblReqFoodTitle1.setText("Delivery Address");
-        add(lblReqFoodTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 110, -1, -1));
-
-        chkDelAdd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        chkDelAdd.setText("Same Address as in Profile");
-        chkDelAdd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chkDelAddActionPerformed(evt);
-            }
-        });
-        add(chkDelAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 150, -1, -1));
+        add(lblReqFoodTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 150, -1, -1));
 
         lblDeladd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         lblDeladd.setText("Address:");
@@ -220,14 +210,15 @@ public class RequestItemsPanel extends javax.swing.JPanel {
         });
         add(cbNearPantry, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 297, 130, -1));
 
-        btnReqSubmit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        btnReqSubmit.setBackground(new java.awt.Color(204, 204, 255));
+        btnReqSubmit.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
         btnReqSubmit.setText("Submit Request");
         btnReqSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReqSubmitActionPerformed(evt);
             }
         });
-        add(btnReqSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(458, 430, -1, -1));
+        add(btnReqSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(458, 430, 130, 30));
 
         lblMinQuan.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         lblMinQuan.setText("Min 10");
@@ -255,26 +246,6 @@ public class RequestItemsPanel extends javax.swing.JPanel {
         add(cbDelType, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, 120, -1));
         add(LabelImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, -4, 1600, 850));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void chkDelAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkDelAddActionPerformed
-        // TODO add your handling code here:
-        if(chkDelAdd.isSelected()){
-            for(AccessoryRequestor r: ecosystem.getReqDir().getReqAccList()){
-                if(r.getReqUserName().equals(reqUName)){
-                    txtDeliveryadd.setText(r.getReqAddres());
-                    txtDelcity.setText(r.getReqCity());
-                    txtDelstate.setText(r.getReqState());
-                    txtDelzip.setText(r.getReqZipcode());
-                }
-            }
-        }
-        else{
-            txtDeliveryadd.setText("");
-            txtDelcity.setText("");
-            txtDelstate.setText("");
-            txtDelzip.setText("");
-        }
-    }//GEN-LAST:event_chkDelAddActionPerformed
 
     public void setBG() {
         try {
@@ -358,7 +329,6 @@ public class RequestItemsPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         if(cbDelType.getSelectedIndex()==0){
             lblReqFoodTitle1.setVisible(true);
-            chkDelAdd.setVisible(true);
             lblDeladd.setVisible(true);
             txtDeliveryadd.setVisible(true);
             lblDelcity.setVisible(true);
@@ -370,7 +340,6 @@ public class RequestItemsPanel extends javax.swing.JPanel {
         }
         else{
             lblReqFoodTitle1.setVisible(false);
-            chkDelAdd.setVisible(false);
             lblDeladd.setVisible(false);
             txtDeliveryadd.setVisible(false);
             lblDelcity.setVisible(false);
@@ -393,7 +362,6 @@ public class RequestItemsPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> cbDelType;
     private javax.swing.JComboBox<String> cbNearPantry;
     private javax.swing.JComboBox<String> cbSelectCity;
-    private javax.swing.JCheckBox chkDelAdd;
     private javax.swing.JLabel lblDelType;
     private javax.swing.JLabel lblDeladd;
     private javax.swing.JLabel lblDelcity;
@@ -427,7 +395,6 @@ public class RequestItemsPanel extends javax.swing.JPanel {
         cbSelectCity.setSelectedIndex(0);
         cbNearPantry.setSelectedIndex(0);
         sdFoodQuan.setExtent(0);
-        chkDelAdd.setSelected(false);
         cbSelectCity.setSelectedIndex(0);
         cbNearPantry.setSelectedIndex(0);
         cbDelType.setSelectedIndex(0);

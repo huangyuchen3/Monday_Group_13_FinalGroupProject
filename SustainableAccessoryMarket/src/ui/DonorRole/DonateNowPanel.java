@@ -91,8 +91,8 @@ public class DonateNowPanel extends javax.swing.JPanel {
         txtDonateZip = new javax.swing.JTextField();
         lblDonateCity2 = new javax.swing.JLabel();
         cbDonateCity = new javax.swing.JComboBox<>();
-        lblDonateWH = new javax.swing.JLabel();
-        cbWarehouse = new javax.swing.JComboBox<>();
+        lblDonateDH = new javax.swing.JLabel();
+        cbDH = new javax.swing.JComboBox<>();
         btnDonateSubmit = new javax.swing.JButton();
         lblDonateMinQ = new javax.swing.JLabel();
         lblDonateMaxQ = new javax.swing.JLabel();
@@ -103,7 +103,7 @@ public class DonateNowPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblDonationProfileTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblDonationProfileTitle.setForeground(new java.awt.Color(0, 153, 204));
+        lblDonationProfileTitle.setForeground(new java.awt.Color(102, 102, 255));
         lblDonationProfileTitle.setText("Donate Accessory ");
         add(lblDonationProfileTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, -1, -1));
 
@@ -132,9 +132,9 @@ public class DonateNowPanel extends javax.swing.JPanel {
         add(sdDonateQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(214, 190, -1, -1));
 
         lblDonatePickupAddress.setFont(new java.awt.Font("Trebuchet MS", 1, 22)); // NOI18N
-        lblDonatePickupAddress.setForeground(new java.awt.Color(0, 153, 204));
+        lblDonatePickupAddress.setForeground(new java.awt.Color(102, 102, 255));
         lblDonatePickupAddress.setText("Pickup Address");
-        add(lblDonatePickupAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 140, -1, -1));
+        add(lblDonatePickupAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 160, -1, -1));
 
         lblDonateAddress.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         lblDonateAddress.setText("Address:");
@@ -201,19 +201,20 @@ public class DonateNowPanel extends javax.swing.JPanel {
         });
         add(cbDonateCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 150, -1));
 
-        lblDonateWH.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblDonateWH.setText("Nearest DistributionHub:");
-        add(lblDonateWH, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, -1, -1));
+        lblDonateDH.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDonateDH.setText("Nearest DistributionHub:");
+        add(lblDonateDH, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, -1, -1));
 
-        cbWarehouse.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        cbWarehouse.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Select --" }));
-        cbWarehouse.addActionListener(new java.awt.event.ActionListener() {
+        cbDH.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        cbDH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Select --" }));
+        cbDH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbWarehouseActionPerformed(evt);
+                cbDHActionPerformed(evt);
             }
         });
-        add(cbWarehouse, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 150, -1));
+        add(cbDH, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 150, -1));
 
+        btnDonateSubmit.setBackground(new java.awt.Color(204, 204, 255));
         btnDonateSubmit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         btnDonateSubmit.setText("Donate");
         btnDonateSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -305,7 +306,7 @@ public class DonateNowPanel extends javax.swing.JPanel {
             dt.setDonatQuant(String.valueOf(sdDonateQuantity.getValue()));
             dt.setDonatPickuptype("Pick up");
             dt.setDonatStatus("Requested");
-            dt.setDonatWHname(cbWarehouse.getSelectedItem().toString());
+            dt.setDonatWHname(cbDH.getSelectedItem().toString());
             UserAccount ua = new UserAccount();
             ua.setUsername(userAcc.getUsername());
             ua.setPassword(userAcc.getPassword());
@@ -334,22 +335,23 @@ public class DonateNowPanel extends javax.swing.JPanel {
                 whList.add(fcw.getDistributionHubName());
             }
         }        
-        cbWarehouse.setModel(new DefaultComboBoxModel<String>(whList.toArray(new String[0])));
+        cbDH.setModel(new DefaultComboBoxModel<String>(whList.toArray(new String[0])));
     }//GEN-LAST:event_cbDonateCityActionPerformed
 
-    private void cbWarehouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbWarehouseActionPerformed
+    private void cbDHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDHActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbWarehouseActionPerformed
+    }//GEN-LAST:event_cbDHActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Imagelogo;
     private javax.swing.JButton btnDonateSubmit;
+    private javax.swing.JComboBox<String> cbDH;
     private javax.swing.JComboBox<String> cbDonateCity;
-    private javax.swing.JComboBox<String> cbWarehouse;
     private javax.swing.JLabel lblDonateAddress;
     private javax.swing.JLabel lblDonateCity;
     private javax.swing.JLabel lblDonateCity2;
+    private javax.swing.JLabel lblDonateDH;
     private javax.swing.JLabel lblDonateFoodItem;
     private javax.swing.JLabel lblDonateFoodQuantity;
     private javax.swing.JLabel lblDonateMaxQ;
@@ -357,7 +359,6 @@ public class DonateNowPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblDonatePersons;
     private javax.swing.JLabel lblDonatePickupAddress;
     private javax.swing.JLabel lblDonateState;
-    private javax.swing.JLabel lblDonateWH;
     private javax.swing.JLabel lblDonateZip;
     private javax.swing.JLabel lblDonationProfileTitle;
     private javax.swing.JLabel lblImage;
@@ -385,9 +386,9 @@ public class DonateNowPanel extends javax.swing.JPanel {
         txtDonateState.setText("");
         txtDonateZip.setText("");
         cbDonateCity.setSelectedIndex(0);
-        cbWarehouse.setSelectedIndex(0);
+        cbDH.setSelectedIndex(0);
         sdDonateQuantity.setExtent(0);
         cbDonateCity.setSelectedIndex(0);
-        cbWarehouse.setSelectedIndex(0);
+        cbDH.setSelectedIndex(0);
     }
 }

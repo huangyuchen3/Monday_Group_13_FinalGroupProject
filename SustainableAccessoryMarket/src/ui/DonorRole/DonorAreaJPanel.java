@@ -78,7 +78,7 @@ public class DonorAreaJPanel extends javax.swing.JPanel {
         DonorMenubarPanel.setPreferredSize(new java.awt.Dimension(617, 500));
         DonorMenubarPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnViewDon.setBackground(new java.awt.Color(0, 153, 204));
+        btnViewDon.setBackground(new java.awt.Color(204, 204, 255));
         btnViewDon.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnViewDon.setText("View Donations");
         btnViewDon.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +88,7 @@ public class DonorAreaJPanel extends javax.swing.JPanel {
         });
         DonorMenubarPanel.add(btnViewDon, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, -1, -1));
 
-        btnProfile.setBackground(new java.awt.Color(0, 153, 204));
+        btnProfile.setBackground(new java.awt.Color(204, 204, 255));
         btnProfile.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnProfile.setText("View Profile");
         btnProfile.addActionListener(new java.awt.event.ActionListener() {
@@ -98,7 +98,7 @@ public class DonorAreaJPanel extends javax.swing.JPanel {
         });
         DonorMenubarPanel.add(btnProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, -1, -1));
 
-        btnDonNow.setBackground(new java.awt.Color(0, 153, 204));
+        btnDonNow.setBackground(new java.awt.Color(204, 204, 255));
         btnDonNow.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnDonNow.setText("Donate Now");
         btnDonNow.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +109,7 @@ public class DonorAreaJPanel extends javax.swing.JPanel {
         DonorMenubarPanel.add(btnDonNow, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 90, -1, -1));
 
         lblWelcomemsg.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblWelcomemsg.setForeground(new java.awt.Color(0, 153, 204));
+        lblWelcomemsg.setForeground(new java.awt.Color(102, 102, 255));
         lblWelcomemsg.setText("Welcome Donor !");
         DonorMenubarPanel.add(lblWelcomemsg, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, -1, -1));
 

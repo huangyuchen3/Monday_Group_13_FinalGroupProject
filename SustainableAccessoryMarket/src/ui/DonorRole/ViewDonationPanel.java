@@ -61,11 +61,12 @@ public class ViewDonationPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1500, 1000));
         setLayout(null);
 
+        lblDonorViewTitle.setBackground(new java.awt.Color(102, 102, 255));
         lblDonorViewTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblDonorViewTitle.setForeground(new java.awt.Color(0, 153, 204));
+        lblDonorViewTitle.setForeground(new java.awt.Color(102, 102, 255));
         lblDonorViewTitle.setText(" Donations");
         add(lblDonorViewTitle);
-        lblDonorViewTitle.setBounds(360, 60, 339, 35);
+        lblDonorViewTitle.setBounds(50, 50, 339, 35);
 
         tblDonations.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         tblDonations.setModel(new javax.swing.table.DefaultTableModel(
@@ -97,7 +98,7 @@ public class ViewDonationPanel extends javax.swing.JPanel {
         }
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(43, 185, 994, 220);
+        jScrollPane1.setBounds(50, 110, 994, 220);
         add(Imagelogo);
         Imagelogo.setBounds(75, 31, 102, 104);
         add(Imagelabel);
