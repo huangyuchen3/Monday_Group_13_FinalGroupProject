@@ -104,7 +104,7 @@ public class DonationRequestsPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblDonRequestsTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblDonRequestsTitle.setForeground(new java.awt.Color(0, 153, 204));
+        lblDonRequestsTitle.setForeground(new java.awt.Color(102, 102, 255));
         lblDonRequestsTitle.setText("Donation Requests");
         add(lblDonRequestsTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(418, 14, -1, -1));
 
@@ -117,7 +117,7 @@ public class DonationRequestsPanel extends javax.swing.JPanel {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Donation ID", "Accessory Item", "Quantity", "Drop-Off ", "Status"
+                "Donation ID", "Accessory Item", "Quantity", "Address", "Status"
             }
         ));
         tblDonReq.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -176,10 +176,10 @@ public class DonationRequestsPanel extends javax.swing.JPanel {
                 btnReqSendActionPerformed(evt);
             }
         });
-        add(btnReqSend, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 280, -1, -1));
+        add(btnReqSend, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 280, -1, -1));
 
         lblDonReqTitle1.setFont(new java.awt.Font("Trebuchet MS", 1, 22)); // NOI18N
-        lblDonReqTitle1.setForeground(new java.awt.Color(0, 153, 204));
+        lblDonReqTitle1.setForeground(new java.awt.Color(102, 102, 255));
         lblDonReqTitle1.setText("Assign Volunteer");
         add(lblDonReqTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 320, -1, -1));
 

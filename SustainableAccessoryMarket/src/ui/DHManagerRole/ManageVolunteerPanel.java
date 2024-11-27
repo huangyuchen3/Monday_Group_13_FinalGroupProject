@@ -60,7 +60,7 @@ public class ManageVolunteerPanel extends javax.swing.JPanel {
             nogList.add(ng.getCOName());
             }
         }
-        cbSelectNGO.setModel(new DefaultComboBoxModel<String>(nogList.toArray(new String[0])));
+        cbSelectCO.setModel(new DefaultComboBoxModel<String>(nogList.toArray(new String[0])));
         for(DistributionHub fcw: ecosystem.getACDDirectory().getFadList()){
             if(fcw.getDistributionHubAdmin().equals(userAcc.getEmployee().getName())){
                 WHname=fcw.getDistributionHubName();
@@ -93,13 +93,13 @@ public class ManageVolunteerPanel extends javax.swing.JPanel {
         cbVolReq = new javax.swing.JComboBox<>();
         btnVolReq = new javax.swing.JButton();
         lblSelectNGO = new javax.swing.JLabel();
-        cbSelectNGO = new javax.swing.JComboBox<>();
+        cbSelectCO = new javax.swing.JComboBox<>();
         LabelImage = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
         lblManageVolTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblManageVolTitle.setForeground(new java.awt.Color(0, 153, 204));
+        lblManageVolTitle.setForeground(new java.awt.Color(102, 102, 255));
         lblManageVolTitle.setText("Manage Volunteers");
 
         tblManageVolunteer.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
@@ -122,7 +122,7 @@ public class ManageVolunteerPanel extends javax.swing.JPanel {
         jScrollPane.setViewportView(tblManageVolunteer);
 
         lblDonationProfileTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 22)); // NOI18N
-        lblDonationProfileTitle.setForeground(new java.awt.Color(0, 153, 204));
+        lblDonationProfileTitle.setForeground(new java.awt.Color(102, 102, 255));
         lblDonationProfileTitle.setText("Request Volunteers");
 
         lbVolReq.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
@@ -140,10 +140,10 @@ public class ManageVolunteerPanel extends javax.swing.JPanel {
         });
 
         lblSelectNGO.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblSelectNGO.setText("Select a CO :");
+        lblSelectNGO.setText("Select a Community Outreach :");
 
-        cbSelectNGO.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        cbSelectNGO.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Select --", "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbSelectCO.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        cbSelectCO.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Select --", "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         LabelImage.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
 
@@ -156,7 +156,7 @@ public class ManageVolunteerPanel extends javax.swing.JPanel {
                     .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1427, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(492, 492, 492)
-                        .addComponent(cbSelectNGO, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cbSelectCO, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(396, 396, 396)
                         .addComponent(lblManageVolTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -188,7 +188,7 @@ public class ManageVolunteerPanel extends javax.swing.JPanel {
                         .addGap(27, 27, 27)
                         .addComponent(lblDonationProfileTitle)
                         .addGap(31, 31, 31)
-                        .addComponent(cbSelectNGO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cbSelectCO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(316, 316, 316)
                         .addComponent(lblSelectNGO))
@@ -240,7 +240,7 @@ public class ManageVolunteerPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         COVolunteerRequests vr = new COVolunteerRequests();
         vr.setVolreqId("1");
-        vr.setVolreqName(cbSelectNGO.getSelectedItem().toString());
+        vr.setVolreqName(cbSelectCO.getSelectedItem().toString());
         vr.setVolreqNum("1");
         //vr.setVolreqWH(WHname);
         vr.setVolreqStatus("Requested");
@@ -259,7 +259,7 @@ public class ManageVolunteerPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LabelImage;
     private javax.swing.JButton btnVolReq;
-    private javax.swing.JComboBox<String> cbSelectNGO;
+    private javax.swing.JComboBox<String> cbSelectCO;
     private javax.swing.JComboBox<String> cbVolReq;
     private javax.swing.JScrollPane jScrollPane;
     private javax.swing.JLabel lbVolReq;

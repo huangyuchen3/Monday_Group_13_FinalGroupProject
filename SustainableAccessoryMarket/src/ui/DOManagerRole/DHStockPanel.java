@@ -37,10 +37,10 @@ public class DHStockPanel extends javax.swing.JPanel {
         this.userAcc = userAcc;
         populatePantryItemsTable();
          lblQReqF.setVisible(false);
-         lblPersons.setVisible(false);
+         lblPeople.setVisible(false);
          cbQReqF.setVisible(false);
          btnSubReq.setVisible(false);
-         chkReqFWH.setVisible(false);
+         chkReqFDH.setVisible(false);
          setBG();
          makeTableTransparent();
     }
@@ -60,16 +60,16 @@ public class DHStockPanel extends javax.swing.JPanel {
         btnSubReq = new javax.swing.JButton();
         lblQReqF = new javax.swing.JLabel();
         cbQReqF = new javax.swing.JComboBox<>();
-        chkReqFWH = new javax.swing.JCheckBox();
-        lblPersons = new javax.swing.JLabel();
+        chkReqFDH = new javax.swing.JCheckBox();
+        lblPeople = new javax.swing.JLabel();
         LabelImage = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblAvailStockTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblAvailStockTitle.setForeground(new java.awt.Color(0, 153, 204));
-        lblAvailStockTitle.setText("Available Stock");
-        add(lblAvailStockTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
+        lblAvailStockTitle.setForeground(new java.awt.Color(102, 102, 255));
+        lblAvailStockTitle.setText("Store Available Stock");
+        add(lblAvailStockTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
         tblAvailStock.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         tblAvailStock.setModel(new javax.swing.table.DefaultTableModel(
@@ -80,7 +80,7 @@ public class DHStockPanel extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Item ID", "Food Item", "Item Quantity"
+                "Item ID", "Accessory Item", "Item Quantity"
             }
         ));
         tblAvailStock.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -90,7 +90,7 @@ public class DHStockPanel extends javax.swing.JPanel {
         });
         jScrollPane.setViewportView(tblAvailStock);
 
-        add(jScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 1008, 153));
+        add(jScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 960, 153));
 
         btnSubReq.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         btnSubReq.setText("Submit Request");
@@ -99,29 +99,29 @@ public class DHStockPanel extends javax.swing.JPanel {
                 btnSubReqActionPerformed(evt);
             }
         });
-        add(btnSubReq, new org.netbeans.lib.awtextra.AbsoluteConstraints(403, 369, -1, -1));
+        add(btnSubReq, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
 
         lblQReqF.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         lblQReqF.setText("Quantity Required for:");
-        add(lblQReqF, new org.netbeans.lib.awtextra.AbsoluteConstraints(316, 315, -1, -1));
+        add(lblQReqF, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, -1, -1));
 
         cbQReqF.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         cbQReqF.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Select --", "50", "100", "150", "200", "250" }));
-        add(cbQReqF, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 310, 120, -1));
+        add(cbQReqF, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 120, -1));
 
-        chkReqFWH.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        chkReqFWH.setText("Request stock from Warehouse");
-        chkReqFWH.addActionListener(new java.awt.event.ActionListener() {
+        chkReqFDH.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        chkReqFDH.setText("Request stock from Distribution Hub");
+        chkReqFDH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chkReqFWHActionPerformed(evt);
+                chkReqFDHActionPerformed(evt);
             }
         });
-        add(chkReqFWH, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 260, -1, -1));
+        add(chkReqFDH, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
 
-        lblPersons.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblPersons.setText("Persons");
-        add(lblPersons, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 310, -1, -1));
-        add(LabelImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, 690));
+        lblPeople.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblPeople.setText("People");
+        add(lblPeople, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 300, -1, -1));
+        add(LabelImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(-280, 0, 1440, 690));
     }// </editor-fold>//GEN-END:initComponents
 
     
@@ -155,21 +155,21 @@ public class DHStockPanel extends javax.swing.JPanel {
         }
     }
     
-    private void chkReqFWHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkReqFWHActionPerformed
+    private void chkReqFDHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkReqFDHActionPerformed
         // TODO add your handling code here:
-        if(chkReqFWH.isSelected()){
+        if(chkReqFDH.isSelected()){
             lblQReqF.setVisible(true);
-            lblPersons.setVisible(true);
+            lblPeople.setVisible(true);
             cbQReqF.setVisible(true);
             btnSubReq.setVisible(true);
         }
         else{
             lblQReqF.setVisible(false);
-            lblPersons.setVisible(false);
+            lblPeople.setVisible(false);
             cbQReqF.setVisible(false);
             btnSubReq.setVisible(false);
         }
-    }//GEN-LAST:event_chkReqFWHActionPerformed
+    }//GEN-LAST:event_chkReqFDHActionPerformed
 
     private void btnSubReqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubReqActionPerformed
         // TODO add your handling code here:
@@ -186,10 +186,10 @@ public class DHStockPanel extends javax.swing.JPanel {
     private javax.swing.JLabel LabelImage;
     private javax.swing.JButton btnSubReq;
     private javax.swing.JComboBox<String> cbQReqF;
-    private javax.swing.JCheckBox chkReqFWH;
+    private javax.swing.JCheckBox chkReqFDH;
     private javax.swing.JScrollPane jScrollPane;
     private javax.swing.JLabel lblAvailStockTitle;
-    private javax.swing.JLabel lblPersons;
+    private javax.swing.JLabel lblPeople;
     private javax.swing.JLabel lblQReqF;
     private javax.swing.JTable tblAvailStock;
     // End of variables declaration//GEN-END:variables

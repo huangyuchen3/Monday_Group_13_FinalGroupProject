@@ -29,7 +29,7 @@
           <Font name="Trebuchet MS" size="29" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="99" red="0" type="rgb"/>
+          <Color blue="ff" green="66" red="66" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Donation Requests"/>
       </Properties>
@@ -61,7 +61,7 @@
                 <Column editable="true" title="Donation ID" type="java.lang.Object"/>
                 <Column editable="true" title="Accessory Item" type="java.lang.Object"/>
                 <Column editable="true" title="Quantity" type="java.lang.Object"/>
-                <Column editable="true" title="Drop-Off " type="java.lang.Object"/>
+                <Column editable="true" title="Address" type="java.lang.Object"/>
                 <Column editable="true" title="Status" type="java.lang.Object"/>
               </Table>
             </Property>
@@ -204,7 +204,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="710" y="280" width="-1" height="-1"/>
+          <AbsoluteConstraints x="860" y="280" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -214,7 +214,7 @@
           <Font name="Trebuchet MS" size="22" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="99" red="0" type="rgb"/>
+          <Color blue="ff" green="66" red="66" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Assign Volunteer"/>
       </Properties>

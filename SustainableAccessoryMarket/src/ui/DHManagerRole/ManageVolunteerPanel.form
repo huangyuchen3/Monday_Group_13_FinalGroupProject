@@ -26,7 +26,7 @@
                   <Component id="jScrollPane" min="-2" pref="1427" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <EmptySpace min="492" pref="492" max="-2" attributes="0"/>
-                      <Component id="cbSelectNGO" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="cbSelectCO" min="-2" pref="150" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="396" pref="396" max="-2" attributes="0"/>
@@ -68,7 +68,7 @@
                       <EmptySpace min="27" pref="27" max="-2" attributes="0"/>
                       <Component id="lblDonationProfileTitle" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="31" pref="31" max="-2" attributes="0"/>
-                      <Component id="cbSelectNGO" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbSelectCO" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="316" pref="316" max="-2" attributes="0"/>
@@ -101,7 +101,7 @@
           <Font name="Trebuchet MS" size="29" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="99" red="0" type="rgb"/>
+          <Color blue="ff" green="66" red="66" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Manage Volunteers"/>
       </Properties>
@@ -184,7 +184,7 @@
           <Font name="Trebuchet MS" size="22" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="99" red="0" type="rgb"/>
+          <Color blue="ff" green="66" red="66" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Request Volunteers"/>
       </Properties>
@@ -233,10 +233,10 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Trebuchet MS" size="13" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Select a CO :"/>
+        <Property name="text" type="java.lang.String" value="Select a Community Outreach :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="cbSelectNGO">
+    <Component class="javax.swing.JComboBox" name="cbSelectCO">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Trebuchet MS" size="13" style="0"/>
