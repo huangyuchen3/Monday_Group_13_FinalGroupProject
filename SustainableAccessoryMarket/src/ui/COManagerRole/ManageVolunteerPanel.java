@@ -61,7 +61,7 @@ public class ManageVolunteerPanel extends javax.swing.JPanel {
         NGOCP.setBackground(new java.awt.Color(255, 255, 255));
         NGOCP.setPreferredSize(new java.awt.Dimension(150, 600));
 
-        btnAddItems.setBackground(new java.awt.Color(0, 153, 204));
+        btnAddItems.setBackground(new java.awt.Color(204, 204, 255));
         btnAddItems.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnAddItems.setText("Add Volunteer");
         btnAddItems.addActionListener(new java.awt.event.ActionListener() {
@@ -70,7 +70,7 @@ public class ManageVolunteerPanel extends javax.swing.JPanel {
             }
         });
 
-        btnViewItems.setBackground(new java.awt.Color(0, 153, 204));
+        btnViewItems.setBackground(new java.awt.Color(204, 204, 255));
         btnViewItems.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnViewItems.setText("View/Update Volunteer ");
         btnViewItems.addActionListener(new java.awt.event.ActionListener() {
@@ -79,7 +79,7 @@ public class ManageVolunteerPanel extends javax.swing.JPanel {
             }
         });
 
-        btnRequests.setBackground(new java.awt.Color(0, 153, 204));
+        btnRequests.setBackground(new java.awt.Color(204, 204, 255));
         btnRequests.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnRequests.setText("Requests");
         btnRequests.addActionListener(new java.awt.event.ActionListener() {

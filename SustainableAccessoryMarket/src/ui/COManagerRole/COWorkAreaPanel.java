@@ -71,7 +71,7 @@ public class COWorkAreaPanel extends javax.swing.JPanel {
         ManubarNonGovOrgPanel.setBackground(new java.awt.Color(255, 255, 255));
         ManubarNonGovOrgPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnManagevol.setBackground(new java.awt.Color(0, 153, 204));
+        btnManagevol.setBackground(new java.awt.Color(204, 204, 255));
         btnManagevol.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnManagevol.setText("Manage Volunteers");
         btnManagevol.addActionListener(new java.awt.event.ActionListener() {
@@ -81,7 +81,7 @@ public class COWorkAreaPanel extends javax.swing.JPanel {
         });
         ManubarNonGovOrgPanel.add(btnManagevol, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 80, -1, -1));
 
-        btnProfile.setBackground(new java.awt.Color(0, 153, 204));
+        btnProfile.setBackground(new java.awt.Color(204, 204, 255));
         btnProfile.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnProfile.setText("My Profile");
         btnProfile.addActionListener(new java.awt.event.ActionListener() {
@@ -92,9 +92,9 @@ public class COWorkAreaPanel extends javax.swing.JPanel {
         ManubarNonGovOrgPanel.add(btnProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, -1, -1));
 
         lblWelcomemsg.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblWelcomemsg.setForeground(new java.awt.Color(0, 153, 204));
-        lblWelcomemsg.setText("Welcome NGO!");
-        ManubarNonGovOrgPanel.add(lblWelcomemsg, new org.netbeans.lib.awtextra.AbsoluteConstraints(387, 6, -1, -1));
+        lblWelcomemsg.setForeground(new java.awt.Color(102, 102, 255));
+        lblWelcomemsg.setText("Welcome Community Outreach Manager!");
+        ManubarNonGovOrgPanel.add(lblWelcomemsg, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, -1, -1));
 
         lbllogout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {

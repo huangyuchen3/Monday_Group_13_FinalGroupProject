@@ -56,11 +56,11 @@ public class AddDOItemsPanel extends javax.swing.JPanel {
             }
             
         }
-        cbPantryName.setModel(new DefaultComboBoxModel<String>(PantryList.toArray(new String[0])));
-        txtPantryManager.setEnabled(false);
-        if(cbPantryName.getSelectedItem() == null || cbPantryName.getItemCount() == 0){
-        txtPantryManager.setText("");
-        }else{ txtPantryManager.setText(getMngrName(cbPantryName.getSelectedItem().toString())); }
+        cbDOName.setModel(new DefaultComboBoxModel<String>(PantryList.toArray(new String[0])));
+        txtDOManager.setEnabled(false);
+        if(cbDOName.getSelectedItem() == null || cbDOName.getItemCount() == 0){
+        txtDOManager.setText("");
+        }else{ txtDOManager.setText(getMngrName(cbDOName.getSelectedItem().toString())); }
         setBG();
     }
 
@@ -74,123 +74,123 @@ public class AddDOItemsPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblAddFCPantryTitle = new javax.swing.JLabel();
-        lblWarehousename = new javax.swing.JLabel();
-        txtPantryManager = new javax.swing.JTextField();
-        lblPantryManager = new javax.swing.JLabel();
-        txtFooditem = new javax.swing.JTextField();
-        lblFooditem = new javax.swing.JLabel();
-        txtFoodQuantity = new javax.swing.JTextField();
+        lblDHname = new javax.swing.JLabel();
+        txtDOManager = new javax.swing.JTextField();
+        lblDOManager = new javax.swing.JLabel();
+        txtAccessoryitem = new javax.swing.JTextField();
+        lblAccessoryitem = new javax.swing.JLabel();
+        txtAccessoryQuantity = new javax.swing.JTextField();
         lblWHname = new javax.swing.JLabel();
-        lblPantryName = new javax.swing.JLabel();
-        cbPantryName = new javax.swing.JComboBox<>();
-        btnPantrySubmit = new javax.swing.JButton();
-        lblFooditemID = new javax.swing.JLabel();
-        txtFooditemId = new javax.swing.JTextField();
-        btnPantryclear = new javax.swing.JButton();
+        lblDOName = new javax.swing.JLabel();
+        cbDOName = new javax.swing.JComboBox<>();
+        btnSubmit = new javax.swing.JButton();
+        lblAccessoryitemID = new javax.swing.JLabel();
+        txtAccessoryitemId = new javax.swing.JTextField();
+        btnClear = new javax.swing.JButton();
         LabelImage = new javax.swing.JLabel();
-        lblFoodQuantity = new javax.swing.JLabel();
+        lblAccessoryQuantity = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblAddFCPantryTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblAddFCPantryTitle.setForeground(new java.awt.Color(0, 153, 204));
+        lblAddFCPantryTitle.setForeground(new java.awt.Color(102, 102, 255));
         lblAddFCPantryTitle.setText("Add Drop Off Items");
-        add(lblAddFCPantryTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 19, -1, -1));
+        add(lblAddFCPantryTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, -1));
 
-        lblWarehousename.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblWarehousename.setText("Distribution Hub Name:");
-        add(lblWarehousename, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, -1, -1));
+        lblDHname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDHname.setText("Distribution Hub Name:");
+        add(lblDHname, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, -1, -1));
 
-        txtPantryManager.setEditable(false);
-        txtPantryManager.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtPantryManager.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtPantryManager.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtDOManager.setEditable(false);
+        txtDOManager.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtDOManager.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtDOManager.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtPantryManagerFocusLost(evt);
+                txtDOManagerFocusLost(evt);
             }
         });
-        txtPantryManager.addActionListener(new java.awt.event.ActionListener() {
+        txtDOManager.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPantryManagerActionPerformed(evt);
+                txtDOManagerActionPerformed(evt);
             }
         });
-        add(txtPantryManager, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 178, 137, -1));
+        add(txtDOManager, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 178, 137, -1));
 
-        lblPantryManager.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblPantryManager.setText("Distribution Hub Manager:");
-        add(lblPantryManager, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, -1, -1));
+        lblDOManager.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDOManager.setText("Drop Off Store Manager:");
+        add(lblDOManager, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, -1, -1));
 
-        txtFooditem.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtFooditem.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtFooditem.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtAccessoryitem.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtAccessoryitem.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtAccessoryitem.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtFooditemFocusLost(evt);
+                txtAccessoryitemFocusLost(evt);
             }
         });
-        add(txtFooditem, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 264, 137, -1));
+        add(txtAccessoryitem, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 264, 137, -1));
 
-        lblFooditem.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblFooditem.setText("Accessory Item:");
-        add(lblFooditem, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, -1, -1));
+        lblAccessoryitem.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblAccessoryitem.setText("Accessory Item:");
+        add(lblAccessoryitem, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, -1, -1));
 
-        txtFoodQuantity.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtFoodQuantity.setPreferredSize(new java.awt.Dimension(150, 25));
-        add(txtFoodQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 307, 137, -1));
+        txtAccessoryQuantity.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtAccessoryQuantity.setPreferredSize(new java.awt.Dimension(150, 25));
+        add(txtAccessoryQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 307, 137, -1));
 
         lblWHname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         add(lblWHname, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 98, 130, 20));
 
-        lblPantryName.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblPantryName.setText("Distribution Hub:");
-        add(lblPantryName, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, -1, -1));
+        lblDOName.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDOName.setText("Drop Off Store:");
+        add(lblDOName, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, -1, -1));
 
-        cbPantryName.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        cbPantryName.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Select --", "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbPantryName.addActionListener(new java.awt.event.ActionListener() {
+        cbDOName.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        cbDOName.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Select --", "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbDOName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbPantryNameActionPerformed(evt);
+                cbDONameActionPerformed(evt);
             }
         });
-        add(cbPantryName, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 150, -1));
+        add(cbDOName, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 150, -1));
 
-        btnPantrySubmit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        btnPantrySubmit.setText("Submit");
-        btnPantrySubmit.addActionListener(new java.awt.event.ActionListener() {
+        btnSubmit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        btnSubmit.setText("Submit");
+        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPantrySubmitActionPerformed(evt);
+                btnSubmitActionPerformed(evt);
             }
         });
-        add(btnPantrySubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 379, -1, -1));
+        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 379, -1, -1));
 
-        lblFooditemID.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblFooditemID.setText("Item ID:");
-        add(lblFooditemID, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 220, -1, -1));
+        lblAccessoryitemID.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblAccessoryitemID.setText("Item ID:");
+        add(lblAccessoryitemID, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 220, -1, -1));
 
-        txtFooditemId.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtFooditemId.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtFooditemId.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtAccessoryitemId.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtAccessoryitemId.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtAccessoryitemId.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtFooditemIdFocusLost(evt);
+                txtAccessoryitemIdFocusLost(evt);
             }
         });
-        add(txtFooditemId, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 221, 137, -1));
+        add(txtAccessoryitemId, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 221, 137, -1));
 
-        btnPantryclear.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        btnPantryclear.setText("Clear");
-        btnPantryclear.addActionListener(new java.awt.event.ActionListener() {
+        btnClear.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        btnClear.setText("Clear");
+        btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPantryclearActionPerformed(evt);
+                btnClearActionPerformed(evt);
             }
         });
-        add(btnPantryclear, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 380, -1, -1));
+        add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 380, -1, -1));
 
         LabelImage.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         add(LabelImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 0, 1270, 970));
 
-        lblFoodQuantity.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblFoodQuantity.setText("Item Quantity:");
-        add(lblFoodQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 311, -1, -1));
+        lblAccessoryQuantity.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblAccessoryQuantity.setText("Item Quantity:");
+        add(lblAccessoryQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 311, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
      public void setBG() {
@@ -208,26 +208,26 @@ public class AddDOItemsPanel extends javax.swing.JPanel {
         }
     }
     
-    private void txtPantryManagerFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPantryManagerFocusLost
+    private void txtDOManagerFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDOManagerFocusLost
         // TODO add your handling code here:
      
-    }//GEN-LAST:event_txtPantryManagerFocusLost
+    }//GEN-LAST:event_txtDOManagerFocusLost
 
-    private void txtFooditemFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtFooditemFocusLost
+    private void txtAccessoryitemFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtAccessoryitemFocusLost
         // TODO add your handling code here:
       
-    }//GEN-LAST:event_txtFooditemFocusLost
+    }//GEN-LAST:event_txtAccessoryitemFocusLost
 
-    private void btnPantrySubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPantrySubmitActionPerformed
+    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         // TODO add your handling code here:
         if(!nullCheck()){
             DropOffItems fcpi=new DropOffItems();
-            fcpi.setDropOffItemId(txtFooditemId.getText());
+            fcpi.setDropOffItemId(txtAccessoryitemId.getText());
             fcpi.setDropOffHubName(WHname);
-            fcpi.setDropOffName(String.valueOf(cbPantryName.getSelectedItem()));
-            fcpi.setDropOffManager(txtPantryManager.getText());
-            fcpi.setAccessoryItems(txtFooditem.getText());
-            fcpi.setAccessoryQuantity(txtFoodQuantity.getText());           
+            fcpi.setDropOffName(String.valueOf(cbDOName.getSelectedItem()));
+            fcpi.setDropOffManager(txtDOManager.getText());
+            fcpi.setAccessoryItems(txtAccessoryitem.getText());
+            fcpi.setAccessoryQuantity(txtAccessoryQuantity.getText());           
             fcpid = ecosystem.getACDOIDirectory();
             fcpid.addFCPItems(fcpi);
             ecosystem.setACDOIDirectory(fcpid);
@@ -240,19 +240,19 @@ public class AddDOItemsPanel extends javax.swing.JPanel {
     }
 
     private void clearfields() {
-        txtFooditemId.setText("");
-       if(cbPantryName.getSelectedItem().toString().isEmpty()){
-        txtPantryManager.setText("");
-        }else{ txtPantryManager.setText(getMngrName(cbPantryName.getSelectedItem().toString())); }
-        txtFooditem.setText("");
-        txtFoodQuantity.setText("");
-    }//GEN-LAST:event_btnPantrySubmitActionPerformed
+        txtAccessoryitemId.setText("");
+       if(cbDOName.getSelectedItem().toString().isEmpty()){
+        txtDOManager.setText("");
+        }else{ txtDOManager.setText(getMngrName(cbDOName.getSelectedItem().toString())); }
+        txtAccessoryitem.setText("");
+        txtAccessoryQuantity.setText("");
+    }//GEN-LAST:event_btnSubmitActionPerformed
 
-    private void cbPantryNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPantryNameActionPerformed
+    private void cbDONameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDONameActionPerformed
         // TODO add your handling code here:
-        String fpname=cbPantryName.getSelectedItem().toString();
-        txtPantryManager.setText(getMngrName(fpname));
-    }//GEN-LAST:event_cbPantryNameActionPerformed
+        String fpname=cbDOName.getSelectedItem().toString();
+        txtDOManager.setText(getMngrName(fpname));
+    }//GEN-LAST:event_cbDONameActionPerformed
 
     public String getMngrName(String Dropoff){
         String mngr="";
@@ -264,41 +264,41 @@ public class AddDOItemsPanel extends javax.swing.JPanel {
         return mngr;
     }
     
-    private void txtFooditemIdFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtFooditemIdFocusLost
+    private void txtAccessoryitemIdFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtAccessoryitemIdFocusLost
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtFooditemIdFocusLost
+    }//GEN-LAST:event_txtAccessoryitemIdFocusLost
 
-    private void txtPantryManagerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPantryManagerActionPerformed
+    private void txtDOManagerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDOManagerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtPantryManagerActionPerformed
+    }//GEN-LAST:event_txtDOManagerActionPerformed
 
-    private void btnPantryclearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPantryclearActionPerformed
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
         // TODO add your handling code here:
         clearfields();
-    }//GEN-LAST:event_btnPantryclearActionPerformed
+    }//GEN-LAST:event_btnClearActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LabelImage;
-    private javax.swing.JButton btnPantrySubmit;
-    private javax.swing.JButton btnPantryclear;
-    private javax.swing.JComboBox<String> cbPantryName;
+    private javax.swing.JButton btnClear;
+    private javax.swing.JButton btnSubmit;
+    private javax.swing.JComboBox<String> cbDOName;
+    private javax.swing.JLabel lblAccessoryQuantity;
+    private javax.swing.JLabel lblAccessoryitem;
+    private javax.swing.JLabel lblAccessoryitemID;
     private javax.swing.JLabel lblAddFCPantryTitle;
-    private javax.swing.JLabel lblFoodQuantity;
-    private javax.swing.JLabel lblFooditem;
-    private javax.swing.JLabel lblFooditemID;
-    private javax.swing.JLabel lblPantryManager;
-    private javax.swing.JLabel lblPantryName;
+    private javax.swing.JLabel lblDHname;
+    private javax.swing.JLabel lblDOManager;
+    private javax.swing.JLabel lblDOName;
     private javax.swing.JLabel lblWHname;
-    private javax.swing.JLabel lblWarehousename;
-    private javax.swing.JTextField txtFoodQuantity;
-    private javax.swing.JTextField txtFooditem;
-    private javax.swing.JTextField txtFooditemId;
-    private javax.swing.JTextField txtPantryManager;
+    private javax.swing.JTextField txtAccessoryQuantity;
+    private javax.swing.JTextField txtAccessoryitem;
+    private javax.swing.JTextField txtAccessoryitemId;
+    private javax.swing.JTextField txtDOManager;
     // End of variables declaration//GEN-END:variables
 
     private boolean nullCheck() {
-        if(txtPantryManager.getText().length()!=0 && txtFooditem.getText().length()!=0 && txtFoodQuantity.getText().length()!=0)
+        if(txtDOManager.getText().length()!=0 && txtAccessoryitem.getText().length()!=0 && txtAccessoryQuantity.getText().length()!=0)
         {
             return false;
         }

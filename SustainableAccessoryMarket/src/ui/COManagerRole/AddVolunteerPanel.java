@@ -96,7 +96,7 @@ public class AddVolunteerPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblAddVolunteerTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblAddVolunteerTitle.setForeground(new java.awt.Color(0, 153, 204));
+        lblAddVolunteerTitle.setForeground(new java.awt.Color(102, 102, 255));
         lblAddVolunteerTitle.setText("Add Volunteer");
         add(lblAddVolunteerTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(385, 6, -1, -1));
 

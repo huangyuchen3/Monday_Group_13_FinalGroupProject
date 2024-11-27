@@ -68,13 +68,13 @@ public class RequestsPanel extends javax.swing.JPanel {
 
         lblAddReqFCTitle = new javax.swing.JLabel();
         jScrollPane = new javax.swing.JScrollPane();
-        tblFCReq = new javax.swing.JTable();
-        btnFCReqAvail = new javax.swing.JButton();
+        tblDHReq = new javax.swing.JTable();
+        btnDHReqAvail = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblWarehouse = new javax.swing.JTable();
-        btnWHProcess = new javax.swing.JButton();
-        lblAddWHTitle = new javax.swing.JLabel();
-        lblWarehouse = new javax.swing.JLabel();
+        tblDistributionHub = new javax.swing.JTable();
+        btnDHProcess = new javax.swing.JButton();
+        lblAddDHTitle = new javax.swing.JLabel();
+        lblDistributionHub = new javax.swing.JLabel();
         lblRequestID = new javax.swing.JLabel();
         lblReq = new javax.swing.JLabel();
         LabelImage = new javax.swing.JLabel();
@@ -82,12 +82,12 @@ public class RequestsPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblAddReqFCTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        lblAddReqFCTitle.setForeground(new java.awt.Color(0, 153, 204));
-        lblAddReqFCTitle.setText("Requests from Nourish.Bridge");
-        add(lblAddReqFCTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(318, 6, -1, -1));
+        lblAddReqFCTitle.setForeground(new java.awt.Color(102, 102, 255));
+        lblAddReqFCTitle.setText("Requests From Distribution Hub");
+        add(lblAddReqFCTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, -1, -1));
 
-        tblFCReq.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        tblFCReq.setModel(new javax.swing.table.DefaultTableModel(
+        tblDHReq.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        tblDHReq.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -95,29 +95,29 @@ public class RequestsPanel extends javax.swing.JPanel {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Request ID", "Request", "Warehouse", "Number of Persons", "Status"
+                "Request ID", "Request", "Distribution Hub", "Number of Persons", "Status"
             }
         ));
-        tblFCReq.addMouseListener(new java.awt.event.MouseAdapter() {
+        tblDHReq.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                tblFCReqMousePressed(evt);
+                tblDHReqMousePressed(evt);
             }
         });
-        jScrollPane.setViewportView(tblFCReq);
+        jScrollPane.setViewportView(tblDHReq);
 
         add(jScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 59, 696, 129));
 
-        btnFCReqAvail.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        btnFCReqAvail.setText("Make Available");
-        btnFCReqAvail.addActionListener(new java.awt.event.ActionListener() {
+        btnDHReqAvail.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        btnDHReqAvail.setText("Make Available");
+        btnDHReqAvail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnFCReqAvailActionPerformed(evt);
+                btnDHReqAvailActionPerformed(evt);
             }
         });
-        add(btnFCReqAvail, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 463, -1, -1));
+        add(btnDHReqAvail, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 463, -1, -1));
 
-        tblWarehouse.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        tblWarehouse.setModel(new javax.swing.table.DefaultTableModel(
+        tblDistributionHub.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        tblDistributionHub.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -128,32 +128,32 @@ public class RequestsPanel extends javax.swing.JPanel {
                 "Volunteer ID", "Name", "Address", "City", "Zip", "Status"
             }
         ));
-        tblWarehouse.setGridColor(new java.awt.Color(0, 0, 0));
-        tblWarehouse.setOpaque(false);
-        tblWarehouse.addMouseListener(new java.awt.event.MouseAdapter() {
+        tblDistributionHub.setGridColor(new java.awt.Color(0, 0, 0));
+        tblDistributionHub.setOpaque(false);
+        tblDistributionHub.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                tblWarehouseMousePressed(evt);
+                tblDistributionHubMousePressed(evt);
             }
         });
-        jScrollPane1.setViewportView(tblWarehouse);
+        jScrollPane1.setViewportView(tblDistributionHub);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 292, 814, 153));
 
-        btnWHProcess.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        btnWHProcess.setText("Process");
-        btnWHProcess.addActionListener(new java.awt.event.ActionListener() {
+        btnDHProcess.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        btnDHProcess.setText("Process");
+        btnDHProcess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnWHProcessActionPerformed(evt);
+                btnDHProcessActionPerformed(evt);
             }
         });
-        add(btnWHProcess, new org.netbeans.lib.awtextra.AbsoluteConstraints(351, 206, -1, -1));
+        add(btnDHProcess, new org.netbeans.lib.awtextra.AbsoluteConstraints(351, 206, -1, -1));
 
-        lblAddWHTitle.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblAddWHTitle.setText("For Warehouse:");
-        add(lblAddWHTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 259, -1, -1));
+        lblAddDHTitle.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblAddDHTitle.setText("For Distribution Hub:");
+        add(lblAddDHTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 259, -1, -1));
 
-        lblWarehouse.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        add(lblWarehouse, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 241, -1, -1));
+        lblDistributionHub.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        add(lblDistributionHub, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 241, -1, -1));
 
         lblRequestID.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         lblRequestID.setText("Request ID:");
@@ -180,44 +180,44 @@ public class RequestsPanel extends javax.swing.JPanel {
     }
 
     public void makeTableTransparent() {
-        tblFCReq.setOpaque(false);
-        ((DefaultTableCellRenderer) tblFCReq.getDefaultRenderer(Object.class)).setOpaque(false);
-        tblFCReq.setShowGrid(false);
+        tblDHReq.setOpaque(false);
+        ((DefaultTableCellRenderer) tblDHReq.getDefaultRenderer(Object.class)).setOpaque(false);
+        tblDHReq.setShowGrid(false);
         jScrollPane.setOpaque(false);
         jScrollPane.getViewport().setOpaque(false);
 
         DefaultTableCellRenderer headerRenderer = new DefaultTableCellRenderer();
         headerRenderer.setBackground(Color.WHITE);
 
-        for (int i = 0; i < tblFCReq.getModel().getColumnCount(); i++) {
-            tblFCReq.getColumnModel().getColumn(i).setHeaderRenderer(headerRenderer);
+        for (int i = 0; i < tblDHReq.getModel().getColumnCount(); i++) {
+            tblDHReq.getColumnModel().getColumn(i).setHeaderRenderer(headerRenderer);
         }
     }
 
     public void makeTableTransparent1() {
-        tblWarehouse.setOpaque(false);
-        ((DefaultTableCellRenderer) tblWarehouse.getDefaultRenderer(Object.class)).setOpaque(false);
-        tblWarehouse.setShowGrid(false);
+        tblDistributionHub.setOpaque(false);
+        ((DefaultTableCellRenderer) tblDistributionHub.getDefaultRenderer(Object.class)).setOpaque(false);
+        tblDistributionHub.setShowGrid(false);
         jScrollPane1.setOpaque(false);
         jScrollPane1.getViewport().setOpaque(false);
 
         DefaultTableCellRenderer headerRenderer = new DefaultTableCellRenderer();
         headerRenderer.setBackground(Color.WHITE);
 
-        for (int i = 0; i < tblWarehouse.getModel().getColumnCount(); i++) {
-            tblWarehouse.getColumnModel().getColumn(i).setHeaderRenderer(headerRenderer);
+        for (int i = 0; i < tblDistributionHub.getModel().getColumnCount(); i++) {
+            tblDistributionHub.getColumnModel().getColumn(i).setHeaderRenderer(headerRenderer);
         }
     }
     
 
-    private void btnFCReqAvailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFCReqAvailActionPerformed
+    private void btnDHReqAvailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDHReqAvailActionPerformed
         // TODO add your handling code here:
-        int selectedRowIndex = tblWarehouse.getSelectedRow();
+        int selectedRowIndex = tblDistributionHub.getSelectedRow();
         if (selectedRowIndex < 0) {
             JOptionPane.showMessageDialog(this, "Please select a request");
             return;
         }
-        DefaultTableModel model = (DefaultTableModel) tblWarehouse.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblDistributionHub.getModel();
         COVolunteer selectedV = (COVolunteer) model.getValueAt(selectedRowIndex, 0);
         if (selectedV.getVolAvail().equals("New") || selectedV.getVolAvail().equals("No")) {
             selectedV.setVolAvail("Yes");
@@ -234,57 +234,57 @@ public class RequestsPanel extends javax.swing.JPanel {
         populateRTable();
         populateVTable();
         lblReq.setText("");
-        lblWarehouse.setText("");
-    }//GEN-LAST:event_btnFCReqAvailActionPerformed
+        lblDistributionHub.setText("");
+    }//GEN-LAST:event_btnDHReqAvailActionPerformed
 
-    private void btnWHProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnWHProcessActionPerformed
+    private void btnDHProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDHProcessActionPerformed
         // TODO add your handling code here:
-        int selectedRowIndex = tblFCReq.getSelectedRow();
+        int selectedRowIndex = tblDHReq.getSelectedRow();
         if (selectedRowIndex < 0) {
             JOptionPane.showMessageDialog(this, "Please select a request");
             return;
         }
-        DefaultTableModel model = (DefaultTableModel) tblFCReq.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblDHReq.getModel();
         COVolunteerRequests selectedVR = (COVolunteerRequests) model.getValueAt(selectedRowIndex, 0);
         if (selectedVR.getVolreqStatus().equals("Completed")) {
             JOptionPane.showMessageDialog(this, "Request already completed!");
         } else {
-            lblWarehouse.setText(selectedVR.getVolreqDB());
+            lblDistributionHub.setText(selectedVR.getVolreqDB());
             lblReq.setText(selectedVR.getVolreqId());
-            tblWarehouse.setVisible(true);
-            btnFCReqAvail.setVisible(true);
+            tblDistributionHub.setVisible(true);
+            btnDHReqAvail.setVisible(true);
         }
         populateVTable();
-    }//GEN-LAST:event_btnWHProcessActionPerformed
+    }//GEN-LAST:event_btnDHProcessActionPerformed
 
-    private void tblFCReqMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblFCReqMousePressed
+    private void tblDHReqMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDHReqMousePressed
         // TODO add your handling code here:
-                tblFCReq.setSelectionForeground(Color.BLACK);
-    }//GEN-LAST:event_tblFCReqMousePressed
+                tblDHReq.setSelectionForeground(Color.BLACK);
+    }//GEN-LAST:event_tblDHReqMousePressed
 
-    private void tblWarehouseMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblWarehouseMousePressed
+    private void tblDistributionHubMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDistributionHubMousePressed
         // TODO add your handling code here:
-                tblWarehouse.setSelectionForeground(Color.BLACK);
-    }//GEN-LAST:event_tblWarehouseMousePressed
+                tblDistributionHub.setSelectionForeground(Color.BLACK);
+    }//GEN-LAST:event_tblDistributionHubMousePressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LabelImage;
-    private javax.swing.JButton btnFCReqAvail;
-    private javax.swing.JButton btnWHProcess;
+    private javax.swing.JButton btnDHProcess;
+    private javax.swing.JButton btnDHReqAvail;
     private javax.swing.JScrollPane jScrollPane;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblAddDHTitle;
     private javax.swing.JLabel lblAddReqFCTitle;
-    private javax.swing.JLabel lblAddWHTitle;
+    private javax.swing.JLabel lblDistributionHub;
     private javax.swing.JLabel lblReq;
     private javax.swing.JLabel lblRequestID;
-    private javax.swing.JLabel lblWarehouse;
-    private javax.swing.JTable tblFCReq;
-    private javax.swing.JTable tblWarehouse;
+    private javax.swing.JTable tblDHReq;
+    private javax.swing.JTable tblDistributionHub;
     // End of variables declaration//GEN-END:variables
 
     private void populateRTable() {
-        DefaultTableModel model = (DefaultTableModel) tblFCReq.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblDHReq.getModel();
         model.setRowCount(0);
         for (COVolunteerRequests vr : ecosystem.getVRDirectory().getVrList()) {
             if (vr.getVolreqName().equals(nogName)) {
@@ -300,7 +300,7 @@ public class RequestsPanel extends javax.swing.JPanel {
     }
 
     private void populateVTable() {
-        DefaultTableModel model = (DefaultTableModel) tblWarehouse.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblDistributionHub.getModel();
         model.setRowCount(0);
         for (COVolunteer vol : ecosystem.getVolDir().getVolunteerList()) {
             if (vol.getVolCO().equals(ngoAName)) {

@@ -99,7 +99,7 @@ public class ViewModifyVolunteerPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblViewVolTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        lblViewVolTitle.setForeground(new java.awt.Color(0, 153, 204));
+        lblViewVolTitle.setForeground(new java.awt.Color(102, 102, 255));
         lblViewVolTitle.setText("View/Modify Volunteer");
         add(lblViewVolTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(314, 13, -1, -1));
 
