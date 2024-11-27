@@ -71,186 +71,186 @@ public class AddCOPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblAddNonGovtOrgTitle = new javax.swing.JLabel();
-        lblNonGovtOrgname = new javax.swing.JLabel();
-        txtNonGovtOrgname = new javax.swing.JTextField();
-        lblNonGovtOrgPhno = new javax.swing.JLabel();
-        txtNonGovtOrgPhone = new javax.swing.JTextField();
-        lblNonGovtOrgAdd = new javax.swing.JLabel();
-        txtNonGovtOrgAdd = new javax.swing.JTextField();
-        lblNonGovtOrgCity = new javax.swing.JLabel();
-        txtNonGovtOrgCity = new javax.swing.JTextField();
-        lblNonGovtOrgState = new javax.swing.JLabel();
-        txtNonGovtOrgState = new javax.swing.JTextField();
-        lblNonGovtOrgZip = new javax.swing.JLabel();
-        txtNonGovtOrgZip = new javax.swing.JTextField();
-        lblNonGovtOrgAgent = new javax.swing.JLabel();
-        txtNonGovtOrgAgent = new javax.swing.JTextField();
-        lblNonGovtOrgAgentuname = new javax.swing.JLabel();
-        txtNonGovtOrgAgentuname = new javax.swing.JTextField();
-        lblNonGovtOrgpwd = new javax.swing.JLabel();
-        txtNonGovtOrgpwd = new javax.swing.JTextField();
-        lblNonGovtOrgcopwd1 = new javax.swing.JLabel();
-        txtNonGovtOrgcopwd1 = new javax.swing.JTextField();
-        btnNonGovtOrgSubmit = new javax.swing.JButton();
-        lblNonGovtOrgid = new javax.swing.JLabel();
-        txtNonGovtOrgid = new javax.swing.JTextField();
+        lblCOname = new javax.swing.JLabel();
+        txtCOname = new javax.swing.JTextField();
+        lblCOPhno = new javax.swing.JLabel();
+        txtCOPhone = new javax.swing.JTextField();
+        lblCOAdd = new javax.swing.JLabel();
+        txtCOAdd = new javax.swing.JTextField();
+        lblCOCity = new javax.swing.JLabel();
+        txtCOCity = new javax.swing.JTextField();
+        lblCOState = new javax.swing.JLabel();
+        txtCOState = new javax.swing.JTextField();
+        lblCOZip = new javax.swing.JLabel();
+        txtCOZip = new javax.swing.JTextField();
+        lblCOAgent = new javax.swing.JLabel();
+        txtCOAgent = new javax.swing.JTextField();
+        lblCOAgentuname = new javax.swing.JLabel();
+        txtCOAgentuname = new javax.swing.JTextField();
+        lblCOpwd = new javax.swing.JLabel();
+        txtCOpwd = new javax.swing.JTextField();
+        lblCOpwd1 = new javax.swing.JLabel();
+        txtCOpwd1 = new javax.swing.JTextField();
+        btnCOSubmit = new javax.swing.JButton();
+        lblCOid = new javax.swing.JLabel();
+        txtCOid = new javax.swing.JTextField();
         lblNonGovtOrgid2 = new javax.swing.JLabel();
         lblNonGovtOrgname1 = new javax.swing.JLabel();
         lblNonGovtOrgPhone1 = new javax.swing.JLabel();
         lblNonGovtOrgZip1 = new javax.swing.JLabel();
         lblNonGovtOrgAdmin1 = new javax.swing.JLabel();
         lblNonGovtOrgpwd2 = new javax.swing.JLabel();
-        btnNonGovtOrgCancel = new javax.swing.JButton();
+        btnCOCancel = new javax.swing.JButton();
         LabelImg = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblAddNonGovtOrgTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblAddNonGovtOrgTitle.setForeground(new java.awt.Color(0, 153, 204));
-        lblAddNonGovtOrgTitle.setText("Add NGO");
-        add(lblAddNonGovtOrgTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, -1));
+        lblAddNonGovtOrgTitle.setForeground(new java.awt.Color(102, 102, 255));
+        lblAddNonGovtOrgTitle.setText("Add Community Outreach");
+        add(lblAddNonGovtOrgTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
 
-        lblNonGovtOrgname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblNonGovtOrgname.setText("NGO Name:");
-        add(lblNonGovtOrgname, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, -1, -1));
+        lblCOname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblCOname.setText("CO Name:");
+        add(lblCOname, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, -1, -1));
 
-        txtNonGovtOrgname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtNonGovtOrgname.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtNonGovtOrgname.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtCOname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtCOname.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtCOname.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtNonGovtOrgnameFocusLost(evt);
+                txtCOnameFocusLost(evt);
             }
         });
-        add(txtNonGovtOrgname, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 100, 137, -1));
+        add(txtCOname, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 100, 137, -1));
 
-        lblNonGovtOrgPhno.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblNonGovtOrgPhno.setText("NGO Phone Number:");
-        add(lblNonGovtOrgPhno, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, -1, -1));
+        lblCOPhno.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblCOPhno.setText("CO Phone Number:");
+        add(lblCOPhno, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, -1, -1));
 
-        txtNonGovtOrgPhone.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtNonGovtOrgPhone.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtNonGovtOrgPhone.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtCOPhone.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtCOPhone.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtCOPhone.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtNonGovtOrgPhoneFocusLost(evt);
+                txtCOPhoneFocusLost(evt);
             }
         });
-        add(txtNonGovtOrgPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 130, 137, -1));
+        add(txtCOPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 130, 137, -1));
 
-        lblNonGovtOrgAdd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblNonGovtOrgAdd.setText("NGO Address:");
-        add(lblNonGovtOrgAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, -1, -1));
+        lblCOAdd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblCOAdd.setText("CO Address:");
+        add(lblCOAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, -1, -1));
 
-        txtNonGovtOrgAdd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtNonGovtOrgAdd.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtNonGovtOrgAdd.addActionListener(new java.awt.event.ActionListener() {
+        txtCOAdd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtCOAdd.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtCOAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNonGovtOrgAddActionPerformed(evt);
+                txtCOAddActionPerformed(evt);
             }
         });
-        add(txtNonGovtOrgAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, 137, -1));
+        add(txtCOAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, 137, -1));
 
-        lblNonGovtOrgCity.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblNonGovtOrgCity.setText("City:");
-        add(lblNonGovtOrgCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, -1, -1));
+        lblCOCity.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblCOCity.setText("City:");
+        add(lblCOCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 190, -1, -1));
 
-        txtNonGovtOrgCity.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtNonGovtOrgCity.setPreferredSize(new java.awt.Dimension(150, 25));
-        add(txtNonGovtOrgCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, 137, -1));
+        txtCOCity.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtCOCity.setPreferredSize(new java.awt.Dimension(150, 25));
+        add(txtCOCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, 137, -1));
 
-        lblNonGovtOrgState.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblNonGovtOrgState.setText("State:");
-        add(lblNonGovtOrgState, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, -1, -1));
+        lblCOState.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblCOState.setText("State:");
+        add(lblCOState, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, -1, 20));
 
-        txtNonGovtOrgState.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtNonGovtOrgState.setPreferredSize(new java.awt.Dimension(150, 25));
-        add(txtNonGovtOrgState, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, 137, -1));
+        txtCOState.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtCOState.setPreferredSize(new java.awt.Dimension(150, 25));
+        add(txtCOState, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, 137, -1));
 
-        lblNonGovtOrgZip.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblNonGovtOrgZip.setText("Zip:");
-        add(lblNonGovtOrgZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, -1, -1));
+        lblCOZip.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblCOZip.setText("Zip:");
+        add(lblCOZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, -1, -1));
 
-        txtNonGovtOrgZip.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtNonGovtOrgZip.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtNonGovtOrgZip.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtCOZip.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtCOZip.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtCOZip.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtNonGovtOrgZipFocusLost(evt);
+                txtCOZipFocusLost(evt);
             }
         });
-        add(txtNonGovtOrgZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, 137, -1));
+        add(txtCOZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, 137, -1));
 
-        lblNonGovtOrgAgent.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblNonGovtOrgAgent.setText("NGO Agent Name:");
-        add(lblNonGovtOrgAgent, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, -1, 20));
+        lblCOAgent.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblCOAgent.setText("CO Agent Name:");
+        add(lblCOAgent, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, -1, 20));
 
-        txtNonGovtOrgAgent.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtNonGovtOrgAgent.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtNonGovtOrgAgent.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtCOAgent.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtCOAgent.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtCOAgent.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtNonGovtOrgAgentFocusLost(evt);
+                txtCOAgentFocusLost(evt);
             }
         });
-        add(txtNonGovtOrgAgent, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 280, 137, -1));
+        add(txtCOAgent, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 280, 137, -1));
 
-        lblNonGovtOrgAgentuname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblNonGovtOrgAgentuname.setText("NGO Agent Username:");
-        add(lblNonGovtOrgAgentuname, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, -1, -1));
+        lblCOAgentuname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblCOAgentuname.setText("CO Agent Username:");
+        add(lblCOAgentuname, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, -1, -1));
 
-        txtNonGovtOrgAgentuname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtNonGovtOrgAgentuname.setPreferredSize(new java.awt.Dimension(150, 25));
-        add(txtNonGovtOrgAgentuname, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 137, -1));
+        txtCOAgentuname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtCOAgentuname.setPreferredSize(new java.awt.Dimension(150, 25));
+        add(txtCOAgentuname, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 137, -1));
 
-        lblNonGovtOrgpwd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblNonGovtOrgpwd.setText("Password:");
-        add(lblNonGovtOrgpwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 340, -1, -1));
+        lblCOpwd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblCOpwd.setText("Password:");
+        add(lblCOpwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, -1, -1));
 
-        txtNonGovtOrgpwd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtNonGovtOrgpwd.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtNonGovtOrgpwd.addActionListener(new java.awt.event.ActionListener() {
+        txtCOpwd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtCOpwd.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtCOpwd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNonGovtOrgpwdActionPerformed(evt);
+                txtCOpwdActionPerformed(evt);
             }
         });
-        add(txtNonGovtOrgpwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 340, 137, -1));
+        add(txtCOpwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 340, 137, -1));
 
-        lblNonGovtOrgcopwd1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblNonGovtOrgcopwd1.setText("Confirm Password:");
-        add(lblNonGovtOrgcopwd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, -1, -1));
+        lblCOpwd1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblCOpwd1.setText("Confirm Password:");
+        add(lblCOpwd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, -1, -1));
 
-        txtNonGovtOrgcopwd1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtNonGovtOrgcopwd1.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtNonGovtOrgcopwd1.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtCOpwd1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtCOpwd1.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtCOpwd1.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtNonGovtOrgcopwd1FocusLost(evt);
+                txtCOpwd1FocusLost(evt);
             }
         });
-        add(txtNonGovtOrgcopwd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 370, 137, -1));
+        add(txtCOpwd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 370, 137, -1));
 
-        btnNonGovtOrgSubmit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        btnNonGovtOrgSubmit.setText("Submit");
-        btnNonGovtOrgSubmit.addActionListener(new java.awt.event.ActionListener() {
+        btnCOSubmit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        btnCOSubmit.setText("Submit");
+        btnCOSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNonGovtOrgSubmitActionPerformed(evt);
+                btnCOSubmitActionPerformed(evt);
             }
         });
-        add(btnNonGovtOrgSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, -1, -1));
+        add(btnCOSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, -1, -1));
 
-        lblNonGovtOrgid.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblNonGovtOrgid.setText("NGO ID:");
-        add(lblNonGovtOrgid, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, -1, -1));
+        lblCOid.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblCOid.setText("CO ID:");
+        add(lblCOid, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, -1, -1));
 
-        txtNonGovtOrgid.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtNonGovtOrgid.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtNonGovtOrgid.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtCOid.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtCOid.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtCOid.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtNonGovtOrgidFocusLost(evt);
+                txtCOidFocusLost(evt);
             }
         });
-        txtNonGovtOrgid.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtCOid.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtNonGovtOrgidKeyReleased(evt);
+                txtCOidKeyReleased(evt);
             }
         });
-        add(txtNonGovtOrgid, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 70, 134, -1));
+        add(txtCOid, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 70, 134, -1));
 
         lblNonGovtOrgid2.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         add(lblNonGovtOrgid2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, -1, -1));
@@ -270,14 +270,14 @@ public class AddCOPanel extends javax.swing.JPanel {
         lblNonGovtOrgpwd2.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         add(lblNonGovtOrgpwd2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 350, 0, 0));
 
-        btnNonGovtOrgCancel.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        btnNonGovtOrgCancel.setText("Cancel");
-        btnNonGovtOrgCancel.addActionListener(new java.awt.event.ActionListener() {
+        btnCOCancel.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        btnCOCancel.setText("Cancel");
+        btnCOCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNonGovtOrgCancelActionPerformed(evt);
+                btnCOCancelActionPerformed(evt);
             }
         });
-        add(btnNonGovtOrgCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 420, -1, -1));
+        add(btnCOCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 420, -1, -1));
         add(LabelImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1430, 710));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -297,46 +297,46 @@ public class AddCOPanel extends javax.swing.JPanel {
     }
 
 
-    private void txtNonGovtOrgnameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNonGovtOrgnameFocusLost
+    private void txtCOnameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCOnameFocusLost
         // TODO add your handling code here:
-        if (!(txtNonGovtOrgname.getText().matches("^[a-zA-Z]*$"))) {
+        if (!(txtCOname.getText().matches("^[a-zA-Z]*$"))) {
             lblNonGovtOrgname1.setText("Invalid input. Please enter only alphabets");
         } else {
             lblNonGovtOrgname1.setText("");
         }
-    }//GEN-LAST:event_txtNonGovtOrgnameFocusLost
+    }//GEN-LAST:event_txtCOnameFocusLost
 
-    private void txtNonGovtOrgPhoneFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNonGovtOrgPhoneFocusLost
+    private void txtCOPhoneFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCOPhoneFocusLost
         // TODO add your handling code here:
-        if (!(txtNonGovtOrgPhone.getText().matches("^[0-9]*$")) || !(txtNonGovtOrgPhone.getText().length() == 10)) {
+        if (!(txtCOPhone.getText().matches("^[0-9]*$")) || !(txtCOPhone.getText().length() == 10)) {
             lblNonGovtOrgPhone1.setText("Please enter a valid phone number");
             //  lblNGOPhno1.setForeground(Color.red);
         } else {
             lblNonGovtOrgPhone1.setText("");
 
         }
-    }//GEN-LAST:event_txtNonGovtOrgPhoneFocusLost
+    }//GEN-LAST:event_txtCOPhoneFocusLost
 
-    private void txtNonGovtOrgZipFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNonGovtOrgZipFocusLost
+    private void txtCOZipFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCOZipFocusLost
         // TODO add your handling code here:
-        if ((txtNonGovtOrgZip.getText().matches("^[a-zA-Z]*$"))) {
+        if ((txtCOZip.getText().matches("^[a-zA-Z]*$"))) {
             lblNonGovtOrgZip1.setText("Invalid input. Please enter only numbers");
 
         } else {
             lblNonGovtOrgZip1.setText("");
         }
-    }//GEN-LAST:event_txtNonGovtOrgZipFocusLost
+    }//GEN-LAST:event_txtCOZipFocusLost
 
-    private void txtNonGovtOrgAgentFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNonGovtOrgAgentFocusLost
+    private void txtCOAgentFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCOAgentFocusLost
         // TODO add your handling code here:
-        if (!(txtNonGovtOrgAgent.getText().matches("^[a-zA-Z]*$"))) {
+        if (!(txtCOAgent.getText().matches("^[a-zA-Z]*$"))) {
             lblNonGovtOrgAdmin1.setText("Invalid input. Please enter only alphabets.");
         } else {
             lblNonGovtOrgAdmin1.setText("");
         }
-    }//GEN-LAST:event_txtNonGovtOrgAgentFocusLost
+    }//GEN-LAST:event_txtCOAgentFocusLost
 
-    private void txtNonGovtOrgcopwd1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNonGovtOrgcopwd1FocusLost
+    private void txtCOpwd1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCOpwd1FocusLost
         // TODO add your handling code here:
 //        if(!(txtNGOpwd.getText().equals(txtNGOcopwd1.getText()))){
 //            lblNGOpwd2.setText("Password Mismatch. Please verify the password entered.");
@@ -344,7 +344,7 @@ public class AddCOPanel extends javax.swing.JPanel {
 //        else{
 //            lblNGOpwd2.setText("");
 //        }
-    }//GEN-LAST:event_txtNonGovtOrgcopwd1FocusLost
+    }//GEN-LAST:event_txtCOpwd1FocusLost
 
     public boolean isValid(String test, String regex) {
 //        String regex = "^[A-Za-z0-9]+";
@@ -359,22 +359,22 @@ public class AddCOPanel extends javax.swing.JPanel {
         return m.matches();
     }
 
-    private void btnNonGovtOrgSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNonGovtOrgSubmitActionPerformed
+    private void btnCOSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCOSubmitActionPerformed
         // TODO add your handling code here:
 
         if (!nullCheck()) {
             if (chkpwd()) {
 
-                String ngoid = txtNonGovtOrgid.getText();
-                String ngoName = txtNonGovtOrgname.getText();
-                String phone = txtNonGovtOrgPhone.getText();
+                String ngoid = txtCOid.getText();
+                String ngoName = txtCOname.getText();
+                String phone = txtCOPhone.getText();
 
-                String ngoCity = txtNonGovtOrgCity.getText();
-                String ngoState = txtNonGovtOrgState.getText();
-                String ngoZip = txtNonGovtOrgZip.getText();
-                String ngoAgent = txtNonGovtOrgAgent.getText();
-                String ngoUser = txtNonGovtOrgAgentuname.getText();
-                String ngoPswd = txtNonGovtOrgpwd.getText();
+                String ngoCity = txtCOCity.getText();
+                String ngoState = txtCOState.getText();
+                String ngoZip = txtCOZip.getText();
+                String ngoAgent = txtCOAgent.getText();
+                String ngoUser = txtCOAgentuname.getText();
+                String ngoPswd = txtCOpwd.getText();
                 if (!isValid(ngoid, "^[0-9]+")) {
                     JOptionPane.showMessageDialog(this, "Please enter valid ID");
                     return;
@@ -414,27 +414,27 @@ public class AddCOPanel extends javax.swing.JPanel {
 
                 UserAccountDirectory uaList = ecosystem.getUserAccountDirectory();
                 Worker employee = new Worker();
-                employee.setName(txtNonGovtOrgAgent.getText());
+                employee.setName(txtCOAgent.getText());
                 String role = "NGOAgent";
                 CommunityOutreach ngo = new CommunityOutreach();
-                ngo.setCOId("ngo" + txtNonGovtOrgid.getText());
-                ngo.setCOName(txtNonGovtOrgname.getText());
-                ngo.setCOPhone(txtNonGovtOrgPhone.getText());
-                ngo.setCOAddress(txtNonGovtOrgAdd.getText());
-                ngo.setCOCity(txtNonGovtOrgCity.getText());
-                ngo.setCOState(txtNonGovtOrgState.getText());
-                ngo.setCOZipcode(txtNonGovtOrgZip.getText());
-                ngo.setCOAgent(txtNonGovtOrgAgent.getText());
+                ngo.setCOId("ngo" + txtCOid.getText());
+                ngo.setCOName(txtCOname.getText());
+                ngo.setCOPhone(txtCOPhone.getText());
+                ngo.setCOAddress(txtCOAdd.getText());
+                ngo.setCOCity(txtCOCity.getText());
+                ngo.setCOState(txtCOState.getText());
+                ngo.setCOZipcode(txtCOZip.getText());
+                ngo.setCOAgent(txtCOAgent.getText());
                 UserAccount nogAccount = new UserAccount();
-                nogAccount.setUsername(txtNonGovtOrgAgentuname.getText());
-                nogAccount.setPassword(txtNonGovtOrgpwd.getText());
+                nogAccount.setUsername(txtCOAgentuname.getText());
+                nogAccount.setPassword(txtCOpwd.getText());
                 // uaList.createUserAccount(txtFCAuname.getText(), txtFCApwd.getText(), employee, new FCAdminRole());
                 //                ua = usersList.getUserAccount(txtUserName.getText());
 
                 nogAccount.setRole(new COManagerRole());
                 nogAccount.setEmployee(employee);
                 uad = ecosystem.getUserAccountDirectory();
-                uad.createUserAccount(txtNonGovtOrgAgentuname.getText(), txtNonGovtOrgpwd.getText(), employee, new COManagerRole());
+                uad.createUserAccount(txtCOAgentuname.getText(), txtCOpwd.getText(), employee, new COManagerRole());
                 ecosystem.setUserAccountDirectory(uad);
                 ngo.setCOAccount(nogAccount);
                 ngod = ecosystem.getcoDir();
@@ -446,47 +446,47 @@ public class AddCOPanel extends javax.swing.JPanel {
                 clearfields();
             } else {
                 JOptionPane.showMessageDialog(this, "Password Mismatch. Please verify the password entered.");
-                txtNonGovtOrgcopwd1.setText("");
+                txtCOpwd1.setText("");
             }
         } else {
             JOptionPane.showMessageDialog(this, "Please make sure that you have filled all mandatory fields");
         }
-    }//GEN-LAST:event_btnNonGovtOrgSubmitActionPerformed
+    }//GEN-LAST:event_btnCOSubmitActionPerformed
 
-    private void txtNonGovtOrgidFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNonGovtOrgidFocusLost
+    private void txtCOidFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCOidFocusLost
         // TODO add your handling code here:
-        if ((txtNonGovtOrgid.getText().matches("^[a-zA-Z]*$"))) {
+        if ((txtCOid.getText().matches("^[a-zA-Z]*$"))) {
             lblNonGovtOrgid2.setText("Invalid input. Please enter only numbers");
         } else {
             lblNonGovtOrgid2.setText("");
         }
-    }//GEN-LAST:event_txtNonGovtOrgidFocusLost
+    }//GEN-LAST:event_txtCOidFocusLost
 
-    private void txtNonGovtOrgidKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNonGovtOrgidKeyReleased
+    private void txtCOidKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCOidKeyReleased
         // TODO add your handling code here:
 
-    }//GEN-LAST:event_txtNonGovtOrgidKeyReleased
+    }//GEN-LAST:event_txtCOidKeyReleased
 
-    private void txtNonGovtOrgAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNonGovtOrgAddActionPerformed
+    private void txtCOAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCOAddActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNonGovtOrgAddActionPerformed
+    }//GEN-LAST:event_txtCOAddActionPerformed
 
-    private void btnNonGovtOrgCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNonGovtOrgCancelActionPerformed
+    private void btnCOCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCOCancelActionPerformed
         // TODO add your handling code here:
         clearfields();
-    }//GEN-LAST:event_btnNonGovtOrgCancelActionPerformed
+    }//GEN-LAST:event_btnCOCancelActionPerformed
 
-    private void txtNonGovtOrgpwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNonGovtOrgpwdActionPerformed
-        if (!Business.Validations.ValidateInputs.isPasswordValid(txtNonGovtOrgpwd.getText())) {
+    private void txtCOpwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCOpwdActionPerformed
+        if (!Business.Validations.ValidateInputs.isPasswordValid(txtCOpwd.getText())) {
             JOptionPane.showMessageDialog(this, "Please verify the password (min 8).");
         }
-    }//GEN-LAST:event_txtNonGovtOrgpwdActionPerformed
+    }//GEN-LAST:event_txtCOpwdActionPerformed
 
     private boolean nullCheck() {
-        if (txtNonGovtOrgid.getText().length() != 0 && txtNonGovtOrgname.getText().length() != 0
-                && txtNonGovtOrgPhone.getText().length() != 0 && txtNonGovtOrgAdd.getText().length() != 0 && txtNonGovtOrgCity.getText().length() != 0
-                && txtNonGovtOrgState.getText().length() != 0 && txtNonGovtOrgZip.getText().length() != 0 && txtNonGovtOrgAgent.getText().length() != 0
-                && txtNonGovtOrgAgentuname.getText().length() != 0 && txtNonGovtOrgpwd.getText().length() != 0 && txtNonGovtOrgcopwd1.getText().length() != 0) {
+        if (txtCOid.getText().length() != 0 && txtCOname.getText().length() != 0
+                && txtCOPhone.getText().length() != 0 && txtCOAdd.getText().length() != 0 && txtCOCity.getText().length() != 0
+                && txtCOState.getText().length() != 0 && txtCOZip.getText().length() != 0 && txtCOAgent.getText().length() != 0
+                && txtCOAgentuname.getText().length() != 0 && txtCOpwd.getText().length() != 0 && txtCOpwd1.getText().length() != 0) {
             return false;
         } else {
             return true;
@@ -494,56 +494,56 @@ public class AddCOPanel extends javax.swing.JPanel {
     }
 
     private void clearfields() {
-        txtNonGovtOrgname.setText("");
-        txtNonGovtOrgPhone.setText("");
-        txtNonGovtOrgAdd.setText("");
-        txtNonGovtOrgCity.setText("");
-        txtNonGovtOrgState.setText("");
-        txtNonGovtOrgZip.setText("");
-        txtNonGovtOrgAgent.setText("");
-        txtNonGovtOrgAgentuname.setText("");
-        txtNonGovtOrgpwd.setText("");
-        txtNonGovtOrgcopwd1.setText("");
-        txtNonGovtOrgid.setText("");
+        txtCOname.setText("");
+        txtCOPhone.setText("");
+        txtCOAdd.setText("");
+        txtCOCity.setText("");
+        txtCOState.setText("");
+        txtCOZip.setText("");
+        txtCOAgent.setText("");
+        txtCOAgentuname.setText("");
+        txtCOpwd.setText("");
+        txtCOpwd1.setText("");
+        txtCOid.setText("");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LabelImg;
-    private javax.swing.JButton btnNonGovtOrgCancel;
-    private javax.swing.JButton btnNonGovtOrgSubmit;
+    private javax.swing.JButton btnCOCancel;
+    private javax.swing.JButton btnCOSubmit;
     private javax.swing.JLabel lblAddNonGovtOrgTitle;
-    private javax.swing.JLabel lblNonGovtOrgAdd;
+    private javax.swing.JLabel lblCOAdd;
+    private javax.swing.JLabel lblCOAgent;
+    private javax.swing.JLabel lblCOAgentuname;
+    private javax.swing.JLabel lblCOCity;
+    private javax.swing.JLabel lblCOPhno;
+    private javax.swing.JLabel lblCOState;
+    private javax.swing.JLabel lblCOZip;
+    private javax.swing.JLabel lblCOid;
+    private javax.swing.JLabel lblCOname;
+    private javax.swing.JLabel lblCOpwd;
+    private javax.swing.JLabel lblCOpwd1;
     private javax.swing.JLabel lblNonGovtOrgAdmin1;
-    private javax.swing.JLabel lblNonGovtOrgAgent;
-    private javax.swing.JLabel lblNonGovtOrgAgentuname;
-    private javax.swing.JLabel lblNonGovtOrgCity;
-    private javax.swing.JLabel lblNonGovtOrgPhno;
     private javax.swing.JLabel lblNonGovtOrgPhone1;
-    private javax.swing.JLabel lblNonGovtOrgState;
-    private javax.swing.JLabel lblNonGovtOrgZip;
     private javax.swing.JLabel lblNonGovtOrgZip1;
-    private javax.swing.JLabel lblNonGovtOrgcopwd1;
-    private javax.swing.JLabel lblNonGovtOrgid;
     private javax.swing.JLabel lblNonGovtOrgid2;
-    private javax.swing.JLabel lblNonGovtOrgname;
     private javax.swing.JLabel lblNonGovtOrgname1;
-    private javax.swing.JLabel lblNonGovtOrgpwd;
     private javax.swing.JLabel lblNonGovtOrgpwd2;
-    private javax.swing.JTextField txtNonGovtOrgAdd;
-    private javax.swing.JTextField txtNonGovtOrgAgent;
-    private javax.swing.JTextField txtNonGovtOrgAgentuname;
-    private javax.swing.JTextField txtNonGovtOrgCity;
-    private javax.swing.JTextField txtNonGovtOrgPhone;
-    private javax.swing.JTextField txtNonGovtOrgState;
-    private javax.swing.JTextField txtNonGovtOrgZip;
-    private javax.swing.JTextField txtNonGovtOrgcopwd1;
-    private javax.swing.JTextField txtNonGovtOrgid;
-    private javax.swing.JTextField txtNonGovtOrgname;
-    private javax.swing.JTextField txtNonGovtOrgpwd;
+    private javax.swing.JTextField txtCOAdd;
+    private javax.swing.JTextField txtCOAgent;
+    private javax.swing.JTextField txtCOAgentuname;
+    private javax.swing.JTextField txtCOCity;
+    private javax.swing.JTextField txtCOPhone;
+    private javax.swing.JTextField txtCOState;
+    private javax.swing.JTextField txtCOZip;
+    private javax.swing.JTextField txtCOid;
+    private javax.swing.JTextField txtCOname;
+    private javax.swing.JTextField txtCOpwd;
+    private javax.swing.JTextField txtCOpwd1;
     // End of variables declaration//GEN-END:variables
 
     private boolean chkpwd() {
-        if (txtNonGovtOrgpwd.getText().equals(txtNonGovtOrgcopwd1.getText())) {
+        if (txtCOpwd.getText().equals(txtCOpwd1.getText())) {
             return true;
         } else {
             return false;

@@ -108,9 +108,9 @@ public class AddDOPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblAddPantryTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblAddPantryTitle.setForeground(new java.awt.Color(0, 153, 204));
-        lblAddPantryTitle.setText("Add Pantry");
-        add(lblAddPantryTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, -1, -1));
+        lblAddPantryTitle.setForeground(new java.awt.Color(102, 102, 255));
+        lblAddPantryTitle.setText("Add Drop Off");
+        add(lblAddPantryTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, -1, -1));
 
         lblPantryname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         lblPantryname.setText("Pantry Name:");
