@@ -4,14 +4,10 @@
  */
 package Business.UserAccount;
 
-import Business.Role.DeliveryVolunteer;
-import Business.Role.DonorRole;
-import Business.Role.ACPManagerRole;
-import Business.Role.CoRole;
-import Business.Role.RequestorRole;
+import Business.Role.*;
+import Business.Role.PersonalRequestorRole;
 import Business.Worker.Worker;
-import Business.Role.Role;
-import Business.Role.SystemAdminRole;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -37,21 +33,21 @@ public class UserAccountDirectory {
         UserAccount donorAccount = new UserAccount();
         donorAccount.setUsername("donor");
         donorAccount.setPassword("donor123");
-        donorAccount.setRole(new DonorRole()); // Replace with your DonorRole class
+        donorAccount.setRole(new PersonalDonorRole()); // Replace with your PersonalDonorRole class
         donorAccount.setEmployee(null); // Set an Employee object if needed
         userAccList.add(donorAccount);
         
         UserAccount volunteerAccount = new UserAccount();
         volunteerAccount.setUsername("volunteer");
         volunteerAccount.setPassword("volunteer123");
-        volunteerAccount.setRole(new DeliveryVolunteer()); // Replace with your VolunteerRole class
+        volunteerAccount.setRole(new Volunteer()); // Replace with your VolunteerRole class
         volunteerAccount.setEmployee(null); // Set an Employee object if needed
         userAccList.add(volunteerAccount);
         
         UserAccount requesterAccount = new UserAccount();
         requesterAccount.setUsername("requester");
         requesterAccount.setPassword("requester123");
-        requesterAccount.setRole(new RequestorRole()); // Replace with your RequestorRole class
+        requesterAccount.setRole(new PersonalRequestorRole()); // Replace with your PersonalRequestorRole class
         requesterAccount.setEmployee(null); // Set an Employee object if needed
         userAccList.add(requesterAccount);
     }

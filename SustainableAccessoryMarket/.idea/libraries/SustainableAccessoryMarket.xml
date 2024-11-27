@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="SustainableAccessoryMarket">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/jfreechart-1.0.19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jcommon-1.0.23.jar!/" />
+      <root url="jar://$PROJECT_DIR$/mail-1.4.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/db4o-8.0.184.15484-all-java5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AbsoluteLayout.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
