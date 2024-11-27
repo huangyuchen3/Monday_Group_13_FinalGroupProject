@@ -295,14 +295,14 @@ public class ContactDistributionHubPanel extends javax.swing.JPanel {
 
     private void populatefields() {
         for(DistributionHub fcw : ecosystem.getACDDirectory().getFadList()){
-            if(fcw.getAcDistributionHubName().equals(WHname)){
-                txtWarehousename.setText(fcw.getAcDistributionHubName());
-                txtWarehousePhone.setText(fcw.getAcDistributionHubPhone());
-                txtWarehouseAdd.setText(fcw.getAcDistributionHubAddress());
-                txtWarehouseCity.setText(fcw.getAcDistributionHubCity());
-                txtWarehouseState.setText(fcw.getAcDistributionHubState());
-                txtWarehouseZip.setText(fcw.getAcDistributionHubZipcode());
-                txtWarehouseFCAdmin.setText(fcw.getAcDistributionHubAdmin());
+            if(fcw.getDistributionHubName().equals(WHname)){
+                txtWarehousename.setText(fcw.getDistributionHubName());
+                txtWarehousePhone.setText(fcw.getDistributionHubPhone());
+                txtWarehouseAdd.setText(fcw.getDistributionHubAddress());
+                txtWarehouseCity.setText(fcw.getDistributionHubCity());
+                txtWarehouseState.setText(fcw.getDistributionHubState());
+                txtWarehouseZip.setText(fcw.getDistributionHubZipcode());
+                txtWarehouseFCAdmin.setText(fcw.getDistributionHubAdmin());
             }
         }
     }

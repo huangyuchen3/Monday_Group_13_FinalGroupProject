@@ -12,29 +12,29 @@ import Business.DistributionHub.DistributionHubDirectory;
  *@author ankitapatil
  */
 public class DistributionHubDirectory {
-     ArrayList<DistributionHub> acDistributionHubList;
+     ArrayList<DistributionHub> DistributionHubList;
 
      public DistributionHubDirectory(){
-         acDistributionHubList = new ArrayList<DistributionHub>();
+         DistributionHubList = new ArrayList<DistributionHub>();
      }
     public ArrayList<DistributionHub> getFadList() {
-        return acDistributionHubList;
+        return DistributionHubList;
     }
 
-    public void setFadList(ArrayList<DistributionHub> acDistributionHubIdList) {
-        this.acDistributionHubList = acDistributionHubIdList;
+    public void setFadList(ArrayList<DistributionHub> DistributionHubIdList) {
+        this.DistributionHubList = DistributionHubIdList;
     }
-    public void addNewACDistributionHub(DistributionHub fac){
-        acDistributionHubList.add(fac);
+    public void addNewDistributionHub(DistributionHub fac){
+        DistributionHubList.add(fac);
     }
-    public void deleteACDistributionHub(DistributionHub selectedfac){
-        acDistributionHubList.remove(selectedfac);
+    public void deleteDistributionHub(DistributionHub selectedfac){
+        DistributionHubList.remove(selectedfac);
     }
     public String getDHname(String FCAname){
         String WHname;
-        for(DistributionHub f: acDistributionHubList){
-            if(f.getAcDistributionHubAdmin().equals(FCAname)){
-                return f.getAcDistributionHubName();
+        for(DistributionHub f: DistributionHubList){
+            if(f.getDistributionHubAdmin().equals(FCAname)){
+                return f.getDistributionHubName();
             }
         }
         return null;

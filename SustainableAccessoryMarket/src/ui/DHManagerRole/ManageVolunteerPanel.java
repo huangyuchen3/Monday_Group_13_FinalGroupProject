@@ -50,8 +50,8 @@ public class ManageVolunteerPanel extends javax.swing.JPanel {
          ecosystem.setVRDirectory(new COVolunteerRequestsDirectory());
         }
         for(DistributionHub fcw:ecosystem.getACDDirectory().getFadList()){
-            if(fcw.getAcDistributionHubAdmin().equals(userAcc.getEmployee().getName())){
-              city=fcw.getAcDistributionHubCity();
+            if(fcw.getDistributionHubAdmin().equals(userAcc.getEmployee().getName())){
+              city=fcw.getDistributionHubCity();
             }
         }
         ArrayList<String> nogList = new ArrayList();
@@ -62,8 +62,8 @@ public class ManageVolunteerPanel extends javax.swing.JPanel {
         }
         cbSelectNGO.setModel(new DefaultComboBoxModel<String>(nogList.toArray(new String[0])));
         for(DistributionHub fcw: ecosystem.getACDDirectory().getFadList()){
-            if(fcw.getAcDistributionHubAdmin().equals(userAcc.getEmployee().getName())){
-                WHname=fcw.getAcDistributionHubName();
+            if(fcw.getDistributionHubAdmin().equals(userAcc.getEmployee().getName())){
+                WHname=fcw.getDistributionHubName();
             }
         }
 
