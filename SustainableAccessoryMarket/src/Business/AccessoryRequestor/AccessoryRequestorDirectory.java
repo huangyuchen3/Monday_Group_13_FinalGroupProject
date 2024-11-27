@@ -4,7 +4,7 @@
  */
 package Business.AccessoryRequestor;
 
-import Business.Shop.Shop;
+//import Business.Shop.Shop;
 import java.util.ArrayList;
 
 /**

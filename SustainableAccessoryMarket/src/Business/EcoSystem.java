@@ -5,28 +5,20 @@
  */
 package Business;
 
-import Business.Customer.CustomerDirectory;
-import Business.DeliveryMan.DeliveryManDirectory;
+//import Business.Customer.CustomerDirectory;
+//import Business.DeliveryMan.DeliveryManDirectory;
 import Business.AccessoryDonation.AccessoryDonationDirectory;
 import Business.AccessoryDonor.AccessoryDonorDirectory;
 import Business.DropOff.DropOffDirectory;
 import Business.DropOff.DropOffItemsDirectory;
-import Business.DistributionHub.DistributionHub;
 import Business.DistributionHub.DistributionHubDirectory;
 import Business.CommunityOutreach.CommunityOutreachDirectory;
 import Business.COVolunteer.COVolunteerRequestsDirectory;
 import Business.COVolunteer.COVolunteerDirectory;
 import Business.AccessoryRequestorder.AccessoryRequestorderDirectory;
 import Business.AccessoryRequestor.AccessoryRequestorDirectory;
-import Business.Shop.ShopDirectory;
-import Business.Role.DeliveryVolunteer;
-import Business.Role.DonorRole;
-import Business.Role.ACAdminRole;
-import Business.Role.ACPManagerRole;
-import Business.Role.CoRole;
-import Business.Role.RequestorRole;
-import Business.Role.Role;
-import Business.Role.SystemAdminRole;
+import Business.Role.*;
+import Business.Role.DOManagerRole;
 import Business.UserAccount.UserAccount;
 import Business.UserAccount.UserAccountDirectory;
 import java.util.ArrayList;
@@ -233,12 +225,12 @@ public class EcoSystem extends Organization {
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roleList = new ArrayList<Role>();
         roleList.add(new SystemAdminRole());
-        roleList.add(new RequestorRole());
-        roleList.add(new DonorRole());
-        roleList.add(new CoRole());
-        roleList.add(new ACAdminRole());
-        roleList.add(new ACPManagerRole());
-        roleList.add(new DeliveryVolunteer());
+        roleList.add(new PersonalRequestorRole());
+        roleList.add(new PersonalDonorRole());
+        roleList.add(new COManagerRole());
+        roleList.add(new DHManagerRole());
+        roleList.add(new DOManagerRole());
+        roleList.add(new Volunteer());
         return roleList;
     }
 
