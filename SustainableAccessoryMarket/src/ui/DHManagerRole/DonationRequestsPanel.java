@@ -106,7 +106,7 @@ public class DonationRequestsPanel extends javax.swing.JPanel {
         lblDonRequestsTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
         lblDonRequestsTitle.setForeground(new java.awt.Color(102, 102, 255));
         lblDonRequestsTitle.setText("Donation Requests");
-        add(lblDonRequestsTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(418, 14, -1, -1));
+        add(lblDonRequestsTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 30, -1, -1));
 
         tblDonReq.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         tblDonReq.setModel(new javax.swing.table.DefaultTableModel(

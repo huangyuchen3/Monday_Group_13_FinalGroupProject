@@ -116,19 +116,16 @@ public class DHManagerWorkAreaPanel extends javax.swing.JPanel {
         FCAMenubarPanelLayout.setHorizontalGroup(
             FCAMenubarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FCAMenubarPanelLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
                 .addGroup(FCAMenubarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(FCAMenubarPanelLayout.createSequentialGroup()
-                        .addGap(65, 65, 65)
                         .addComponent(btnDOSPItems)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnViewDonationReq)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnManageVol)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FCAMenubarPanelLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lblWelcomemessage)
-                        .addGap(120, 120, 120)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnManageVol))
+                    .addComponent(lblWelcomemessage))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
                 .addComponent(jLabel)
                 .addGap(153, 153, 153)
                 .addComponent(lbllogout, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -140,18 +137,20 @@ public class DHManagerWorkAreaPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(FCAMenubarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(FCAMenubarPanelLayout.createSequentialGroup()
-                        .addComponent(lblWelcomemessage)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(FCAMenubarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(FCAMenubarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(btnDOSPItems)
-                                .addComponent(btnManageVol)
-                                .addComponent(btnViewDonationReq))
-                            .addComponent(lbllogout, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lbllogout, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(FCAMenubarPanelLayout.createSequentialGroup()
+                                .addComponent(lblWelcomemessage)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(FCAMenubarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(btnDOSPItems)
+                                    .addComponent(btnManageVol)
+                                    .addComponent(btnViewDonationReq))))
                         .addGap(15, 15, 15))
                     .addGroup(FCAMenubarPanelLayout.createSequentialGroup()
                         .addComponent(jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(26, Short.MAX_VALUE))))
         );
 
         SplitPaneFCAdmin.setLeftComponent(FCAMenubarPanel);
@@ -183,7 +182,7 @@ public class DHManagerWorkAreaPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SplitPaneFCAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, 795, Short.MAX_VALUE)
+            .addComponent(SplitPaneFCAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

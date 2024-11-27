@@ -93,12 +93,12 @@ public class ViewItemsRequestsPanel extends javax.swing.JPanel {
 
         lblFoodRequestsTitle = new javax.swing.JLabel();
         jScrollPane = new javax.swing.JScrollPane();
-        tblFoodRequests = new javax.swing.JTable();
-        btnFoodRequestsAssign = new javax.swing.JButton();
+        tblAccessoryRequests = new javax.swing.JTable();
+        btnRequestsAssign = new javax.swing.JButton();
         lblRequestsid = new javax.swing.JLabel();
-        txtFoodRequestsid = new javax.swing.JTextField();
+        txtRequestsid = new javax.swing.JTextField();
         lblFoodRequestsid1 = new javax.swing.JLabel();
-        btnFoodRequestsSend = new javax.swing.JButton();
+        btnRequestsSend = new javax.swing.JButton();
         lblFoodRequestsTitle1 = new javax.swing.JLabel();
         cbVolunteerLbl = new javax.swing.JLabel();
         cbAssignVol = new javax.swing.JComboBox<>();
@@ -109,12 +109,12 @@ public class ViewItemsRequestsPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblFoodRequestsTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblFoodRequestsTitle.setForeground(new java.awt.Color(0, 153, 204));
-        lblFoodRequestsTitle.setText("Accessory Requests");
-        add(lblFoodRequestsTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(448, 32, -1, -1));
+        lblFoodRequestsTitle.setForeground(new java.awt.Color(102, 102, 255));
+        lblFoodRequestsTitle.setText("View Accessory Requests");
+        add(lblFoodRequestsTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
 
-        tblFoodRequests.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        tblFoodRequests.setModel(new javax.swing.table.DefaultTableModel(
+        tblAccessoryRequests.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        tblAccessoryRequests.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -125,62 +125,62 @@ public class ViewItemsRequestsPanel extends javax.swing.JPanel {
                 "Request ID", "Requestor", "Quantity", "Order Type", "Status", "Donation ID"
             }
         ));
-        tblFoodRequests.addMouseListener(new java.awt.event.MouseAdapter() {
+        tblAccessoryRequests.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                tblFoodRequestsMousePressed(evt);
+                tblAccessoryRequestsMousePressed(evt);
             }
         });
-        jScrollPane.setViewportView(tblFoodRequests);
+        jScrollPane.setViewportView(tblAccessoryRequests);
 
         add(jScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 99, 999, 153));
 
-        btnFoodRequestsAssign.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        btnFoodRequestsAssign.setText("Assign");
-        btnFoodRequestsAssign.addActionListener(new java.awt.event.ActionListener() {
+        btnRequestsAssign.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        btnRequestsAssign.setText("Assign");
+        btnRequestsAssign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnFoodRequestsAssignActionPerformed(evt);
+                btnRequestsAssignActionPerformed(evt);
             }
         });
-        add(btnFoodRequestsAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 520, -1, -1));
+        add(btnRequestsAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 520, -1, -1));
 
         lblRequestsid.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         lblRequestsid.setText("Request ID :");
-        add(lblRequestsid, new org.netbeans.lib.awtextra.AbsoluteConstraints(359, 380, -1, -1));
+        add(lblRequestsid, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, -1));
 
-        txtFoodRequestsid.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtFoodRequestsid.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtFoodRequestsid.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtRequestsid.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        txtRequestsid.setPreferredSize(new java.awt.Dimension(150, 25));
+        txtRequestsid.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtFoodRequestsidFocusLost(evt);
+                txtRequestsidFocusLost(evt);
             }
         });
-        txtFoodRequestsid.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtRequestsid.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtFoodRequestsidKeyReleased(evt);
+                txtRequestsidKeyReleased(evt);
             }
         });
-        add(txtFoodRequestsid, new org.netbeans.lib.awtextra.AbsoluteConstraints(483, 376, 137, -1));
+        add(txtRequestsid, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 137, -1));
 
         lblFoodRequestsid1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         lblFoodRequestsid1.setText("Assign Volunteer :");
-        add(lblFoodRequestsid1, new org.netbeans.lib.awtextra.AbsoluteConstraints(323, 423, -1, -1));
+        add(lblFoodRequestsid1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, -1, -1));
 
-        btnFoodRequestsSend.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        btnFoodRequestsSend.setText("Send request to volunteer");
-        btnFoodRequestsSend.addActionListener(new java.awt.event.ActionListener() {
+        btnRequestsSend.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        btnRequestsSend.setText("Send request to volunteer");
+        btnRequestsSend.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnFoodRequestsSendActionPerformed(evt);
+                btnRequestsSendActionPerformed(evt);
             }
         });
-        add(btnFoodRequestsSend, new org.netbeans.lib.awtextra.AbsoluteConstraints(854, 286, -1, -1));
+        add(btnRequestsSend, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 290, -1, -1));
 
         lblFoodRequestsTitle1.setFont(new java.awt.Font("Trebuchet MS", 1, 22)); // NOI18N
-        lblFoodRequestsTitle1.setForeground(new java.awt.Color(0, 153, 204));
+        lblFoodRequestsTitle1.setForeground(new java.awt.Color(102, 102, 255));
         lblFoodRequestsTitle1.setText("Assign Volunteer");
-        add(lblFoodRequestsTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 302, -1, -1));
+        add(lblFoodRequestsTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
 
         cbVolunteerLbl.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        add(cbVolunteerLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, -70, 980, 670));
+        add(cbVolunteerLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, -70, 780, 670));
 
         cbAssignVol.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         cbAssignVol.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Select --", "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -189,7 +189,7 @@ public class ViewItemsRequestsPanel extends javax.swing.JPanel {
                 cbAssignVolActionPerformed(evt);
             }
         });
-        add(cbAssignVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(483, 419, 137, -1));
+        add(cbAssignVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, 137, -1));
 
         cbDonationID.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         cbDonationID.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Select --", "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -198,11 +198,11 @@ public class ViewItemsRequestsPanel extends javax.swing.JPanel {
                 cbDonationIDActionPerformed(evt);
             }
         });
-        add(cbDonationID, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 470, 100, -1));
+        add(cbDonationID, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 470, 100, -1));
 
         lblDonationID.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         lblDonationID.setText("Donation ID:");
-        add(lblDonationID, new org.netbeans.lib.awtextra.AbsoluteConstraints(357, 466, -1, 30));
+        add(lblDonationID, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, -1, 30));
     }// </editor-fold>//GEN-END:initComponents
 
 //    public void setBG() {
@@ -221,48 +221,48 @@ public class ViewItemsRequestsPanel extends javax.swing.JPanel {
 //    }
 
     public void makeTableTransparent() {
-        tblFoodRequests.setOpaque(false);
-        ((DefaultTableCellRenderer) tblFoodRequests.getDefaultRenderer(Object.class)).setOpaque(false);
-        tblFoodRequests.setShowGrid(false);
+        tblAccessoryRequests.setOpaque(false);
+        ((DefaultTableCellRenderer) tblAccessoryRequests.getDefaultRenderer(Object.class)).setOpaque(false);
+        tblAccessoryRequests.setShowGrid(false);
         jScrollPane.setOpaque(false);
         jScrollPane.getViewport().setOpaque(false);
 
         DefaultTableCellRenderer headerRenderer = new DefaultTableCellRenderer();
         headerRenderer.setBackground(Color.WHITE);
 
-        for (int i = 0; i < tblFoodRequests.getModel().getColumnCount(); i++) {
-            tblFoodRequests.getColumnModel().getColumn(i).setHeaderRenderer(headerRenderer);
+        for (int i = 0; i < tblAccessoryRequests.getModel().getColumnCount(); i++) {
+            tblAccessoryRequests.getColumnModel().getColumn(i).setHeaderRenderer(headerRenderer);
         }
     }
-    private void txtFoodRequestsidFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtFoodRequestsidFocusLost
+    private void txtRequestsidFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtRequestsidFocusLost
         // TODO add your handling code here:
 
-    }//GEN-LAST:event_txtFoodRequestsidFocusLost
+    }//GEN-LAST:event_txtRequestsidFocusLost
 
-    private void txtFoodRequestsidKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFoodRequestsidKeyReleased
+    private void txtRequestsidKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRequestsidKeyReleased
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtFoodRequestsidKeyReleased
+    }//GEN-LAST:event_txtRequestsidKeyReleased
 
-    private void btnFoodRequestsSendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFoodRequestsSendActionPerformed
+    private void btnRequestsSendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestsSendActionPerformed
         // TODO add your handling code here:
-        int selectedRowIndex = tblFoodRequests.getSelectedRow();
+        int selectedRowIndex = tblAccessoryRequests.getSelectedRow();
         if (selectedRowIndex < 0) {
             JOptionPane.showMessageDialog(this, "Please select a request");
             return;
         }
-        DefaultTableModel model = (DefaultTableModel) tblFoodRequests.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblAccessoryRequests.getModel();
         AccessoryRequestorder selectedR = (AccessoryRequestorder) model.getValueAt(selectedRowIndex, 0);
-        txtFoodRequestsid.setText(selectedR.getReqOrderId());
+        txtRequestsid.setText(selectedR.getReqOrderId());
 //        ArrayList<String> VolunteerList = new ArrayList();
 //        for (COVolunteer vol : ecosystem.getVolDir().getVolunteerList()) {
 //            VolunteerList.add(vol.getVolName());
 //        }
 //        cbAssignVol.setModel(new DefaultComboBoxModel<String>(VolunteerList.toArray(new String[0])));
-    }//GEN-LAST:event_btnFoodRequestsSendActionPerformed
+    }//GEN-LAST:event_btnRequestsSendActionPerformed
 
-    private void btnFoodRequestsAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFoodRequestsAssignActionPerformed
+    private void btnRequestsAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestsAssignActionPerformed
         // TODO add your handling code here:
-        String Reqid = txtFoodRequestsid.getText();
+        String Reqid = txtRequestsid.getText();
         String donId = cbDonationID.getSelectedItem().toString();
         System.out.println(donId + "don combo box");
         volname = cbAssignVol.getSelectedItem().toString();
@@ -329,12 +329,12 @@ public class ViewItemsRequestsPanel extends javax.swing.JPanel {
 //        }
 //    }
         JOptionPane.showMessageDialog(this, "Delivery Assigned to Volunteer Successfully!");
-    }//GEN-LAST:event_btnFoodRequestsAssignActionPerformed
+    }//GEN-LAST:event_btnRequestsAssignActionPerformed
 
-    private void tblFoodRequestsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblFoodRequestsMousePressed
+    private void tblAccessoryRequestsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblAccessoryRequestsMousePressed
         // TODO add your handling code here:
-        tblFoodRequests.setSelectionForeground(Color.BLUE);
-    }//GEN-LAST:event_tblFoodRequestsMousePressed
+        tblAccessoryRequests.setSelectionForeground(Color.BLUE);
+    }//GEN-LAST:event_tblAccessoryRequestsMousePressed
 
     private void cbAssignVolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbAssignVolActionPerformed
         // TODO add your handling code here:
@@ -348,8 +348,8 @@ public class ViewItemsRequestsPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnFoodRequestsAssign;
-    private javax.swing.JButton btnFoodRequestsSend;
+    private javax.swing.JButton btnRequestsAssign;
+    private javax.swing.JButton btnRequestsSend;
     private javax.swing.JComboBox<String> cbAssignVol;
     private javax.swing.JComboBox<String> cbDonationID;
     private javax.swing.JLabel cbVolunteerLbl;
@@ -359,12 +359,12 @@ public class ViewItemsRequestsPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblFoodRequestsTitle1;
     private javax.swing.JLabel lblFoodRequestsid1;
     private javax.swing.JLabel lblRequestsid;
-    private javax.swing.JTable tblFoodRequests;
-    private javax.swing.JTextField txtFoodRequestsid;
+    private javax.swing.JTable tblAccessoryRequests;
+    private javax.swing.JTextField txtRequestsid;
     // End of variables declaration//GEN-END:variables
 
     private void populateTable() {
-        DefaultTableModel model = (DefaultTableModel) tblFoodRequests.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblAccessoryRequests.getModel();
         model.setRowCount(0);
         for (AccessoryRequestorder rq : ecosystem.getReqorderDirectory().getReqOrderList()) {
             if (rq.getReqPantryName().equals(FCPname)) {

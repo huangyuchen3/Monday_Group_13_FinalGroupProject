@@ -86,7 +86,7 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
 //
 //        bgImgLabel.setIcon(new ImageIcon(newimg1));
 
-        rdSignupInd.setSelected(true);
+        rdSignupPersonal.setSelected(true);
         rdSignupPanel.setVisible(true);
         this.donorFlag = true;
         this.organisationFlag = false;
@@ -136,11 +136,10 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
         txtSignupState = new javax.swing.JTextField();
         btnSignupClear = new javax.swing.JButton();
         rdSignupPanel = new javax.swing.JPanel();
-        rdSignupRes = new javax.swing.JRadioButton();
-        rdSignupInd = new javax.swing.JRadioButton();
-        rdSignupOr = new javax.swing.JRadioButton();
-        bgImgLabel = new javax.swing.JLabel();
+        rdSignupPersonal = new javax.swing.JRadioButton();
+        rdSignupPartner = new javax.swing.JRadioButton();
         submiitBtn = new javax.swing.JButton();
+        bgImgLabel = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1100, 1000));
@@ -293,7 +292,7 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
         add(lblIAM, new org.netbeans.lib.awtextra.AbsoluteConstraints(202, 30, -1, -1));
 
         cmbIAM.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        cmbIAM.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Food Donor", "Food Requestor" }));
+        cmbIAM.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Accessory Donor", "Accessory Requestor" }));
         cmbIAM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbIAMActionPerformed(evt);
@@ -317,7 +316,7 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(txtSignupState, new org.netbeans.lib.awtextra.AbsoluteConstraints(291, 331, 162, -1));
 
-        btnSignupClear.setBackground(new java.awt.Color(0, 153, 204));
+        btnSignupClear.setBackground(new java.awt.Color(204, 204, 255));
         btnSignupClear.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         btnSignupClear.setText("Clear");
         btnSignupClear.addActionListener(new java.awt.event.ActionListener() {
@@ -329,27 +328,19 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
 
         rdSignupPanel.setOpaque(false);
 
-        rdSignupRes.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
-        rdSignupRes.setText("Restaurant");
-        rdSignupRes.addActionListener(new java.awt.event.ActionListener() {
+        rdSignupPersonal.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
+        rdSignupPersonal.setText("Personal");
+        rdSignupPersonal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rdSignupResActionPerformed(evt);
+                rdSignupPersonalActionPerformed(evt);
             }
         });
 
-        rdSignupInd.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
-        rdSignupInd.setText("Individual");
-        rdSignupInd.addActionListener(new java.awt.event.ActionListener() {
+        rdSignupPartner.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
+        rdSignupPartner.setText("Partner");
+        rdSignupPartner.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rdSignupIndActionPerformed(evt);
-            }
-        });
-
-        rdSignupOr.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
-        rdSignupOr.setText("Organisation");
-        rdSignupOr.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rdSignupOrActionPerformed(evt);
+                rdSignupPartnerActionPerformed(evt);
             }
         });
 
@@ -358,12 +349,10 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
         rdSignupPanelLayout.setHorizontalGroup(
             rdSignupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(rdSignupPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(rdSignupRes)
+                .addGap(114, 114, 114)
+                .addComponent(rdSignupPartner)
                 .addGap(18, 18, 18)
-                .addComponent(rdSignupOr)
-                .addGap(18, 18, 18)
-                .addComponent(rdSignupInd)
+                .addComponent(rdSignupPersonal)
                 .addContainerGap())
         );
         rdSignupPanelLayout.setVerticalGroup(
@@ -371,19 +360,14 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
             .addGroup(rdSignupPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(rdSignupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rdSignupRes)
-                    .addComponent(rdSignupOr)
-                    .addComponent(rdSignupInd))
+                    .addComponent(rdSignupPartner)
+                    .addComponent(rdSignupPersonal))
                 .addContainerGap())
         );
 
-        add(rdSignupPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
+        add(rdSignupPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 390, -1));
 
-        bgImgLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/blurbg.jpeg"))); // NOI18N
-        bgImgLabel.setMaximumSize(new java.awt.Dimension(1100, 1000));
-        bgImgLabel.setPreferredSize(new java.awt.Dimension(1100, 1000));
-        add(bgImgLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(483, 0, 910, -1));
-
+        submiitBtn.setBackground(new java.awt.Color(204, 204, 255));
         submiitBtn.setText("Submit");
         submiitBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -391,6 +375,11 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(submiitBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 630, -1, -1));
+
+        bgImgLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/blurbg.jpeg"))); // NOI18N
+        bgImgLabel.setMaximumSize(new java.awt.Dimension(1100, 1000));
+        bgImgLabel.setPreferredSize(new java.awt.Dimension(1100, 1000));
+        add(bgImgLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 860));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSignupHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignupHomeActionPerformed
@@ -441,75 +430,92 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
     }
 
 
-    private void rdSignupResActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdSignupResActionPerformed
+    private void rdSignupPartnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdSignupPartnerActionPerformed
         // TODO add your handling code here:
-        if (rdSignupRes.isSelected()) {
-            rdSignupOr.setSelected(false);
-            rdSignupInd.setSelected(false);
+//        if (rdSignupPartner.isSelected()) {
+//            rdSignupRes.setSelected(false);
+//            rdSignupPersonal.setSelected(false);
+//            ageFlag = false;
+//            txtSignupAge.setEditable(false);
+//            txtSignupAge.setEnabled(false);
+//            cmbSignupGender.setEditable(false);
+//            cmbSignupGender.setEnabled(false);
+//            this.donorFlag = false;
+//            this.organisationFlag = true;
+//            this.restaurantFlag = false;
+//        } else if (rdSignupRes.isSelected() == false && rdSignupPartner.isSelected() == false && rdSignupPersonal.isSelected() == false) {
+//            JOptionPane.showMessageDialog(this, "Please Provide Donor Type!!");
+//        }
+            if (rdSignupPartner.isSelected()) {
+            rdSignupPersonal.setSelected(false); // Deselect the Personal radio button
             ageFlag = false;
-            txtSignupAge.setEditable(false);
+            txtSignupAge.setEditable(false);     // Disable the Age text field
             txtSignupAge.setEnabled(false);
-            cmbSignupGender.setEditable(false);
+            cmbSignupGender.setEditable(false);  // Disable the Gender combo box
             cmbSignupGender.setEnabled(false);
-            this.donorFlag = false;
-            this.organisationFlag = false;
-            this.restaurantFlag = true;
-        } else if (rdSignupRes.isSelected() == false && rdSignupOr.isSelected() == false && rdSignupInd.isSelected() == false) {
-            JOptionPane.showMessageDialog(this, "Please Provide Donor Type!!");
-        }
 
-
-    }//GEN-LAST:event_rdSignupResActionPerformed
-
-    private void rdSignupOrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdSignupOrActionPerformed
-        // TODO add your handling code here:
-        if (rdSignupOr.isSelected()) {
-            rdSignupRes.setSelected(false);
-            rdSignupInd.setSelected(false);
-            ageFlag = false;
-            txtSignupAge.setEditable(false);
-            txtSignupAge.setEnabled(false);
-            cmbSignupGender.setEditable(false);
-            cmbSignupGender.setEnabled(false);
             this.donorFlag = false;
             this.organisationFlag = true;
             this.restaurantFlag = false;
-        } else if (rdSignupRes.isSelected() == false && rdSignupOr.isSelected() == false && rdSignupInd.isSelected() == false) {
+        } else if (!rdSignupPartner.isSelected() && !rdSignupPersonal.isSelected()) {
             JOptionPane.showMessageDialog(this, "Please Provide Donor Type!!");
         }
-    }//GEN-LAST:event_rdSignupOrActionPerformed
+    }//GEN-LAST:event_rdSignupPartnerActionPerformed
 
-    private void rdSignupIndActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdSignupIndActionPerformed
-        // TODO add your handling code here:
-        if (rdSignupInd.isSelected()) {
-            rdSignupOr.setSelected(false);
-            rdSignupRes.setSelected(false);
+    private void rdSignupPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdSignupPersonalActionPerformed
+//        // TODO add your handling code here:
+//        if (rdSignupPersonal.isSelected()) {
+//            rdSignupPartner.setSelected(false);
+//            rdSignupRes.setSelected(false);
+//            ageFlag = true;
+//            txtSignupAge.setEditable(true);
+//            txtSignupAge.setEnabled(true);
+//            cmbSignupGender.setEditable(true);
+//            cmbSignupGender.setEnabled(true);
+//            this.donorFlag = true;
+//            this.organisationFlag = false;
+//            this.restaurantFlag = false;
+//        } else if (rdSignupRes.isSelected() == false && rdSignupPartner.isSelected() == false && rdSignupPersonal.isSelected() == false) {
+//            JOptionPane.showMessageDialog(this, "Please Provide Donor Type!!");
+//        }
+
+            if (rdSignupPersonal.isSelected()) {
+            rdSignupPartner.setSelected(false); // Deselect the Partner radio button
             ageFlag = true;
-            txtSignupAge.setEditable(true);
+            txtSignupAge.setEditable(true);     // Enable the Age text field
             txtSignupAge.setEnabled(true);
-            cmbSignupGender.setEditable(true);
+            cmbSignupGender.setEditable(true);  // Enable the Gender combo box
             cmbSignupGender.setEnabled(true);
+
             this.donorFlag = true;
             this.organisationFlag = false;
             this.restaurantFlag = false;
-        } else if (rdSignupRes.isSelected() == false && rdSignupOr.isSelected() == false && rdSignupInd.isSelected() == false) {
+        } else if (!rdSignupPartner.isSelected() && !rdSignupPersonal.isSelected()) {
             JOptionPane.showMessageDialog(this, "Please Provide Donor Type!!");
         }
-    }//GEN-LAST:event_rdSignupIndActionPerformed
+    }//GEN-LAST:event_rdSignupPersonalActionPerformed
 
     private void cmbIAMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbIAMActionPerformed
         // TODO add your handling code here:
 
+//        if (cmbIAM.getSelectedIndex() == 0) {
+//            // rdPanel.setVisible(true);
+//            rdSignupRes.setVisible(true);
+//            rdSignupPartner.setText("Organization");
+//
+//        } else {
+//            // rdPanel.setVisible(false);
+//            rdSignupRes.setVisible(false);
+//            rdSignupPartner.setText("Orphanage/Old Age Home");
+//
+//        }
+
         if (cmbIAM.getSelectedIndex() == 0) {
-            // rdPanel.setVisible(true);
-            rdSignupRes.setVisible(true);
-            rdSignupOr.setText("Organization");
-
+        // Update text for Partner radio button when first option is selected
+        rdSignupPartner.setText("Partner");
         } else {
-            // rdPanel.setVisible(false);
-            rdSignupRes.setVisible(false);
-            rdSignupOr.setText("Orphanage/Old Age Home");
-
+            // Update text for Partner radio button when other options are selected
+            rdSignupPartner.setText("Partner");
         }
 
     }//GEN-LAST:event_cmbIAMActionPerformed
@@ -587,7 +593,7 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
             if (userDoNotExists) {
                 if (txtSignupPwd.getText().equals(txtSignupCPWD.getText())) {
                     switch (role) {
-                        case "Food Requestor":
+                        case "Accessory Requestor":
                             usersList.createUserAccount(txtSignupUserName.getText(), txtSignupPwd.getText(), employee, new PersonalRequestorRole());
                             ua = usersList.getUserAccount(txtSignupUserName.getText());
                             req = new AccessoryRequestor(ua);
@@ -615,7 +621,7 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
 
                             break;
 
-                        case "Food Donor":
+                        case "Accessory Donor":
                             usersList.createUserAccount(txtSignupUserName.getText(), txtSignupPwd.getText(), employee, new PersonalDonorRole());
                             ua = usersList.getUserAccount(txtSignupUserName.getText());
                             don = new AccessoryDonor(ua);
@@ -701,10 +707,9 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblSignupState;
     private javax.swing.JLabel lblSignupUsername;
     private javax.swing.JLabel lblSignupZip;
-    private javax.swing.JRadioButton rdSignupInd;
-    private javax.swing.JRadioButton rdSignupOr;
     private javax.swing.JPanel rdSignupPanel;
-    private javax.swing.JRadioButton rdSignupRes;
+    private javax.swing.JRadioButton rdSignupPartner;
+    private javax.swing.JRadioButton rdSignupPersonal;
     private javax.swing.JButton submiitBtn;
     private javax.swing.JTextField txtSignupAddrss1;
     private javax.swing.JTextField txtSignupAge;
@@ -773,10 +778,10 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
             return true;
         }
 
-        if (!rdSignupRes.isSelected() && !rdSignupOr.isSelected() && !rdSignupInd.isSelected()) {
-            JOptionPane.showMessageDialog(this, "Please Provide Resident Address!!");
-            return true;
-        }
+//        if (!rdSignupRes.isSelected() && !rdSignupPartner.isSelected() && !rdSignupPersonal.isSelected()) {
+//            JOptionPane.showMessageDialog(this, "Please Provide Resident Address!!");
+//            return true;
+//        }
 
         return isNotValid;
     }
@@ -890,18 +895,48 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
     }
 
     private String getReqType() {
+//        String requestorType = "";
+//        if (rdSignupPartner.isSelected()) {
+//            requestorType = "Organization";
+//        } else if (rdSignupPersonal.isSelected()) {
+//            requestorType = "Individual";
+//        } else if (rdSignupRes.isSelected()) {
+//            requestorType = "Restaurant";
+//        }
+//        return requestorType;
+
         String requestorType = "";
-        if (rdSignupOr.isSelected()) {
+        if (rdSignupPartner.isSelected()) {
             requestorType = "Organization";
-        } else if (rdSignupInd.isSelected()) {
+        } else if (rdSignupPersonal.isSelected()) {
             requestorType = "Individual";
-        } else if (rdSignupRes.isSelected()) {
-            requestorType = "Restaurant";
         }
         return requestorType;
     }
 
     private void clearFields() {
+
+//        txtSignupName.setText("");
+//        txtSignupAddrss1.setText("");
+//        txtSignupUserCity.setText("");
+//        txtSignupAge.setText("");
+//        cmbSignupGender.setSelectedIndex(0);
+//        txtSignupState.setText("");
+//        txtSignupEmail.setText("");
+//        txtSignupPhone.setText("");
+//        txtSignupZipCode.setText("");
+//        txtSignupPwd.setText("");
+//        txtSignupUserName.setText("");
+//        txtSignupCPWD.setText("");
+//        cmbIAM.setSelectedIndex(0);
+//        rdSignupPersonal.setSelected(true);
+//        rdSignupPartner.setSelected(false);
+//        rdSignupRes.setSelected(false);
+//        this.donorFlag = true;
+//        this.organisationFlag = false;
+//        this.restaurantFlag = false;
+//        check = false;
+//        ageFlag = true;
 
         txtSignupName.setText("");
         txtSignupAddrss1.setText("");
@@ -916,12 +951,10 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
         txtSignupUserName.setText("");
         txtSignupCPWD.setText("");
         cmbIAM.setSelectedIndex(0);
-        rdSignupInd.setSelected(true);
-        rdSignupOr.setSelected(false);
-        rdSignupRes.setSelected(false);
+        rdSignupPersonal.setSelected(true);
+        rdSignupPartner.setSelected(false);
         this.donorFlag = true;
         this.organisationFlag = false;
-        this.restaurantFlag = false;
         check = false;
         ageFlag = true;
     }
