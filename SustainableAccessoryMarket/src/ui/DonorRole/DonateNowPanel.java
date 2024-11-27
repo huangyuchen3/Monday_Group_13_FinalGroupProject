@@ -81,7 +81,6 @@ public class DonateNowPanel extends javax.swing.JPanel {
         txtDonateItem = new javax.swing.JTextField();
         sdDonateQuantity = new javax.swing.JSlider();
         lblDonatePickupAddress = new javax.swing.JLabel();
-        chkDonateAddress = new javax.swing.JCheckBox();
         lblDonateAddress = new javax.swing.JLabel();
         txtDonateAddress = new javax.swing.JTextField();
         lblDonateCity = new javax.swing.JLabel();
@@ -136,15 +135,6 @@ public class DonateNowPanel extends javax.swing.JPanel {
         lblDonatePickupAddress.setForeground(new java.awt.Color(0, 153, 204));
         lblDonatePickupAddress.setText("Pickup Address");
         add(lblDonatePickupAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 140, -1, -1));
-
-        chkDonateAddress.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        chkDonateAddress.setText("Same Address as in Profile");
-        chkDonateAddress.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chkDonateAddressActionPerformed(evt);
-            }
-        });
-        add(chkDonateAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 180, -1, -1));
 
         lblDonateAddress.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         lblDonateAddress.setText("Address:");
@@ -347,25 +337,6 @@ public class DonateNowPanel extends javax.swing.JPanel {
         cbWarehouse.setModel(new DefaultComboBoxModel<String>(whList.toArray(new String[0])));
     }//GEN-LAST:event_cbDonateCityActionPerformed
 
-    private void chkDonateAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkDonateAddressActionPerformed
-        // TODO add your handling code here:
-        if (chkDonateAddress.isSelected()) {
-            for (AccessoryDonor d : ecosystem.getDonDir().getDonorList()) {
-                if (d.getDonUserName().equals(donUName)) {
-                    txtDonateAddress.setText(d.getDonorAddres());
-                    txtDonateCity.setText(d.getDonorCity());
-                    txtDonateState.setText(d.getDonorState());
-                    txtDonateZip.setText(d.getDonorZipcode());
-                }
-            }
-        } else {
-            txtDonateAddress.setText("");
-            txtDonateCity.setText("");
-            txtDonateState.setText("");
-            txtDonateZip.setText("");
-        }
-    }//GEN-LAST:event_chkDonateAddressActionPerformed
-
     private void cbWarehouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbWarehouseActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbWarehouseActionPerformed
@@ -376,7 +347,6 @@ public class DonateNowPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnDonateSubmit;
     private javax.swing.JComboBox<String> cbDonateCity;
     private javax.swing.JComboBox<String> cbWarehouse;
-    private javax.swing.JCheckBox chkDonateAddress;
     private javax.swing.JLabel lblDonateAddress;
     private javax.swing.JLabel lblDonateCity;
     private javax.swing.JLabel lblDonateCity2;
@@ -417,7 +387,6 @@ public class DonateNowPanel extends javax.swing.JPanel {
         cbDonateCity.setSelectedIndex(0);
         cbWarehouse.setSelectedIndex(0);
         sdDonateQuantity.setExtent(0);
-        chkDonateAddress.setSelected(false);
         cbDonateCity.setSelectedIndex(0);
         cbWarehouse.setSelectedIndex(0);
     }
