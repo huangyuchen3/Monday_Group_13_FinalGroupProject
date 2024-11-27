@@ -27,7 +27,7 @@ import ui.DonorRole.DonorProfilePanel;
 
 /**
  *
- *@author ankitapatil
+ *@author reetikabhanushali
  */
 public class ViewModifyDHPanel extends javax.swing.JPanel {
 

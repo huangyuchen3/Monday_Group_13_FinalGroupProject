@@ -14,7 +14,7 @@ import ui.COManagerRole.COWorkAreaPanel;
 
 /**
  *
- * @author ankitapatil 
+ * @author reetikabhanushali 
  */
 public class COManagerRole extends Role{
 

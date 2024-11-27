@@ -29,7 +29,7 @@ import ui.DonorRole.DonorProfilePanel;
 
 /**
  *
- *@author ankitapatil
+ *@author reetikabhanushali
  */
 public class AddDOPanel extends javax.swing.JPanel {
 
@@ -450,7 +450,7 @@ public class AddDOPanel extends javax.swing.JPanel {
                 System.out.println(fcp);
                 System.out.println("here");
                 fcpd = ecosystem.getACDOFDirectory();
-                fcpd.addNewFCPantry(fcp);
+                fcpd.addNewDO(fcp);
                 System.out.println(fcpd);
                 System.out.println(ecosystem.getACDOFDirectory().getFcpList());
 
@@ -458,7 +458,7 @@ public class AddDOPanel extends javax.swing.JPanel {
                 Integer pantryCnt = ecosystem.getDropOffCnt();
                 ecosystem.setDropOffCnt(pantryCnt+1);
 
-                JOptionPane.showMessageDialog(this, "pantry added successfully!");
+                JOptionPane.showMessageDialog(this, "Drop-Off added successfully!");
                 clearfields();
                 //  fcPantryAccount.setRole(new FCAdminRole());
                 //fcp.setFcpAccount(fcPantryAccount);

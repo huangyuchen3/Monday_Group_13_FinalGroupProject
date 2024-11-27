@@ -8,7 +8,7 @@ import Business.UserAccount.UserAccount;
 
 /**
  *
- *@author ankitapatil
+ *@author reetikabhanushali
  */
 public class DistributionHub {
     private String DistributionHubId;

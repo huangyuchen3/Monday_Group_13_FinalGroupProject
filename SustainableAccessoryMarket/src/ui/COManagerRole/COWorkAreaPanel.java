@@ -21,7 +21,7 @@ import ui.MainJFrame;
 
 /**
  *
- * @author ankitapatil 
+ * @author reetikabhanushali 
  */
 public class COWorkAreaPanel extends javax.swing.JPanel {
 

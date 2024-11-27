@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- *@author ankitapatil
+ *@author reetikabhanushali
  */
 public class CommunityOutreachDirectory {
     private ArrayList<CommunityOutreach> COList;

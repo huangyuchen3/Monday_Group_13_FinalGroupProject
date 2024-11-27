@@ -12,7 +12,7 @@ import ui.RequestorRole.RequestorAreaJPanel;
 
 /**
  *
- * @author ankitapatil 
+ * @author reetikabhanushali 
  */
 public class PersonalRequestorRole extends Role{
     

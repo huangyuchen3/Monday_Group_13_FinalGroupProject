@@ -13,18 +13,21 @@ import javax.swing.JSplitPane;
 
 /**
  *
- *@author ankitapatil
+ *@author reetikabhanushali
  */
 public abstract class Role {
           
     public enum RoleType{
-        FCAdmin("FCAdmin"),
-        FCPManager("FCPManager"),
-        Donor("Donor"),
-        Requestor("Requestor"),
-        NGOAgent("NGOAgent"),
-        Volunteer("Volunteer"),
-        SysAdmin("Sysadmin");
+        
+        COManager("COManager"),
+        DHManager("DHManager"),
+        DOManager("DOManager"),
+        PartnerDonor("PartnerDonor"),
+        PartnerRequester("PartnerRequester"),
+        PersonalDonor("PersonalDonor"),
+        PersonalRequester("PersonalRequester"),
+        SystemAdmin("SystemAdmin"),
+        Volunteer("Volunteer");
         
         private String value;
         private RoleType(String value){

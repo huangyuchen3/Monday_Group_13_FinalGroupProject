@@ -12,7 +12,7 @@ import ui.DOManagerRole.DOManagerWorkAreaPanel;
 
 /**
  *
- *@author ankitapatil
+ *@author reetikabhanushali
  */
 public class DOManagerRole extends Role{
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business, JPanel jp, JSplitPane jsp) {

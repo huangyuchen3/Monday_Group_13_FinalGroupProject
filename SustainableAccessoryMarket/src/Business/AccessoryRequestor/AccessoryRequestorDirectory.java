@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author ankitapatil 
+ * @author reetikabhanushali 
  */
 public class AccessoryRequestorDirectory {
     private ArrayList<AccessoryRequestor> reqAccList;

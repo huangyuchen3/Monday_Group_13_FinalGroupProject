@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author ankitapatil 
+ * @author reetikabhanushali 
  */
 public class ContactDHPanel extends javax.swing.JPanel {
 

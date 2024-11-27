@@ -31,7 +31,7 @@ import ui.DonorRole.DonorProfilePanel;
 
 /**
  *
- *@author ankitapatil
+ *@author reetikabhanushali
  */
 public class ViewAllStatsPanel extends javax.swing.JPanel {
 

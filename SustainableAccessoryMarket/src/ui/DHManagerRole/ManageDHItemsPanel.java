@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 
 /**
  *
- *@author ankitapatil
+ *@author reetikabhanushali
  */
 public class ManageDHItemsPanel extends javax.swing.JPanel {
 

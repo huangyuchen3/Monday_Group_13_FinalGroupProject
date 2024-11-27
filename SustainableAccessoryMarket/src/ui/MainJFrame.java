@@ -38,7 +38,7 @@ import ui.VolunteerRole.VolunteerWorkAreaPanel;
 
 /**
  *
- *@author ankitapatil
+ *@author reetikabhanushali
  */
 public class MainJFrame extends javax.swing.JFrame {
 

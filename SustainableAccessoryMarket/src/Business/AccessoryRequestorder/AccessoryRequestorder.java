@@ -10,7 +10,7 @@ import Business.UserAccount.UserAccount;
 
 /**
  *
- * @author ankitapatil 
+ * @author reetikabhanushali 
  */
 public class AccessoryRequestorder {
     private String requestorOrderId;

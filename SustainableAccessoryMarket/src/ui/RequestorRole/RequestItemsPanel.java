@@ -24,7 +24,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author ankitapatil 
+ * @author reetikabhanushali 
  */
 public class RequestItemsPanel extends javax.swing.JPanel {
 

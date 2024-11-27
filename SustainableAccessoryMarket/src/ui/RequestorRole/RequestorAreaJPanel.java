@@ -20,7 +20,7 @@ import ui.MainJFrame;
 
 /**
  *
- * @author ankitapatil 
+ * @author reetikabhanushali 
  */
 public class RequestorAreaJPanel extends javax.swing.JPanel {
 
