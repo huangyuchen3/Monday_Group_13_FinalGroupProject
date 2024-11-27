@@ -44,9 +44,9 @@ public class UserAccountDirectory {
         UserAccount partnerDonorAccount = new UserAccount();
         partnerDonorAccount.setUsername("partnerdonor");
         partnerDonorAccount.setPassword("partnerdonor123");
-        partnerDonorAccount.setRole(new PartnerDonorRole()); // Replace with your PersonalDonorRole class
+        partnerDonorAccount.setRole(new PartnerDonorRole()); // Replace with your PartnerDonorRole class
         partnerDonorAccount.setEmployee(partnerDonorWorker); // Set an Employee object if needed
-        userAccList.add(partnerDonorAccount); //need work
+        userAccList.add(partnerDonorAccount); 
         
         Worker volunteerWorker = new Worker();
         volunteerWorker.setName("Default Volunteer");
@@ -73,7 +73,7 @@ public class UserAccountDirectory {
         partnerRequesterAccount.setPassword("partnerrequester123");
         partnerRequesterAccount.setRole(new PartnerRequesterRole()); // Replace with your PersonalRequestorRole class
         partnerRequesterAccount.setEmployee(partnerRequesterWorker); // Set an Employee object if needed
-        userAccList.add(partnerRequesterAccount); //need work
+        userAccList.add(partnerRequesterAccount); 
         
         Worker COManagerWorker = new Worker();
         COManagerWorker.setName("Default COManager");

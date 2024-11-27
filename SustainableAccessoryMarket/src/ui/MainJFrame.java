@@ -326,9 +326,50 @@ public class MainJFrame extends javax.swing.JFrame {
                 CardLayout crdLyt = (CardLayout) container.getLayout();
                 crdLyt.next(container);
             }
+            else if (ua.getRole().toString().equals("Business.Role.PartnerDonorRole")) {
+                userNameJTextField.setEnabled(false);
+                passwordtxtField.setEnabled(false);
+                loginJButton.setEnabled(false);
+                logoutJButton.setEnabled(true);
+
+                // Navigate to the DonorAreaJPanel, similar to PersonalDonorRole
+                DonorAreaJPanel don = new DonorAreaJPanel(container, ecosystem, ua, jPanel, jSplitPane);
+                container.add("Donor", don);
+                CardLayout crdLyt = (CardLayout) container.getLayout();
+                crdLyt.next(container);
+            }
+            
+            else if (ua.getRole().toString().equals("Business.Role.PartnerRequesterRole")) {
+                userNameJTextField.setEnabled(false);
+                passwordtxtField.setEnabled(false);
+                loginJButton.setEnabled(false);
+                logoutJButton.setEnabled(true);
+
+                // Navigate to RequestorAreaJPanel or a specific panel for PartnerRequesterRole
+                RequestorAreaJPanel req = new RequestorAreaJPanel(container, ecosystem, ua, jPanel, jSplitPane);
+                container.add("Requestor", req);
+                CardLayout crdLyt = (CardLayout) container.getLayout();
+                crdLyt.next(container);
+            }
+            
+            else if (ua.getRole().toString().equals("Business.Role.DHManagerRole")) {
+                userNameJTextField.setEnabled(false);
+                passwordtxtField.setEnabled(false);
+                loginJButton.setEnabled(false);
+                logoutJButton.setEnabled(true);
+
+                // Navigate to DHManagerWorkAreaPanel
+                DHManagerWorkAreaPanel dhm = new DHManagerWorkAreaPanel(container, ecosystem, ua, jPanel, jSplitPane);
+                container.add("DHManager", dhm);
+                CardLayout crdLyt = (CardLayout) container.getLayout();
+                crdLyt.next(container);
+            }
+            
+            else {
+                JOptionPane.showMessageDialog(this, "Role not defined for this user!");
+            }
         }
-
-
+        
     }//GEN-LAST:event_loginJButtonActionPerformed
 
     private void logoutJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutJButtonActionPerformed
