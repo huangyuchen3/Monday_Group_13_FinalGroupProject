@@ -131,7 +131,7 @@ public class RequestorProfilePanel extends javax.swing.JPanel {
 
         lblReqProfileTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
         lblReqProfileTitle.setForeground(new java.awt.Color(102, 102, 255));
-        lblReqProfileTitle.setText(" Food Requestor Profile");
+        lblReqProfileTitle.setText(" Accessory Requestor Profile");
         add(lblReqProfileTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, -1, -1));
 
         txtReqpwd1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N

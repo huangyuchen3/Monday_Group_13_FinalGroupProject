@@ -113,7 +113,7 @@ public class RequestItemsPanel extends javax.swing.JPanel {
 
         lblReqFoodTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
         lblReqFoodTitle.setForeground(new java.awt.Color(102, 102, 255));
-        lblReqFoodTitle.setText("Request Food");
+        lblReqFoodTitle.setText("Request Accessory");
         add(lblReqFoodTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 40, -1, -1));
 
         lblReqQuan.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
