@@ -53,7 +53,7 @@ public class ManageUsersPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblViewUsersTitle = new javax.swing.JLabel();
+        lblManageUsersTitle = new javax.swing.JLabel();
         jScrollPane = new javax.swing.JScrollPane();
         tblViewUsers = new javax.swing.JTable();
         btnUsersDelete = new javax.swing.JButton();
@@ -63,10 +63,10 @@ public class ManageUsersPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(2000, 1100));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblViewUsersTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
-        lblViewUsersTitle.setForeground(new java.awt.Color(102, 102, 255));
-        lblViewUsersTitle.setText("View Users");
-        add(lblViewUsersTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(389, 24, -1, -1));
+        lblManageUsersTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
+        lblManageUsersTitle.setForeground(new java.awt.Color(102, 102, 255));
+        lblManageUsersTitle.setText("Manage Users");
+        add(lblManageUsersTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(389, 24, -1, -1));
 
         tblViewUsers.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         tblViewUsers.setModel(new javax.swing.table.DefaultTableModel(
@@ -216,7 +216,7 @@ public class ManageUsersPanel extends javax.swing.JPanel {
     private javax.swing.JLabel LabelImg;
     private javax.swing.JButton btnUsersDelete;
     private javax.swing.JScrollPane jScrollPane;
-    private javax.swing.JLabel lblViewUsersTitle;
+    private javax.swing.JLabel lblManageUsersTitle;
     private javax.swing.JLabel logoImg;
     private javax.swing.JTable tblViewUsers;
     // End of variables declaration//GEN-END:variables

@@ -96,7 +96,7 @@ public class DonateNowPanel extends javax.swing.JPanel {
         btnDonateSubmit = new javax.swing.JButton();
         lblDonateMinQ = new javax.swing.JLabel();
         lblDonateMaxQ = new javax.swing.JLabel();
-        lblDonatePersons = new javax.swing.JLabel();
+        lblDonatePeople = new javax.swing.JLabel();
         Imagelogo = new javax.swing.JLabel();
         lblImage = new javax.swing.JLabel();
 
@@ -232,9 +232,9 @@ public class DonateNowPanel extends javax.swing.JPanel {
         lblDonateMaxQ.setText("Max 100");
         add(lblDonateMaxQ, new org.netbeans.lib.awtextra.AbsoluteConstraints(361, 230, -1, -1));
 
-        lblDonatePersons.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblDonatePersons.setText("persons");
-        add(lblDonatePersons, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, -1, -1));
+        lblDonatePeople.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblDonatePeople.setText("People");
+        add(lblDonatePeople, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, -1, -1));
 
         Imagelogo.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         add(Imagelogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(97, 18, 102, 104));
@@ -356,7 +356,7 @@ public class DonateNowPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblDonateFoodQuantity;
     private javax.swing.JLabel lblDonateMaxQ;
     private javax.swing.JLabel lblDonateMinQ;
-    private javax.swing.JLabel lblDonatePersons;
+    private javax.swing.JLabel lblDonatePeople;
     private javax.swing.JLabel lblDonatePickupAddress;
     private javax.swing.JLabel lblDonateState;
     private javax.swing.JLabel lblDonateZip;
