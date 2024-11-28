@@ -239,16 +239,20 @@ public class ManageUsersPanel extends javax.swing.JPanel {
         
         if(role.equals("Business.Role.SystemAdminRole")){
              rl="System Admin";
-        }else if(role.equals("Business.Role.FCAdminRole")){
-            rl="FC Admin";
-        }else if(role.equals("Business.Role.FCPManagerRole")){
-            rl="FCP Manager";
-        }else if(role.equals("Business.Role.NgoRole")){
-            rl="NGO";
+        }else if(role.equals("Business.Role.COManagerRole")){
+            rl="CO Manager";
+        }else if(role.equals("Business.Role.DHManagerRole")){
+            rl="DH Manager";
+        }else if(role.equals("Business.Role.DOManagerRole")){
+            rl="DO Manager";
+        }else if(role.equals("Business.Role.PartnerDonorRole")){
+            rl="Partner Donor";
         }else if(role.equals("Business.Role.PersonalDonorRole")){
-            rl="Donor";
+            rl="Personal Donor";
         }else if(role.equals("Business.Role.PersonalRequestorRole")){
-            rl="Requestor";
+            rl="Personal Requestor";
+        }else if(role.equals("Business.Role.PartnerRequesterRole")){
+            rl="Partner Requestor";
         }else if(role.equals("Business.Role.Volunteer")){
             rl="Volunteer";
         }
