@@ -77,13 +77,13 @@ public class RequestorAreaJPanel extends javax.swing.JPanel {
 
         btnFoodReq.setBackground(new java.awt.Color(204, 204, 255));
         btnFoodReq.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnFoodReq.setText("Request Food");
+        btnFoodReq.setText("Request Accessory");
         btnFoodReq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFoodReqActionPerformed(evt);
             }
         });
-        MenubarPanel.add(btnFoodReq, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 70, -1, -1));
+        MenubarPanel.add(btnFoodReq, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, -1, -1));
 
         btnMyProfile.setBackground(new java.awt.Color(204, 204, 255));
         btnMyProfile.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
