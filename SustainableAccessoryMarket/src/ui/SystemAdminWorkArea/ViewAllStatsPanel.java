@@ -18,12 +18,12 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartFrame;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.plot.CategoryPlot;
-import org.jfree.chart.plot.PlotOrientation;
-import org.jfree.data.category.DefaultCategoryDataset;
+//import org.jfree.chart.ChartFactory;
+//import org.jfree.chart.ChartFrame;
+//import org.jfree.chart.JFreeChart;
+//import org.jfree.chart.plot.CategoryPlot;
+//import org.jfree.chart.plot.PlotOrientation;
+//import org.jfree.data.category.DefaultCategoryDataset;
 //import org.jfree.chart.ChartFactory;
 //import org.jfree.chart.ChartFrame;
 //import org.jfree.chart.ChartPanel;
@@ -225,17 +225,17 @@ public class ViewAllStatsPanel extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
-        DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-        dataset.setValue(ecosystem.getDonorsCnt(), "Population", "Donors");
-        dataset.setValue(ecosystem.getRequestorsCnt(), "Population", "Requestors");
-        dataset.setValue(ecosystem.getVolunteersCnt(), "Population", "Volunteers");
-
-        JFreeChart chart = ChartFactory.createBarChart("Population count", "roles", "Population", dataset, PlotOrientation.VERTICAL, false, true, false);
-           CategoryPlot p = chart.getCategoryPlot();
-           p.setRangeGridlinePaint(Color.black);
-           ChartFrame f = new ChartFrame("Request Analysis",chart);
-           f.setVisible(true);
-           f.setSize(500,400);
+//        DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+//        dataset.setValue(ecosystem.getDonorsCnt(), "Population", "Donors");
+//        dataset.setValue(ecosystem.getRequestorsCnt(), "Population", "Requestors");
+//        dataset.setValue(ecosystem.getVolunteersCnt(), "Population", "Volunteers");
+//
+//        JFreeChart chart = ChartFactory.createBarChart("Population count", "roles", "Population", dataset, PlotOrientation.VERTICAL, false, true, false);
+//           CategoryPlot p = chart.getCategoryPlot();
+//           p.setRangeGridlinePaint(Color.black);
+//           ChartFrame f = new ChartFrame("Request Analysis",chart);
+//           f.setVisible(true);
+//           f.setSize(500,400);
 
     }//GEN-LAST:event_jButton1ActionPerformed
 

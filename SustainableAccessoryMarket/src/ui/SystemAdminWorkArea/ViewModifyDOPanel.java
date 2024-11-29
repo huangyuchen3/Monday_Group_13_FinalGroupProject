@@ -479,7 +479,7 @@ public class ViewModifyDOPanel extends javax.swing.JPanel {
 
                 f.setDropOffName(txtDropOffname.getText());
                 f.setDropOffPhone(txtDropOffPhone.getText());
-                f.setDropOffAddresss(txtDropOffAdd.getText());
+                f.setDropOffAddress(txtDropOffAdd.getText());
                 f.setDropOffCity(txtDropOffCity.getText());
                 f.setDropOffState(txtDropOffState.getText());
                 f.setDropOffZipcode(txtDropOffZip.getText());
