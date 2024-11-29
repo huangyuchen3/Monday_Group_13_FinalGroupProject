@@ -18,6 +18,12 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartFrame;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.CategoryPlot;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
 //import org.jfree.chart.ChartFactory;
 //import org.jfree.chart.ChartFrame;
 //import org.jfree.chart.ChartPanel;
@@ -78,7 +84,6 @@ public class ViewAllStatsPanel extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        pieChartPanel = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(204, 204, 255));
         setPreferredSize(new java.awt.Dimension(2000, 1100));
@@ -137,9 +142,6 @@ public class ViewAllStatsPanel extends javax.swing.JPanel {
             }
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 410, 100, 30));
-
-        pieChartPanel.setLayout(new java.awt.BorderLayout());
-        add(pieChartPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 110, 430, 280));
     }// </editor-fold>//GEN-END:initComponents
 
     public void setBG() {
@@ -222,7 +224,7 @@ public class ViewAllStatsPanel extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        /*
+        
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
         dataset.setValue(ecosystem.getDonorsCnt(), "Population", "Donors");
         dataset.setValue(ecosystem.getRequestorsCnt(), "Population", "Requestors");
@@ -234,7 +236,7 @@ public class ViewAllStatsPanel extends javax.swing.JPanel {
            ChartFrame f = new ChartFrame("Request Analysis",chart);
            f.setVisible(true);
            f.setSize(500,400);
-*/
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
@@ -246,7 +248,6 @@ public class ViewAllStatsPanel extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane;
     private javax.swing.JLabel lblViewUsersTitle;
     private javax.swing.JLabel logoImg;
-    private javax.swing.JPanel pieChartPanel;
     private javax.swing.JTable tblViewUsers;
     // End of variables declaration//GEN-END:variables
 
