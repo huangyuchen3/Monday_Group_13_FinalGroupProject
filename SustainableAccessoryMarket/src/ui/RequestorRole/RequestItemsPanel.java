@@ -9,6 +9,7 @@ import Business.DropOff.DropOff;
 import Business.AccessoryRequestorder.AccessoryRequestorder;
 import Business.AccessoryRequestorder.AccessoryRequestorderDirectory;
 import Business.AccessoryRequestor.AccessoryRequestor;
+import Business.DropOff.DropOffDirectory;
 import Business.UserAccount.UserAccount;
 import java.awt.Dimension;
 import java.awt.Image;
@@ -71,13 +72,16 @@ public class RequestItemsPanel extends javax.swing.JPanel {
                 ptList.add(fcp.getDropOffName());
             }
         }
-        cbNearPantry.setModel(new DefaultComboBoxModel<String>(ptList.toArray(new String[0])));
+        cbSelectDropOffStore.setModel(new DefaultComboBoxModel<String>(ptList.toArray(new String[0])));
         setBG();
         
         lblSelectCity.setVisible(false);
         cbSelectCity.setVisible(false);
         lblDelType.setVisible(false);
         cbDelType.setVisible(false);
+        
+        DropOffDirectory dropOffDirectory = ecosystem.getACDOFDirectory(); // Assume you have this method
+        populateDropOffComboBox(dropOffDirectory); // Populate the combo box
     }
 
     /**
@@ -103,8 +107,8 @@ public class RequestItemsPanel extends javax.swing.JPanel {
         txtDelzip = new javax.swing.JTextField();
         lblSelectCity = new javax.swing.JLabel();
         cbSelectCity = new javax.swing.JComboBox<>();
-        lblNearPantry = new javax.swing.JLabel();
-        cbNearPantry = new javax.swing.JComboBox<>();
+        lblSelectDropOffStore = new javax.swing.JLabel();
+        cbSelectDropOffStore = new javax.swing.JComboBox<>();
         btnReqSubmit = new javax.swing.JButton();
         lblMinQuan = new javax.swing.JLabel();
         lblMaxQuan = new javax.swing.JLabel();
@@ -202,18 +206,18 @@ public class RequestItemsPanel extends javax.swing.JPanel {
         });
         add(cbSelectCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 245, 130, -1));
 
-        lblNearPantry.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblNearPantry.setText("Select Drop Off Store:");
-        add(lblNearPantry, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, -1, -1));
+        lblSelectDropOffStore.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblSelectDropOffStore.setText("Select Drop Off Store:");
+        add(lblSelectDropOffStore, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, -1, -1));
 
-        cbNearPantry.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        cbNearPantry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Select --", "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbNearPantry.addActionListener(new java.awt.event.ActionListener() {
+        cbSelectDropOffStore.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        cbSelectDropOffStore.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Select --", "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbSelectDropOffStore.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbNearPantryActionPerformed(evt);
+                cbSelectDropOffStoreActionPerformed(evt);
             }
         });
-        add(cbNearPantry, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 297, 130, -1));
+        add(cbSelectDropOffStore, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 297, 180, -1));
 
         btnReqSubmit.setBackground(new java.awt.Color(204, 204, 255));
         btnReqSubmit.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
@@ -308,7 +312,7 @@ public class RequestItemsPanel extends javax.swing.JPanel {
             rq.setReqOrderQuant(String.valueOf(sdFoodQuan.getValue()));
             rq.setReqOrderType(cbDelType.getSelectedItem().toString());
             rq.setReqOrderStatus("Requested");
-            rq.setReqPantryName(cbNearPantry.getSelectedItem().toString());
+            rq.setReqPantryName(cbSelectDropOffStore.getSelectedItem().toString());
             UserAccount ua=new UserAccount();
             ua.setUsername(userAcc.getUsername());
             ua.setPassword(userAcc.getPassword());
@@ -356,17 +360,22 @@ public class RequestItemsPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_cbDelTypeActionPerformed
 
-    private void cbNearPantryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbNearPantryActionPerformed
+    private void cbSelectDropOffStoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSelectDropOffStoreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbNearPantryActionPerformed
+        String selectedDropOff = (String) cbSelectDropOffStore.getSelectedItem();
+        if (selectedDropOff != null) {
+            System.out.println("Selected Drop-Off Store: " + selectedDropOff);
+            // You can retrieve more details or perform specific actions here
+        }
+    }//GEN-LAST:event_cbSelectDropOffStoreActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LabelImage;
     private javax.swing.JButton btnReqSubmit;
     private javax.swing.JComboBox<String> cbDelType;
-    private javax.swing.JComboBox<String> cbNearPantry;
     private javax.swing.JComboBox<String> cbSelectCity;
+    private javax.swing.JComboBox<String> cbSelectDropOffStore;
     private javax.swing.JLabel lblDelType;
     private javax.swing.JLabel lblDeladd;
     private javax.swing.JLabel lblDelcity;
@@ -374,12 +383,12 @@ public class RequestItemsPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblDelzip;
     private javax.swing.JLabel lblMaxQuan;
     private javax.swing.JLabel lblMinQuan;
-    private javax.swing.JLabel lblNearPantry;
     private javax.swing.JLabel lblPersons;
     private javax.swing.JLabel lblReqFoodTitle;
     private javax.swing.JLabel lblReqFoodTitle1;
     private javax.swing.JLabel lblReqQuan;
     private javax.swing.JLabel lblSelectCity;
+    private javax.swing.JLabel lblSelectDropOffStore;
     private javax.swing.JSlider sdFoodQuan;
     private javax.swing.JTextField txtDelcity;
     private javax.swing.JTextField txtDeliveryadd;
@@ -398,10 +407,23 @@ public class RequestItemsPanel extends javax.swing.JPanel {
         txtDelstate.setText("");
         txtDelzip.setText("");
         cbSelectCity.setSelectedIndex(0);
-        cbNearPantry.setSelectedIndex(0);
+        cbSelectDropOffStore.setSelectedIndex(0);
         sdFoodQuan.setExtent(0);
         cbSelectCity.setSelectedIndex(0);
-        cbNearPantry.setSelectedIndex(0);
+        cbSelectDropOffStore.setSelectedIndex(0);
         cbDelType.setSelectedIndex(0);
+    }
+    
+    private void populateDropOffComboBox(DropOffDirectory dropOffDirectory) {
+        cbSelectDropOffStore.removeAllItems(); // Clear existing items
+
+        for (DropOff dropOff : dropOffDirectory.getFcpList()) {
+            cbSelectDropOffStore.addItem(dropOff.getDropOffName()); // Add drop-off names
+        }
+
+        // Set default selection (first item)
+        if (cbSelectDropOffStore.getItemCount() > 0) {
+            cbSelectDropOffStore.setSelectedIndex(0); // Default to the first drop-off store
+        }
     }
 }

@@ -433,7 +433,7 @@ public class AddDOPanel extends javax.swing.JPanel {
                 fcp.setDropOffHubName(cbDistributionHub.getSelectedItem().toString());
                 fcp.setDropOffName(txtDropOffname.getText());
                 fcp.setDropOffPhone(txtDropOffPhone.getText());
-                fcp.setDropOffAddresss(txtDropOffAdd.getText());
+                fcp.setDropOffAddress(txtDropOffAdd.getText());
                 fcp.setDropOffCity(txtDropOffCity.getText());
                 fcp.setDropOffState(txtDropOffState.getText());
                 fcp.setDropOffZipcode(txtDropOffZip.getText());

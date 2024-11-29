@@ -50,7 +50,7 @@ public class DropOff {
         return DropOffAddress;
     }
 
-    public void setDropOffAddresss(String DropOffAddress) {
+    public void setDropOffAddress(String DropOffAddress) {
         this.DropOffAddress = DropOffAddress;
     }
 
