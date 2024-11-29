@@ -73,6 +73,11 @@ public class RequestItemsPanel extends javax.swing.JPanel {
         }
         cbNearPantry.setModel(new DefaultComboBoxModel<String>(ptList.toArray(new String[0])));
         setBG();
+        
+        lblSelectCity.setVisible(false);
+        cbSelectCity.setVisible(false);
+        lblDelType.setVisible(false);
+        cbDelType.setVisible(false);
     }
 
     /**
@@ -198,7 +203,7 @@ public class RequestItemsPanel extends javax.swing.JPanel {
         add(cbSelectCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 245, 130, -1));
 
         lblNearPantry.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblNearPantry.setText("Select Nearest Pantry:");
+        lblNearPantry.setText("Select Drop Off Store:");
         add(lblNearPantry, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, -1, -1));
 
         cbNearPantry.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
@@ -286,9 +291,9 @@ public class RequestItemsPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
 //        String city=cbSelectCity.getSelectedItem().toString();
 //        ArrayList<String> ptList = new ArrayList<String>();
-//        for (DropOff fcp : ecosystem.getFCPDirectory().getFcpList()){
-//            if(fcp.getFcpCity().equals(city)){
-//                ptList.add(fcp.getFcpName());
+//        for (DropOff fcp : ecosystem.getACDOFDirectory().getFcpList()){
+//            if(fcp.getDropOffCity().equals(city)){
+//                ptList.add(fcp.getDropOffName());
 //            }
 //        }
 //        cbNearPantry.setModel(new DefaultComboBoxModel<String>(ptList.toArray(new String[0])));
