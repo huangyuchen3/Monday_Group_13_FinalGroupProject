@@ -57,14 +57,14 @@ public class UserAccountDirectory {
         volunteerAccount.setEmployee(volunteerWorker); // Set an Employee object if needed
         userAccList.add(volunteerAccount);
         
-        Worker personalRequesterWorker = new Worker();
-        personalRequesterWorker.setName("Default Personal Requester");
-        UserAccount personalRequesterAccount = new UserAccount();
-        personalRequesterAccount.setUsername("personalrequester");
-        personalRequesterAccount.setPassword("personalrequester123");
-        personalRequesterAccount.setRole(new PersonalRequestorRole()); // Replace with your PersonalRequestorRole class
-        personalRequesterAccount.setEmployee(personalRequesterWorker); // Set an Employee object if needed
-        userAccList.add(personalRequesterAccount);
+//        Worker personalRequesterWorker = new Worker();
+//        personalRequesterWorker.setName("Default Personal Requester");
+//        UserAccount personalRequesterAccount = new UserAccount();
+//        personalRequesterAccount.setUsername("personalrequester");
+//        personalRequesterAccount.setPassword("personalrequester123");
+//        personalRequesterAccount.setRole(new PersonalRequestorRole()); // Replace with your PersonalRequestorRole class
+//        personalRequesterAccount.setEmployee(personalRequesterWorker); // Set an Employee object if needed
+//        userAccList.add(personalRequesterAccount);
         
         Worker partnerRequesterWorker = new Worker();
         partnerRequesterWorker.setName("Default Partner Requester");

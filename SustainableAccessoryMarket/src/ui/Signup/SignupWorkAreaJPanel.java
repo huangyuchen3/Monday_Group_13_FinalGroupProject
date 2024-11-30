@@ -63,7 +63,7 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
 
         if (ecosystem.getReqDir() == null) {
-            ecosystem.setReqDir(new AccessoryRequestorDirectory());
+            ecosystem.setReqDir(new AccessoryRequestorDirectory(ecosystem.getUserAccountDirectory()));
         }
         if (ecosystem.getDonDir() == null) {
             ecosystem.setDonDir(new AccessoryDonorDirectory());
