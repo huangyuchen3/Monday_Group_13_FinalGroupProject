@@ -237,7 +237,7 @@ public class EcoSystem extends Organization {
 
     private EcoSystem() {
         super("Sustainable Accessory Market");
-        this.requestorDir = new AccessoryRequestorDirectory();
+        //this.requestorDir = new AccessoryRequestorDirectory();
         this.donorDir = new AccessoryDonorDirectory();
         //this.acDistributionHubDir = new DistributionHubDirectory();
         //this.coDir = new CommunityOutreachDirectory(userAccountDirectory);
@@ -253,6 +253,8 @@ public class EcoSystem extends Organization {
         this.dropOffDirectory = new DropOffDirectory(this.uaDir);
         this.coDir = new CommunityOutreachDirectory(this.uaDir);
         this.acDistributionHubDir = new DistributionHubDirectory(this.uaDir);
+        this.requestorDir = new AccessoryRequestorDirectory(this.uaDir);
+        
         
         this.donorsCnt = 0;
         this.distributionHubCnt = 0; 
@@ -261,16 +263,14 @@ public class EcoSystem extends Organization {
     }
     
     private void addDefaultUserAccounts() {
-    // Prevent duplicate initialization
-    if (!uaDir.getUserAccountList().isEmpty()) {
-        return; // Skip if accounts already exist
-    }
 
-    // Add default accounts here
-    uaDir.createUserAccount("admin", "admin123", null, new SystemAdminRole());
-    uaDir.createUserAccount("dhmanager1", "@Password123", null, new DHManagerRole());}
-
-
+        // Prevent duplicate initialization
+        if (!uaDir.getUserAccountList().isEmpty()) {
+            return; // Skip if accounts already exist
+        }
+        // Add default accounts here
+        uaDir.createUserAccount("admin", "admin123", null, new SystemAdminRole());
+        uaDir.createUserAccount("dhmanager1", "@Password123", null, new DHManagerRole());}
     
     public DropOffDirectory getDropOffDirectory() {
         return dropOffDirectory;
@@ -345,4 +345,6 @@ public class EcoSystem extends Organization {
     public void setVRDirectory(COVolunteerRequestsDirectory volunteerRequestsDir) {
         this.volunteerRequestsDir = volunteerRequestsDir;
     }
+    
+    
 }
