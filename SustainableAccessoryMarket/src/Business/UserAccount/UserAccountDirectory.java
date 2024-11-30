@@ -30,23 +30,23 @@ public class UserAccountDirectory {
         adminAccount.setEmployee(null); // If no employee object is needed
         userAccList.add(adminAccount);
         
-        Worker personalDonorWorker = new Worker();
-        personalDonorWorker.setName("Default Personal Donor");
-        UserAccount personalDonorAccount = new UserAccount();
-        personalDonorAccount.setUsername("personaldonor");
-        personalDonorAccount.setPassword("personaldonor123");
-        personalDonorAccount.setRole(new PersonalDonorRole()); // Replace with your PersonalDonorRole class
-        personalDonorAccount.setEmployee(personalDonorWorker); // Set an Employee object if needed
-        userAccList.add(personalDonorAccount);
-        
-        Worker partnerDonorWorker = new Worker();
-        partnerDonorWorker.setName("Default Partner Donor");
-        UserAccount partnerDonorAccount = new UserAccount();
-        partnerDonorAccount.setUsername("partnerdonor");
-        partnerDonorAccount.setPassword("partnerdonor123");
-        partnerDonorAccount.setRole(new PartnerDonorRole()); // Replace with your PartnerDonorRole class
-        partnerDonorAccount.setEmployee(partnerDonorWorker); // Set an Employee object if needed
-        userAccList.add(partnerDonorAccount); 
+//        Worker personalDonorWorker = new Worker();
+//        personalDonorWorker.setName("Default Personal Donor");
+//        UserAccount personalDonorAccount = new UserAccount();
+//        personalDonorAccount.setUsername("personaldonor");
+//        personalDonorAccount.setPassword("personaldonor123");
+//        personalDonorAccount.setRole(new PersonalDonorRole()); // Replace with your PersonalDonorRole class
+//        personalDonorAccount.setEmployee(personalDonorWorker); // Set an Employee object if needed
+//        userAccList.add(personalDonorAccount);
+//        
+//        Worker partnerDonorWorker = new Worker();
+//        partnerDonorWorker.setName("Default Partner Donor");
+//        UserAccount partnerDonorAccount = new UserAccount();
+//        partnerDonorAccount.setUsername("partnerdonor");
+//        partnerDonorAccount.setPassword("partnerdonor123");
+//        partnerDonorAccount.setRole(new PartnerDonorRole()); // Replace with your PartnerDonorRole class
+//        partnerDonorAccount.setEmployee(partnerDonorWorker); // Set an Employee object if needed
+//        userAccList.add(partnerDonorAccount); 
         
         Worker volunteerWorker = new Worker();
         volunteerWorker.setName("Default Volunteer");
@@ -66,14 +66,14 @@ public class UserAccountDirectory {
 //        personalRequesterAccount.setEmployee(personalRequesterWorker); // Set an Employee object if needed
 //        userAccList.add(personalRequesterAccount);
         
-        Worker partnerRequesterWorker = new Worker();
-        partnerRequesterWorker.setName("Default Partner Requester");
-        UserAccount partnerRequesterAccount = new UserAccount();
-        partnerRequesterAccount.setUsername("partnerrequester");
-        partnerRequesterAccount.setPassword("partnerrequester123");
-        partnerRequesterAccount.setRole(new PartnerRequesterRole()); // Replace with your PersonalRequestorRole class
-        partnerRequesterAccount.setEmployee(partnerRequesterWorker); // Set an Employee object if needed
-        userAccList.add(partnerRequesterAccount); 
+//        Worker partnerRequesterWorker = new Worker();
+//        partnerRequesterWorker.setName("Default Partner Requester");
+//        UserAccount partnerRequesterAccount = new UserAccount();
+//        partnerRequesterAccount.setUsername("partnerrequester");
+//        partnerRequesterAccount.setPassword("partnerrequester123");
+//        partnerRequesterAccount.setRole(new PartnerRequesterRole()); // Replace with your PersonalRequestorRole class
+//        partnerRequesterAccount.setEmployee(partnerRequesterWorker); // Set an Employee object if needed
+//        userAccList.add(partnerRequesterAccount); 
         
 //        Worker COManagerWorker = new Worker();
 //        COManagerWorker.setName("Default COManager");

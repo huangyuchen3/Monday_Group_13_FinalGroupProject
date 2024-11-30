@@ -390,10 +390,10 @@ public class RequestorProfilePanel extends javax.swing.JPanel {
                     String reqUser = txtRequname.getText();
                     String reqPswd = txtReqpwd.getText();
 
-                    if (!isValid(reqName, "^[A-Za-z]{3,}")) {
-                        JOptionPane.showMessageDialog(this, "Please enter valid name");
-                        return;
-                    }
+//                    if (!isValid(reqName, "^[A-Za-z]{3,}")) {
+//                        JOptionPane.showMessageDialog(this, "Please enter valid name");
+//                        return;
+//                    }
                     if (!isValid(phone, "[+]?[0-9]{10,13}")) {
                         JOptionPane.showMessageDialog(this, "Please enter valid phone number");
                         return;
@@ -423,10 +423,10 @@ public class RequestorProfilePanel extends javax.swing.JPanel {
                         JOptionPane.showMessageDialog(this, "Please enter a valid password of atleast 8 characters in length. It must contain a number, a specicial character, a lowercase and an uppercase character.");
                         return;
                     }
-                    if (!isValid(reqMail, "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$")) {
-                        JOptionPane.showMessageDialog(this, "Please enter a valid mail");
-                        return;
-                    }
+//                    if (!isValid(reqMail, "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$")) {
+//                        JOptionPane.showMessageDialog(this, "Please enter a valid mail");
+//                        return;
+//                    }
 
                     r.setReqName(txtReqName.getText());
                     r.setReqPhno(txtReqphone.getText());
@@ -553,7 +553,7 @@ public class RequestorProfilePanel extends javax.swing.JPanel {
                 txtReqzip.setEnabled(false);
                 txtRequname.setText(r.getReqAccount().getUsername());
                 txtRequname.setEnabled(false);
-                txtReqpwd.setText(r.getReqAccount().getUsername());
+                txtReqpwd.setText(r.getReqAccount().getPassword());
                 txtReqpwd.setEnabled(false);
             }
         }
