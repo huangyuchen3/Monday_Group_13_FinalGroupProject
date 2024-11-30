@@ -73,7 +73,7 @@ public class AccessoryRequestorDirectory {
         reqWorker1.setName("Personal Requestor One");
 
         UserAccount account1 = userAccountDirectory.createUserAccount(
-            "personalreqone",
+            "personalreq1",
             "@Password123",
             reqWorker1,
             new PersonalRequestorRole()
@@ -99,7 +99,7 @@ public class AccessoryRequestorDirectory {
         reqWorker2.setName("Personal Requestor Two");
 
         UserAccount account2 = userAccountDirectory.createUserAccount(
-            "personalreqtwo",
+            "personalreq2",
             "@Password123",
             reqWorker2,
             new PersonalRequestorRole()
@@ -129,7 +129,7 @@ public class AccessoryRequestorDirectory {
         reqWorker3.setName("Partner Requestor One");
 
         UserAccount account3 = userAccountDirectory.createUserAccount(
-            "partnerreqone",
+            "partnerreq1",
             "@Password123",
             reqWorker3,
             new PartnerRequesterRole()
@@ -156,7 +156,7 @@ public class AccessoryRequestorDirectory {
         reqWorker4.setName("Partner Requestor Two");
 
         UserAccount account4 = userAccountDirectory.createUserAccount(
-            "partnerreqtwo",
+            "partnerreq2",
             "@Password123",
             reqWorker4,
             new PartnerRequesterRole()

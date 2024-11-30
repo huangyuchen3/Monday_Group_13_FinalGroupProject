@@ -455,11 +455,11 @@ public class DonorProfilePanel extends javax.swing.JPanel {
                     d.setDonorCity(txtDonorCity.getText());
                     d.setDonorState(txtDonorState.getText());
                     d.setDonorZipcode(txtDonorZip.getText());
-                    d.setDonUserName(txtDonorUsername.getText());
-                    d.setDonPwd(txtDonorPassword.getText());
+                    //d.setDonUserName(txtDonorUsername.getText());
+                    //d.setDonPwd(txtDonorPassword.getText());
                     
-                    //d.getDonorAccount().setUsername(txtDonorUsername.getText());
-                    //d.getDonorAccount().setPassword(txtDonorPassword.getText());
+                    d.getDonorAccount().setUsername(txtDonorUsername.getText());
+                    d.getDonorAccount().setPassword(txtDonorPassword.getText());
                 }
             }
             // ecosystem.setFCWDirectory(fcWarehouseList);
@@ -535,7 +535,9 @@ public class DonorProfilePanel extends javax.swing.JPanel {
 
     private void populateFields() {
         for (AccessoryDonor d : ecosystem.getDonDir().getDonorList()) {
-            if (d.getDonorName().equals(DonName)) {
+            if (d.getDonorAccount().getUsername().equals(DonUname)
+                    //d.getDonorName().equals(DonName)
+                    ) {
                 txtDonorname.setText(d.getDonorName());
                 txtDonorname.setEnabled(false);
                 txtDonorPhone.setText(d.getDonorPhno());
@@ -554,6 +556,7 @@ public class DonorProfilePanel extends javax.swing.JPanel {
                 txtDonorUsername.setEnabled(false);
                 txtDonorPassword.setText(d.getDonorAccount().getPassword());
                 txtDonorPassword.setEnabled(false);
+                break;
             }
         }
     }

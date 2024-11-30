@@ -437,6 +437,9 @@ public class RequestorProfilePanel extends javax.swing.JPanel {
                     r.setReqZipcode(txtReqzip.getText());
                     r.setReqUserName(txtRequname.getText());
                     r.setReqPwd(txtReqpwd.getText());
+                    
+                    r.getReqAccount().setUsername(txtRequname.getText());
+                    r.getReqAccount().setPassword(txtReqpwd.getText());
                 }
             }
             // ecosystem.setFCWDirectory(fcWarehouseList);
@@ -536,7 +539,7 @@ public class RequestorProfilePanel extends javax.swing.JPanel {
 
     private void populateFields() {
         for (AccessoryRequestor r : ecosystem.getReqDir().getReqAccList()) {
-            if (r.getReqName().equals(requestorName)) {
+            if (r.getReqAccount().getUsername().equals(reqUname)) {
                 txtReqName.setText(r.getReqName());
                 txtReqName.setEnabled(false);
                 txtReqphone.setText(r.getReqPhno());
@@ -555,7 +558,9 @@ public class RequestorProfilePanel extends javax.swing.JPanel {
                 txtRequname.setEnabled(false);
                 txtReqpwd.setText(r.getReqAccount().getPassword());
                 txtReqpwd.setEnabled(false);
+                break;
             }
+            
         }
     }
 
