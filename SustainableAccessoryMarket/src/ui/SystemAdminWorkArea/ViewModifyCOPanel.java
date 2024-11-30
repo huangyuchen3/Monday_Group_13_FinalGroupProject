@@ -44,7 +44,7 @@ public class ViewModifyCOPanel extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
-        ecosystem.getcoDir().initializeDefaultCommunityOutreachCenters(ecosystem.getUserAccountDirectory());
+        //ecosystem.getcoDir().initializeDefaultCommunityOutreachCenters(ecosystem.getUserAccountDirectory());
 //        if (ecosystem.getcoDir() == null) {
 //            ecosystem.setNgoDir(new CommunityOutreachDirectory(userAccountDirectory));
 //        }
