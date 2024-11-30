@@ -88,7 +88,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageDHActionPerformed(evt);
             }
         });
-        MenubarSysAdminPanel.add(btnManageDH, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
+        MenubarSysAdminPanel.add(btnManageDH, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
 
         btnManageDO.setBackground(new java.awt.Color(204, 204, 255));
         btnManageDO.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
@@ -98,7 +98,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageDOActionPerformed(evt);
             }
         });
-        MenubarSysAdminPanel.add(btnManageDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, -1, -1));
+        MenubarSysAdminPanel.add(btnManageDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, -1, -1));
 
         btnManageUsers.setBackground(new java.awt.Color(204, 204, 255));
         btnManageUsers.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
@@ -108,7 +108,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageUsersActionPerformed(evt);
             }
         });
-        MenubarSysAdminPanel.add(btnManageUsers, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 80, -1, -1));
+        MenubarSysAdminPanel.add(btnManageUsers, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 80, -1, -1));
 
         lblSysadminWelcomemsg.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
         lblSysadminWelcomemsg.setForeground(new java.awt.Color(102, 102, 255));
@@ -117,13 +117,13 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         btnManageCO.setBackground(new java.awt.Color(204, 204, 255));
         btnManageCO.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnManageCO.setText("Manage CO");
+        btnManageCO.setText("Manage Community Outreach");
         btnManageCO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageCOActionPerformed(evt);
             }
         });
-        MenubarSysAdminPanel.add(btnManageCO, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 80, -1, -1));
+        MenubarSysAdminPanel.add(btnManageCO, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, -1, -1));
 
         lblsysadminlogout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -142,7 +142,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnViewAllStatsActionPerformed(evt);
             }
         });
-        MenubarSysAdminPanel.add(btnViewAllStats, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 80, -1, -1));
+        MenubarSysAdminPanel.add(btnViewAllStats, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 80, -1, -1));
 
         SysAdminSplitPane.setLeftComponent(MenubarSysAdminPanel);
 

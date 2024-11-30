@@ -58,9 +58,10 @@ public class ViewModifyCOPanel extends javax.swing.JPanel {
         }
         addDummyData();
         populatengotable();
-        txtCOuname.setEnabled(false);
+        //txtCOuname.setEnabled(false);
         setBG();
         makeTableTransparent();
+        btnCOCancel.setVisible(false);
     }
     
     private void addDummyData() {
@@ -81,8 +82,8 @@ public class ViewModifyCOPanel extends javax.swing.JPanel {
         ngo1.setCOZipcode("10001");
 
         UserAccount account1 = new UserAccount();
-        account1.setUsername("alice_johnson");
-        account1.setPassword("Password@123");
+        account1.setUsername("comanager1");
+        account1.setPassword("@Password123");
         Worker worker1 = new Worker();
         worker1.setName("Alice Johnson");
         account1.setEmployee(worker1);
@@ -99,8 +100,8 @@ public class ViewModifyCOPanel extends javax.swing.JPanel {
         ngo2.setCOZipcode("90001");
 
         UserAccount account2 = new UserAccount();
-        account2.setUsername("bob_smith");
-        account2.setPassword("Password@456");
+        account2.setUsername("comanager2");
+        account2.setPassword("@Password123");
         Worker worker2 = new Worker();
         worker2.setName("Bob Smith");
         account2.setEmployee(worker2);
@@ -124,7 +125,6 @@ public class ViewModifyCOPanel extends javax.swing.JPanel {
         jScrollPane = new javax.swing.JScrollPane();
         tblNonGovtOrg = new javax.swing.JTable();
         btnCODelete = new javax.swing.JButton();
-        btnCOEdit = new javax.swing.JButton();
         jPanel = new javax.swing.JPanel();
         lblCOname = new javax.swing.JLabel();
         txtCOname = new javax.swing.JTextField();
@@ -155,16 +155,17 @@ public class ViewModifyCOPanel extends javax.swing.JPanel {
         lblCOuname1 = new javax.swing.JLabel();
         lblCOpwd1 = new javax.swing.JLabel();
         lblCOid1 = new javax.swing.JLabel();
+        lblCOid = new javax.swing.JLabel();
+        btnCOEdit = new javax.swing.JButton();
         btnCOCancel = new javax.swing.JButton();
         LabelImage = new javax.swing.JLabel();
-        lblCOid = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblAddCOTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
         lblAddCOTitle.setForeground(new java.awt.Color(102, 102, 255));
-        lblAddCOTitle.setText("CO Details");
-        add(lblAddCOTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 0, 190, 40));
+        lblAddCOTitle.setText("Community Outreach Details");
+        add(lblAddCOTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 400, 40));
 
         tblNonGovtOrg.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         tblNonGovtOrg.setModel(new javax.swing.table.DefaultTableModel(
@@ -194,16 +195,7 @@ public class ViewModifyCOPanel extends javax.swing.JPanel {
                 btnCODeleteActionPerformed(evt);
             }
         });
-        add(btnCODelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 200, 92, -1));
-
-        btnCOEdit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        btnCOEdit.setText("Edit");
-        btnCOEdit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCOEditActionPerformed(evt);
-            }
-        });
-        add(btnCOEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 200, 92, -1));
+        add(btnCODelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 200, 92, -1));
 
         jPanel.setOpaque(false);
         jPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -349,6 +341,21 @@ public class ViewModifyCOPanel extends javax.swing.JPanel {
         lblCOid1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         jPanel.add(lblCOid1, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 28, 150, 20));
 
+        add(jPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 660, -1));
+
+        lblCOid.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblCOid.setText("CO Id:");
+        add(lblCOid, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
+
+        btnCOEdit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        btnCOEdit.setText("Edit");
+        btnCOEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCOEditActionPerformed(evt);
+            }
+        });
+        add(btnCOEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 200, 92, -1));
+
         btnCOCancel.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         btnCOCancel.setText("Cancel");
         btnCOCancel.addActionListener(new java.awt.event.ActionListener() {
@@ -356,14 +363,8 @@ public class ViewModifyCOPanel extends javax.swing.JPanel {
                 btnCOCancelActionPerformed(evt);
             }
         });
-        jPanel.add(btnCOCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 0, -1, -1));
-
-        add(jPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 660, -1));
-        add(LabelImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 1490, 770));
-
-        lblCOid.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblCOid.setText("CO Id:");
-        add(lblCOid, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
+        add(btnCOCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 280, -1, -1));
+        add(LabelImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -150, 1490, 870));
     }// </editor-fold>//GEN-END:initComponents
 
     public void setBG() {
@@ -397,22 +398,62 @@ public class ViewModifyCOPanel extends javax.swing.JPanel {
     }
 
     private void btnCODeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCODeleteActionPerformed
-        // TODO add your handling code here:
+//        // TODO add your handling code here:
+//        int selectedRowIndex = tblNonGovtOrg.getSelectedRow();
+//        if (selectedRowIndex < 0) {
+//            JOptionPane.showMessageDialog(this, "Please select a record to delete");
+//            return;
+//        }
+//        DefaultTableModel model = (DefaultTableModel) tblNonGovtOrg.getModel();
+//        CommunityOutreach selectedNGO = (CommunityOutreach) model.getValueAt(selectedRowIndex, 0);
+//        ecosystem.getUserAccountDirectory().deleteUserAccount(
+//                ecosystem.getcoDir().getNgoList().get(selectedRowIndex).getCOAccount());
+//        
+//        ngod = ecosystem.getcoDir();
+//        ngod.deleteNGO(selectedNGO);
+//        ecosystem.setNgoDir(ngod);
+//        Integer ngoCnt = ecosystem.getcoCnt();
+//        
+//        ecosystem.setcoCnt(ngoCnt - 1);
+//        JOptionPane.showMessageDialog(this, "Community Outreach deleted Successfully");
+//        populatengotable();
+//        clearfields();
+
+        // Check if a row is selected
         int selectedRowIndex = tblNonGovtOrg.getSelectedRow();
         if (selectedRowIndex < 0) {
             JOptionPane.showMessageDialog(this, "Please select a record to delete");
             return;
         }
+
+        // Retrieve the selected Community Outreach object
         DefaultTableModel model = (DefaultTableModel) tblNonGovtOrg.getModel();
         CommunityOutreach selectedNGO = (CommunityOutreach) model.getValueAt(selectedRowIndex, 0);
-        ecosystem.getUserAccountDirectory().deleteUserAccount(
-                ecosystem.getcoDir().getNgoList().get(selectedRowIndex).getCOAccount());
-        ngod = ecosystem.getcoDir();
-        ngod.deleteNGO(selectedNGO);
-        ecosystem.setNgoDir(ngod);
+
+        if (selectedNGO == null) {
+            JOptionPane.showMessageDialog(this, "No valid record found to delete");
+            return;
+        }
+
+        // Delete the corresponding UserAccount
+        UserAccount accountToDelete = selectedNGO.getCOAccount();
+        if (accountToDelete != null) {
+            ecosystem.getUserAccountDirectory().deleteUserAccount(accountToDelete);
+        }
+
+        // Remove the NGO from the directory
+        ecosystem.getcoDir().deleteNGO(selectedNGO);
+
+        // Update the count of Community Outreach entities
         Integer ngoCnt = ecosystem.getcoCnt();
-        ecosystem.setcoCnt(ngoCnt - 1);
-        JOptionPane.showMessageDialog(this, "NGO deleted Successfully");
+        if (ngoCnt != null && ngoCnt > 0) {
+            ecosystem.setcoCnt(ngoCnt - 1);
+        } else {
+            ecosystem.setcoCnt(0); // Fallback to 0 if count is null or already 0
+        }
+
+        // Display success message and refresh table
+        JOptionPane.showMessageDialog(this, "Community Outreach deleted successfully");
         populatengotable();
         clearfields();
     }//GEN-LAST:event_btnCODeleteActionPerformed
@@ -440,11 +481,11 @@ public class ViewModifyCOPanel extends javax.swing.JPanel {
 
     private void txtCOnameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCOnameFocusLost
         // TODO add your handling code here:
-        if (!(txtCOname.getText().matches("^[a-zA-Z]*$"))) {
-            lblCOname1.setText("Invalid input. Please enter only alphabets");
-        } else {
-            lblCOname1.setText("");
-        }
+//        if (!(txtCOname.getText().matches("^[a-zA-Z]*$"))) {
+//            lblCOname1.setText("Invalid input. Please enter only alphabets");
+//        } else {
+//            lblCOname1.setText("");
+//        }
     }//GEN-LAST:event_txtCOnameFocusLost
 
     private void txtCOnameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCOnameKeyReleased
@@ -522,10 +563,10 @@ public class ViewModifyCOPanel extends javax.swing.JPanel {
                 String ngoUser = txtCOuname.getText();
                 String ngoPswd = txtCOpwd.getText();
                 
-                if (!isValid(ngoName, "^[A-Za-z]{3,}")) {
-                    JOptionPane.showMessageDialog(this, "Please enter valid name");
-                    return;
-                }
+//                if (!isValid(ngoName, "^[A-Za-z]{3,}")) {
+//                    JOptionPane.showMessageDialog(this, "Please enter valid name");
+//                    return;
+//                }
                 if (!isValid(phone, "[+]?[0-9]{10,13}")) {
                     JOptionPane.showMessageDialog(this, "Please enter valid phone number");
                     return;
@@ -542,10 +583,10 @@ public class ViewModifyCOPanel extends javax.swing.JPanel {
                     JOptionPane.showMessageDialog(this, "Please enter valid zip");
                     return;
                 }
-                if (!isValid(ngoAgent, "^[A-Za-z]{3,}")) {
-                    JOptionPane.showMessageDialog(this, "Please enter a valid name");
-                    return;
-                }
+//                if (!isValid(ngoAgent, "^[A-Za-z]{3,}")) {
+//                    JOptionPane.showMessageDialog(this, "Please enter a valid name");
+//                    return;
+//                }
                 if (!isValid(ngoUser, "^[a-zA-Z0-9._-]{6,}$")) {
                     JOptionPane.showMessageDialog(this, "Please enter a valid username of atleast 6 characters");
                     return;
@@ -576,7 +617,7 @@ public class ViewModifyCOPanel extends javax.swing.JPanel {
         // ecosystem.setFCWDirectory(fcWarehouseList);
         ngod = ecosystem.getcoDir();
         ecosystem.setNgoDir(ngod);
-        JOptionPane.showMessageDialog(this, "NGO details updated successfully");
+        JOptionPane.showMessageDialog(this, "Community Outreach details updated successfully");
         clearfields();
         populatengotable();
     }//GEN-LAST:event_btnCOUpdateActionPerformed

@@ -64,7 +64,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="100" y="80" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="20" y="80" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -83,7 +83,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="310" y="80" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="230" y="80" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -102,7 +102,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="600" y="80" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="630" y="80" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -130,14 +130,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Trebuchet MS" size="14" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Manage CO"/>
+                <Property name="text" type="java.lang.String" value="Manage Community Outreach"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageCOActionPerformed"/>
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="470" y="80" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="390" y="80" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -180,7 +180,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="740" y="80" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="770" y="80" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
