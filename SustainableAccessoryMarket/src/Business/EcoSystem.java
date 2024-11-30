@@ -238,7 +238,7 @@ public class EcoSystem extends Organization {
     private EcoSystem() {
         super("Sustainable Accessory Market");
         //this.requestorDir = new AccessoryRequestorDirectory();
-        this.donorDir = new AccessoryDonorDirectory();
+        //this.donorDir = new AccessoryDonorDirectory();
         //this.acDistributionHubDir = new DistributionHubDirectory();
         //this.coDir = new CommunityOutreachDirectory(userAccountDirectory);
         this.uaDir = new UserAccountDirectory(); // Initialize UserAccountDirectory
@@ -254,6 +254,7 @@ public class EcoSystem extends Organization {
         this.coDir = new CommunityOutreachDirectory(this.uaDir);
         this.acDistributionHubDir = new DistributionHubDirectory(this.uaDir);
         this.requestorDir = new AccessoryRequestorDirectory(this.uaDir);
+        this.donorDir = new AccessoryDonorDirectory(this.uaDir);
         
         
         this.donorsCnt = 0;

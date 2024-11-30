@@ -410,10 +410,10 @@ public class DonorProfilePanel extends javax.swing.JPanel {
                     String donUser = txtDonorUsername.getText();
                     String donPswd = txtDonorPassword.getText();
 
-                    if (!isValid(donName, "^[A-Za-z]{3,}")) {
-                        JOptionPane.showMessageDialog(this, "Please enter valid name");
-                        return;
-                    }
+//                    if (!isValid(donName, "^[A-Za-z]{3,}")) {
+//                        JOptionPane.showMessageDialog(this, "Please enter valid name");
+//                        return;
+//                    }
                     if (!isValid(phone, "[+]?[0-9]{10,13}")) {
                         JOptionPane.showMessageDialog(this, "Please enter valid phone number");
                         return;
@@ -443,10 +443,10 @@ public class DonorProfilePanel extends javax.swing.JPanel {
                         JOptionPane.showMessageDialog(this, "Please enter a valid password of atleast 8 characters in length. It must contain a number, a specicial character, a lowercase and an uppercase character.");
                         return;
                     }
-                    if (!isValid(donMail, "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$")) {
-                        JOptionPane.showMessageDialog(this, "Please enter a valid mail");
-                        return;
-                    }
+//                    if (!isValid(donMail, "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$")) {
+//                        JOptionPane.showMessageDialog(this, "Please enter a valid mail");
+//                        return;
+//                    }
 
                     d.setDonorName(txtDonorname.getText());
                     d.setDonorPhno(txtDonorPhone.getText());
@@ -457,6 +457,9 @@ public class DonorProfilePanel extends javax.swing.JPanel {
                     d.setDonorZipcode(txtDonorZip.getText());
                     d.setDonUserName(txtDonorUsername.getText());
                     d.setDonPwd(txtDonorPassword.getText());
+                    
+                    //d.getDonorAccount().setUsername(txtDonorUsername.getText());
+                    //d.getDonorAccount().setPassword(txtDonorPassword.getText());
                 }
             }
             // ecosystem.setFCWDirectory(fcWarehouseList);

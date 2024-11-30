@@ -95,35 +95,88 @@ public class AccessoryRequestorDirectory {
         // Add the first Accessory Requestor to the list
         this.reqAccList.add(requestor1);
         
+        Worker reqWorker2 = new Worker();
+        reqWorker2.setName("Personal Requestor Two");
+
+        UserAccount account2 = userAccountDirectory.createUserAccount(
+            "personalreqtwo",
+            "@Password123",
+            reqWorker2,
+            new PersonalRequestorRole()
+        );
+
+        // Create Accessory Requestor 1
+        AccessoryRequestor requestor2 = new AccessoryRequestor(account2);
+        requestor2.setReqId("REQ2");
+        requestor2.setReqName("Personal Requestor Two");
+        requestor2.setReqType("Personal");
+        requestor2.setReqQuan("60");
+        requestor2.setReqPhno("4564567890");
+        requestor2.setReqAddres("789 Oak Street");
+        requestor2.setReqCity("Boston");
+        requestor2.setReqState("MA");
+        requestor2.setReqZipcode("02117");
+        requestor2.setReqEmail("reqtwo@example.com");
+
+        // Add the first Accessory Requestor to the list
+        this.reqAccList.add(requestor2);
+        
         
         
 
         // Create Worker and UserAccount for Requestor 2
-        Worker reqWorker2 = new Worker();
-        reqWorker2.setName("Partner Requestor Two");
+        Worker reqWorker3 = new Worker();
+        reqWorker3.setName("Partner Requestor One");
 
-        UserAccount account2 = userAccountDirectory.createUserAccount(
-            "partnerreqtwo",
+        UserAccount account3 = userAccountDirectory.createUserAccount(
+            "partnerreqone",
             "@Password123",
-            reqWorker2,
+            reqWorker3,
             new PartnerRequesterRole()
         );
 
         // Create Accessory Requestor 2
-        AccessoryRequestor requestor2 = new AccessoryRequestor(account2);
-        requestor2.setReqId("REQ2");
-        requestor2.setReqName("Partner Requestor Two");
-        requestor2.setReqType("Partner");
-        requestor2.setReqQuan("200");
-        requestor2.setReqPhno("9876543210");
-        requestor2.setReqAddres("789 Maple Street");
-        requestor2.setReqCity("Cambridge");
-        requestor2.setReqState("MA");
-        requestor2.setReqZipcode("02139");
-        requestor2.setReqEmail("reqtwo@example.com");
+        AccessoryRequestor requestor3 = new AccessoryRequestor(account3);
+        requestor3.setReqId("REQ3");
+        requestor3.setReqName("Partner Requestor One");
+        requestor3.setReqType("Partner");
+        requestor3.setReqQuan("100");
+        requestor3.setReqPhno("9876543210");
+        requestor3.setReqAddres("123 Maple Street");
+        requestor3.setReqCity("Cambridge");
+        requestor3.setReqState("MA");
+        requestor3.setReqZipcode("02138");
+        requestor3.setReqEmail("partnerreqone@example.com");
 
         // Add the second Accessory Requestor to the list
-        this.reqAccList.add(requestor2);
+        this.reqAccList.add(requestor3);
+        
+        
+        Worker reqWorker4 = new Worker();
+        reqWorker4.setName("Partner Requestor Two");
+
+        UserAccount account4 = userAccountDirectory.createUserAccount(
+            "partnerreqtwo",
+            "@Password123",
+            reqWorker4,
+            new PartnerRequesterRole()
+        );
+
+        // Create Accessory Requestor 2
+        AccessoryRequestor requestor4 = new AccessoryRequestor(account4);
+        requestor4.setReqId("REQ4");
+        requestor4.setReqName("Partner Requestor Two");
+        requestor4.setReqType("Partner");
+        requestor4.setReqQuan("100");
+        requestor4.setReqPhno("9876543210");
+        requestor4.setReqAddres("123 Maple Street");
+        requestor4.setReqCity("Cambridge");
+        requestor4.setReqState("MA");
+        requestor4.setReqZipcode("02138");
+        requestor4.setReqEmail("partnerreqtwo@example.com");
+
+        // Add the second Accessory Requestor to the list
+        this.reqAccList.add(requestor4);
 
         // Debug messages to confirm initialization
         System.out.println("Default Accessory Requestors initialized.");
