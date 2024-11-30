@@ -447,7 +447,7 @@ public class ViewModifyDHPanel extends javax.swing.JPanel {
         }
         ecosystem.setdistributionHubCnt(whcnt - 1);
 
-        JOptionPane.showMessageDialog(this, "Warehouse deleted successfully");
+        JOptionPane.showMessageDialog(this, "Distribution Hub deleted successfully");
         populateWHtable();
         clearfields();
     }//GEN-LAST:event_btnWarehouseDeleteActionPerformed
