@@ -56,11 +56,60 @@ public class ViewModifyCOPanel extends javax.swing.JPanel {
         if (ecosystem.getcoDir() == null) {
             ecosystem.setNgoDir(new CommunityOutreachDirectory());
         }
+        addDummyData();
         populatengotable();
         txtCOuname.setEnabled(false);
         setBG();
         makeTableTransparent();
     }
+    
+    private void addDummyData() {
+    // Check if the list already has data to avoid duplication
+        if (!ecosystem.getcoDir().getNgoList().isEmpty()) {
+            return;
+        }
+
+        // Create dummy NGOs
+        CommunityOutreach ngo1 = new CommunityOutreach();
+        ngo1.setCOId("CO001");
+        ngo1.setCOName("Helping Hands");
+        ngo1.setCOAgent("Alice Johnson");
+        ngo1.setCOPhone("1234567890");
+        ngo1.setCOAddress("123 Main St");
+        ngo1.setCOCity("New York");
+        ngo1.setCOState("NY");
+        ngo1.setCOZipcode("10001");
+
+        UserAccount account1 = new UserAccount();
+        account1.setUsername("alice_johnson");
+        account1.setPassword("Password@123");
+        Worker worker1 = new Worker();
+        worker1.setName("Alice Johnson");
+        account1.setEmployee(worker1);
+        ngo1.setCOAccount(account1);
+
+        CommunityOutreach ngo2 = new CommunityOutreach();
+        ngo2.setCOId("CO002");
+        ngo2.setCOName("Care and Share");
+        ngo2.setCOAgent("Bob Smith");
+        ngo2.setCOPhone("9876543210");
+        ngo2.setCOAddress("456 Elm St");
+        ngo2.setCOCity("Los Angeles");
+        ngo2.setCOState("CA");
+        ngo2.setCOZipcode("90001");
+
+        UserAccount account2 = new UserAccount();
+        account2.setUsername("bob_smith");
+        account2.setPassword("Password@456");
+        Worker worker2 = new Worker();
+        worker2.setName("Bob Smith");
+        account2.setEmployee(worker2);
+        ngo2.setCOAccount(account2);
+
+        // Add the NGOs to the directory
+        ecosystem.getcoDir().addNewNGO(ngo1);
+        ecosystem.getcoDir().addNewNGO(ngo2);
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
