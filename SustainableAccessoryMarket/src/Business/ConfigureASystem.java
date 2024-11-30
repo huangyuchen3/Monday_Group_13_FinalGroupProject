@@ -13,19 +13,16 @@ public class ConfigureASystem {
     public static EcoSystem configure(){
         
         EcoSystem system = EcoSystem.getInstance();
-        
-        //Create a network
-        //create an enterprise
-        //initialize some organizations
-        //have some employees 
-        //create user account
-        
-        
-        Worker employee = system.getEmployeeDirectory().createEmployee("sysadmin");
-        
-        UserAccount ua = system.getUserAccountDirectory().createUserAccount("sysadmin", "sysadmin", employee, new SystemAdminRole());
-        
-        return system;
-    }
+
+    // Initialize system admin account
+    Worker adminWorker = system.getEmployeeDirectory().createEmployee("sysadmin");
+    system.getUserAccountDirectory().createUserAccount(
+        "sysadmin",
+        "sysadmin",
+        adminWorker,
+        new SystemAdminRole()
+    );
+
+    return system;}
     
 }
