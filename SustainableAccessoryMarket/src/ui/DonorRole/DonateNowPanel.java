@@ -64,6 +64,8 @@ public class DonateNowPanel extends javax.swing.JPanel {
         
         setBG();
         // setLogo();
+        lblDonateCity2.setVisible(false);
+        cbDonateCity.setVisible(false);
     }
 
     /**
