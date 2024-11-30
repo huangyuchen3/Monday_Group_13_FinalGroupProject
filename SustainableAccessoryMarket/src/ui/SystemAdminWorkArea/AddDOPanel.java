@@ -461,6 +461,9 @@ public class AddDOPanel extends javax.swing.JPanel {
 
                 ecosystem.setACDODirectory(fcpd);
                 Integer pantryCnt = ecosystem.getDropOffCnt();
+                if (pantryCnt == null) {
+                       pantryCnt = 0; // Default to 0 if it's null
+                }
                 ecosystem.setDropOffCnt(pantryCnt+1);
 
                 JOptionPane.showMessageDialog(this, "Drop-Off added successfully!");

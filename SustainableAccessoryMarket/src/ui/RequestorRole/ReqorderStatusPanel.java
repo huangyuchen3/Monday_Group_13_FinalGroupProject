@@ -61,7 +61,7 @@ public class ReqorderStatusPanel extends javax.swing.JPanel {
 
         lblFCRequestsTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
         lblFCRequestsTitle.setForeground(new java.awt.Color(102, 102, 255));
-        lblFCRequestsTitle.setText(" Food Requests");
+        lblFCRequestsTitle.setText(" Accessory Requests");
         add(lblFCRequestsTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         tblFCReq.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
@@ -73,7 +73,7 @@ public class ReqorderStatusPanel extends javax.swing.JPanel {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Request ID", "Pantry", "Quantity", "Order Type", "Status", "Donation ID"
+                "Request ID", "Drop off", "Quantity", "Order Type", "Status", "Donation ID"
             }
         ));
         tblFCReq.addMouseListener(new java.awt.event.MouseAdapter() {

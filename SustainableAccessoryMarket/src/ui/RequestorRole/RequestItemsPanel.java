@@ -323,8 +323,11 @@ public class RequestItemsPanel extends javax.swing.JPanel {
             rq.setReqZip(txtDelzip.getText());
             rqorD = ecosystem.getReqorderDirectory();
             rqorD.addNewReqorder(rq);
-            ecosystem.setReqorderDirectory(rqorD);
+            ecosystem.setReqorderDirectory(rqorD);// Make sure this updates the directory reference
             Integer reqCnt = ecosystem.getRequestCnt();
+            if (reqCnt == null) {
+                reqCnt = 0; // Default to 0 if it's null
+            }
             ecosystem.setRequestCnt(reqCnt + 1);
             JOptionPane.showMessageDialog(this, "Your request has been placed. We love to serve you soon!");
             clearfields();
