@@ -7,6 +7,8 @@ package ui.SystemAdminWorkArea;
 import Business.EcoSystem;
 import Business.DistributionHub.DistributionHub;
 import Business.DistributionHub.DistributionHubDirectory;
+import Business.UserAccount.UserAccount;
+import Business.Worker.Worker;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -42,11 +44,60 @@ public class ViewModifyDHPanel extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
+        addMockData();
         populateWHtable();
-        txtDistributionHubuname.setEnabled(false);
+        //txtDistributionHubuname.setEnabled(false);
         setBG();
         makeTableTransparent();
     }
+    
+    public void addMockData() {
+        // Create UserAccount for Central Hub
+        Worker worker1 = new Worker();
+        worker1.setName("John Doe");
+        UserAccount user1 = new UserAccount();
+        user1.setUsername("DHOne");
+        user1.setPassword("DHOne@123");
+        user1.setEmployee(worker1);
+
+        // Create Central Hub
+        DistributionHub dh1 = new DistributionHub();
+        dh1.setDistributionHubId("DH001");
+        dh1.setDistributionHubName("DistHubOne");
+        dh1.setDistributionHubPhone("1234567890");
+        dh1.setDistributionHubAddress("123 Main St");
+        dh1.setDistributionHubCity("Boston");
+        dh1.setDistributionHubState("MA");
+        dh1.setDistributionHubZipcode("02118");
+        dh1.setDistributionHubAdmin("DHAdminOne");
+        dh1.setDistributionHubAccount(user1); // Link the UserAccount to this hub
+
+        // Create UserAccount for East Hub
+        Worker worker2 = new Worker();
+        worker2.setName("DHtwo");
+        UserAccount user2 = new UserAccount();
+        user2.setUsername("DHTwo");
+        user2.setPassword("DHTwo@123");
+        user2.setEmployee(worker2);
+
+        // Create East Hub
+        DistributionHub dh2 = new DistributionHub();
+        dh2.setDistributionHubId("DH002");
+        dh2.setDistributionHubName("DistHubOne");
+        dh2.setDistributionHubPhone("9876543210");
+        dh2.setDistributionHubAddress("456 Elm St");
+        dh2.setDistributionHubCity("New York");
+        dh2.setDistributionHubState("NY");
+        dh2.setDistributionHubZipcode("10001");
+        dh2.setDistributionHubAdmin("DHAdminTwo");
+        dh2.setDistributionHubAccount(user2); // Link the UserAccount to this hub
+
+        // Add mock data to the DistributionHubDirectory
+        ecosystem.getACDDirectory().addNewDistributionHub(dh1);
+        ecosystem.getACDDirectory().addNewDistributionHub(dh2);
+        
+        ecosystem.setdistributionHubCnt(ecosystem.getdistributionHubCnt() + 2);
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -235,7 +286,6 @@ public class ViewModifyDHPanel extends javax.swing.JPanel {
         lblDistributionHubuname.setText("Distribution Hub Admin Username:");
         add(lblDistributionHubuname, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 500, -1, -1));
 
-        txtDistributionHubuname.setEditable(false);
         txtDistributionHubuname.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         txtDistributionHubuname.setPreferredSize(new java.awt.Dimension(150, 25));
         add(txtDistributionHubuname, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 498, 137, -1));
@@ -384,15 +434,20 @@ public class ViewModifyDHPanel extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model = (DefaultTableModel) tblWarehouseDetails.getModel();
-        DistributionHub selectedFCW = (DistributionHub) model.getValueAt(selectedRowIndex, 0);
+        DistributionHub selectedHub = (DistributionHub) model.getValueAt(selectedRowIndex, 0);
+
         ecosystem.getUserAccountDirectory().deleteUserAccount(
-                ecosystem.getACDDirectory().getFadList().get(selectedRowIndex).getDistributionHubAccount());
-        fcd = ecosystem.getACDDirectory();
-        fcd.deleteDistributionHub(selectedFCW);
-        ecosystem.setACDDirectory(fcd);
+            ecosystem.getACDDirectory().getFadList().get(selectedRowIndex).getDistributionHubAccount()
+        );
+        ecosystem.getACDDirectory().deleteDistributionHub(selectedHub);
+
         Integer whcnt = ecosystem.getdistributionHubCnt();
-        ecosystem.setdistributionHubCnt(whcnt-1);
-        JOptionPane.showMessageDialog(this, "warehouse deleted Successfully");
+        if (whcnt == null) {
+            whcnt = 0; // Fallback to 0 if null
+        }
+        ecosystem.setdistributionHubCnt(whcnt - 1);
+
+        JOptionPane.showMessageDialog(this, "Warehouse deleted successfully");
         populateWHtable();
         clearfields();
     }//GEN-LAST:event_btnWarehouseDeleteActionPerformed
