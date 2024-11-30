@@ -135,13 +135,17 @@ public class UserAccountDirectory {
 
     
     public UserAccount createUserAccount(String username, String password, Worker employee, Role role){
+        if (!checkIfUsernameIsUnique(username)) {
+            System.out.println("Username already exists: " + username);
+            return null; // Prevent duplicate accounts
+        }
         UserAccount userAccount = new UserAccount();
-    userAccount.setUsername(username);
-    userAccount.setPassword(password);
-    userAccount.setEmployee(employee);  // Associate the Worker object here
-    userAccount.setRole(role);
-    userAccList.add(userAccount);
-    return userAccount;
+        userAccount.setUsername(username);
+        userAccount.setPassword(password);
+        userAccount.setEmployee(employee);  // Associate the Worker object here
+        userAccount.setRole(role);
+        userAccList.add(userAccount);
+        return userAccount;
     }
     
     public boolean checkIfUsernameIsUnique(String username){
