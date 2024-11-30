@@ -6,6 +6,7 @@ package Business.DistributionHub;
 
 import java.util.ArrayList;
 import Business.DistributionHub.DistributionHubDirectory;
+import Business.EcoSystem;
 import Business.Role.DHManagerRole;
 import Business.UserAccount.UserAccount;
 import Business.UserAccount.UserAccountDirectory;
@@ -18,6 +19,7 @@ import Business.Worker.Worker;
 public class DistributionHubDirectory {
      ArrayList<DistributionHub> DistributionHubList;
      private UserAccountDirectory userAccountDirectory;
+     EcoSystem ecosystem;
 
      public DistributionHubDirectory(UserAccountDirectory userAccountDirectory){
         //DistributionHubList = new ArrayList<DistributionHub>();
@@ -40,9 +42,13 @@ public class DistributionHubDirectory {
         }
     }
     DistributionHubList.add(fac);
+    ecosystem.setdistributionHubCnt(ecosystem.getdistributionHubCnt() + 1); // Increment count only for new hubs
+
     }
     public void deleteDistributionHub(DistributionHub selectedfac){
-        DistributionHubList.remove(selectedfac);
+        if (DistributionHubList.remove(selectedfac)) {
+        ecosystem.setdistributionHubCnt(ecosystem.getdistributionHubCnt() - 1); // Decrement count
+    }
     }
     public String getDHname(String FCAname){
         String WHname;

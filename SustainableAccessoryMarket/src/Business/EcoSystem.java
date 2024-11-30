@@ -263,6 +263,7 @@ public class EcoSystem extends Organization {
     }
     
     private void addDefaultUserAccounts() {
+
         // Prevent duplicate initialization
         if (!uaDir.getUserAccountList().isEmpty()) {
             return; // Skip if accounts already exist
@@ -270,8 +271,6 @@ public class EcoSystem extends Organization {
         // Add default accounts here
         uaDir.createUserAccount("admin", "admin123", null, new SystemAdminRole());
         uaDir.createUserAccount("dhmanager1", "@Password123", null, new DHManagerRole());}
-
-
     
     public DropOffDirectory getDropOffDirectory() {
         return dropOffDirectory;
