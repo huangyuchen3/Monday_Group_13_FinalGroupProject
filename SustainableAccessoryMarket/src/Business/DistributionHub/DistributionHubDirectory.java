@@ -17,9 +17,13 @@ import Business.Worker.Worker;
  */
 public class DistributionHubDirectory {
      ArrayList<DistributionHub> DistributionHubList;
+     private UserAccountDirectory userAccountDirectory;
 
-     public DistributionHubDirectory(){
-         DistributionHubList = new ArrayList<DistributionHub>();
+     public DistributionHubDirectory(UserAccountDirectory userAccountDirectory){
+        //DistributionHubList = new ArrayList<DistributionHub>();
+        this.userAccountDirectory = userAccountDirectory;
+        this.DistributionHubList = new ArrayList<>();
+        initializeDefaultDistributionHubs(userAccountDirectory);
      }
     public ArrayList<DistributionHub> getFadList() {
         return DistributionHubList;
@@ -47,9 +51,9 @@ public class DistributionHubDirectory {
     public void initializeDefaultDistributionHubs(UserAccountDirectory userAccountDirectory) {
         // Create Worker and UserAccount for the first hub
         Worker admin1 = new Worker();
-        admin1.setName("Admin One");
+        admin1.setName("Distribution Hub Manager One");
         UserAccount account1 = userAccountDirectory.createUserAccount(
-            "hubadmin1",
+            "dhmanager1",
             "@Password123",
             admin1,
             new DHManagerRole()
@@ -69,9 +73,9 @@ public class DistributionHubDirectory {
 
         // Create Worker and UserAccount for the second hub
         Worker admin2 = new Worker();
-        admin2.setName("Admin Two");
+        admin2.setName("Distribution Hub Manager Two");
         UserAccount account2 = userAccountDirectory.createUserAccount(
-            "hubadmin2",
+            "dhmanager2",
             "@Password123",
             admin2,
             new DHManagerRole()
