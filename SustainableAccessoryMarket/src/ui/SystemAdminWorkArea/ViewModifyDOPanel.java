@@ -304,7 +304,7 @@ public class ViewModifyDOPanel extends javax.swing.JPanel {
         ecosystem.setACDODirectory(fcpd);
         Integer pantryCnt = ecosystem.getDropOffCnt();
         ecosystem.setDropOffCnt(pantryCnt-1);
-        JOptionPane.showMessageDialog(this, "pantry deleted Successfully");
+        JOptionPane.showMessageDialog(this, "Drop Off store deleted Successfully");
         populatePantryTable();
         clearfields();
     }//GEN-LAST:event_btnDropOffDeleteActionPerformed
