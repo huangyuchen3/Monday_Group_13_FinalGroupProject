@@ -64,6 +64,10 @@ public class ViewAllStatsPanel extends javax.swing.JPanel {
         jLabel3.setText(ecosystem.getRequestorsCnt().toString());
         jLabel1.setText(ecosystem.getVolunteersCnt().toString());
         //showPieChart();
+        jLabel2.setVisible(false);
+        jLabel3.setVisible(false);
+        jLabel1.setVisible(false);
+        jButton1.setVisible(false);
 
     }
 
@@ -85,7 +89,7 @@ public class ViewAllStatsPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(2000, 1100));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -122,7 +126,7 @@ public class ViewAllStatsPanel extends javax.swing.JPanel {
             tblViewUsers.getColumnModel().getColumn(3).setResizable(false);
         }
 
-        add(jScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 150, 990, 212));
+        add(jScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 990, 212));
         add(logoImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 90, 80));
 
         jLabel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 51, 0)), "no. of Donars", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 0, 18), new java.awt.Color(255, 51, 0)), "no.of Volunteers", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Helvetica Neue", 0, 18), new java.awt.Color(255, 0, 51))); // NOI18N

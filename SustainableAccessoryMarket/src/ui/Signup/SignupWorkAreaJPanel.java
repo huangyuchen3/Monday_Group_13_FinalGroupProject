@@ -13,6 +13,8 @@ import Business.Role.PersonalRequestorRole;
 import Business.Worker.Worker;
 import Business.AccessoryRequestor.AccessoryRequestor;
 import Business.AccessoryRequestor.AccessoryRequestorDirectory;
+import Business.Role.PartnerDonorRole;
+import Business.Role.PartnerRequesterRole;
 //import Business.Mail.JavaMailUtil;
 //import Business.Role.CustomerRole;
 
@@ -576,84 +578,113 @@ public class SignupWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_txtSignupEmailFocusLost
 
     private void submiitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submiitBtnActionPerformed
-        //if (txtverificationCode.getText().equals(verificationCode)) {
-
-            UserAccountDirectory usersList = ecosystem.getUserAccountDirectory();
-            String role = (String) cmbIAM.getSelectedItem();
-            Worker employee = new Worker();
-            employee.setName(txtSignupName.getText());
-            boolean userDoNotExists = true;
-            ArrayList<UserAccount> users = usersList.getUserAccountList();
-            for (UserAccount ua : users) {
-                if (ua.getUsername().equals(txtSignupUserName.getText())) {
-                    userDoNotExists = false;
-                }
+    UserAccountDirectory usersList = ecosystem.getUserAccountDirectory();
+        String role = (String) cmbIAM.getSelectedItem();
+        Worker employee = new Worker();
+        employee.setName(txtSignupName.getText());
+        boolean userDoNotExists = true;
+        ArrayList<UserAccount> users = usersList.getUserAccountList();
+        for (UserAccount ua : users) {
+            if (ua.getUsername().equals(txtSignupUserName.getText())) {
+                userDoNotExists = false;
             }
+        }
 
-            if (userDoNotExists) {
-                if (txtSignupPwd.getText().equals(txtSignupCPWD.getText())) {
-                    switch (role) {
-                        case "Accessory Requestor":
+        if (userDoNotExists) {
+            if (txtSignupPwd.getText().equals(txtSignupCPWD.getText())) {
+                switch (role) {
+                    case "Accessory Requestor":
+                        //usersList.createUserAccount(txtSignupUserName.getText(), txtSignupPwd.getText(), employee, new PersonalRequestorRole());
+                        if (rdSignupPersonal.isSelected()) {
+                            // Personal Requestor Role
                             usersList.createUserAccount(txtSignupUserName.getText(), txtSignupPwd.getText(), employee, new PersonalRequestorRole());
-                            ua = usersList.getUserAccount(txtSignupUserName.getText());
-                            req = new AccessoryRequestor(ua);
-                            req.setReqType(getReqType());
-                            req.setReqName(txtSignupName.getText());
-                            req.setReqAddres(txtSignupAddrss1.getText());
-                            req.setReqCity(txtSignupUserCity.getText());
-                            req.setReqState(txtSignupState.getText());
-                            req.setReqEmail(txtSignupEmail.getText());
-                            req.setReqPhno(txtSignupPhone.getText());
-                            req.setReqZipcode(txtSignupZipCode.getText());
-                            req.setReqUserName(txtSignupUserName.getText());
-                            req.setReqPwd(txtSignupPwd.getText());
+                        } else if (rdSignupPartner.isSelected()) {
+                            // Partner Requestor Role (if applicable in your system)
+                            usersList.createUserAccount(txtSignupUserName.getText(), txtSignupPwd.getText(), employee, new PartnerRequesterRole());
+    }
+                        ua = usersList.getUserAccount(txtSignupUserName.getText());
+                        req = new AccessoryRequestor(ua);
+                        req.setReqType(getReqType());
+                        req.setReqName(txtSignupName.getText());
+                        req.setReqAddres(txtSignupAddrss1.getText());
+                        req.setReqCity(txtSignupUserCity.getText());
+                        req.setReqState(txtSignupState.getText());
+                        req.setReqEmail(txtSignupEmail.getText());
+                        req.setReqPhno(txtSignupPhone.getText());
+                        req.setReqZipcode(txtSignupZipCode.getText());
+                        req.setReqUserName(txtSignupUserName.getText());
+                        req.setReqPwd(txtSignupPwd.getText());
 
-                            rd = ecosystem.getReqDir();
-                            rd.addReqDir(req);
-                            ecosystem.setReqDir(rd);
-                            if (donorFlag == true && organisationFlag == false && restaurantFlag == false) {
-                                Integer reqstorCnt = ecosystem.getRequestorsCnt();
-                                ecosystem.setRequestorsCnt(reqstorCnt + 1);
-                            } else if (donorFlag == false && organisationFlag == true && restaurantFlag == false) {
-                                Integer orgCnt = ecosystem.getOrganisationsCnt();
-                                ecosystem.setOrganisationsCnt(orgCnt + 1);
-                            }
+                        rd = ecosystem.getReqDir();
+                        rd.addReqDir(req);
+                        ecosystem.setReqDir(rd);
+                        
+                        Integer reqCnt = ecosystem.getRequestorsCnt();
+                        ecosystem.setRequestorsCnt(reqCnt + 1);
 
-                            break;
 
-                        case "Accessory Donor":
+//                        if (donorFlag && !organisationFlag && !restaurantFlag) {
+//                            Integer reqstorCnt = ecosystem.getRequestorsCnt();
+//                            ecosystem.setRequestorsCnt(reqstorCnt + 1);
+//                        } else if (!donorFlag && organisationFlag && !restaurantFlag) {
+//                            Integer orgCnt = ecosystem.getOrganisationsCnt();
+//                            ecosystem.setOrganisationsCnt(orgCnt + 1);
+//                        }
+//                        break;
+
+                    case "Accessory Donor":
+                        if (rdSignupPersonal.isSelected()) {
+                            // Assign Personal Donor Role
                             usersList.createUserAccount(txtSignupUserName.getText(), txtSignupPwd.getText(), employee, new PersonalDonorRole());
-                            ua = usersList.getUserAccount(txtSignupUserName.getText());
-                            don = new AccessoryDonor(ua);
-                            don.setDonorType(role);
+                        } else if (rdSignupPartner.isSelected()) {
+                            // Assign Partner Donor Role (create this role if it doesn't exist)
+                            usersList.createUserAccount(txtSignupUserName.getText(), txtSignupPwd.getText(), employee, new PartnerDonorRole());
+                        }
+                        //usersList.createUserAccount(txtSignupUserName.getText(), txtSignupPwd.getText(), employee, new PersonalDonorRole());
+                        ua = usersList.getUserAccount(txtSignupUserName.getText());
+                        don = new AccessoryDonor(ua);
+                        don.setDonorType(role);
+                        don.setDonorName(txtSignupName.getText());
+                        don.setDonorAddres(txtSignupAddrss1.getText());
+                        don.setDonorCity(txtSignupUserCity.getText());
+                        don.setDonorState(txtSignupState.getText());
+                        don.setDonorEmail(txtSignupEmail.getText());
+                        don.setDonorPhno(txtSignupPhone.getText());
+                        don.setDonorZipcode(txtSignupZipCode.getText());
+                        don.setDonUserName(txtSignupUserName.getText());
+                        don.setDonPwd(txtSignupPwd.getText());
 
-                            don.setDonorName(txtSignupName.getText());
-                            don.setDonorAddres(txtSignupAddrss1.getText());
-                            don.setDonorCity(txtSignupUserCity.getText());
-                            don.setDonorState(txtSignupState.getText());
-                            don.setDonorEmail(txtSignupEmail.getText());
-                            don.setDonorPhno(txtSignupPhone.getText());
-                            don.setDonorZipcode(txtSignupZipCode.getText());
-                            don.setDonPwd(txtSignupUserName.getText());
-                            don.setDonPwd(txtSignupPwd.getText());
-                            if (donorFlag == true && organisationFlag == false && restaurantFlag == false) {
-                                Integer donCnt = ecosystem.getDonorsCnt();
-                                ecosystem.setDonorsCnt(donCnt + 1);
-                            } else if (donorFlag == false && organisationFlag == true && restaurantFlag == false) {
-                                Integer orgCnt = ecosystem.getOrganisationsCnt();
-                                ecosystem.setOrganisationsCnt(orgCnt + 1);
-                            } else if (donorFlag == false && organisationFlag == false && restaurantFlag == true) {
-                                Integer restaurantCnt = ecosystem.getshopCnt();
-                                ecosystem.setRestaurentCnt(restaurantCnt + 1);
-                            }
+                        dd = ecosystem.getDonDir();
+                        dd.addDonDir(don);
+                        ecosystem.setDonDir(dd);
+                        
+                        Integer donCnt = ecosystem.getDonorsCnt();
+                        ecosystem.setDonorsCnt(donCnt + 1);
 
-                            break;
-                        default:
-                            break;
-
-                    }
+//                        if (donorFlag && !organisationFlag && !restaurantFlag) {
+//                            Integer donCnt = ecosystem.getDonorsCnt();
+//                            ecosystem.setDonorsCnt(donCnt + 1);
+//                        } else if (!donorFlag && organisationFlag && !restaurantFlag) {
+//                            Integer orgCnt = ecosystem.getOrganisationsCnt();
+//                            ecosystem.setOrganisationsCnt(orgCnt + 1);
+//                        } else if (!donorFlag && !organisationFlag && restaurantFlag) {
+//                            Integer restaurantCnt = ecosystem.getshopCnt();
+//                            ecosystem.setRestaurentCnt(restaurantCnt + 1);
+//                        }
+                        break;
+                    default:
+                        break;
                 }
+
+                // Success message
+                JOptionPane.showMessageDialog(this, "Signup Successful! Welcome, " + txtSignupName.getText());
+                clearFields(); // Clear the form fields after successful signup
+            } else {
+                JOptionPane.showMessageDialog(this, "Password and Confirm Password do not match.");
             }
+        } else {
+            JOptionPane.showMessageDialog(this, "Username already exists. Please choose a different username.");
+        }
 
 //                    try {
 ////                logger.log(Level.INFO, "Sending email to new user");

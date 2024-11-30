@@ -385,7 +385,7 @@ public class AddDHPanel extends javax.swing.JPanel {
                 ecosystem.setUserAccountDirectory(uad);
                 Integer whcnt = ecosystem.getdistributionHubCnt();
                 ecosystem.setdistributionHubCnt(whcnt+1);
-                JOptionPane.showMessageDialog(this, "warehouse added successfully!");
+                JOptionPane.showMessageDialog(this, "Distribution Hub added successfully!");
                 clearfields();
             } else {
                 JOptionPane.showMessageDialog(this, "Password Mismatch. Please verify the password entered.");
