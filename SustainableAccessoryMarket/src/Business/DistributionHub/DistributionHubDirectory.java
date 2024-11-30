@@ -24,6 +24,7 @@ public class DistributionHubDirectory {
      public DistributionHubDirectory(UserAccountDirectory userAccountDirectory){
         //DistributionHubList = new ArrayList<DistributionHub>();
         this.userAccountDirectory = userAccountDirectory;
+        this.ecosystem = ecosystem; // Assign ecosystem
         this.DistributionHubList = new ArrayList<>();
         initializeDefaultDistributionHubs(userAccountDirectory);
      }
@@ -35,20 +36,37 @@ public class DistributionHubDirectory {
         this.DistributionHubList = DistributionHubIdList;
     }
     public void addNewDistributionHub(DistributionHub fac){
+//        for (DistributionHub existingHub : DistributionHubList) {
+//        if (existingHub.getDistributionHubId().equals(fac.getDistributionHubId())) {
+//            System.out.println("Duplicate Distribution Hub ID detected: " + fac.getDistributionHubId());
+//            return; // Prevent duplicate addition
+//        }
+//    }
+//    DistributionHubList.add(fac);
+//    ecosystem.setdistributionHubCnt(ecosystem.getdistributionHubCnt() + 1); // Increment count only for new hubs
         for (DistributionHub existingHub : DistributionHubList) {
-        if (existingHub.getDistributionHubId().equals(fac.getDistributionHubId())) {
-            System.out.println("Duplicate Distribution Hub ID detected: " + fac.getDistributionHubId());
-            return; // Prevent duplicate addition
+            if (existingHub.getDistributionHubId().equals(fac.getDistributionHubId())) {
+                System.out.println("Duplicate Distribution Hub ID detected: " + fac.getDistributionHubId());
+                return; // Prevent duplicate addition
+            }
         }
-    }
-    DistributionHubList.add(fac);
-    ecosystem.setdistributionHubCnt(ecosystem.getdistributionHubCnt() + 1); // Increment count only for new hubs
+        DistributionHubList.add(fac);
+
+        // Increment count only if ecosystem is valid
+        if (ecosystem != null) {
+            ecosystem.setdistributionHubCnt(ecosystem.getdistributionHubCnt() + 1);
+        }
 
     }
     public void deleteDistributionHub(DistributionHub selectedfac){
+//        if (DistributionHubList.remove(selectedfac)) {
+//        ecosystem.setdistributionHubCnt(ecosystem.getdistributionHubCnt() - 1); // Decrement count
+//    }
         if (DistributionHubList.remove(selectedfac)) {
-        ecosystem.setdistributionHubCnt(ecosystem.getdistributionHubCnt() - 1); // Decrement count
-    }
+            if (ecosystem != null) {
+                ecosystem.setdistributionHubCnt(ecosystem.getdistributionHubCnt() - 1);
+            }
+        }
     }
     public String getDHname(String FCAname){
         String WHname;
@@ -65,6 +83,9 @@ public class DistributionHubDirectory {
         if (!DistributionHubList.isEmpty()) {
             // Prevent re-initialization
             return;
+        }
+        if (ecosystem != null) {
+            ecosystem.setdistributionHubCnt(DistributionHubList.size());
         }
         Worker admin1 = new Worker();
         admin1.setName("Distribution Hub Manager One");

@@ -257,10 +257,21 @@ public class EcoSystem extends Organization {
         this.donorDir = new AccessoryDonorDirectory(this.uaDir);
         
         
-        this.donorsCnt = 0;
-        this.distributionHubCnt = 0; 
-        this.requestorsCnt = 0;
-        this.volunteersCnt = 0;
+//        this.donorsCnt = 0;
+//        this.distributionHubCnt = 0; 
+//        this.requestorsCnt = 0;
+//        this.volunteersCnt = 0;
+        
+        
+        this.donorsCnt = 4; // Example default value
+        this.distributionHubCnt = 2;
+        this.requestorsCnt = 4;
+        this.volunteersCnt = 4;
+        this.DropOffCnt = 2;
+        this.coCnt = 2;
+        this.organisationsCnt = 2;
+        this.donationCnt = 10;
+        this.requestCnt = 10;
     }
     
     private void addDefaultUserAccounts() {
