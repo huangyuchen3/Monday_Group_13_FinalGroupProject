@@ -15,6 +15,10 @@ public class DistributionHub {
     private String DistributionHubName;
     private String DistributionHubPhone;
     private String DistributionHubAddress;
+
+    public void setDistributionHubCity(String DistributionHubCity) {
+        this.DistributionHubCity = DistributionHubCity;
+    }
     private String DistributionHubCity;
     private String DistributionHubState;
     private String DistributionHubZipcode;

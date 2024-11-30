@@ -252,7 +252,10 @@ public class EcoSystem extends Organization {
 
         // Initialize DropOffDirectory with UserAccountDirectory
         this.dropOffDirectory = new DropOffDirectory(this.uaDir);
-        //this.dropOffDirectory.initializeDefaultDropOffStores(this.uaDir); // Initialize default stores
+        this.donorsCnt = 0;
+        this.distributionHubCnt = 0; 
+        this.requestorsCnt = 0;
+        this.volunteersCnt = 0;
     }
 
 
