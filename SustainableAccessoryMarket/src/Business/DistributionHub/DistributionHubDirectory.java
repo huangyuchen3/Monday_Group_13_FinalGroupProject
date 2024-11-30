@@ -33,7 +33,13 @@ public class DistributionHubDirectory {
         this.DistributionHubList = DistributionHubIdList;
     }
     public void addNewDistributionHub(DistributionHub fac){
-        DistributionHubList.add(fac);
+        for (DistributionHub existingHub : DistributionHubList) {
+        if (existingHub.getDistributionHubId().equals(fac.getDistributionHubId())) {
+            System.out.println("Duplicate Distribution Hub ID detected: " + fac.getDistributionHubId());
+            return; // Prevent duplicate addition
+        }
+    }
+    DistributionHubList.add(fac);
     }
     public void deleteDistributionHub(DistributionHub selectedfac){
         DistributionHubList.remove(selectedfac);
@@ -50,6 +56,10 @@ public class DistributionHubDirectory {
     
     public void initializeDefaultDistributionHubs(UserAccountDirectory userAccountDirectory) {
         // Create Worker and UserAccount for the first hub
+        if (!DistributionHubList.isEmpty()) {
+            // Prevent re-initialization
+            return;
+        }
         Worker admin1 = new Worker();
         admin1.setName("Distribution Hub Manager One");
         UserAccount account1 = userAccountDirectory.createUserAccount(
