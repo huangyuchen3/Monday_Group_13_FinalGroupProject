@@ -123,6 +123,11 @@ public class RequestorProfilePanel extends javax.swing.JPanel {
                 txtReqNameFocusLost(evt);
             }
         });
+        txtReqName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtReqNameActionPerformed(evt);
+            }
+        });
         add(txtReqName, new org.netbeans.lib.awtextra.AbsoluteConstraints(476, 91, 137, -1));
 
         lblReqName.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
@@ -485,6 +490,10 @@ public class RequestorProfilePanel extends javax.swing.JPanel {
         disableFields();
 
     }//GEN-LAST:event_btnReqCancelActionPerformed
+
+    private void txtReqNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReqNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtReqNameActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
