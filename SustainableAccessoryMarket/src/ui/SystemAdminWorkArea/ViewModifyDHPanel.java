@@ -490,10 +490,10 @@ public class ViewModifyDHPanel extends javax.swing.JPanel {
                 String whUser = txtDistributionHubuname.getText();
                 String whPswd = txtDistributionHubAdminpwd.getText();
 
-                if (!isValid(whName, "^[A-Za-z]{3,}")) {
-                    JOptionPane.showMessageDialog(this, "Please enter valid name");
-                    return;
-                }
+//                if (!isValid(whName, "^[A-Za-z]{3,}")) {
+//                    JOptionPane.showMessageDialog(this, "Please enter valid name");
+//                    return;
+//                }
                 if (!isValid(phone, "[+]?[0-9]{10,13}")) {
                     JOptionPane.showMessageDialog(this, "Please enter valid phone number");
                     return;
@@ -510,10 +510,10 @@ public class ViewModifyDHPanel extends javax.swing.JPanel {
                     JOptionPane.showMessageDialog(this, "Please enter valid zip");
                     return;
                 }
-                if (!isValid(whAdmin, "^[A-Za-z]{3,}")) {
-                    JOptionPane.showMessageDialog(this, "Please enter a valid name");
-                    return;
-                }
+//                if (!isValid(whAdmin, "^[A-Za-z]{3,}")) {
+//                    JOptionPane.showMessageDialog(this, "Please enter a valid name");
+//                    return;
+//                }
                 if (!isValid(whUser, "^[a-zA-Z0-9._-]{6,}$")) {
                     JOptionPane.showMessageDialog(this, "Please enter a valid username of atleast 6 characters");
                     return;
