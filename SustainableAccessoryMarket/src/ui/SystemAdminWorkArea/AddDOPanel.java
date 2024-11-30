@@ -45,16 +45,21 @@ public class AddDOPanel extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
+
+        // Use the UserAccountDirectory from EcoSystem
         if (ecosystem.getACDOFDirectory() == null) {
-            ecosystem.setACDODirectory(new DropOffDirectory());
+            ecosystem.setACDODirectory(new DropOffDirectory(ecosystem.getUserAccountDirectory()));
         }
-        ArrayList<String> whList = new ArrayList<String>();
+
+        // Populate Distribution Hub ComboBox
+        ArrayList<String> whList = new ArrayList<>();
         for (DistributionHub fcw : ecosystem.getACDDirectory().getFadList()) {
             whList.add(fcw.getDistributionHubName());
         }
-        cbDistributionHub.setModel(new DefaultComboBoxModel<String>(whList.toArray(new String[0])));
+        cbDistributionHub.setModel(new DefaultComboBoxModel<>(whList.toArray(new String[0])));
         setBG();
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.

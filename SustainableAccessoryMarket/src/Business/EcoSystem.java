@@ -57,6 +57,8 @@ public class EcoSystem extends Organization {
     private Integer shopCnt;
     private Integer donationCnt;
     private Integer requestCnt;
+    private DropOffDirectory dropOffDirectory;
+    private UserAccountDirectory userAccountDirectory;
 
     public Integer getshopCnt() {
         return shopCnt;
@@ -240,29 +242,29 @@ public class EcoSystem extends Organization {
         this.donorDir = new AccessoryDonorDirectory();
         this.acDistributionHubDir = new DistributionHubDirectory();
         this.coDir = new CommunityOutreachDirectory();
-        this.acDropOffDir = new DropOffDirectory();
-        this.uaDir = new UserAccountDirectory();
+        this.uaDir = new UserAccountDirectory(); // Initialize UserAccountDirectory
         this.acDropOffItemsDir = new DropOffItemsDirectory();
         this.volunteerDir = new COVolunteerDirectory();
         this.donationDir = new AccessoryDonationDirectory();
         this.volunteerRequestsDir = new COVolunteerRequestsDirectory();
         this.donationCounttId = 1;
         this.requestorCountID = 1;
-      
-        
-        this.distributionHubCnt = 0;
-        this.DropOffCnt = 0;
-        this.coCnt = 0;
-        this.volunteersCnt = 0;
-        this.donorsCnt = 0;
-        this.requestorsCnt = 0;
-        this.organisationsCnt = 0;
-        this.shopCnt = 0;
-        this.donationCnt = 0;
-        this.requestCnt = 0;
-        System.out.println(this.donationCounttId + "sati");
-        // networkList=new ArrayList<Network>();
+
+        // Initialize DropOffDirectory with UserAccountDirectory
+        this.dropOffDirectory = new DropOffDirectory(this.uaDir);
+        //this.dropOffDirectory.initializeDefaultDropOffStores(this.uaDir); // Initialize default stores
     }
+
+
+    
+    public DropOffDirectory getDropOffDirectory() {
+        return dropOffDirectory;
+    }
+
+    public UserAccountDirectory getUserAccountDirectory() {
+        return this.uaDir;
+    }
+
 
     public boolean checkIfUserIsUnique(String userName) {
         UserAccountDirectory usersList = business.getUserAccountDirectory();

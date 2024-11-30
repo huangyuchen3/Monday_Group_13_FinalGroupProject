@@ -43,7 +43,7 @@ public class ViewModifyDOPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
         populatePantryTable();
-        txtDropOffuname.setEnabled(false);
+        //txtDropOffuname.setEnabled(false);
 
         setBG();
         makeTableTransparent();
@@ -444,10 +444,10 @@ public class ViewModifyDOPanel extends javax.swing.JPanel {
                 String panUser = txtDropOffuname.getText();
                 String panPswd = txtDropOffpwd.getText();
 
-                if (!isValid(panName, "^[A-Za-z]{3,}")) {
-                    JOptionPane.showMessageDialog(this, "Please enter valid name");
-                    return;
-                }
+//                if (!isValid(panName, "^[A-Za-z]{3,}")) {
+//                    JOptionPane.showMessageDialog(this, "Please enter valid name");
+//                    return;
+//                }
                 if (!isValid(phone, "[+]?[0-9]{10,13}")) {
                     JOptionPane.showMessageDialog(this, "Please enter valid phone number");
                     return;
@@ -464,10 +464,10 @@ public class ViewModifyDOPanel extends javax.swing.JPanel {
                     JOptionPane.showMessageDialog(this, "Please enter valid zip");
                     return;
                 }
-                if (!isValid(panManager, "^[A-Za-z]{3,}")) {
-                    JOptionPane.showMessageDialog(this, "Please enter a valid name");
-                    return;
-                }
+//                if (!isValid(panManager, "^[A-Za-z]{3,}")) {
+//                    JOptionPane.showMessageDialog(this, "Please enter a valid name");
+//                    return;
+//                }
                 if (!isValid(panUser, "^[a-zA-Z0-9._-]{6,}$")) {
                     JOptionPane.showMessageDialog(this, "Please enter a valid username of atleast 6 characters");
                     return;
