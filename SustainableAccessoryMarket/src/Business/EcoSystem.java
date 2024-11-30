@@ -259,6 +259,16 @@ public class EcoSystem extends Organization {
         this.requestorsCnt = 0;
         this.volunteersCnt = 0;
     }
+    
+    private void addDefaultUserAccounts() {
+    // Prevent duplicate initialization
+    if (!uaDir.getUserAccountList().isEmpty()) {
+        return; // Skip if accounts already exist
+    }
+
+    // Add default accounts here
+    uaDir.createUserAccount("admin", "admin123", null, new SystemAdminRole());
+    uaDir.createUserAccount("dhmanager1", "@Password123", null, new DHManagerRole());}
 
 
     
