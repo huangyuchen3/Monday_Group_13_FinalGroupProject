@@ -48,7 +48,7 @@ public class AddDHPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
         if (ecosystem.getACDOFDirectory() == null) {
-            ecosystem.setACDDirectory(new DistributionHubDirectory());
+            ecosystem.setACDDirectory(new DistributionHubDirectory(ecosystem.getUserAccountDirectory()));
         }
 
         setBG();

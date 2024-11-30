@@ -40,7 +40,7 @@ public class DropOffDirectory {
     
     public void initializeDefaultDropOffStores(UserAccountDirectory userAccountDirectory) {
         Worker manager1 = new Worker();
-        manager1.setName("Manager one");
+        manager1.setName("DropOff Store Manager one");
         UserAccount account1 = userAccountDirectory.createUserAccount(
             "domanager1",
             "@Password123",
@@ -64,7 +64,7 @@ public class DropOffDirectory {
         
         // Create Worker for Manager 2
         Worker manager2 = new Worker();
-        manager2.setName("Manager two");
+        manager2.setName("DropOff Store Manager two");
 
         // Create UserAccount for Manager 2
         UserAccount account2 = userAccountDirectory.createUserAccount(

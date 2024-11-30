@@ -54,7 +54,7 @@ public class AddCOPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
         if (ecosystem.getcoDir() == null) {
-            ecosystem.setNgoDir(new CommunityOutreachDirectory());
+            ecosystem.setNgoDir(new CommunityOutreachDirectory(ecosystem.getUserAccountDirectory()));
         }
 
         setBG();
