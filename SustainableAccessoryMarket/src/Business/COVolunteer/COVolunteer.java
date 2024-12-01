@@ -23,7 +23,17 @@ public class COVolunteer {
     private String volunteerExp;
     private String volunteerAvail;
     private String volunteerCO;
+    private String managerUsername;
 
+    
+    public String getManagerUsername() {
+        return managerUsername;
+    }
+
+    public void setManagerUsername(String managerUsername) {
+        this.managerUsername = managerUsername;
+    }
+    
     public String getVolCO() {
         return volunteerCO;
     }

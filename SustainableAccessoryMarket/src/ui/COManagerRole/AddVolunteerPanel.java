@@ -38,13 +38,15 @@ public class AddVolunteerPanel extends javax.swing.JPanel {
     UserAccountDirectory uad;
     COVolunteerDirectory vold;
     String coName;
+    private UserAccount userAcc;
 
     public AddVolunteerPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount userAcc) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
+        this.userAcc = userAcc;
         if (ecosystem.getVolDir() == null) {
-            ecosystem.setVolDir(new COVolunteerDirectory());
+            ecosystem.setVolDir(new COVolunteerDirectory(ecosystem.getUserAccountDirectory()));
         }
         setBG();
         coName = userAcc.getEmployee().getName();
@@ -459,6 +461,9 @@ public class AddVolunteerPanel extends javax.swing.JPanel {
                 volAccount.setEmployee(employee);
                 vol.setVolAvail("New");
                 vol.setVolCO(coName);
+                
+                vol.setManagerUsername(userAcc.getUsername());
+                
                 uad = ecosystem.getUserAccountDirectory();
                 uad.createUserAccount(txtVolunteeruname.getText(), txtVolunteerpwd.getText(), employee, new Volunteer());
                 ecosystem.setUserAccountDirectory(uad);

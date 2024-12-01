@@ -298,11 +298,35 @@ public class RequestsPanel extends javax.swing.JPanel {
             }
         }
     }
+    
+    
 
+//    private void populateVTable() {
+//        DefaultTableModel model = (DefaultTableModel) tblDistributionHub.getModel();
+//        model.setRowCount(0);
+//        for (COVolunteer vol : ecosystem.getVolDir().getVolunteerList()) {
+//            if (vol.getVolCO().equals(ngoAName)) {
+//                Object[] row = new Object[6];
+//                row[0] = vol;
+//                row[1] = vol.getVolName();
+//                row[2] = vol.getVolAddress();
+//                row[3] = vol.getVolCity();
+//                row[4] = vol.getVolZipcode();
+//                row[5] = vol.getVolAvail();
+//                model.addRow(row);
+//            }
+//        }
+//    }
+    
     private void populateVTable() {
         DefaultTableModel model = (DefaultTableModel) tblDistributionHub.getModel();
         model.setRowCount(0);
         for (COVolunteer vol : ecosystem.getVolDir().getVolunteerList()) {
+            // Check if getVolCO() is null
+            if (vol.getVolCO() == null) {
+                System.out.println("COVolunteer object has a null volCO value for volunteer: " + vol.getVolName());
+                continue; // Skip this volunteer
+            }
             if (vol.getVolCO().equals(ngoAName)) {
                 Object[] row = new Object[6];
                 row[0] = vol;
@@ -314,5 +338,6 @@ public class RequestsPanel extends javax.swing.JPanel {
                 model.addRow(row);
             }
         }
-    }
+}
+
 }

@@ -38,18 +38,21 @@ public class ViewModifyVolunteerPanel extends javax.swing.JPanel {
     EcoSystem ecosystem;
     COVolunteerDirectory vold;
     String nogName;
+    private UserAccount userAcc;
 
     public ViewModifyVolunteerPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount userAcc) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
         if (ecosystem.getVolDir() == null) {
-            ecosystem.setVolDir(new COVolunteerDirectory());
+            ecosystem.setVolDir(new COVolunteerDirectory(ecosystem.getUserAccountDirectory()));
         }
+        this.userAcc = userAcc;
         nogName = userAcc.getEmployee().getName();
         populatevoltable();
         setBG();
         makeTableTransparent1();
+        
     }
 
     /**
@@ -575,11 +578,32 @@ public class ViewModifyVolunteerPanel extends javax.swing.JPanel {
         lblvolunteerid1.setText("");
     }
 
+//    private void populatevoltable() {
+//        DefaultTableModel model = (DefaultTableModel) tblViewVolunteer.getModel();
+//        model.setRowCount(0);
+//        for (COVolunteer vol : ecosystem.getVolDir().getVolunteerList()) {
+//            if (vol.getVolCO().equals(nogName)) {
+//                Object[] row = new Object[9];
+//                row[0] = vol;
+//                row[1] = vol.getVolName();
+//                row[2] = vol.getVolAge();
+//                row[3] = vol.getVolPhno();
+//                row[4] = vol.getVolAddress();
+//                row[5] = vol.getVolCity();
+//                row[6] = vol.getVolState();
+//                row[7] = vol.getVolZipcode();
+//                row[8] = vol.getVolExp();
+//                model.addRow(row);
+//            }
+//        }
+//    }
+    
     private void populatevoltable() {
         DefaultTableModel model = (DefaultTableModel) tblViewVolunteer.getModel();
         model.setRowCount(0);
+
         for (COVolunteer vol : ecosystem.getVolDir().getVolunteerList()) {
-            if (vol.getVolCO().equals(nogName)) {
+            if (vol.getManagerUsername() != null && vol.getManagerUsername().equals(userAcc.getUsername())) {
                 Object[] row = new Object[9];
                 row[0] = vol;
                 row[1] = vol.getVolName();
@@ -594,6 +618,10 @@ public class ViewModifyVolunteerPanel extends javax.swing.JPanel {
             }
         }
     }
+
+
+    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LabelImage;

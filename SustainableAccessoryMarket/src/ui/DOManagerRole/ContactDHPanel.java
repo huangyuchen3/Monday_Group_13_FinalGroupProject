@@ -39,6 +39,7 @@ public class ContactDHPanel extends javax.swing.JPanel {
         lblVolReq.setVisible(false);
         cbVolReq.setVisible(false);
         btnSubmitReq.setVisible(false);
+
         FCPmgname = userAcc.getEmployee().getName();
         for(DropOff fcp: ecosystem.getACDOFDirectory().getFcpList()){
             if(fcp.getDropOffManager().equals(FCPmgname)){

@@ -4,6 +4,8 @@
  */
 package Business.CommunityOutreach;
 
+import Business.COVolunteer.COVolunteer;
+import Business.EcoSystem;
 import Business.Role.COManagerRole;
 import Business.UserAccount.UserAccount;
 import Business.UserAccount.UserAccountDirectory;
@@ -69,7 +71,8 @@ public class CommunityOutreachDirectory {
 
         // Add the first Community Outreach to the list
         this.COList.add(co1);
-
+        
+        
         // Create Worker and UserAccount for Community Outreach Center 2
         Worker coManager2 = new Worker();
         coManager2.setName("Community Manager Two");
