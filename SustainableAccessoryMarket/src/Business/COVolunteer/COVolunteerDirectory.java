@@ -97,7 +97,9 @@ public class COVolunteerDirectory {
             volunteer1.setVolZipcode("02116");
             volunteer1.setVolExp("2");
             volunteer1.setManagerUsername("comanager1"); // Assign to comanager1
+            volunteer1.setVolCO("Helping Hands Center");
             volunteer1.setVolAccount(volunteerAccount1); // Link the UserAccount to the volunteer
+            volunteer1.setVolAvail("New");
 
             // Create Volunteer 2
             Worker volunteerWorker2 = new Worker();
@@ -121,7 +123,9 @@ public class COVolunteerDirectory {
             volunteer2.setVolZipcode("02140");
             volunteer2.setVolExp("5");
             volunteer2.setManagerUsername("comanager1"); // Assign to comanager1
+            volunteer2.setVolCO("Helping Hands Center");
             volunteer2.setVolAccount(volunteerAccount2); // Link the UserAccount to the volunteer
+            volunteer2.setVolAvail("New");
 
             // Create Volunteer 3 (Assigned to comanager2)
             Worker volunteerWorker3 = new Worker();
@@ -145,7 +149,9 @@ public class COVolunteerDirectory {
             volunteer3.setVolZipcode("02144");
             volunteer3.setVolExp("3");
             volunteer3.setManagerUsername("comanager2"); // Assign to comanager2
+            volunteer3.setVolCO("Care and Share Center");
             volunteer3.setVolAccount(volunteerAccount3); // Link the UserAccount to the volunteer
+            volunteer3.setVolAvail("New");
 
             // Create Volunteer 4 (Assigned to comanager2)
             Worker volunteerWorker4 = new Worker();
@@ -169,7 +175,9 @@ public class COVolunteerDirectory {
             volunteer4.setVolZipcode("02155");
             volunteer4.setVolExp("6");
             volunteer4.setManagerUsername("comanager2"); // Assign to comanager2
+            volunteer4.setVolCO("Care and Share Center");
             volunteer4.setVolAccount(volunteerAccount4); // Link the UserAccount to the volunteer
+            volunteer4.setVolAvail("New");
 
             // Add all volunteers to the list
             this.volList.add(volunteer1);
