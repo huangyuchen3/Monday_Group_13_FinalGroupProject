@@ -83,8 +83,8 @@ public class RequestsPanel extends javax.swing.JPanel {
 
         lblAddReqFCTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         lblAddReqFCTitle.setForeground(new java.awt.Color(102, 102, 255));
-        lblAddReqFCTitle.setText("Requests From Distribution Hub");
-        add(lblAddReqFCTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, -1, -1));
+        lblAddReqFCTitle.setText("Requests From Distribution Hub / Drop Off Store");
+        add(lblAddReqFCTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, -1, -1));
 
         tblDHReq.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         tblDHReq.setModel(new javax.swing.table.DefaultTableModel(
@@ -95,7 +95,7 @@ public class RequestsPanel extends javax.swing.JPanel {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Request ID", "Request", "Distribution Hub", "Number of Persons", "Status"
+                "Request ID", "Request", "Distribution Hub / Drop Off Store", "Number of Persons", "Status"
             }
         ));
         tblDHReq.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -105,7 +105,7 @@ public class RequestsPanel extends javax.swing.JPanel {
         });
         jScrollPane.setViewportView(tblDHReq);
 
-        add(jScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 59, 696, 129));
+        add(jScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 1010, 129));
 
         btnDHReqAvail.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         btnDHReqAvail.setText("Make Available");
@@ -137,7 +137,7 @@ public class RequestsPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblDistributionHub);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 292, 814, 153));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 292, 1020, 153));
 
         btnDHProcess.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         btnDHProcess.setText("Process");
@@ -149,7 +149,7 @@ public class RequestsPanel extends javax.swing.JPanel {
         add(btnDHProcess, new org.netbeans.lib.awtextra.AbsoluteConstraints(351, 206, -1, -1));
 
         lblAddDHTitle.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblAddDHTitle.setText("For Distribution Hub:");
+        lblAddDHTitle.setText("For Distribution Hub/ Drop Off Store:");
         add(lblAddDHTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 259, -1, -1));
 
         lblDistributionHub.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
@@ -320,24 +320,18 @@ public class RequestsPanel extends javax.swing.JPanel {
     
     private void populateVTable() {
         DefaultTableModel model = (DefaultTableModel) tblDistributionHub.getModel();
-        model.setRowCount(0);
-        for (COVolunteer vol : ecosystem.getVolDir().getVolunteerList()) {
-            // Check if getVolCO() is null
-            if (vol.getVolCO() == null) {
-                System.out.println("COVolunteer object has a null volCO value for volunteer: " + vol.getVolName());
-                continue; // Skip this volunteer
-            }
-            if (vol.getVolCO().equals(ngoAName)) {
+            model.setRowCount(0);
+
+            for (COVolunteer vol : ecosystem.getVolDir().getVolunteerList()) {
                 Object[] row = new Object[6];
-                row[0] = vol;
+                row[0] = vol; // Store the actual COVolunteer object, not just the ID
                 row[1] = vol.getVolName();
                 row[2] = vol.getVolAddress();
                 row[3] = vol.getVolCity();
                 row[4] = vol.getVolZipcode();
-                row[5] = vol.getVolAvail();
+                row[5] = vol.getVolAvail(); // Assuming vol.getVolAvail() returns the availability status
                 model.addRow(row);
             }
-        }
 }
 
 }
