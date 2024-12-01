@@ -12,9 +12,14 @@ import Business.AccessoryRequestorder.AccessoryRequestorder;
 import Business.AccessoryRequestorder.AccessoryRequestorderDirectory;
 import Business.UserAccount.UserAccount;
 import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Image;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
+import javax.imageio.ImageIO;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableCellRenderer;
@@ -205,20 +210,20 @@ public class ViewItemsRequestsPanel extends javax.swing.JPanel {
         add(lblDonationID, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, -1, 30));
     }// </editor-fold>//GEN-END:initComponents
 
-//    public void setBG() {
-//        try {
-//            cbVolunteerLbl.setMinimumSize(new Dimension(userProcessContainer.getWidth(), userProcessContainer.getHeight()));
-//            cbVolunteerLbl.setPreferredSize(new Dimension(userProcessContainer.getWidth(), userProcessContainer.getHeight()));
-//            cbVolunteerLbl.setMaximumSize(new Dimension(userProcessContainer.getWidth(), userProcessContainer.getHeight()));
-//
-//            Image img = ImageIO.read(getClass().getResource("/Images/background2.png"));
-//
-//            Image newimg = img.getScaledInstance(1500, userProcessContainer.getHeight(), java.awt.Image.SCALE_SMOOTH);
-//            cbVolunteerLbl.setIcon(new ImageIcon(newimg));
-//        } catch (IOException ex) {
-//
-//        }
-//    }
+    public void setBG() {
+        try {
+            cbVolunteerLbl.setMinimumSize(new Dimension(userProcessContainer.getWidth(), userProcessContainer.getHeight()));
+            cbVolunteerLbl.setPreferredSize(new Dimension(userProcessContainer.getWidth(), userProcessContainer.getHeight()));
+            cbVolunteerLbl.setMaximumSize(new Dimension(userProcessContainer.getWidth(), userProcessContainer.getHeight()));
+
+            Image img = ImageIO.read(getClass().getResource("/Images/background2.png"));
+
+            Image newimg = img.getScaledInstance(1500, userProcessContainer.getHeight(), java.awt.Image.SCALE_SMOOTH);
+            cbVolunteerLbl.setIcon(new ImageIcon(newimg));
+        } catch (IOException ex) {
+
+        }
+    }
 
     public void makeTableTransparent() {
         tblAccessoryRequests.setOpaque(false);
@@ -370,7 +375,7 @@ public class ViewItemsRequestsPanel extends javax.swing.JPanel {
             if (rq.getReqPantryName().equals(FCPname)) {
                 Object[] row = new Object[6];
                 row[0] = rq;
-                row[1] = rq.getReqName();
+                row[1] = rq.getReqPantryName();
                 row[2] = rq.getReqOrderQuant();
                 row[3] = rq.getReqOrderType();
                 row[4] = rq.getReqOrderStatus();
