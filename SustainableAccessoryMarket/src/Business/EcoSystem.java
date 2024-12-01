@@ -17,6 +17,7 @@ import Business.COVolunteer.COVolunteerRequestsDirectory;
 import Business.COVolunteer.COVolunteerDirectory;
 import Business.AccessoryRequestorder.AccessoryRequestorderDirectory;
 import Business.AccessoryRequestor.AccessoryRequestorDirectory;
+import Business.COVolunteer.COVolunteer;
 import Business.Role.*;
 import Business.Role.DOManagerRole;
 import Business.UserAccount.UserAccount;
@@ -243,7 +244,7 @@ public class EcoSystem extends Organization {
         //this.coDir = new CommunityOutreachDirectory(userAccountDirectory);
         this.uaDir = new UserAccountDirectory(); // Initialize UserAccountDirectory
         this.acDropOffItemsDir = new DropOffItemsDirectory();
-        this.volunteerDir = new COVolunteerDirectory();
+        //this.volunteerDir = new COVolunteerDirectory();
         this.donationDir = new AccessoryDonationDirectory();
         this.volunteerRequestsDir = new COVolunteerRequestsDirectory();
         this.donationCounttId = 1;
@@ -255,7 +256,7 @@ public class EcoSystem extends Organization {
         this.acDistributionHubDir = new DistributionHubDirectory(this.uaDir);
         this.requestorDir = new AccessoryRequestorDirectory(this.uaDir);
         this.donorDir = new AccessoryDonorDirectory(this.uaDir);
-        
+        this.volunteerDir = new COVolunteerDirectory(this.uaDir);
         
 //        this.donorsCnt = 0;
 //        this.distributionHubCnt = 0; 
@@ -273,6 +274,7 @@ public class EcoSystem extends Organization {
         this.donationCnt = 10;
         this.requestCnt = 10;
     }
+
     
     private void addDefaultUserAccounts() {
 
