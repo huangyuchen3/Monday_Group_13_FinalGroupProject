@@ -323,15 +323,18 @@ public class RequestsPanel extends javax.swing.JPanel {
             model.setRowCount(0);
 
             for (COVolunteer vol : ecosystem.getVolDir().getVolunteerList()) {
-                Object[] row = new Object[6];
-                row[0] = vol; // Store the actual COVolunteer object, not just the ID
-                row[1] = vol.getVolName();
-                row[2] = vol.getVolAddress();
-                row[3] = vol.getVolCity();
-                row[4] = vol.getVolZipcode();
-                row[5] = vol.getVolAvail(); // Assuming vol.getVolAvail() returns the availability status
-                model.addRow(row);
-            }
+        // Check if the volunteer's manager matches the logged-in manager
+                if (vol.getManagerUsername().equals(userAcc.getUsername())) {
+                    Object[] row = new Object[6];
+                    row[0] = vol; // Store the actual COVolunteer object, not just the ID
+                    row[1] = vol.getVolName();
+                    row[2] = vol.getVolAddress();
+                    row[3] = vol.getVolCity();
+                    row[4] = vol.getVolZipcode();
+                    row[5] = vol.getVolAvail(); // Assuming vol.getVolAvail() returns the availability status
+                    model.addRow(row);
+                }
+                    }
 }
 
 }
