@@ -351,22 +351,30 @@ public class DonationRequestsPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void populateTable() {
-        System.out.println(1);
         DefaultTableModel model = (DefaultTableModel) tblDonReq.getModel();
         model.setRowCount(0);
-        System.out.println(ecosystem.getDonatDirectory().getDonatList());
-        for(AccessoryDonation dt: ecosystem.getDonatDirectory().getDonatList()){
-            System.out.println(dt.getDonatStatus());
-            System.out.println(dt.getDonatWHname().equals(WHname));
-            if(dt.getDonatWHname().equals(WHname) && dt.getDonatStatus() != "Delivered"){
-           Object[] row = new Object[5];
-           row[0] =dt;
-           row[1] =dt.getDonatItem();
-           row[2] =dt.getDonatQuant();
-           row[3] =dt.getDonatWHname();
-           row[4] =dt.getDonatStatus();
-           model.addRow(row);
+
+        // Debug: Print all donations
+        System.out.println("Donation List: " + ecosystem.getDonatDirectory().getDonatList());
+
+        // Get the logged-in manager's hub name
+        String WHname = ecosystem.getACDDirectory().getDHname(userAcc.getEmployee().getName());
+        System.out.println("Logged-in Manager's Hub: " + WHname);
+
+        // Filter donations for this hub
+        for (AccessoryDonation dt : ecosystem.getDonatDirectory().getDonatList()) {
+            System.out.println("Checking Donation: " + dt);
+            if (dt.getDonatWHname().equals(WHname) && !dt.getDonatStatus().equals("Delivered")) {
+                Object[] row = new Object[5];
+                row[0] = dt;
+                row[1] = dt.getDonatItem();
+                row[2] = dt.getDonatQuant();
+                row[3] = dt.getDonatAdd();
+                row[4] = dt.getDonatStatus();
+                model.addRow(row);
             }
-        } 
-    }
+        }
+
+        System.out.println("Table Row Count: " + model.getRowCount());
+        }
 }

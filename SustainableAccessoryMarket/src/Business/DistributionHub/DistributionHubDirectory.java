@@ -68,13 +68,16 @@ public class DistributionHubDirectory {
             }
         }
     }
-    public String getDHname(String FCAname){
-        String WHname;
-        for(DistributionHub f: DistributionHubList){
-            if(f.getDistributionHubAdmin().equals(FCAname)){
+    public String getDHname(String FCAname) {
+        System.out.println("Finding Hub for Manager: " + FCAname);
+        for (DistributionHub f : DistributionHubList) {
+            System.out.println("Checking Hub Admin: " + f.getDistributionHubAdmin());
+            if (f.getDistributionHubAdmin().equals(FCAname)) {
+                System.out.println("Hub Found: " + f.getDistributionHubName());
                 return f.getDistributionHubName();
             }
         }
+        System.out.println("No Hub Found for Manager: " + FCAname);
         return null;
     }
     
@@ -104,9 +107,11 @@ public class DistributionHubDirectory {
         hub1.setDistributionHubCity("Boston");
         hub1.setDistributionHubState("MA");
         hub1.setDistributionHubZipcode("02118");
-        hub1.setDistributionHubAdmin("Admin One");
+        hub1.setDistributionHubAdmin(admin1.getName());
         hub1.setDistributionHubAccount(account1);
         DistributionHubList.add(hub1);
+        
+        System.out.println("Hub Added: " + hub1.getDistributionHubName() + ", Admin: " + hub1.getDistributionHubAdmin());
 
         // Create Worker and UserAccount for the second hub
         Worker admin2 = new Worker();
@@ -126,8 +131,10 @@ public class DistributionHubDirectory {
         hub2.setDistributionHubCity("New York");
         hub2.setDistributionHubState("NY");
         hub2.setDistributionHubZipcode("10001");
-        hub2.setDistributionHubAdmin("Admin Two");
+        hub2.setDistributionHubAdmin(admin2.getName());
         hub2.setDistributionHubAccount(account2);
         DistributionHubList.add(hub2);
+        
+        System.out.println("DistributionHubList: " + DistributionHubList);
     }
 }

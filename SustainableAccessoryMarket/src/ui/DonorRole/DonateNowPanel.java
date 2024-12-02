@@ -300,29 +300,31 @@ public class DonateNowPanel extends javax.swing.JPanel {
 
     private void btnDonateSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDonateSubmitActionPerformed
         // TODO add your handling code here:
-        if (!nullCheck()) {
+            if (!nullCheck()) {
             AccessoryDonation dt = new AccessoryDonation();
             dt.setDonatId(String.valueOf(donId));
             dt.setDonatDname(donName);
-            
             dt.setDonatItem(txtDonateItem.getText());
             dt.setDonatQuant(String.valueOf(sdDonateQuantity.getValue()));
             dt.setDonatPickuptype("Pick up");
             dt.setDonatStatus("Requested");
             dt.setDonatWHname(cbDH.getSelectedItem().toString());
-            UserAccount ua = new UserAccount();
-            ua.setUsername(userAcc.getUsername());
-            ua.setPassword(userAcc.getPassword());
-            dt.setDonatDonorAcc(ua);
+            System.out.println("Donation WH Name: " + cbDH.getSelectedItem().toString());
             dt.setDonatAdd(txtDonateAddress.getText());
             dt.setDonatCity(txtDonateCity.getText());
             dt.setDonatZip(txtDonateZip.getText());
+            dt.setDonatDonorAcc(userAcc);
+
             donatD = ecosystem.getDonatDirectory();
             donatD.addNewDonation(dt);
+
+            // Debug: Check donation details
+            System.out.println("New Donation Added: " + dt);
+
             ecosystem.setDonatDirectory(donatD);
-            Integer donationCnt = ecosystem.getDonationCnt();
-            ecosystem.setDonationCnt(donationCnt + 1);
-            JOptionPane.showMessageDialog(this, "Thank you for your Donation! \n Your request has been placed. ");
+            ecosystem.setDonationCnt(ecosystem.getDonationCnt() + 1);
+
+            JOptionPane.showMessageDialog(this, "Thank you for your Donation! \n Your request has been placed.");
             clearfields();
         } else {
             JOptionPane.showMessageDialog(this, "Please make sure that you have filled all mandatory fields");
