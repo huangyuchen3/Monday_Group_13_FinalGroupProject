@@ -54,7 +54,7 @@ public class DonationRequestsPanel extends javax.swing.JPanel {
         }
         ArrayList<String> VolunteerList = new ArrayList();
         for (COVolunteer vol : ecosystem.getVolDir().getVolunteerList()){
-            if(vol.getVolCity().equals(city) && vol.getVolAvail().equals("Yes")){
+            if(vol.getVolAvail().equals("Yes")){
             VolunteerList.add(vol.getVolName());
             }
         }
@@ -65,9 +65,9 @@ public class DonationRequestsPanel extends javax.swing.JPanel {
         ArrayList<String> fcPantryList = new ArrayList<>();
 
         for (  DropOff e : ecosystem.getACDOFDirectory().getFcpList()){
-            if(e.getDropOffHubName().equals(WHname)){
+            //if(e.getDropOffHubName().equals(WHname)){
             fcPantryList.add(e.getDropOffHubName());
-            }
+            //}
         }
         System.out.println(fcPantryList);
         System.out.println("sff");
@@ -185,6 +185,7 @@ public class DonationRequestsPanel extends javax.swing.JPanel {
 
         lblSelectPantry.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         lblSelectPantry.setText("Select Pantry:");
+        lblSelectPantry.setEnabled(false);
         add(lblSelectPantry, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 480, -1, -1));
 
         cbSelectPantry.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
