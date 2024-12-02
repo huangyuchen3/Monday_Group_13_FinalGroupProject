@@ -11,7 +11,7 @@ package Business.COVolunteer;
 public class COVolunteerRequests {
     private String volunteerRequestsId;
     private String volunteerRequestsName;
-    private String volunteerRequestsNum;
+    private int volunteerRequestsNum;
     private String volunteerRequestsDB;
     private String volunteerRequestsStatus;
 
@@ -39,11 +39,11 @@ public class COVolunteerRequests {
         this.volunteerRequestsName = volunteerRequestsName;
     }
 
-    public String getVolreqNum() {
+    public int getVolreqNum() {
         return volunteerRequestsNum;
     }
 
-    public void setVolreqNum(String volunteerRequestsNum) {
+    public void setVolreqNum(int volunteerRequestsNum) {
         this.volunteerRequestsNum = volunteerRequestsNum;
     }
 
