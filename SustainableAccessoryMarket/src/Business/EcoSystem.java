@@ -17,6 +17,7 @@ import Business.COVolunteer.COVolunteerRequestsDirectory;
 import Business.COVolunteer.COVolunteerDirectory;
 import Business.AccessoryRequestorder.AccessoryRequestorderDirectory;
 import Business.AccessoryRequestor.AccessoryRequestorDirectory;
+import Business.AccessoryRequestorder.AccessoryRequestorder;
 import Business.COVolunteer.COVolunteer;
 import Business.Role.*;
 import Business.Role.DOManagerRole;
@@ -273,7 +274,44 @@ public class EcoSystem extends Organization {
         this.organisationsCnt = 2;
         this.donationCnt = 10;
         this.requestCnt = 10;
+        initializeDefaultRequests();
     }
+    
+    public void initializeDefaultRequests() {
+    // Ensure the directory is initialized
+    if (this.requestorOrderDir == null) {
+        this.requestorOrderDir = new AccessoryRequestorderDirectory();
+    }
+
+    // Create Request 1
+    AccessoryRequestorder request1 = new AccessoryRequestorder();
+    request1.setReqOrderId("REQ1");
+    request1.setReqName("Default Requestor");
+    request1.setReqOrderQuant("10");
+    request1.setReqOrderType("Clothes");
+    request1.setReqOrderStatus("Requested");
+    request1.setReqPantryName("Default DropOff Store 1");
+    request1.setReqCity("Boston");
+    request1.setReqZip("02115");
+
+    // Create Request 2
+    AccessoryRequestorder request2 = new AccessoryRequestorder();
+    request2.setReqOrderId("REQ2");
+    request2.setReqName("Default Requestor");
+    request2.setReqOrderQuant("20");
+    request2.setReqOrderType("Shoes");
+    request2.setReqOrderStatus("Requested");
+    request2.setReqPantryName("Default DropOff Store 1");
+    request2.setReqCity("Boston");
+    request2.setReqZip("02115");
+
+    // Add requests to the directory
+    this.requestorOrderDir.addNewReqorder(request1);
+    this.requestorOrderDir.addNewReqorder(request2);
+
+    System.out.println("Default requests for domanager1 have been initialized.");
+}
+
 
     
     private void addDefaultUserAccounts() {
