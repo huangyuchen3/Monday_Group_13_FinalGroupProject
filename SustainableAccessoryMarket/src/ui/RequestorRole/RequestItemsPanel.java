@@ -246,7 +246,7 @@ public class RequestItemsPanel extends javax.swing.JPanel {
         add(lblDelType, new org.netbeans.lib.awtextra.AbsoluteConstraints(127, 344, -1, -1));
 
         cbDelType.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        cbDelType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Delivery" }));
+        cbDelType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "clothes" }));
         cbDelType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbDelTypeActionPerformed(evt);

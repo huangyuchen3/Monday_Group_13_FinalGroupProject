@@ -300,7 +300,7 @@ public class EcoSystem extends Organization {
     request2.setReqOrderId("REQ2");
     request2.setReqName("Partner Requestor Two");
     request2.setReqOrderQuant("20");
-    request2.setReqOrderType("Shoes");
+    request2.setReqOrderType("Clothes");
     request2.setReqOrderStatus("Requested");
     request2.setReqPantryName("Default DropOff Store 1");
     request2.setReqAdd("newbury");

@@ -134,7 +134,7 @@ public class ViewItemsRequestsPanel extends javax.swing.JPanel {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Request ID", "Requestor", "Quantity", "Order Type", "Status", "Donation ID"
+                "Request ID", "Requestor", "Quantity", "Order Type", "Status", "Item ID"
             }
         ));
         tblAccessoryRequests.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -213,7 +213,7 @@ public class ViewItemsRequestsPanel extends javax.swing.JPanel {
         add(cbDonationID, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 470, 100, -1));
 
         lblDonationID.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblDonationID.setText("Donation ID:");
+        lblDonationID.setText("Item ID:");
         add(lblDonationID, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, -1, 30));
     }// </editor-fold>//GEN-END:initComponents
 

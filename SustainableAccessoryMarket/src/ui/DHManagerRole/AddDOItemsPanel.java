@@ -231,7 +231,7 @@ public class AddDOItemsPanel extends javax.swing.JPanel {
             fcpid = ecosystem.getACDOIDirectory();
             fcpid.addFCPItems(fcpi);
             ecosystem.setACDOIDirectory(fcpid);
-            JOptionPane.showMessageDialog(this, "Items added to Pantry successfully!");
+            JOptionPane.showMessageDialog(this, "Items added to Drop off successfully!");
             clearfields(); 
         }
         else{

@@ -55,6 +55,7 @@ public class RequestsPanel extends javax.swing.JPanel {
         populateVTable();
         //tblV.setVisible(false);
         // btnAvail.setVisible(false);
+        btnDHProcess.setVisible(false);
     }
 
     /**
