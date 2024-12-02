@@ -62,6 +62,7 @@ public class DonateNowPanel extends javax.swing.JPanel {
         }        
         cbDonateCity.setModel(new DefaultComboBoxModel<String>(CityList.toArray(new String[0])));
         
+        populateDistributionHubComboBox();
         setBG();
         // setLogo();
         lblDonateCity2.setVisible(false);
@@ -214,7 +215,7 @@ public class DonateNowPanel extends javax.swing.JPanel {
                 cbDHActionPerformed(evt);
             }
         });
-        add(cbDH, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 150, -1));
+        add(cbDH, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 190, -1));
 
         btnDonateSubmit.setBackground(new java.awt.Color(204, 204, 255));
         btnDonateSubmit.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
@@ -392,5 +393,19 @@ public class DonateNowPanel extends javax.swing.JPanel {
         sdDonateQuantity.setExtent(0);
         cbDonateCity.setSelectedIndex(0);
         cbDH.setSelectedIndex(0);
+    }
+    
+    private void populateDistributionHubComboBox() {
+        // Clear existing items
+        cbDH.removeAllItems();
+        cbDH.addItem("-- Select --"); // Default placeholder option
+
+        // Fetch distribution hubs from EcoSystem
+        ArrayList<DistributionHub> distributionHubs = ecosystem.getACDDirectory().getFadList();
+
+        // Add each hub name to the combo box
+        for (DistributionHub hub : distributionHubs) {
+            cbDH.addItem(hub.getDistributionHubName());
+        }
     }
 }
