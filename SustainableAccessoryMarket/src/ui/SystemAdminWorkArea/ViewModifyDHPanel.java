@@ -498,7 +498,7 @@ public class ViewModifyDHPanel extends javax.swing.JPanel {
         // ecosystem.setFCWDirectory(fcWarehouseList);
         fcd = ecosystem.getACDDirectory();
         ecosystem.setACDDirectory(fcd);
-        JOptionPane.showMessageDialog(this, "warehouse details updated successfully");
+        JOptionPane.showMessageDialog(this, "Distribution Hub details updated successfully");
         clearfields();
         populateWHtable();
     }//GEN-LAST:event_btnWarehouseUpdateActionPerformed

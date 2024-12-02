@@ -73,9 +73,9 @@ public class ViewItemsRequestsPanel extends javax.swing.JPanel {
 }
         ArrayList<String> VolunteerList = new ArrayList();
         for (COVolunteer vol : ecosystem.getVolDir().getVolunteerList()) {
-            //if (vol.getVolCity().equals(city) && vol.getVolAvail().equals("Yes")) {
+            if (vol.getVolAvail().equals("Yes")) {
                 VolunteerList.add(vol.getVolName());
-            //}
+            }
         }
         ArrayList<String> donIdList = new ArrayList();
 
@@ -195,7 +195,7 @@ public class ViewItemsRequestsPanel extends javax.swing.JPanel {
         add(cbVolunteerLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, -70, 780, 670));
 
         cbAssignVol.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        cbAssignVol.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Select --", "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbAssignVol.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Select --" }));
         cbAssignVol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbAssignVolActionPerformed(evt);
