@@ -286,22 +286,24 @@ public class EcoSystem extends Organization {
     // Create Request 1
     AccessoryRequestorder request1 = new AccessoryRequestorder();
     request1.setReqOrderId("REQ1");
-    request1.setReqName("Default Requestor");
+    request1.setReqName("Personal Requestor One");
     request1.setReqOrderQuant("10");
     request1.setReqOrderType("Clothes");
     request1.setReqOrderStatus("Requested");
     request1.setReqPantryName("Default DropOff Store 1");
+    request1.setReqAdd("Commonwealth");
     request1.setReqCity("Boston");
     request1.setReqZip("02115");
 
     // Create Request 2
     AccessoryRequestorder request2 = new AccessoryRequestorder();
     request2.setReqOrderId("REQ2");
-    request2.setReqName("Default Requestor");
+    request2.setReqName("Partner Requestor Two");
     request2.setReqOrderQuant("20");
     request2.setReqOrderType("Shoes");
     request2.setReqOrderStatus("Requested");
     request2.setReqPantryName("Default DropOff Store 1");
+    request2.setReqAdd("newbury");
     request2.setReqCity("Boston");
     request2.setReqZip("02115");
 

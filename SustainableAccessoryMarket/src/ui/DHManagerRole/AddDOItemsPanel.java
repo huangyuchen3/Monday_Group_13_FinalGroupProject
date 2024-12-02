@@ -51,9 +51,9 @@ public class AddDOItemsPanel extends javax.swing.JPanel {
         lblWHname.setText(WHname);
         ArrayList<String> PantryList = new ArrayList<String>();
         for (DropOff fcp : ecosystem.getACDOFDirectory().getFcpList()){
-            if(fcp.getDropOffName().equals(WHname)){
+//            if(fcp.getDropOffName().equals(WHname)){
                 PantryList.add(fcp.getDropOffName());
-            }
+//            }
             
         }
         cbDOName.setModel(new DefaultComboBoxModel<String>(PantryList.toArray(new String[0])));
