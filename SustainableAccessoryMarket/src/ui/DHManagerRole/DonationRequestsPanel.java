@@ -71,8 +71,9 @@ public class DonationRequestsPanel extends javax.swing.JPanel {
         }
         System.out.println(fcPantryList);
         System.out.println("sff");
-        cbSelectPantry.setModel(new DefaultComboBoxModel<String>(fcPantryList.toArray(new String[0])));
-        
+        cbSelectPantry.setModel(new DefaultComboBoxModel<String>(fcPantryList.toArray(new String[1])));
+        cbSelectPantry.setVisible(false);
+        lblSelectPantry.setVisible(false);
         populateTable();
         setBG();
         makeTableTransparent();
