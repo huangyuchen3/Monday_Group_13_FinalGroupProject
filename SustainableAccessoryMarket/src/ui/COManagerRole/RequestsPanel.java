@@ -286,14 +286,15 @@ public class RequestsPanel extends javax.swing.JPanel {
     private void populateRTable() {
         DefaultTableModel model = (DefaultTableModel) tblDHReq.getModel();
         model.setRowCount(0);
+
         for (COVolunteerRequests vr : ecosystem.getVRDirectory().getVrList()) {
-            if (vr.getVolreqName().equals(nogName)) {
-                Object[] row = new Object[6];
-                row[0] = vr;
-                row[1] = vr.getVolreqName();
-                row[2] = vr.getVolreqDB();
-                row[3] = vr.getVolreqNum();
-                row[4] = vr.getVolreqStatus();
+            if (vr.getVolreqName().equals(nogName)) { // Filter by CO manager's assigned center
+                Object[] row = new Object[5];
+                row[0] = vr.getVolreqId();
+                row[1] = "Volunteer Request"; // General description (can customize)
+                row[2] = vr.getVolreqDB(); // Distribution Hub/Drop-Off Store name
+                row[3] = vr.getVolreqNum(); // Number of volunteers
+                row[4] = vr.getVolreqStatus(); // Status (New, Completed, etc.)
                 model.addRow(row);
             }
         }
