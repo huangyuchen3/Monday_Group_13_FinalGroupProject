@@ -449,8 +449,8 @@ public class ViewDHItemsPanel extends javax.swing.JPanel {
         for (DropOffItems fcpi : ecosystem.getACDOIDirectory().getDOiList()) {
             String fcpWhName = fcpi.getDropOffHubName();
             System.out.println(fcpWhName + "ankith ouside populatetbl");
-            if(fcpWhName.equals(WHname)){
-             System.out.println(fcpWhName + "ankith inside populatetbl");
+            //if(fcpWhName.equals(WHname)){
+             //System.out.println(fcpWhName + "ankith inside populatetbl");
             Object[] row = new Object[6];
             row[0] = fcpi;
             row[1] = fcpi.getDropOffHubName();
@@ -459,7 +459,7 @@ public class ViewDHItemsPanel extends javax.swing.JPanel {
             row[4] = fcpi.getAccessoryItems();
             row[5] = fcpi.getAccessoryQuantity();
             model.addRow(row);
-            }
+            //}
         }
     }
 

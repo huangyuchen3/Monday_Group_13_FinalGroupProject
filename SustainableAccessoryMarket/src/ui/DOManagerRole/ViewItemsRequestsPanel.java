@@ -73,9 +73,9 @@ public class ViewItemsRequestsPanel extends javax.swing.JPanel {
 }
         ArrayList<String> VolunteerList = new ArrayList();
         for (COVolunteer vol : ecosystem.getVolDir().getVolunteerList()) {
-            if (vol.getVolCity().equals(city) && vol.getVolAvail().equals("Yes")) {
+            //if (vol.getVolCity().equals(city) && vol.getVolAvail().equals("Yes")) {
                 VolunteerList.add(vol.getVolName());
-            }
+            //}
         }
         ArrayList<String> donIdList = new ArrayList();
 
