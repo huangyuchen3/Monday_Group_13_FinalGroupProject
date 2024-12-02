@@ -64,6 +64,13 @@ public class ViewItemsRequestsPanel extends javax.swing.JPanel {
                 break;
             }
         }
+        
+        for (DropOff fcp : ecosystem.getACDOFDirectory().getFcpList()) {
+    if (fcp.getDropOffManager().equals(userAcc.getEmployee().getName())) {
+        FCPname = fcp.getDropOffName();
+        break;
+    }
+}
         ArrayList<String> VolunteerList = new ArrayList();
         for (COVolunteer vol : ecosystem.getVolDir().getVolunteerList()) {
             if (vol.getVolCity().equals(city) && vol.getVolAvail().equals("Yes")) {
@@ -249,20 +256,38 @@ public class ViewItemsRequestsPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_txtRequestsidKeyReleased
 
     private void btnRequestsSendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestsSendActionPerformed
-        // TODO add your handling code here:
-        int selectedRowIndex = tblAccessoryRequests.getSelectedRow();
-        if (selectedRowIndex < 0) {
-            JOptionPane.showMessageDialog(this, "Please select a request");
-            return;
-        }
-        DefaultTableModel model = (DefaultTableModel) tblAccessoryRequests.getModel();
-        AccessoryRequestorder selectedR = (AccessoryRequestorder) model.getValueAt(selectedRowIndex, 0);
-        txtRequestsid.setText(selectedR.getReqOrderId());
-//        ArrayList<String> VolunteerList = new ArrayList();
-//        for (COVolunteer vol : ecosystem.getVolDir().getVolunteerList()) {
-//            VolunteerList.add(vol.getVolName());
+//        // TODO add your handling code here:
+//        int selectedRowIndex = tblAccessoryRequests.getSelectedRow();
+//        if (selectedRowIndex < 0) {
+//            JOptionPane.showMessageDialog(this, "Please select a request");
+//            return;
 //        }
-//        cbAssignVol.setModel(new DefaultComboBoxModel<String>(VolunteerList.toArray(new String[0])));
+//        DefaultTableModel model = (DefaultTableModel) tblAccessoryRequests.getModel();
+//        AccessoryRequestorder selectedR = (AccessoryRequestorder) model.getValueAt(selectedRowIndex, 0);
+//        txtRequestsid.setText(selectedR.getReqOrderId());
+////        ArrayList<String> VolunteerList = new ArrayList();
+////        for (COVolunteer vol : ecosystem.getVolDir().getVolunteerList()) {
+////            VolunteerList.add(vol.getVolName());
+////        }
+////        cbAssignVol.setModel(new DefaultComboBoxModel<String>(VolunteerList.toArray(new String[0])));
+
+        // Ensure a row is selected
+    int selectedRowIndex = tblAccessoryRequests.getSelectedRow();
+    if (selectedRowIndex < 0) {
+        JOptionPane.showMessageDialog(this, "Please select a request");
+        return;
+    }
+
+    // Fetch the selected object
+    DefaultTableModel model = (DefaultTableModel) tblAccessoryRequests.getModel();
+    AccessoryRequestorder selectedR = (AccessoryRequestorder) model.getValueAt(selectedRowIndex, 0); // Use the object
+
+    if (selectedR != null) {
+        txtRequestsid.setText(selectedR.getReqOrderId());
+        System.out.println("Selected Request ID: " + selectedR.getReqOrderId());
+    } else {
+        JOptionPane.showMessageDialog(this, "Error: Selected request is null");
+    }
     }//GEN-LAST:event_btnRequestsSendActionPerformed
 
     private void btnRequestsAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestsAssignActionPerformed
@@ -371,22 +396,33 @@ public class ViewItemsRequestsPanel extends javax.swing.JPanel {
     private void populateTable() {
         DefaultTableModel model = (DefaultTableModel) tblAccessoryRequests.getModel();
         model.setRowCount(0);
-        for (AccessoryRequestorder rq : ecosystem.getReqorderDirectory().getReqOrderList()) {
-            if (rq.getReqPantryName().equals(FCPname)) {
-                Object[] row = new Object[6];
-                row[0] = rq;
-                row[1] = rq.getReqPantryName();
-                row[2] = rq.getReqOrderQuant();
-                row[3] = rq.getReqOrderType();
-                row[4] = rq.getReqOrderStatus();
-                if (rq.getReqDonId() != null) {
-                    row[5] = rq.getReqDonId();
 
-                } else {
-                    row[5] = "-";
-                }
-                model.addRow(row);
-            }
-        }
+        // Fetch requests from the directory
+//        for (AccessoryRequestorder rq : ecosystem.getReqorderDirectory().getReqOrderList()) {
+//            // Filter requests by the pantry name managed by domanager1
+//            if (rq.getReqPantryName().equals(FCPname)) {
+//                Object[] row = new Object[6];
+//                row[0] = rq.getReqOrderId();
+//                row[1] = rq.getReqName();
+//                row[2] = rq.getReqOrderQuant();
+//                row[3] = rq.getReqOrderType();
+//                row[4] = rq.getReqOrderStatus();
+//                row[5] = rq.getReqDonId() != null ? rq.getReqDonId() : "-";
+//                model.addRow(row);
+//            }
+//        }
+        
+        for (AccessoryRequestorder rq : ecosystem.getReqorderDirectory().getReqOrderList()) {
+    if (rq.getReqPantryName().equals(FCPname)) {
+        Object[] row = new Object[6];
+        row[0] = rq; // Store the actual object, not just the ID
+        row[1] = rq.getReqName();
+        row[2] = rq.getReqOrderQuant();
+        row[3] = rq.getReqOrderType();
+        row[4] = rq.getReqOrderStatus();
+        row[5] = rq.getReqDonId() != null ? rq.getReqDonId() : "-";
+        model.addRow(row);
+    }
+}
     }
 }

@@ -57,7 +57,7 @@ public class DropOffDirectory {
         dropOff1.setDropOffCity("Boston");
         dropOff1.setDropOffState("MA");
         dropOff1.setDropOffZipcode("02115");
-        dropOff1.setDropOffManager("Manager one");
+        dropOff1.setDropOffManager("DropOff Store Manager one");
         dropOff1.setDropOffAccount(account1);
         this.DropOffList.add(dropOff1);
         
