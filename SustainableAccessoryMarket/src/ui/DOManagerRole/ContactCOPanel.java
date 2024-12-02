@@ -112,7 +112,7 @@ public class ContactCOPanel extends javax.swing.JPanel {
         add(lblCO, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 280, -1));
 
         cbVolReq1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        cbVolReq1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-select-", "10", "20", "30", "40", "50" }));
+        cbVolReq1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-select-", "1", "2", "3", "4", "5" }));
         cbVolReq1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbVolReq1ActionPerformed(evt);
@@ -138,33 +138,32 @@ public class ContactCOPanel extends javax.swing.JPanel {
     private void btnSubmitReqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitReqActionPerformed
         // TODO add your handling code here:
         String selectedCOName = (String) cbSelCO.getSelectedItem();
-            String selectedNumVolunteers = (String) cbVolReq1.getSelectedItem();
+        String selectedNumVolunteers = (String) cbVolReq1.getSelectedItem();
 
-            if (selectedCOName.equals("-select-") || selectedNumVolunteers.equals("-select-")) {
-                JOptionPane.showMessageDialog(this, "Please select valid Community Outreach and number of volunteers.");
-                return;
-            }
+        if (selectedCOName.equals("-select-") || selectedNumVolunteers.equals("-select-")) {
+            JOptionPane.showMessageDialog(this, "Please select valid Community Outreach and number of volunteers.");
+            return;
+        }
 
-            try {
-        // Create a new request object
-        COVolunteerRequests newRequest = new COVolunteerRequests();
-        newRequest.setVolreqId("REQ" + System.currentTimeMillis()); // Unique ID
-        newRequest.setVolreqName(selectedCOName);
-        newRequest.setVolreqDB(WHname); // Name of the requesting Distribution Hub/Drop-Off Store
+        try {
+            int numVolunteers = Integer.parseInt(selectedNumVolunteers);
 
-        // Convert the number of volunteers to an integer
-        int numVolunteers = Integer.parseInt(selectedNumVolunteers);
-        newRequest.setVolreqNum(numVolunteers); // Assign the integer value
+            // Create a new request object
+            COVolunteerRequests newRequest = new COVolunteerRequests();
+            newRequest.setVolreqId("REQ" + System.currentTimeMillis());
+            newRequest.setVolreqName(selectedCOName);
+            newRequest.setVolreqDB(WHname); // Name of the requesting entity (Distribution Hub or Drop-Off Store)
+            newRequest.setVolreqSource("Drop-Off Store"); // Explicitly specify the source
+            newRequest.setVolreqNum(numVolunteers);
+            newRequest.setVolreqStatus("New");
 
-        newRequest.setVolreqStatus("New");
+            // Add the request to the directory
+            ecosystem.getVRDirectory().addVR(newRequest);
 
-        // Add the request to the directory
-        ecosystem.getVRDirectory().addVR(newRequest);
-
-        JOptionPane.showMessageDialog(this, "Your request has been sent successfully!");
-    } catch (NumberFormatException e) {
-        JOptionPane.showMessageDialog(this, "Invalid number of volunteers. Please select a numeric value.");
-    }
+            JOptionPane.showMessageDialog(this, "Your request has been sent successfully!");
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Invalid number of volunteers. Please select a numeric value.");
+        }
     }//GEN-LAST:event_btnSubmitReqActionPerformed
 
     private void cbSelCOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSelCOActionPerformed

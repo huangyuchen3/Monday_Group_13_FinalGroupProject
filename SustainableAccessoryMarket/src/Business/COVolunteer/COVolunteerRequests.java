@@ -12,6 +12,7 @@ public class COVolunteerRequests {
     private String volunteerRequestsId;
     private String volunteerRequestsName;
     private int volunteerRequestsNum;
+    private String volreqSource;
     private String volunteerRequestsDB;
     private String volunteerRequestsStatus;
 
@@ -29,6 +30,14 @@ public class COVolunteerRequests {
 
     public void setVolreqId(String volunteerRequestsId) {
         this.volunteerRequestsId = volunteerRequestsId;
+    }
+    
+    public String getVolreqSource() {
+        return volreqSource;
+    }
+
+    public void setVolreqSource(String volreqSource) {
+        this.volreqSource = volreqSource;
     }
 
     public String getVolreqName() {
