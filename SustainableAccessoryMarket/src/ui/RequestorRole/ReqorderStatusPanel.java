@@ -131,23 +131,40 @@ public class ReqorderStatusPanel extends javax.swing.JPanel {
     }
 
     private void populateTable() {
+//        DefaultTableModel model = (DefaultTableModel) tblFCReq.getModel();
+//        model.setRowCount(0);
+//        if (ecosystem.getReqorderDirectory() != null) {
+//            for (AccessoryRequestorder rq : ecosystem.getReqorderDirectory().getReqOrderList()) {
+//                if (rq.getReqRequestorAcc().getUsername() == null ? userAcc.getUsername() == null : rq.getReqRequestorAcc().getUsername().equals(userAcc.getUsername())) {
+//                    Object[] row = new Object[6];
+//                    row[0] = rq;
+//                    row[1] = rq.getReqPantryName();
+//                    row[2] = rq.getReqOrderQuant();
+//                    row[3] = rq.getReqOrderType();
+//                    row[4] = rq.getReqOrderStatus();
+//                    if (rq.getReqDonId() != null) {
+//                        row[5] = rq.getReqDonId();
+//                    } else {
+//                        row[5] = "-";
+//                    }
+//
+//                    model.addRow(row);
+//                }
+//            }
+//        }
         DefaultTableModel model = (DefaultTableModel) tblFCReq.getModel();
         model.setRowCount(0);
         if (ecosystem.getReqorderDirectory() != null) {
             for (AccessoryRequestorder rq : ecosystem.getReqorderDirectory().getReqOrderList()) {
-                if (rq.getReqRequestorAcc().getUsername() == null ? userAcc.getUsername() == null : rq.getReqRequestorAcc().getUsername().equals(userAcc.getUsername())) {
+                if (rq.getReqRequestorAcc() != null && 
+                    rq.getReqRequestorAcc().getUsername().equals(userAcc.getUsername())) {
                     Object[] row = new Object[6];
                     row[0] = rq;
                     row[1] = rq.getReqPantryName();
                     row[2] = rq.getReqOrderQuant();
                     row[3] = rq.getReqOrderType();
                     row[4] = rq.getReqOrderStatus();
-                    if (rq.getReqDonId() != null) {
-                        row[5] = rq.getReqDonId();
-                    } else {
-                        row[5] = "-";
-                    }
-
+                    row[5] = (rq.getReqDonId() != null) ? rq.getReqDonId() : "-";
                     model.addRow(row);
                 }
             }
