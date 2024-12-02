@@ -102,7 +102,7 @@ public class DOManagerWorkAreaPanel extends javax.swing.JPanel {
 
         btnConDH.setBackground(new java.awt.Color(204, 204, 255));
         btnConDH.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnConDH.setText("Contact Distribution Hub");
+        btnConDH.setText("Contact Community Outreach");
         btnConDH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConDHActionPerformed(evt);

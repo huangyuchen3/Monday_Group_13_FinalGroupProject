@@ -4,6 +4,7 @@
  */
 package ui.DOManagerRole;
 
+import Business.CommunityOutreach.CommunityOutreach;
 import Business.EcoSystem;
 import Business.DropOff.DropOff;
 import Business.DistributionHub.DistributionHub;
@@ -35,10 +36,10 @@ public class ContactDHPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
         this.userAcc = userAcc;
-        lblRequestVol.setVisible(false);
-        lblVolReq.setVisible(false);
-        cbVolReq.setVisible(false);
-        btnSubmitReq.setVisible(false);
+        lblRequestVol.setVisible(true);
+        lblVolReq.setVisible(true);
+        cbSelCO.setVisible(true);
+        btnSubmitReq.setVisible(true);
 
         FCPmgname = userAcc.getEmployee().getName();
         for(DropOff fcp: ecosystem.getACDOFDirectory().getFcpList()){
@@ -47,7 +48,7 @@ public class ContactDHPanel extends javax.swing.JPanel {
             }
         }
         setBG();
-        populatefields();
+        populateCommunityOutreachComboBox();
     }
 
     /**
@@ -60,132 +61,33 @@ public class ContactDHPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblDHTitle = new javax.swing.JLabel();
-        txtDHManager = new javax.swing.JTextField();
-        lblDHName = new javax.swing.JLabel();
-        txtDHName = new javax.swing.JTextField();
-        lblDHPhone = new javax.swing.JLabel();
-        txtDHPhone = new javax.swing.JTextField();
-        lblDHAdd = new javax.swing.JLabel();
-        txtDHAdd = new javax.swing.JTextField();
-        lblDHCity = new javax.swing.JLabel();
-        txtDHCity = new javax.swing.JTextField();
-        lblDHState = new javax.swing.JLabel();
-        txtDHState = new javax.swing.JTextField();
-        lblDHZip = new javax.swing.JLabel();
-        txtDHZip = new javax.swing.JTextField();
-        lblDHManager = new javax.swing.JLabel();
-        cbVolReq = new javax.swing.JComboBox<>();
+        lblCOName = new javax.swing.JLabel();
+        cbSelCO = new javax.swing.JComboBox<>();
         btnSubmitReq = new javax.swing.JButton();
         lblVolReq = new javax.swing.JLabel();
         lblRequestVol = new javax.swing.JLabel();
-        LabelImage = new javax.swing.JLabel();
+        lblCO = new javax.swing.JLabel();
+        cbVolReq1 = new javax.swing.JComboBox<>();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblDHTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 29)); // NOI18N
         lblDHTitle.setForeground(new java.awt.Color(102, 102, 255));
-        lblDHTitle.setText("Contact Distribution Hub");
+        lblDHTitle.setText("Contact Community Outreach");
         add(lblDHTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
 
-        txtDHManager.setEditable(false);
-        txtDHManager.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtDHManager.setEnabled(false);
-        txtDHManager.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtDHManager.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                txtDHManagerFocusLost(evt);
-            }
-        });
-        add(txtDHManager, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 380, 137, -1));
+        lblCOName.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        lblCOName.setText("Community Outreach Name :");
+        add(lblCOName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
 
-        lblDHName.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblDHName.setText("Distribution Hub Name :");
-        add(lblDHName, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
-
-        txtDHName.setEditable(false);
-        txtDHName.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtDHName.setEnabled(false);
-        txtDHName.setOpaque(true);
-        txtDHName.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtDHName.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                txtDHNameFocusLost(evt);
-            }
-        });
-        add(txtDHName, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 137, -1));
-
-        lblDHPhone.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblDHPhone.setText("Phone Number :");
-        add(lblDHPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, -1, -1));
-
-        txtDHPhone.setEditable(false);
-        txtDHPhone.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtDHPhone.setEnabled(false);
-        txtDHPhone.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtDHPhone.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                txtDHPhoneFocusLost(evt);
-            }
-        });
-        add(txtDHPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 137, -1));
-
-        lblDHAdd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblDHAdd.setText("Address :");
-        add(lblDHAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, -1, -1));
-
-        txtDHAdd.setEditable(false);
-        txtDHAdd.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtDHAdd.setEnabled(false);
-        txtDHAdd.setPreferredSize(new java.awt.Dimension(150, 25));
-        add(txtDHAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 137, -1));
-
-        lblDHCity.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblDHCity.setText("City :");
-        add(lblDHCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, -1, -1));
-
-        txtDHCity.setEditable(false);
-        txtDHCity.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtDHCity.setEnabled(false);
-        txtDHCity.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtDHCity.addActionListener(new java.awt.event.ActionListener() {
+        cbSelCO.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        cbSelCO.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-select-", "10", "20", "30", "40", "50" }));
+        cbSelCO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDHCityActionPerformed(evt);
+                cbSelCOActionPerformed(evt);
             }
         });
-        add(txtDHCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, 137, -1));
-
-        lblDHState.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblDHState.setText("State :");
-        add(lblDHState, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, -1, -1));
-
-        txtDHState.setEditable(false);
-        txtDHState.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtDHState.setEnabled(false);
-        txtDHState.setPreferredSize(new java.awt.Dimension(150, 25));
-        add(txtDHState, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, 137, -1));
-
-        lblDHZip.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblDHZip.setText("Zip Code :");
-        add(lblDHZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, -1, -1));
-
-        txtDHZip.setEditable(false);
-        txtDHZip.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        txtDHZip.setEnabled(false);
-        txtDHZip.setPreferredSize(new java.awt.Dimension(150, 25));
-        txtDHZip.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                txtDHZipFocusLost(evt);
-            }
-        });
-        add(txtDHZip, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 330, 137, -1));
-
-        lblDHManager.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        lblDHManager.setText("Distribution Hub Manager:");
-        add(lblDHManager, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, -1));
-
-        cbVolReq.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
-        cbVolReq.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-select-", "10", "20", "30", "40", "50" }));
-        add(cbVolReq, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 510, 132, -1));
+        add(cbSelCO, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 150, -1));
 
         btnSubmitReq.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         btnSubmitReq.setText("Submit Request");
@@ -194,118 +96,93 @@ public class ContactDHPanel extends javax.swing.JPanel {
                 btnSubmitReqActionPerformed(evt);
             }
         });
-        add(btnSubmitReq, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 560, -1, -1));
+        add(btnSubmitReq, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 360, -1, -1));
 
         lblVolReq.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         lblVolReq.setText("Number of Volunteers Required :");
-        add(lblVolReq, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, -1, -1));
+        add(lblVolReq, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, -1));
 
         lblRequestVol.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         lblRequestVol.setText("Request Volunteers");
-        add(lblRequestVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, -1, -1));
-        add(LabelImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1500, 700));
+        add(lblRequestVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
+
+        lblCO.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        lblCO.setText("Select Community Outreach");
+        add(lblCO, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 280, -1));
+
+        cbVolReq1.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
+        cbVolReq1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-select-", "10", "20", "30", "40", "50" }));
+        cbVolReq1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbVolReq1ActionPerformed(evt);
+            }
+        });
+        add(cbVolReq1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, 140, -1));
     }// </editor-fold>//GEN-END:initComponents
 
        public void setBG() {
         try {
-            LabelImage.setMinimumSize(new Dimension(userProcessContainer.getWidth(), userProcessContainer.getHeight()));
-            LabelImage.setPreferredSize(new Dimension(userProcessContainer.getWidth(), userProcessContainer.getHeight()));
-            LabelImage.setMaximumSize(new Dimension(userProcessContainer.getWidth(), userProcessContainer.getHeight()));
+//            LabelImage.setMinimumSize(new Dimension(userProcessContainer.getWidth(), userProcessContainer.getHeight()));
+//            LabelImage.setPreferredSize(new Dimension(userProcessContainer.getWidth(), userProcessContainer.getHeight()));
+//            LabelImage.setMaximumSize(new Dimension(userProcessContainer.getWidth(), userProcessContainer.getHeight()));
 
             Image img = ImageIO.read(getClass().getResource("/Images/background2.png"));
 
             Image newimg = img.getScaledInstance(1500, userProcessContainer.getHeight(), java.awt.Image.SCALE_SMOOTH);
-            LabelImage.setIcon(new ImageIcon(newimg));
+//            LabelImage.setIcon(new ImageIcon(newimg));
         } catch (IOException ex) {
 
         }
     }
-    private void txtDHManagerFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDHManagerFocusLost
-        // TODO add your handling code here:
-//        if(!(txtWHFCAdmin.getText().matches("^[a-zA-Z]*$"))){
-//            lblWHFCAdmin1.setText("Invalid input. Please enter only alphabets.");
-//        }
-//        else{
-//            lblWHFCAdmin1.setText("");
-//        }
-    }//GEN-LAST:event_txtDHManagerFocusLost
-
-    private void txtDHNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDHNameFocusLost
-        // TODO add your handling code here:
-//        if(!(txtWHname.getText().matches("^[a-zA-Z]*$"))){
-//            lblWHname1.setText("Invalid input. Please enter only alphabets");
-//        }
-//        else{
-//            lblWHname1.setText("");
-//        }
-    }//GEN-LAST:event_txtDHNameFocusLost
-
-    private void txtDHPhoneFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDHPhoneFocusLost
-        // TODO add your handling code here:
-//        if(!(txtWHPhno.getText().matches("^[0-9]*$")) || !(txtWHPhno.getText().length()==10)) {
-//            lblWHPhno1.setText("Please enter a valid phone number");
-//        }
-//        else{
-//            lblWHPhno1.setText("");
-//
-//        }
-    }//GEN-LAST:event_txtDHPhoneFocusLost
-
-    private void txtDHZipFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDHZipFocusLost
-        // TODO add your handling code here:
-//        if((txtWHZip.getText().matches("^[a-zA-Z]*$"))){
-//            lblWHZip1.setText("Invalid input. Please enter only numbers");
-//        }
-//        else{
-//            lblWHZip1.setText("");
-//        }
-    }//GEN-LAST:event_txtDHZipFocusLost
-
     private void btnSubmitReqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitReqActionPerformed
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(this, "Your request has been sent to Warehouse");
     }//GEN-LAST:event_btnSubmitReqActionPerformed
 
-    private void txtDHCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDHCityActionPerformed
+    private void cbSelCOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSelCOActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtDHCityActionPerformed
+//        populateDistributionHubComboBox();
+    }//GEN-LAST:event_cbSelCOActionPerformed
+
+    private void cbVolReq1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbVolReq1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbVolReq1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel LabelImage;
     private javax.swing.JButton btnSubmitReq;
-    private javax.swing.JComboBox<String> cbVolReq;
-    private javax.swing.JLabel lblDHAdd;
-    private javax.swing.JLabel lblDHCity;
-    private javax.swing.JLabel lblDHManager;
-    private javax.swing.JLabel lblDHName;
-    private javax.swing.JLabel lblDHPhone;
-    private javax.swing.JLabel lblDHState;
+    private javax.swing.JComboBox<String> cbSelCO;
+    private javax.swing.JComboBox<String> cbVolReq1;
+    private javax.swing.JLabel lblCO;
+    private javax.swing.JLabel lblCOName;
     private javax.swing.JLabel lblDHTitle;
-    private javax.swing.JLabel lblDHZip;
     private javax.swing.JLabel lblRequestVol;
     private javax.swing.JLabel lblVolReq;
-    private javax.swing.JTextField txtDHAdd;
-    private javax.swing.JTextField txtDHCity;
-    private javax.swing.JTextField txtDHManager;
-    private javax.swing.JTextField txtDHName;
-    private javax.swing.JTextField txtDHPhone;
-    private javax.swing.JTextField txtDHState;
-    private javax.swing.JTextField txtDHZip;
     // End of variables declaration//GEN-END:variables
 
-    private void populatefields() {
-        for(DistributionHub fcw : ecosystem.getACDDirectory().getFadList()){
-            if(fcw.getDistributionHubName().equals(WHname)){
-                txtDHName.setText(fcw.getDistributionHubName());
-                txtDHPhone.setText(fcw.getDistributionHubPhone());
-                txtDHAdd.setText(fcw.getDistributionHubAddress());
-                txtDHCity.setText(fcw.getDistributionHubCity());
-                txtDHState.setText(fcw.getDistributionHubState());
-                txtDHZip.setText(fcw.getDistributionHubZipcode());
-                txtDHManager.setText(fcw.getDistributionHubAdmin());
-            }
-        }
+//    private void populatefields() {
+//        for(DistributionHub fcw : ecosystem.getACDDirectory().getFadList()){
+//            if(fcw.getDistributionHubName().equals(WHname)){
+//                txtDHName.setText(fcw.getDistributionHubName());
+//                txtDHPhone.setText(fcw.getDistributionHubPhone());
+//                txtDHAdd.setText(fcw.getDistributionHubAddress());
+//                txtDHCity.setText(fcw.getDistributionHubCity());
+//                txtDHState.setText(fcw.getDistributionHubState());
+//                txtDHZip.setText(fcw.getDistributionHubZipcode());
+//                txtDHManager.setText(fcw.getDistributionHubAdmin());
+//            }
+//        }
+//    }
+    
+    private void populateCommunityOutreachComboBox() {
+    // Clear existing items
+    cbSelCO.removeAllItems();
+    cbSelCO.addItem("-select-"); // Default option
+
+    // Fetch the list of community outreach centers
+    for (CommunityOutreach co : ecosystem.getcoDir().getNgoList()) {
+        cbSelCO.addItem(co.getCOName()); // Add community outreach names to combo box
     }
+}
 
 }
