@@ -442,7 +442,7 @@ public class AddCOPanel extends javax.swing.JPanel {
                 ecosystem.setNgoDir(ngod);
                 Integer ngoCnt = ecosystem.getcoCnt();
                 ecosystem.setcoCnt(ngoCnt + 1);
-                JOptionPane.showMessageDialog(this, "NGO added successfully!");
+                JOptionPane.showMessageDialog(this, "Community Outreach added successfully!");
                 clearfields();
             } else {
                 JOptionPane.showMessageDialog(this, "Password Mismatch. Please verify the password entered.");

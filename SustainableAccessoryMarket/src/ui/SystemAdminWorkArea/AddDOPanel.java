@@ -500,11 +500,11 @@ public class AddDOPanel extends javax.swing.JPanel {
 
     private void txtDropOffManagernameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtDropOffManagernameFocusLost
         // TODO add your handling code here:
-        if (!(txtDropOffManagername.getText().matches("^[a-zA-Z]*$"))) {
-            lblPantryuname1.setText("Invalid input. Please enter only alphabets");
-        } else {
+//        if (!(txtDropOffManagername.getText().matches("^[a-zA-Z]*$"))) {
+//            lblPantryuname1.setText("Invalid input. Please enter only alphabets");
+//        } else {
             lblPantryuname1.setText("");
-        }
+//        }
     }//GEN-LAST:event_txtDropOffManagernameFocusLost
 
 
