@@ -196,7 +196,7 @@ public class DOManagerWorkAreaPanel extends javax.swing.JPanel {
 
     private void btnConDHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConDHActionPerformed
         // TODO add your handling code here:
-        ContactDHPanel objConWH = new ContactDHPanel(userProcessContainer, ecosystem, account);
+        ContactCOPanel objConWH = new ContactCOPanel(userProcessContainer, ecosystem, account);
         SplitPaneFCPManager.setRightComponent(objConWH);
     }//GEN-LAST:event_btnConDHActionPerformed
 

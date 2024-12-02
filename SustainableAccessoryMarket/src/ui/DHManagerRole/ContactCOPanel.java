@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package ui.DOManagerRole;
+package ui.DHManagerRole;
 
+import ui.DOManagerRole.*;
 import Business.CommunityOutreach.CommunityOutreach;
 import Business.EcoSystem;
 import Business.DropOff.DropOff;
@@ -21,7 +22,7 @@ import javax.swing.JPanel;
  *
  * @author reetikabhanushali 
  */
-public class ContactDHPanel extends javax.swing.JPanel {
+public class ContactCOPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form ContactDHPanel
@@ -31,7 +32,7 @@ public class ContactDHPanel extends javax.swing.JPanel {
     UserAccount userAcc;
     String WHname;
     String FCPmgname;
-    public ContactDHPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount userAcc) {
+    public ContactCOPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount userAcc) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;

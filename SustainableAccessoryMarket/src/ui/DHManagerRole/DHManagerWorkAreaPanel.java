@@ -90,7 +90,7 @@ public class DHManagerWorkAreaPanel extends javax.swing.JPanel {
 
         btnManageVol.setBackground(new java.awt.Color(204, 204, 255));
         btnManageVol.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnManageVol.setText("Manage Volunteers");
+        btnManageVol.setText("Contact Community Outreach");
         btnManageVol.setToolTipText("");
         btnManageVol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,7 +125,7 @@ public class DHManagerWorkAreaPanel extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnManageVol))
                     .addComponent(lblWelcomemessage))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(jLabel)
                 .addGap(153, 153, 153)
                 .addComponent(lbllogout, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -150,7 +150,7 @@ public class DHManagerWorkAreaPanel extends javax.swing.JPanel {
                         .addGap(15, 15, 15))
                     .addGroup(FCAMenubarPanelLayout.createSequentialGroup()
                         .addComponent(jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(26, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         SplitPaneFCAdmin.setLeftComponent(FCAMenubarPanel);
@@ -182,7 +182,7 @@ public class DHManagerWorkAreaPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SplitPaneFCAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
+            .addComponent(SplitPaneFCAdmin)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -200,7 +200,7 @@ public class DHManagerWorkAreaPanel extends javax.swing.JPanel {
 
     private void btnManageVolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageVolActionPerformed
         // TODO add your handling code here:
-        ManageVolunteerPanel objVol =  new ManageVolunteerPanel(userProcessContainer,ecosystem,userAccount);
+        ContactCOPanel objVol =  new ContactCOPanel(userProcessContainer,ecosystem,userAccount);
         SplitPaneFCAdmin.setRightComponent(objVol);
     }//GEN-LAST:event_btnManageVolActionPerformed
 
