@@ -9,7 +9,7 @@ import Business.UserAccount.UserAccount;
 
 /**
  *
- * @auhtor ankitapatil
+ * @auhtor zoeke9011
  */
 public class AccessoryDonation {
     

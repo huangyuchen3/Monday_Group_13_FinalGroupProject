@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author  ankitapatil
+ * @author  zoeke9011
  */
 public class HomeJPanel extends javax.swing.JPanel {
 
